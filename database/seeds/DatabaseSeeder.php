@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TechnologyTypesTableSeeder::class);
         $this->call(DisplayOptionsTableSeeder::class);
         $this->call(FunctionTypesTableSeeder::class);
+        $this->call(VariablesTableSeeder::class);
+        $this->call(UnitsOfMeasurementTableSeeder::class);
     }
 }
