@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(PermissionsTableSeeder::class);
         $this->call(DeviceTypesTableSeeder::class);
+        $this->call(TechnologyTypesTableSeeder::class);
     }
 }
