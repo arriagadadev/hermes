@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Permission;
+use App\Organization;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -64,10 +67,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+        //User creation
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        //Default Organization for the user
+        $organization = new Organization;
+        $organization->name = $user->name."'s organization";
+        $organization->save();
+
+        //Get all permissions
+        $permissions = Permission::select('id')->get();
+
+        //Assign all possible permissions to the user
+        foreach($permissions as $permission){
+            DB::table('organization_permission_user')->insert([
+                "organization_id"   => $organization->id,
+                "permission_id"     => $permission->id,
+                "user_id"           => $user->id
+            ]);
+        }
+
+        return $user;
     }
 }
