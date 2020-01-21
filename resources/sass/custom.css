@@ -1,0 +1,10 @@
+.sidebar-element{
+	font-size: 16px !important;
+}
+
+.sidebar-menu>li>a{
+	padding: 0 !important;
+	padding-bottom: 5px !important;
+	padding-top: 5px !important;
+	margin-left: -5px !important;
+}

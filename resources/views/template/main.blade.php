@@ -9,6 +9,7 @@
 
     @include('template.partials.loader')
 
+    <link href="/css/app.css" rel="stylesheet">
     <link href="/css/style.min.css" rel="stylesheet">
 </head>
 
@@ -25,17 +26,19 @@
         });
     </script>
     <div id="app">
-        @include('template.partials.sidebar')
+        <v-app>
+            @include('template.partials.sidebar')
 
-        <div class="page-container">
-            @include('template.partials.navbar')
-            <main class="main-content bgc-grey-100">
-                <div id="mainContent">
-                    @yield('content')
-                </div>
-            </main>
-            @include('template.partials.footer')
-        </div>
+            <div class="page-container">
+                @include('template.partials.navbar')
+                <main class="main-content bgc-grey-100">
+                    <div id="mainContent">
+                        @yield('content')
+                    </div>
+                </main>
+                @include('template.partials.footer')
+            </div>
+        </v-app>
     </div>
 
     <script type="text/javascript" src="/js/app.js"></script>
