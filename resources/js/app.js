@@ -8,7 +8,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import Vuetify from 'vuetify';
+import VueRouter from 'vue-router';
 Vue.use(Vuetify);
+Vue.use(VueRouter);
 
 /**
  * The following block of code may be used to automatically register your
@@ -22,6 +24,7 @@ Vue.use(Vuetify);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+import ExampleComponent from './components/ExampleComponent';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,7 +32,22 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+var routes = [
+
+	{
+        path: '/',
+        name: 'home',
+        component: ExampleComponent
+    }
+
+];
+
+const router = new VueRouter({
+  routes // short for `routes: routes`
+});
+
 const app = new Vue({
     el: '#app',
-    vuetify: new Vuetify()
+    vuetify: new Vuetify(),
+    router
 });
