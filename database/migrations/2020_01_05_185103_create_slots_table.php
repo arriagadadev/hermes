@@ -18,7 +18,7 @@ class CreateSlotsTable extends Migration
             $table->string('alias');
             $table->unsignedBigInteger('device_id');
             $table->unsignedBigInteger('unit_of_measurement_id');
-            $table->unsignedBigInteger('display_option_id');
+            $table->unsignedBigInteger('display_mode_id');
             $table->string('parameter_name');
             $table->boolean('active')->default(true);
             $table->string('title');
@@ -26,7 +26,7 @@ class CreateSlotsTable extends Migration
 
             $table->foreign('device_id')->references('id')->on('devices');
             $table->foreign('unit_of_measurement_id')->references('id')->on('units_of_measurement');
-            $table->foreign('display_option_id')->references('id')->on('display_options');
+            $table->foreign('display_mode_id')->references('id')->on('display_modes');
 
             $table->timestamps();
         });

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDisplayOptionsTable extends Migration
+class CreateDisplayModesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDisplayOptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('display_options', function (Blueprint $table) {
+        Schema::create('display_modes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description')->nullable();
@@ -28,6 +28,6 @@ class CreateDisplayOptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('display_options');
+        Schema::dropIfExists('display_modes');
     }
 }
