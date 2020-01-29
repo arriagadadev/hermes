@@ -3,7 +3,5 @@
 @section('title', 'Hermes Platform')
 
 @section('content')
-	<div class="full-container">
-		<router-view></router-view>
-	</div>
+	<router-view></router-view>
 @endsection
