@@ -24,7 +24,8 @@ Vue.use(VueRouter);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-import ExampleComponent from './components/ExampleComponent';
+import DashboardComponent from './components/DashboardComponent';
+import DevicesComponent from './components/DevicesComponent';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -36,8 +37,13 @@ var routes = [
 
 	{
         path: '/',
-        name: 'home',
-        component: ExampleComponent
+        name: 'dashboard',
+        component: DashboardComponent
+    },
+    {
+        path: '/devices',
+        name: 'devices',
+        component: DevicesComponent
     }
 
 ];
