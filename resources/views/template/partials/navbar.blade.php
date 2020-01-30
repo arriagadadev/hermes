@@ -9,10 +9,10 @@
         </ul>
         <ul class="nav-right">
             <li>
-                <a href="" class="peers fxw-nw ai-c lh-1">
+                <router-link to="/my-account" class="peers fxw-nw ai-c lh-1">
                     <div class="peer mR-5"><i class="material-icons nav-icon">account_circle</i></div>
                     <div class="peer"><span class="fsz-sm c-grey-900">{{ Auth::user()->name }}</span></div>
-                </a>
+                </router-link>
             </li>
             <li>
                 <a href="#" class="peers fxw-nw ai-c lh-1" 

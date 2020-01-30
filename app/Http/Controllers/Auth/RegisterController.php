@@ -68,17 +68,18 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
+        //Default Organization for the user
+        $organization = new Organization;
+        $organization->name = $data['name']."'s organization";
+        $organization->save();
+
         //User creation
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'last_organization_displayed' => $organization->id
         ]);
-
-        //Default Organization for the user
-        $organization = new Organization;
-        $organization->name = $user->name."'s organization";
-        $organization->save();
 
         //Get all permissions
         $permissions = Permission::select('id')->get();
