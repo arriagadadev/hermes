@@ -1887,7 +1887,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      deviceTypes: [],
+      technologyTypes: [],
+      devices: [],
+      variables: [],
+      displayModes: [],
+      unitsOfMeasurement: [],
+      icons: [],
+      functionTypes: []
+    };
+  },
   mounted: function mounted() {
     console.log('Devices component mounted.');
   }
@@ -37374,18 +37397,34 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Devices Component")
-            ]),
+    return _c("div", { staticClass: "container-fluid" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "bgc-white bd bdrs-3 p-20" }, [
+            _c("h4", { staticClass: "c-grey-900 mB-20" }, [_vm._v("Devices")]),
             _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    Devices component.\n                "
-              )
+            _c("table", { staticClass: "table table-hover" }, [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Identifier")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Alias")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [
+                    _vm._v("Device type")
+                  ]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [
+                    _vm._v("Technology type")
+                  ]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Actions")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tbody")
             ])
           ])
         ])

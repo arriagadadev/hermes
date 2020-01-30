@@ -9,8 +9,8 @@
 
     @include('template.partials.loader')
 
-    <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/style.min.css" rel="stylesheet">
+    <link href="/css/app.css?v=0.1" rel="stylesheet">
+    <link href="/css/style.min.css?v=0.1" rel="stylesheet">
 </head>
 
 <body class="app">
