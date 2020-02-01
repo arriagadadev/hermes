@@ -86,6 +86,3432 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@kugatsu/vuenotification/dist/vueNotification.common.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@kugatsu/vuenotification/dist/vueNotification.common.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "70b1");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "0038":
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__("f5d4");
+var global = __webpack_require__("d3c7");
+var SHARED = '__core-js_shared__';
+var store = global[SHARED] || (global[SHARED] = {});
+
+(module.exports = function (key, value) {
+  return store[key] || (store[key] = value !== undefined ? value : {});
+})('versions', []).push({
+  version: core.version,
+  mode: __webpack_require__("4017") ? 'pure' : 'global',
+  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+});
+
+
+/***/ }),
+
+/***/ "00c1":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 21.2.5.3 get RegExp.prototype.flags()
+if (__webpack_require__("b4b4") && /./g.flags != 'g') __webpack_require__("9bce").f(RegExp.prototype, 'flags', {
+  configurable: true,
+  get: __webpack_require__("2421")
+});
+
+
+/***/ }),
+
+/***/ "016d":
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__("c610");
+var anObject = __webpack_require__("ebf6");
+var getKeys = __webpack_require__("16e7");
+
+module.exports = __webpack_require__("0857") ? Object.defineProperties : function defineProperties(O, Properties) {
+  anObject(O);
+  var keys = getKeys(Properties);
+  var length = keys.length;
+  var i = 0;
+  var P;
+  while (length > i) dP.f(O, P = keys[i++], Properties[P]);
+  return O;
+};
+
+
+/***/ }),
+
+/***/ "0222":
+/***/ (function(module, exports) {
+
+exports.f = Object.getOwnPropertySymbols;
+
+
+/***/ }),
+
+/***/ "0435":
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__("d3c7");
+var core = __webpack_require__("f5d4");
+var hide = __webpack_require__("defd");
+var redefine = __webpack_require__("41aa");
+var ctx = __webpack_require__("c11e");
+var PROTOTYPE = 'prototype';
+
+var $export = function (type, name, source) {
+  var IS_FORCED = type & $export.F;
+  var IS_GLOBAL = type & $export.G;
+  var IS_STATIC = type & $export.S;
+  var IS_PROTO = type & $export.P;
+  var IS_BIND = type & $export.B;
+  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] || (global[name] = {}) : (global[name] || {})[PROTOTYPE];
+  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
+  var expProto = exports[PROTOTYPE] || (exports[PROTOTYPE] = {});
+  var key, own, out, exp;
+  if (IS_GLOBAL) source = name;
+  for (key in source) {
+    // contains in native
+    own = !IS_FORCED && target && target[key] !== undefined;
+    // export native or passed
+    out = (own ? target : source)[key];
+    // bind timers to global for call from export context
+    exp = IS_BIND && own ? ctx(out, global) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+    // extend global
+    if (target) redefine(target, key, out, type & $export.U);
+    // export
+    if (exports[key] != out) hide(exports, key, exp);
+    if (IS_PROTO && expProto[key] != out) expProto[key] = out;
+  }
+};
+global.core = core;
+// type bitmap
+$export.F = 1;   // forced
+$export.G = 2;   // global
+$export.S = 4;   // static
+$export.P = 8;   // proto
+$export.B = 16;  // bind
+$export.W = 32;  // wrap
+$export.U = 64;  // safe
+$export.R = 128; // real proto method for `library`
+module.exports = $export;
+
+
+/***/ }),
+
+/***/ "07c6":
+/***/ (function(module, exports, __webpack_require__) {
+
+var store = __webpack_require__("0038")('wks');
+var uid = __webpack_require__("44cb");
+var Symbol = __webpack_require__("d3c7").Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+
+/***/ "0857":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Thank's IE8 for his funny defineProperty
+module.exports = !__webpack_require__("623b")(function () {
+  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+
+/***/ "103e":
+/***/ (function(module, exports) {
+
+// 7.1.4 ToInteger
+var ceil = Math.ceil;
+var floor = Math.floor;
+module.exports = function (it) {
+  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+
+
+/***/ }),
+
+/***/ "12ef":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".notificationCenter{font-family:Avenir,Helvetica,Arial,sans-serif;position:fixed;width:300px;max-width:90vw;top:0;right:0;z-index:50;margin:0 8px}.notificationCenter.topLeft{top:0;left:0;bottom:auto;right:auto}.notificationCenter.topRight{top:0;right:0;bottom:auto;left:auto}.notificationCenter.bottomLeft{bottom:0;left:0;top:auto;right:auto}.notificationCenter.bottomRight{bottom:0;right:0;top:auto;left:auto}.notificationCenter.topCenter{top:0;bottom:auto}.notificationCenter.bottomCenter,.notificationCenter.topCenter{left:50%;right:auto;-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0);margin:auto}.notificationCenter.bottomCenter{bottom:0;top:auto}.notificationCenter .vn-notification{-webkit-box-shadow:0 4px 6px rgba(0,0,0,.5);box-shadow:0 4px 6px rgba(0,0,0,.5);overflow:hidden;margin:8px auto;border-radius:5px}.notificationCenter .vn-notification .vn-container{position:relative;padding:16px 24px 16px 16px;display:grid;grid-template-columns:auto 1fr;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.notificationCenter .vn-notification .vn-container .vn-title{font-size:17px;-webkit-transform:translateY(-5px);transform:translateY(-5px);font-weight:500}.notificationCenter .vn-notification .vn-container p{margin:0;font-size:14px}.notificationCenter .vn-notification .vn-container .vn-icn-left{margin-right:16px}.notificationCenter .vn-notification .vn-container .vn-closeButton{cursor:pointer;position:absolute;right:10px;top:8px}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "16e7":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys = __webpack_require__("94df");
+var enumBugKeys = __webpack_require__("7199");
+
+module.exports = Object.keys || function keys(O) {
+  return $keys(O, enumBugKeys);
+};
+
+
+/***/ }),
+
+/***/ "1723":
+/***/ (function(module, exports, __webpack_require__) {
+
+var document = __webpack_require__("d3c7").document;
+module.exports = document && document.documentElement;
+
+
+/***/ }),
+
+/***/ "1a13":
+/***/ (function(module, exports) {
+
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "1e97":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var addToUnscopables = __webpack_require__("2979");
+var step = __webpack_require__("1f40");
+var Iterators = __webpack_require__("821b");
+var toIObject = __webpack_require__("c56e");
+
+// 22.1.3.4 Array.prototype.entries()
+// 22.1.3.13 Array.prototype.keys()
+// 22.1.3.29 Array.prototype.values()
+// 22.1.3.30 Array.prototype[@@iterator]()
+module.exports = __webpack_require__("bdee")(Array, 'Array', function (iterated, kind) {
+  this._t = toIObject(iterated); // target
+  this._i = 0;                   // next index
+  this._k = kind;                // kind
+// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var kind = this._k;
+  var index = this._i++;
+  if (!O || index >= O.length) {
+    this._t = undefined;
+    return step(1);
+  }
+  if (kind == 'keys') return step(0, index);
+  if (kind == 'values') return step(0, O[index]);
+  return step(0, [index, O[index]]);
+}, 'values');
+
+// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
+Iterators.Arguments = Iterators.Array;
+
+addToUnscopables('keys');
+addToUnscopables('values');
+addToUnscopables('entries');
+
+
+/***/ }),
+
+/***/ "1f40":
+/***/ (function(module, exports) {
+
+module.exports = function (done, value) {
+  return { value: value, done: !!done };
+};
+
+
+/***/ }),
+
+/***/ "1f9a":
+/***/ (function(module, exports) {
+
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function (it) {
+  if (it == undefined) throw TypeError("Can't call method on  " + it);
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "1fe5":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.2.2 IsArray(argument)
+var cof = __webpack_require__("513f");
+module.exports = Array.isArray || function isArray(arg) {
+  return cof(arg) == 'Array';
+};
+
+
+/***/ }),
+
+/***/ "208d":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("0038")('native-function-to-string', Function.toString);
+
+
+/***/ }),
+
+/***/ "20b3":
+/***/ (function(module, exports, __webpack_require__) {
+
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = __webpack_require__("c562");
+var toLength = __webpack_require__("4def");
+var toAbsoluteIndex = __webpack_require__("3971");
+module.exports = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = toIObject($this);
+    var length = toLength(O.length);
+    var index = toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare
+    if (IS_INCLUDES && el != el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare
+      if (value != value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      if (O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+
+/***/ }),
+
+/***/ "2350":
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "2421":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 21.2.5.3 get RegExp.prototype.flags
+var anObject = __webpack_require__("7d66");
+module.exports = function () {
+  var that = anObject(this);
+  var result = '';
+  if (that.global) result += 'g';
+  if (that.ignoreCase) result += 'i';
+  if (that.multiline) result += 'm';
+  if (that.unicode) result += 'u';
+  if (that.sticky) result += 'y';
+  return result;
+};
+
+
+/***/ }),
+
+/***/ "24ae":
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__("103e");
+var max = Math.max;
+var min = Math.min;
+module.exports = function (index, length) {
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+
+/***/ }),
+
+/***/ "2601":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.13 ToObject(argument)
+var defined = __webpack_require__("ed1e");
+module.exports = function (it) {
+  return Object(defined(it));
+};
+
+
+/***/ }),
+
+/***/ "268f":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("9d80");
+
+/***/ }),
+
+/***/ "2979":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 22.1.3.31 Array.prototype[@@unscopables]
+var UNSCOPABLES = __webpack_require__("07c6")('unscopables');
+var ArrayProto = Array.prototype;
+if (ArrayProto[UNSCOPABLES] == undefined) __webpack_require__("defd")(ArrayProto, UNSCOPABLES, {});
+module.exports = function (key) {
+  ArrayProto[UNSCOPABLES][key] = true;
+};
+
+
+/***/ }),
+
+/***/ "2e3d":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = __webpack_require__("f1f5");
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function (it, S) {
+  if (!isObject(it)) return it;
+  var fn, val;
+  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+
+
+/***/ }),
+
+/***/ "3971":
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__("7ecc");
+var max = Math.max;
+var min = Math.min;
+module.exports = function (index, length) {
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+
+/***/ }),
+
+/***/ "39b3":
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__("9bce");
+var anObject = __webpack_require__("7d66");
+var getKeys = __webpack_require__("c605");
+
+module.exports = __webpack_require__("b4b4") ? Object.defineProperties : function defineProperties(O, Properties) {
+  anObject(O);
+  var keys = getKeys(Properties);
+  var length = keys.length;
+  var i = 0;
+  var P;
+  while (length > i) dP.f(O, P = keys[i++], Properties[P]);
+  return O;
+};
+
+
+/***/ }),
+
+/***/ "39ec":
+/***/ (function(module, exports, __webpack_require__) {
+
+var has = __webpack_require__("588f");
+var toIObject = __webpack_require__("c56e");
+var arrayIndexOf = __webpack_require__("8fa9")(false);
+var IE_PROTO = __webpack_require__("cb9e")('IE_PROTO');
+
+module.exports = function (object, names) {
+  var O = toIObject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (has(O, key = names[i++])) {
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+
+
+/***/ }),
+
+/***/ "3aa7":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+var has = __webpack_require__("588f");
+var toObject = __webpack_require__("2601");
+var IE_PROTO = __webpack_require__("cb9e")('IE_PROTO');
+var ObjectProto = Object.prototype;
+
+module.exports = Object.getPrototypeOf || function (O) {
+  O = toObject(O);
+  if (has(O, IE_PROTO)) return O[IE_PROTO];
+  if (typeof O.constructor == 'function' && O instanceof O.constructor) {
+    return O.constructor.prototype;
+  } return O instanceof Object ? ObjectProto : null;
+};
+
+
+/***/ }),
+
+/***/ "3b50":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("4663");
+
+
+/***/ }),
+
+/***/ "3b7a":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+var toIObject = __webpack_require__("c562");
+var $getOwnPropertyDescriptor = __webpack_require__("d66a").f;
+
+__webpack_require__("caec")('getOwnPropertyDescriptor', function () {
+  return function getOwnPropertyDescriptor(it, key) {
+    return $getOwnPropertyDescriptor(toIObject(it), key);
+  };
+});
+
+
+/***/ }),
+
+/***/ "4017":
+/***/ (function(module, exports) {
+
+module.exports = false;
+
+
+/***/ }),
+
+/***/ "4029":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var create = __webpack_require__("a782");
+var descriptor = __webpack_require__("efc2");
+var setToStringTag = __webpack_require__("8fcb");
+var IteratorPrototype = {};
+
+// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+__webpack_require__("defd")(IteratorPrototype, __webpack_require__("07c6")('iterator'), function () { return this; });
+
+module.exports = function (Constructor, NAME, next) {
+  Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
+  setToStringTag(Constructor, NAME + ' Iterator');
+};
+
+
+/***/ }),
+
+/***/ "41aa":
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__("d3c7");
+var hide = __webpack_require__("defd");
+var has = __webpack_require__("588f");
+var SRC = __webpack_require__("44cb")('src');
+var $toString = __webpack_require__("208d");
+var TO_STRING = 'toString';
+var TPL = ('' + $toString).split(TO_STRING);
+
+__webpack_require__("f5d4").inspectSource = function (it) {
+  return $toString.call(it);
+};
+
+(module.exports = function (O, key, val, safe) {
+  var isFunction = typeof val == 'function';
+  if (isFunction) has(val, 'name') || hide(val, 'name', key);
+  if (O[key] === val) return;
+  if (isFunction) has(val, SRC) || hide(val, SRC, O[key] ? '' + O[key] : TPL.join(String(key)));
+  if (O === global) {
+    O[key] = val;
+  } else if (!safe) {
+    delete O[key];
+    hide(O, key, val);
+  } else if (O[key]) {
+    O[key] = val;
+  } else {
+    hide(O, key, val);
+  }
+// add fake Function#toString for correct work wrapped methods / constructors with methods like LoDash isNative
+})(Function.prototype, TO_STRING, function toString() {
+  return typeof this == 'function' && this[SRC] || $toString.call(this);
+});
+
+
+/***/ }),
+
+/***/ "422d":
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__("f1f5");
+var document = __webpack_require__("d3c7").document;
+// typeof document.createElement is 'object' in old IE
+var is = isObject(document) && isObject(document.createElement);
+module.exports = function (it) {
+  return is ? document.createElement(it) : {};
+};
+
+
+/***/ }),
+
+/***/ "436a":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.13 ToObject(argument)
+var defined = __webpack_require__("1f9a");
+module.exports = function (it) {
+  return Object(defined(it));
+};
+
+
+/***/ }),
+
+/***/ "43b1":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.15 ToLength
+var toInteger = __webpack_require__("103e");
+var min = Math.min;
+module.exports = function (it) {
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+
+/***/ }),
+
+/***/ "44cb":
+/***/ (function(module, exports) {
+
+var id = 0;
+var px = Math.random();
+module.exports = function (key) {
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+
+/***/ }),
+
+/***/ "4663":
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__("c610");
+var createDesc = __webpack_require__("e06b");
+module.exports = __webpack_require__("0857") ? function (object, key, value) {
+  return dP.f(object, key, createDesc(1, value));
+} : function (object, key, value) {
+  object[key] = value;
+  return object;
+};
+
+
+/***/ }),
+
+/***/ "46a8":
+/***/ (function(module, exports) {
+
+var id = 0;
+var px = Math.random();
+module.exports = function (key) {
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+
+/***/ }),
+
+/***/ "499e":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/listToStyles.js
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
+}
+
+// CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/addStylesClient.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addStylesClient; });
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+  Modified by Evan You @yyx990803
+*/
+
+
+
+var hasDocument = typeof document !== 'undefined'
+
+if (typeof DEBUG !== 'undefined' && DEBUG) {
+  if (!hasDocument) {
+    throw new Error(
+    'vue-style-loader cannot be used in a non-browser environment. ' +
+    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
+  ) }
+}
+
+/*
+type StyleObject = {
+  id: number;
+  parts: Array<StyleObjectPart>
+}
+
+type StyleObjectPart = {
+  css: string;
+  media: string;
+  sourceMap: ?string
+}
+*/
+
+var stylesInDom = {/*
+  [id: number]: {
+    id: number,
+    refs: number,
+    parts: Array<(obj?: StyleObjectPart) => void>
+  }
+*/}
+
+var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
+var singletonElement = null
+var singletonCounter = 0
+var isProduction = false
+var noop = function () {}
+var options = null
+var ssrIdKey = 'data-vue-ssr-id'
+
+// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+// tags it will allow on a page
+var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
+
+function addStylesClient (parentId, list, _isProduction, _options) {
+  isProduction = _isProduction
+
+  options = _options || {}
+
+  var styles = listToStyles(parentId, list)
+  addStylesToDom(styles)
+
+  return function update (newList) {
+    var mayRemove = []
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i]
+      var domStyle = stylesInDom[item.id]
+      domStyle.refs--
+      mayRemove.push(domStyle)
+    }
+    if (newList) {
+      styles = listToStyles(parentId, newList)
+      addStylesToDom(styles)
+    } else {
+      styles = []
+    }
+    for (var i = 0; i < mayRemove.length; i++) {
+      var domStyle = mayRemove[i]
+      if (domStyle.refs === 0) {
+        for (var j = 0; j < domStyle.parts.length; j++) {
+          domStyle.parts[j]()
+        }
+        delete stylesInDom[domStyle.id]
+      }
+    }
+  }
+}
+
+function addStylesToDom (styles /* Array<StyleObject> */) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i]
+    var domStyle = stylesInDom[item.id]
+    if (domStyle) {
+      domStyle.refs++
+      for (var j = 0; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j])
+      }
+      for (; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j]))
+      }
+      if (domStyle.parts.length > item.parts.length) {
+        domStyle.parts.length = item.parts.length
+      }
+    } else {
+      var parts = []
+      for (var j = 0; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j]))
+      }
+      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
+    }
+  }
+}
+
+function createStyleElement () {
+  var styleElement = document.createElement('style')
+  styleElement.type = 'text/css'
+  head.appendChild(styleElement)
+  return styleElement
+}
+
+function addStyle (obj /* StyleObjectPart */) {
+  var update, remove
+  var styleElement = document.querySelector('style[' + ssrIdKey + '~="' + obj.id + '"]')
+
+  if (styleElement) {
+    if (isProduction) {
+      // has SSR styles and in production mode.
+      // simply do nothing.
+      return noop
+    } else {
+      // has SSR styles but in dev mode.
+      // for some reason Chrome can't handle source map in server-rendered
+      // style tags - source maps in <style> only works if the style tag is
+      // created and inserted dynamically. So we remove the server rendered
+      // styles and inject new ones.
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  if (isOldIE) {
+    // use singleton mode for IE9.
+    var styleIndex = singletonCounter++
+    styleElement = singletonElement || (singletonElement = createStyleElement())
+    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
+    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
+  } else {
+    // use multi-style-tag mode in all other cases
+    styleElement = createStyleElement()
+    update = applyToTag.bind(null, styleElement)
+    remove = function () {
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  update(obj)
+
+  return function updateStyle (newObj /* StyleObjectPart */) {
+    if (newObj) {
+      if (newObj.css === obj.css &&
+          newObj.media === obj.media &&
+          newObj.sourceMap === obj.sourceMap) {
+        return
+      }
+      update(obj = newObj)
+    } else {
+      remove()
+    }
+  }
+}
+
+var replaceText = (function () {
+  var textStore = []
+
+  return function (index, replacement) {
+    textStore[index] = replacement
+    return textStore.filter(Boolean).join('\n')
+  }
+})()
+
+function applyToSingletonTag (styleElement, index, remove, obj) {
+  var css = remove ? '' : obj.css
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = replaceText(index, css)
+  } else {
+    var cssNode = document.createTextNode(css)
+    var childNodes = styleElement.childNodes
+    if (childNodes[index]) styleElement.removeChild(childNodes[index])
+    if (childNodes.length) {
+      styleElement.insertBefore(cssNode, childNodes[index])
+    } else {
+      styleElement.appendChild(cssNode)
+    }
+  }
+}
+
+function applyToTag (styleElement, obj) {
+  var css = obj.css
+  var media = obj.media
+  var sourceMap = obj.sourceMap
+
+  if (media) {
+    styleElement.setAttribute('media', media)
+  }
+  if (options.ssrId) {
+    styleElement.setAttribute(ssrIdKey, obj.id)
+  }
+
+  if (sourceMap) {
+    // https://developer.chrome.com/devtools/docs/javascript-debugging
+    // this makes source maps inside style tags work properly in Chrome
+    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
+    // http://stackoverflow.com/a/26603875
+    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
+  }
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild)
+    }
+    styleElement.appendChild(document.createTextNode(css))
+  }
+}
+
+
+/***/ }),
+
+/***/ "4a39":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__("f379");
+// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+$export($export.S + $export.F * !__webpack_require__("0857"), 'Object', { defineProperty: __webpack_require__("c610").f });
+
+
+/***/ }),
+
+/***/ "4aff":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("e250");
+module.exports = __webpack_require__("f76d").Object.getOwnPropertySymbols;
+
+
+/***/ }),
+
+/***/ "4def":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.15 ToLength
+var toInteger = __webpack_require__("7ecc");
+var min = Math.min;
+module.exports = function (it) {
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+
+/***/ }),
+
+/***/ "4f99":
+/***/ (function(module, exports, __webpack_require__) {
+
+var document = __webpack_require__("1a13").document;
+module.exports = document && document.documentElement;
+
+
+/***/ }),
+
+/***/ "513f":
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+
+/***/ }),
+
+/***/ "54bd":
+/***/ (function(module, exports, __webpack_require__) {
+
+var shared = __webpack_require__("a64e")('keys');
+var uid = __webpack_require__("46a8");
+module.exports = function (key) {
+  return shared[key] || (shared[key] = uid(key));
+};
+
+
+/***/ }),
+
+/***/ "566b":
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+
+/***/ }),
+
+/***/ "5809":
+/***/ (function(module, exports) {
+
+module.exports = function (exec) {
+  try {
+    return !!exec();
+  } catch (e) {
+    return true;
+  }
+};
+
+
+/***/ }),
+
+/***/ "587b":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
+var $keys = __webpack_require__("94df");
+var hiddenKeys = __webpack_require__("7199").concat('length', 'prototype');
+
+exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
+  return $keys(O, hiddenKeys);
+};
+
+
+/***/ }),
+
+/***/ "588f":
+/***/ (function(module, exports) {
+
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function (it, key) {
+  return hasOwnProperty.call(it, key);
+};
+
+
+/***/ }),
+
+/***/ "623b":
+/***/ (function(module, exports) {
+
+module.exports = function (exec) {
+  try {
+    return !!exec();
+  } catch (e) {
+    return true;
+  }
+};
+
+
+/***/ }),
+
+/***/ "6834":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject = __webpack_require__("ebf6");
+var dPs = __webpack_require__("016d");
+var enumBugKeys = __webpack_require__("7199");
+var IE_PROTO = __webpack_require__("54bd")('IE_PROTO');
+var Empty = function () { /* empty */ };
+var PROTOTYPE = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function () {
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = __webpack_require__("e87b")('iframe');
+  var i = enumBugKeys.length;
+  var lt = '<';
+  var gt = '>';
+  var iframeDocument;
+  iframe.style.display = 'none';
+  __webpack_require__("4f99").appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties) {
+  var result;
+  if (O !== null) {
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty();
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+
+/***/ }),
+
+/***/ "70b1":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service-global/node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+// This file is imported into lib/wc client bundles.
+
+if (typeof window !== 'undefined') {
+  var setPublicPath_i
+  if ((setPublicPath_i = window.document.currentScript) && (setPublicPath_i = setPublicPath_i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
+    __webpack_require__.p = setPublicPath_i[1] // eslint-disable-line
+  }
+}
+
+// Indicate to webpack that this file can be concatenated
+/* harmony default export */ var setPublicPath = (null);
+
+// EXTERNAL MODULE: /usr/local/lib/node_modules/@vue/cli-service-global/node_modules/core-js/modules/web.dom.iterable.js
+var web_dom_iterable = __webpack_require__("ee38");
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js
+var get_own_property_descriptor = __webpack_require__("268f");
+var get_own_property_descriptor_default = /*#__PURE__*/__webpack_require__.n(get_own_property_descriptor);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js
+var get_own_property_symbols = __webpack_require__("e265");
+var get_own_property_symbols_default = /*#__PURE__*/__webpack_require__.n(get_own_property_symbols);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js
+var keys = __webpack_require__("a4bb");
+var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
+var define_property = __webpack_require__("85f2");
+var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    define_property_default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js
+
+
+
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    var ownKeys = keys_default()(source);
+
+    if (typeof get_own_property_symbols_default.a === 'function') {
+      ownKeys = ownKeys.concat(get_own_property_symbols_default()(source).filter(function (sym) {
+        return get_own_property_descriptor_default()(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"15bd9b35-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service-global/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueNotification/Notification.vue?vue&type=template&id=1d99eb78&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vn-notification",class:'vn-notif'+ _vm.uuid,style:({backgroundColor: _vm.backgroundColor, color: _vm.textColor})},[_c('div',{staticClass:"vn-container"},[_c('div',{class:{'vn-icn-left': _vm.showLeftIcn},style:({fill: _vm.textColor})},[(_vm.showLeftIcn)?_c('svg',{staticClass:"vn-icone",attrs:{"width":"14","height":"20","viewBox":"0 0 14 20","xmlns":"http://www.w3.org/2000/svg"}},[_c('path',{attrs:{"d":"M3.99346 19C3.99346 19.2652 4.09882 19.5196 4.28635 19.7071C4.47389 19.8946 4.72824 20 4.99346 20H8.99346C9.25868 20 9.51303 19.8946 9.70057 19.7071C9.8881 19.5196 9.99346 19.2652 9.99346 19V18H3.99346V19ZM6.99346 0C5.50444 0.00139123 4.05466 0.477563 2.85479 1.35932C1.65492 2.24108 0.767486 3.48248 0.321445 4.90312C-0.124597 6.32376 -0.106005 7.84963 0.374519 9.25898C0.855044 10.6683 1.77246 11.8877 2.99346 12.74V15C2.99346 15.2652 3.09882 15.5196 3.28635 15.7071C3.47389 15.8946 3.72824 16 3.99346 16H9.99346C10.2587 16 10.513 15.8946 10.7006 15.7071C10.8881 15.5196 10.9935 15.2652 10.9935 15V12.74C12.2145 11.8877 13.1319 10.6683 13.6124 9.25898C14.0929 7.84963 14.1115 6.32376 13.6655 4.90312C13.2194 3.48248 12.332 2.24108 11.1321 1.35932C9.93226 0.477563 8.48248 0.00139123 6.99346 0V0ZM9.84346 11.1L8.99346 11.7V14H4.99346V11.7L4.14346 11.1C3.26823 10.4928 2.60979 9.622 2.26409 8.61445C1.91839 7.60689 1.90351 6.51525 2.22161 5.49865C2.53971 4.48204 3.17417 3.59359 4.03252 2.96278C4.89087 2.33197 5.92824 1.99178 6.99346 1.99178C8.05867 1.99178 9.09605 2.33197 9.9544 2.96278C10.8128 3.59359 11.4472 4.48204 11.7653 5.49865C12.0834 6.51525 12.0685 7.60689 11.7228 8.61445C11.3771 9.622 10.7187 10.4928 9.84346 11.1V11.1Z"}})]):_vm._e()]),_c('div',[(_vm.title !== null && _vm.title !== undefined && _vm.title !== '')?_c('p',{staticClass:"vn-title"},[_vm._v(_vm._s(_vm.title))]):_vm._e(),_c('p',{staticClass:"vn-message"},[_vm._v(_vm._s(_vm.message))])]),_c('div',{staticClass:"vn-closeButton",style:({fill: _vm.textColor}),on:{"click":function($event){return _vm.remove()}}},[(_vm.showCloseIcn)?_c('svg',{attrs:{"width":"10","height":"10","viewBox":"0 0 10 10","xmlns":"http://www.w3.org/2000/svg"}},[_c('path',{attrs:{"d":"M10 1.00714L8.99286 0L5 3.99286L1.00714 0L0 1.00714L3.99286 5L0 8.99286L1.00714 10L5 6.00714L8.99286 10L10 8.99286L6.00714 5L10 1.00714Z"}})]):_vm._e()])])])}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/VueNotification/Notification.vue?vue&type=template&id=1d99eb78&
+
+// EXTERNAL MODULE: /usr/local/lib/node_modules/@vue/cli-service-global/node_modules/core-js/modules/es6.regexp.to-string.js
+var es6_regexp_to_string = __webpack_require__("a279");
+
+// EXTERNAL MODULE: /usr/local/lib/node_modules/@vue/cli-service-global/node_modules/core-js/modules/es6.number.constructor.js
+var es6_number_constructor = __webpack_require__("e886");
+
+// EXTERNAL MODULE: external "gsap"
+var external_gsap_ = __webpack_require__("e3cf");
+
+// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib??ref--12-1!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueNotification/Notification.vue?vue&type=script&lang=js&
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var uuid = 0;
+/* harmony default export */ var Notificationvue_type_script_lang_js_ = ({
+  name: "Notification",
+  data: function data() {
+    return {
+      notification: ".vn-notification",
+      notificationEl: ".vn-notif".concat(this.uuid),
+      notificationElContent: ".vn-notif".concat(this.uuid, " .vn-container"),
+      notificationTitle: ".vn-notif".concat(this.uuid, " .vn-title"),
+      notificationMessage: ".vn-notif".concat(this.uuid, " .vn-message"),
+      notificationIcone: ".vn-notif".concat(this.uuid, " .vn-icone"),
+      notificationIconeClose: ".vn-notif".concat(this.uuid, " .vn-closeButton")
+    };
+  },
+  props: {
+    message: {
+      type: String,
+      default: "🚧 You miss something ..."
+    },
+    title: {
+      type: String,
+      default: null
+    },
+    timer: {
+      type: Number,
+      default: 5
+    },
+    timeout: {
+      type: Object,
+      default: null
+    },
+    infiniteTimer: {
+      type: Boolean,
+      default: false
+    },
+    position: {
+      type: String,
+      default: "topRight"
+    },
+    showLeftIcn: {
+      type: Boolean,
+      default: true
+    },
+    showCloseIcn: {
+      type: Boolean,
+      default: false
+    },
+    type: {
+      type: String,
+      default: "primary"
+    },
+    primary: {
+      type: Object,
+      default: function _default() {
+        return {
+          background: "#fff",
+          color: "#5E6372",
+          titleColor: ""
+        };
+      }
+    },
+    success: {
+      type: Object,
+      default: function _default() {
+        return {
+          background: "#609a22",
+          color: "#E4E4E4"
+        };
+      }
+    },
+    error: {
+      type: Object,
+      default: function _default() {
+        return {
+          background: "#B00002",
+          color: "#E4E4E4"
+        };
+      }
+    },
+    warning: {
+      type: Object,
+      default: function _default() {
+        return {
+          background: "#FFDE03",
+          color: "#2F3C5F"
+        };
+      }
+    },
+    dark: {
+      type: Object,
+      default: function _default() {
+        return {
+          background: "#2F3C5F",
+          color: "#E4E4E4"
+        };
+      }
+    },
+    animateIn: {
+      type: Function,
+      default: function _default() {
+        var tl = new external_gsap_["TimelineMax"]().from(".vn-notif".concat(this.uuid), 0.6, {
+          opacity: 0
+        }).from(this.notificationEl, 0.4, {
+          borderRadius: 100,
+          width: 20,
+          height: 20
+        }).from(".vn-notif".concat(this.uuid, ">div"), 0.3, {
+          opacity: 0
+        });
+        tl.pause();
+        return tl;
+      }
+    },
+    animateOut: {
+      type: Function,
+      default: function _default() {
+        var tl = new external_gsap_["TimelineMax"]({}).to(".vn-notif".concat(this.uuid, ">div"), 0.4, {
+          opacity: 0,
+          ease: external_gsap_["Power3"].easeOut
+        }).to(".vn-notif".concat(this.uuid), 0.3, {
+          borderRadius: 100,
+          width: 30,
+          height: 30
+        }).to(".vn-notif".concat(this.uuid), 0.3, {
+          borderRadius: 100,
+          width: 0,
+          height: 0,
+          margin: "0 auto"
+        }).to(".vn-notif".concat(this.uuid), 0.7, {
+          opacity: 0
+        });
+        return tl;
+      }
+    }
+  },
+  methods: {
+    getContainer: function getContainer() {
+      // Create the vn-container if they don't exist or return it
+      var notificationContainer = document.querySelector(".notificationCenter");
+
+      if (!notificationContainer) {
+        notificationContainer = document.createElement("div");
+        notificationContainer.classList.add("notificationCenter");
+        document.body.appendChild(notificationContainer);
+      }
+
+      return notificationContainer;
+    },
+    remove: function remove() {
+      var _this = this;
+
+      var notificationContainer = this.getContainer();
+      var tl = new external_gsap_["TimelineMax"]({
+        onComplete: function onComplete() {
+          window.clearTimeout(_this.timeout);
+
+          _this.$notification.remove(_this);
+
+          notificationContainer.removeChild(_this.$el);
+
+          _this.$destroy();
+        }
+      }).add(this.animateOut().play(0));
+    },
+    handleTimeout: function handleTimeout() {
+      var _this2 = this;
+
+      if (!this.infiniteTimer) {
+        this.timeout = setTimeout(function () {
+          _this2.remove();
+        }, this.timer * 1000);
+      }
+    },
+    initColors: function initColors() {
+      this.backgroundColor = this[this.type].background;
+      this.textColor = this[this.type].color;
+    }
+  },
+  beforeCreate: function beforeCreate() {
+    this.uuid = uuid.toString();
+    uuid += 1;
+  },
+  beforeMount: function beforeMount() {
+    var notificationContainer = this.getContainer();
+    this.initColors();
+    notificationContainer.appendChild(this.$el);
+    notificationContainer.classList.add(this.position);
+  },
+  mounted: function mounted() {
+    this.handleTimeout();
+    this.animateIn().play(0);
+  },
+  beforeDestroy: function beforeDestroy() {}
+});
+// CONCATENATED MODULE: ./src/VueNotification/Notification.vue?vue&type=script&lang=js&
+ /* harmony default export */ var VueNotification_Notificationvue_type_script_lang_js_ = (Notificationvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/VueNotification/Notification.vue?vue&type=style&index=0&lang=scss&
+var Notificationvue_type_style_index_0_lang_scss_ = __webpack_require__("81a1");
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+// CONCATENATED MODULE: ./src/VueNotification/Notification.vue
+
+
+
+
+
+
+/* normalize component */
+
+var component = normalizeComponent(
+  VueNotification_Notificationvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Notification = (component.exports);
+// CONCATENATED MODULE: ./src/VueNotification/index.js
+
+
+
+
+var NotificationCenter = {
+  install: function install(Vue) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    function createNotification(lConf) {
+      var ComponentClass = Vue.extend(Notification);
+      var newComponent = new ComponentClass({
+        el: document.createElement("div"),
+        propsData: _objectSpread({}, options, lConf)
+      });
+      notifications.push(newComponent);
+    }
+
+    function removeNotification(component) {
+      notifications = notifications.filter(function (c) {
+        return c !== component;
+      });
+    }
+
+    function removeNotifications() {
+      notifications.forEach(function (c) {
+        return c.remove();
+      });
+      notifications = [];
+    } // Expose utilities
+
+
+    var notifications = [];
+    Vue.prototype.$notification = {
+      new: function _new(message) {
+        var lConf = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        lConf.type = "primary";
+        lConf.message = message;
+        return createNotification(lConf);
+      },
+      success: function success(message) {
+        var lConf = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        lConf.type = "success";
+        lConf.message = message;
+        return createNotification(lConf);
+      },
+      error: function error(message) {
+        var lConf = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        lConf.type = "error";
+        lConf.message = message;
+        return createNotification(lConf);
+      },
+      warning: function warning(message) {
+        var lConf = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        lConf.type = "warning";
+        lConf.message = message;
+        return createNotification(lConf);
+      },
+      dark: function dark(message) {
+        var lConf = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        lConf.type = "dark";
+        lConf.message = message;
+        return createNotification(lConf);
+      },
+      remove: function remove(comp) {
+        return removeNotification(comp);
+      },
+      removeAll: function removeAll() {
+        return removeNotifications();
+      }
+    };
+  }
+};
+/* harmony default export */ var VueNotification = (NotificationCenter);
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service-global/node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+
+
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (VueNotification);
+
+
+
+/***/ }),
+
+/***/ "7199":
+/***/ (function(module, exports) {
+
+// IE 8- don't enum bug keys
+module.exports = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+
+
+/***/ }),
+
+/***/ "730d":
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "79b9":
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__("f1f5");
+var setPrototypeOf = __webpack_require__("7af7").set;
+module.exports = function (that, target, C) {
+  var S = target.constructor;
+  var P;
+  if (S !== C && typeof S == 'function' && (P = S.prototype) !== C.prototype && isObject(P) && setPrototypeOf) {
+    setPrototypeOf(that, P);
+  } return that;
+};
+
+
+/***/ }),
+
+/***/ "7af7":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Works with __proto__ only. Old v8 can't work with null proto objects.
+/* eslint-disable no-proto */
+var isObject = __webpack_require__("f1f5");
+var anObject = __webpack_require__("7d66");
+var check = function (O, proto) {
+  anObject(O);
+  if (!isObject(proto) && proto !== null) throw TypeError(proto + ": can't set as prototype!");
+};
+module.exports = {
+  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
+    function (test, buggy, set) {
+      try {
+        set = __webpack_require__("c11e")(Function.call, __webpack_require__("f003").f(Object.prototype, '__proto__').set, 2);
+        set(test, []);
+        buggy = !(test instanceof Array);
+      } catch (e) { buggy = true; }
+      return function setPrototypeOf(O, proto) {
+        check(O, proto);
+        if (buggy) O.__proto__ = proto;
+        else set(O, proto);
+        return O;
+      };
+    }({}, false) : undefined),
+  check: check
+};
+
+
+/***/ }),
+
+/***/ "7d66":
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__("f1f5");
+module.exports = function (it) {
+  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "7e29":
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = __webpack_require__("513f");
+// eslint-disable-next-line no-prototype-builtins
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+
+/***/ }),
+
+/***/ "7ecc":
+/***/ (function(module, exports) {
+
+// 7.1.4 ToInteger
+var ceil = Math.ceil;
+var floor = Math.floor;
+module.exports = function (it) {
+  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+
+
+/***/ }),
+
+/***/ "81a1":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_usr_local_lib_node_modules_vue_cli_service_global_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Notification_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("c2fb");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_usr_local_lib_node_modules_vue_cli_service_global_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Notification_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_usr_local_lib_node_modules_vue_cli_service_global_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Notification_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_usr_local_lib_node_modules_vue_cli_service_global_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Notification_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "821b":
+/***/ (function(module, exports) {
+
+module.exports = {};
+
+
+/***/ }),
+
+/***/ "85f2":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("9167");
+
+/***/ }),
+
+/***/ "8881":
+/***/ (function(module, exports) {
+
+// IE 8- don't enum bug keys
+module.exports = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+
+
+/***/ }),
+
+/***/ "8fa9":
+/***/ (function(module, exports, __webpack_require__) {
+
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = __webpack_require__("c56e");
+var toLength = __webpack_require__("43b1");
+var toAbsoluteIndex = __webpack_require__("24ae");
+module.exports = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = toIObject($this);
+    var length = toLength(O.length);
+    var index = toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare
+    if (IS_INCLUDES && el != el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare
+      if (value != value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      if (O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+
+/***/ }),
+
+/***/ "8fcb":
+/***/ (function(module, exports, __webpack_require__) {
+
+var def = __webpack_require__("9bce").f;
+var has = __webpack_require__("588f");
+var TAG = __webpack_require__("07c6")('toStringTag');
+
+module.exports = function (it, tag, stat) {
+  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
+};
+
+
+/***/ }),
+
+/***/ "9167":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("4a39");
+var $Object = __webpack_require__("f76d").Object;
+module.exports = function defineProperty(it, key, desc) {
+  return $Object.defineProperty(it, key, desc);
+};
+
+
+/***/ }),
+
+/***/ "929a":
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+
+/***/ }),
+
+/***/ "94df":
+/***/ (function(module, exports, __webpack_require__) {
+
+var has = __webpack_require__("d251");
+var toIObject = __webpack_require__("c562");
+var arrayIndexOf = __webpack_require__("20b3")(false);
+var IE_PROTO = __webpack_require__("54bd")('IE_PROTO');
+
+module.exports = function (object, names) {
+  var O = toIObject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (has(O, key = names[i++])) {
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+
+
+/***/ }),
+
+/***/ "9bce":
+/***/ (function(module, exports, __webpack_require__) {
+
+var anObject = __webpack_require__("7d66");
+var IE8_DOM_DEFINE = __webpack_require__("a974");
+var toPrimitive = __webpack_require__("2e3d");
+var dP = Object.defineProperty;
+
+exports.f = __webpack_require__("b4b4") ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if (IE8_DOM_DEFINE) try {
+    return dP(O, P, Attributes);
+  } catch (e) { /* empty */ }
+  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
+  if ('value' in Attributes) O[P] = Attributes.value;
+  return O;
+};
+
+
+/***/ }),
+
+/***/ "9d80":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("3b7a");
+var $Object = __webpack_require__("f76d").Object;
+module.exports = function getOwnPropertyDescriptor(it, key) {
+  return $Object.getOwnPropertyDescriptor(it, key);
+};
+
+
+/***/ }),
+
+/***/ "9f66":
+/***/ (function(module, exports, __webpack_require__) {
+
+// all enumerable object keys, includes symbols
+var getKeys = __webpack_require__("16e7");
+var gOPS = __webpack_require__("0222");
+var pIE = __webpack_require__("e7c7");
+module.exports = function (it) {
+  var result = getKeys(it);
+  var getSymbols = gOPS.f;
+  if (getSymbols) {
+    var symbols = getSymbols(it);
+    var isEnum = pIE.f;
+    var i = 0;
+    var key;
+    while (symbols.length > i) if (isEnum.call(it, key = symbols[i++])) result.push(key);
+  } return result;
+};
+
+
+/***/ }),
+
+/***/ "a0a5":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 Object.keys(O)
+var toObject = __webpack_require__("436a");
+var $keys = __webpack_require__("16e7");
+
+__webpack_require__("caec")('keys', function () {
+  return function keys(it) {
+    return $keys(toObject(it));
+  };
+});
+
+
+/***/ }),
+
+/***/ "a279":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+__webpack_require__("00c1");
+var anObject = __webpack_require__("7d66");
+var $flags = __webpack_require__("2421");
+var DESCRIPTORS = __webpack_require__("b4b4");
+var TO_STRING = 'toString';
+var $toString = /./[TO_STRING];
+
+var define = function (fn) {
+  __webpack_require__("41aa")(RegExp.prototype, TO_STRING, fn, true);
+};
+
+// 21.2.5.14 RegExp.prototype.toString()
+if (__webpack_require__("5809")(function () { return $toString.call({ source: 'a', flags: 'b' }) != '/a/b'; })) {
+  define(function toString() {
+    var R = anObject(this);
+    return '/'.concat(R.source, '/',
+      'flags' in R ? R.flags : !DESCRIPTORS && R instanceof RegExp ? $flags.call(R) : undefined);
+  });
+// FF44- RegExp#toString has a wrong name
+} else if ($toString.name != TO_STRING) {
+  define(function toString() {
+    return $toString.call(this);
+  });
+}
+
+
+/***/ }),
+
+/***/ "a4bb":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("c0cb");
+
+/***/ }),
+
+/***/ "a64e":
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__("f76d");
+var global = __webpack_require__("1a13");
+var SHARED = '__core-js_shared__';
+var store = global[SHARED] || (global[SHARED] = {});
+
+(module.exports = function (key, value) {
+  return store[key] || (store[key] = value !== undefined ? value : {});
+})('versions', []).push({
+  version: core.version,
+  mode: __webpack_require__("fbf4") ? 'pure' : 'global',
+  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+});
+
+
+/***/ }),
+
+/***/ "a782":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject = __webpack_require__("7d66");
+var dPs = __webpack_require__("39b3");
+var enumBugKeys = __webpack_require__("8881");
+var IE_PROTO = __webpack_require__("cb9e")('IE_PROTO');
+var Empty = function () { /* empty */ };
+var PROTOTYPE = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function () {
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = __webpack_require__("422d")('iframe');
+  var i = enumBugKeys.length;
+  var lt = '<';
+  var gt = '>';
+  var iframeDocument;
+  iframe.style.display = 'none';
+  __webpack_require__("1723").appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties) {
+  var result;
+  if (O !== null) {
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty();
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+
+/***/ }),
+
+/***/ "a866":
+/***/ (function(module, exports) {
+
+module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003' +
+  '\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
+
+
+/***/ }),
+
+/***/ "a974":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = !__webpack_require__("b4b4") && !__webpack_require__("5809")(function () {
+  return Object.defineProperty(__webpack_require__("422d")('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+
+/***/ "ad32":
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__("1a13");
+var core = __webpack_require__("f76d");
+var LIBRARY = __webpack_require__("fbf4");
+var wksExt = __webpack_require__("f0fb");
+var defineProperty = __webpack_require__("c610").f;
+module.exports = function (name) {
+  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
+  if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, { value: wksExt.f(name) });
+};
+
+
+/***/ }),
+
+/***/ "b4b4":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Thank's IE8 for his funny defineProperty
+module.exports = !__webpack_require__("5809")(function () {
+  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+
+/***/ "bdee":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var LIBRARY = __webpack_require__("4017");
+var $export = __webpack_require__("0435");
+var redefine = __webpack_require__("41aa");
+var hide = __webpack_require__("defd");
+var Iterators = __webpack_require__("821b");
+var $iterCreate = __webpack_require__("4029");
+var setToStringTag = __webpack_require__("8fcb");
+var getPrototypeOf = __webpack_require__("3aa7");
+var ITERATOR = __webpack_require__("07c6")('iterator');
+var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
+var FF_ITERATOR = '@@iterator';
+var KEYS = 'keys';
+var VALUES = 'values';
+
+var returnThis = function () { return this; };
+
+module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
+  $iterCreate(Constructor, NAME, next);
+  var getMethod = function (kind) {
+    if (!BUGGY && kind in proto) return proto[kind];
+    switch (kind) {
+      case KEYS: return function keys() { return new Constructor(this, kind); };
+      case VALUES: return function values() { return new Constructor(this, kind); };
+    } return function entries() { return new Constructor(this, kind); };
+  };
+  var TAG = NAME + ' Iterator';
+  var DEF_VALUES = DEFAULT == VALUES;
+  var VALUES_BUG = false;
+  var proto = Base.prototype;
+  var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
+  var $default = $native || getMethod(DEFAULT);
+  var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
+  var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
+  var methods, key, IteratorPrototype;
+  // Fix native
+  if ($anyNative) {
+    IteratorPrototype = getPrototypeOf($anyNative.call(new Base()));
+    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
+      // Set @@toStringTag to native iterators
+      setToStringTag(IteratorPrototype, TAG, true);
+      // fix for some old engines
+      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
+    }
+  }
+  // fix Array#{values, @@iterator}.name in V8 / FF
+  if (DEF_VALUES && $native && $native.name !== VALUES) {
+    VALUES_BUG = true;
+    $default = function values() { return $native.call(this); };
+  }
+  // Define iterator
+  if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+    hide(proto, ITERATOR, $default);
+  }
+  // Plug for library
+  Iterators[NAME] = $default;
+  Iterators[TAG] = returnThis;
+  if (DEFAULT) {
+    methods = {
+      values: DEF_VALUES ? $default : getMethod(VALUES),
+      keys: IS_SET ? $default : getMethod(KEYS),
+      entries: $entries
+    };
+    if (FORCED) for (key in methods) {
+      if (!(key in proto)) redefine(proto, key, methods[key]);
+    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
+  }
+  return methods;
+};
+
+
+/***/ }),
+
+/***/ "c0cb":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("a0a5");
+module.exports = __webpack_require__("f76d").Object.keys;
+
+
+/***/ }),
+
+/***/ "c11e":
+/***/ (function(module, exports, __webpack_require__) {
+
+// optional / simple context binding
+var aFunction = __webpack_require__("d27e");
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+
+/***/ "c2fb":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("12ef");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("3c0266f8", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
+/***/ "c3d1":
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
+var toIObject = __webpack_require__("c562");
+var gOPN = __webpack_require__("587b").f;
+var toString = {}.toString;
+
+var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
+  ? Object.getOwnPropertyNames(window) : [];
+
+var getWindowNames = function (it) {
+  try {
+    return gOPN(it);
+  } catch (e) {
+    return windowNames.slice();
+  }
+};
+
+module.exports.f = function getOwnPropertyNames(it) {
+  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
+};
+
+
+/***/ }),
+
+/***/ "c3dd":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
+var $keys = __webpack_require__("39ec");
+var hiddenKeys = __webpack_require__("8881").concat('length', 'prototype');
+
+exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
+  return $keys(O, hiddenKeys);
+};
+
+
+/***/ }),
+
+/***/ "c562":
+/***/ (function(module, exports, __webpack_require__) {
+
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = __webpack_require__("7e29");
+var defined = __webpack_require__("1f9a");
+module.exports = function (it) {
+  return IObject(defined(it));
+};
+
+
+/***/ }),
+
+/***/ "c56e":
+/***/ (function(module, exports, __webpack_require__) {
+
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = __webpack_require__("d66e");
+var defined = __webpack_require__("ed1e");
+module.exports = function (it) {
+  return IObject(defined(it));
+};
+
+
+/***/ }),
+
+/***/ "c605":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys = __webpack_require__("39ec");
+var enumBugKeys = __webpack_require__("8881");
+
+module.exports = Object.keys || function keys(O) {
+  return $keys(O, enumBugKeys);
+};
+
+
+/***/ }),
+
+/***/ "c610":
+/***/ (function(module, exports, __webpack_require__) {
+
+var anObject = __webpack_require__("ebf6");
+var IE8_DOM_DEFINE = __webpack_require__("e3a4");
+var toPrimitive = __webpack_require__("c809");
+var dP = Object.defineProperty;
+
+exports.f = __webpack_require__("0857") ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if (IE8_DOM_DEFINE) try {
+    return dP(O, P, Attributes);
+  } catch (e) { /* empty */ }
+  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
+  if ('value' in Attributes) O[P] = Attributes.value;
+  return O;
+};
+
+
+/***/ }),
+
+/***/ "c809":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = __webpack_require__("929a");
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function (it, S) {
+  if (!isObject(it)) return it;
+  var fn, val;
+  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+
+
+/***/ }),
+
+/***/ "cabe":
+/***/ (function(module, exports, __webpack_require__) {
+
+var META = __webpack_require__("46a8")('meta');
+var isObject = __webpack_require__("929a");
+var has = __webpack_require__("d251");
+var setDesc = __webpack_require__("c610").f;
+var id = 0;
+var isExtensible = Object.isExtensible || function () {
+  return true;
+};
+var FREEZE = !__webpack_require__("623b")(function () {
+  return isExtensible(Object.preventExtensions({}));
+});
+var setMeta = function (it) {
+  setDesc(it, META, { value: {
+    i: 'O' + ++id, // object ID
+    w: {}          // weak collections IDs
+  } });
+};
+var fastKey = function (it, create) {
+  // return primitive with prefix
+  if (!isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+  if (!has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return 'F';
+    // not necessary to add metadata
+    if (!create) return 'E';
+    // add missing metadata
+    setMeta(it);
+  // return object ID
+  } return it[META].i;
+};
+var getWeak = function (it, create) {
+  if (!has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return true;
+    // not necessary to add metadata
+    if (!create) return false;
+    // add missing metadata
+    setMeta(it);
+  // return hash weak collections IDs
+  } return it[META].w;
+};
+// add metadata on freeze-family methods calling
+var onFreeze = function (it) {
+  if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);
+  return it;
+};
+var meta = module.exports = {
+  KEY: META,
+  NEED: false,
+  fastKey: fastKey,
+  getWeak: getWeak,
+  onFreeze: onFreeze
+};
+
+
+/***/ }),
+
+/***/ "caec":
+/***/ (function(module, exports, __webpack_require__) {
+
+// most Object methods by ES6 should accept primitives
+var $export = __webpack_require__("f379");
+var core = __webpack_require__("f76d");
+var fails = __webpack_require__("623b");
+module.exports = function (KEY, exec) {
+  var fn = (core.Object || {})[KEY] || Object[KEY];
+  var exp = {};
+  exp[KEY] = exec(fn);
+  $export($export.S + $export.F * fails(function () { fn(1); }), 'Object', exp);
+};
+
+
+/***/ }),
+
+/***/ "cb9e":
+/***/ (function(module, exports, __webpack_require__) {
+
+var shared = __webpack_require__("0038")('keys');
+var uid = __webpack_require__("44cb");
+module.exports = function (key) {
+  return shared[key] || (shared[key] = uid(key));
+};
+
+
+/***/ }),
+
+/***/ "d251":
+/***/ (function(module, exports) {
+
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function (it, key) {
+  return hasOwnProperty.call(it, key);
+};
+
+
+/***/ }),
+
+/***/ "d27e":
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "d3c7":
+/***/ (function(module, exports) {
+
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "d66a":
+/***/ (function(module, exports, __webpack_require__) {
+
+var pIE = __webpack_require__("e7c7");
+var createDesc = __webpack_require__("e06b");
+var toIObject = __webpack_require__("c562");
+var toPrimitive = __webpack_require__("c809");
+var has = __webpack_require__("d251");
+var IE8_DOM_DEFINE = __webpack_require__("e3a4");
+var gOPD = Object.getOwnPropertyDescriptor;
+
+exports.f = __webpack_require__("0857") ? gOPD : function getOwnPropertyDescriptor(O, P) {
+  O = toIObject(O);
+  P = toPrimitive(P, true);
+  if (IE8_DOM_DEFINE) try {
+    return gOPD(O, P);
+  } catch (e) { /* empty */ }
+  if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
+};
+
+
+/***/ }),
+
+/***/ "d66e":
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = __webpack_require__("566b");
+// eslint-disable-next-line no-prototype-builtins
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+
+/***/ }),
+
+/***/ "d673":
+/***/ (function(module, exports, __webpack_require__) {
+
+var store = __webpack_require__("a64e")('wks');
+var uid = __webpack_require__("46a8");
+var Symbol = __webpack_require__("1a13").Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+
+/***/ "d8a7":
+/***/ (function(module, exports, __webpack_require__) {
+
+// optional / simple context binding
+var aFunction = __webpack_require__("730d");
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+
+/***/ "dc3a":
+/***/ (function(module, exports) {
+
+exports.f = {}.propertyIsEnumerable;
+
+
+/***/ }),
+
+/***/ "defd":
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__("9bce");
+var createDesc = __webpack_require__("efc2");
+module.exports = __webpack_require__("b4b4") ? function (object, key, value) {
+  return dP.f(object, key, createDesc(1, value));
+} : function (object, key, value) {
+  object[key] = value;
+  return object;
+};
+
+
+/***/ }),
+
+/***/ "e06b":
+/***/ (function(module, exports) {
+
+module.exports = function (bitmap, value) {
+  return {
+    enumerable: !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable: !(bitmap & 4),
+    value: value
+  };
+};
+
+
+/***/ }),
+
+/***/ "e250":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// ECMAScript 6 symbols shim
+var global = __webpack_require__("1a13");
+var has = __webpack_require__("d251");
+var DESCRIPTORS = __webpack_require__("0857");
+var $export = __webpack_require__("f379");
+var redefine = __webpack_require__("3b50");
+var META = __webpack_require__("cabe").KEY;
+var $fails = __webpack_require__("623b");
+var shared = __webpack_require__("a64e");
+var setToStringTag = __webpack_require__("ef03");
+var uid = __webpack_require__("46a8");
+var wks = __webpack_require__("d673");
+var wksExt = __webpack_require__("f0fb");
+var wksDefine = __webpack_require__("ad32");
+var enumKeys = __webpack_require__("9f66");
+var isArray = __webpack_require__("1fe5");
+var anObject = __webpack_require__("ebf6");
+var isObject = __webpack_require__("929a");
+var toIObject = __webpack_require__("c562");
+var toPrimitive = __webpack_require__("c809");
+var createDesc = __webpack_require__("e06b");
+var _create = __webpack_require__("6834");
+var gOPNExt = __webpack_require__("c3d1");
+var $GOPD = __webpack_require__("d66a");
+var $DP = __webpack_require__("c610");
+var $keys = __webpack_require__("16e7");
+var gOPD = $GOPD.f;
+var dP = $DP.f;
+var gOPN = gOPNExt.f;
+var $Symbol = global.Symbol;
+var $JSON = global.JSON;
+var _stringify = $JSON && $JSON.stringify;
+var PROTOTYPE = 'prototype';
+var HIDDEN = wks('_hidden');
+var TO_PRIMITIVE = wks('toPrimitive');
+var isEnum = {}.propertyIsEnumerable;
+var SymbolRegistry = shared('symbol-registry');
+var AllSymbols = shared('symbols');
+var OPSymbols = shared('op-symbols');
+var ObjectProto = Object[PROTOTYPE];
+var USE_NATIVE = typeof $Symbol == 'function';
+var QObject = global.QObject;
+// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
+var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
+
+// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+var setSymbolDesc = DESCRIPTORS && $fails(function () {
+  return _create(dP({}, 'a', {
+    get: function () { return dP(this, 'a', { value: 7 }).a; }
+  })).a != 7;
+}) ? function (it, key, D) {
+  var protoDesc = gOPD(ObjectProto, key);
+  if (protoDesc) delete ObjectProto[key];
+  dP(it, key, D);
+  if (protoDesc && it !== ObjectProto) dP(ObjectProto, key, protoDesc);
+} : dP;
+
+var wrap = function (tag) {
+  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
+  sym._k = tag;
+  return sym;
+};
+
+var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function (it) {
+  return typeof it == 'symbol';
+} : function (it) {
+  return it instanceof $Symbol;
+};
+
+var $defineProperty = function defineProperty(it, key, D) {
+  if (it === ObjectProto) $defineProperty(OPSymbols, key, D);
+  anObject(it);
+  key = toPrimitive(key, true);
+  anObject(D);
+  if (has(AllSymbols, key)) {
+    if (!D.enumerable) {
+      if (!has(it, HIDDEN)) dP(it, HIDDEN, createDesc(1, {}));
+      it[HIDDEN][key] = true;
+    } else {
+      if (has(it, HIDDEN) && it[HIDDEN][key]) it[HIDDEN][key] = false;
+      D = _create(D, { enumerable: createDesc(0, false) });
+    } return setSymbolDesc(it, key, D);
+  } return dP(it, key, D);
+};
+var $defineProperties = function defineProperties(it, P) {
+  anObject(it);
+  var keys = enumKeys(P = toIObject(P));
+  var i = 0;
+  var l = keys.length;
+  var key;
+  while (l > i) $defineProperty(it, key = keys[i++], P[key]);
+  return it;
+};
+var $create = function create(it, P) {
+  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
+};
+var $propertyIsEnumerable = function propertyIsEnumerable(key) {
+  var E = isEnum.call(this, key = toPrimitive(key, true));
+  if (this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return false;
+  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
+};
+var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {
+  it = toIObject(it);
+  key = toPrimitive(key, true);
+  if (it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return;
+  var D = gOPD(it, key);
+  if (D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key])) D.enumerable = true;
+  return D;
+};
+var $getOwnPropertyNames = function getOwnPropertyNames(it) {
+  var names = gOPN(toIObject(it));
+  var result = [];
+  var i = 0;
+  var key;
+  while (names.length > i) {
+    if (!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META) result.push(key);
+  } return result;
+};
+var $getOwnPropertySymbols = function getOwnPropertySymbols(it) {
+  var IS_OP = it === ObjectProto;
+  var names = gOPN(IS_OP ? OPSymbols : toIObject(it));
+  var result = [];
+  var i = 0;
+  var key;
+  while (names.length > i) {
+    if (has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true)) result.push(AllSymbols[key]);
+  } return result;
+};
+
+// 19.4.1.1 Symbol([description])
+if (!USE_NATIVE) {
+  $Symbol = function Symbol() {
+    if (this instanceof $Symbol) throw TypeError('Symbol is not a constructor!');
+    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
+    var $set = function (value) {
+      if (this === ObjectProto) $set.call(OPSymbols, value);
+      if (has(this, HIDDEN) && has(this[HIDDEN], tag)) this[HIDDEN][tag] = false;
+      setSymbolDesc(this, tag, createDesc(1, value));
+    };
+    if (DESCRIPTORS && setter) setSymbolDesc(ObjectProto, tag, { configurable: true, set: $set });
+    return wrap(tag);
+  };
+  redefine($Symbol[PROTOTYPE], 'toString', function toString() {
+    return this._k;
+  });
+
+  $GOPD.f = $getOwnPropertyDescriptor;
+  $DP.f = $defineProperty;
+  __webpack_require__("587b").f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__("e7c7").f = $propertyIsEnumerable;
+  __webpack_require__("0222").f = $getOwnPropertySymbols;
+
+  if (DESCRIPTORS && !__webpack_require__("fbf4")) {
+    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
+  }
+
+  wksExt.f = function (name) {
+    return wrap(wks(name));
+  };
+}
+
+$export($export.G + $export.W + $export.F * !USE_NATIVE, { Symbol: $Symbol });
+
+for (var es6Symbols = (
+  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
+  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
+).split(','), j = 0; es6Symbols.length > j;)wks(es6Symbols[j++]);
+
+for (var wellKnownSymbols = $keys(wks.store), k = 0; wellKnownSymbols.length > k;) wksDefine(wellKnownSymbols[k++]);
+
+$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
+  // 19.4.2.1 Symbol.for(key)
+  'for': function (key) {
+    return has(SymbolRegistry, key += '')
+      ? SymbolRegistry[key]
+      : SymbolRegistry[key] = $Symbol(key);
+  },
+  // 19.4.2.5 Symbol.keyFor(sym)
+  keyFor: function keyFor(sym) {
+    if (!isSymbol(sym)) throw TypeError(sym + ' is not a symbol!');
+    for (var key in SymbolRegistry) if (SymbolRegistry[key] === sym) return key;
+  },
+  useSetter: function () { setter = true; },
+  useSimple: function () { setter = false; }
+});
+
+$export($export.S + $export.F * !USE_NATIVE, 'Object', {
+  // 19.1.2.2 Object.create(O [, Properties])
+  create: $create,
+  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
+  defineProperty: $defineProperty,
+  // 19.1.2.3 Object.defineProperties(O, Properties)
+  defineProperties: $defineProperties,
+  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
+  // 19.1.2.7 Object.getOwnPropertyNames(O)
+  getOwnPropertyNames: $getOwnPropertyNames,
+  // 19.1.2.8 Object.getOwnPropertySymbols(O)
+  getOwnPropertySymbols: $getOwnPropertySymbols
+});
+
+// 24.3.2 JSON.stringify(value [, replacer [, space]])
+$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
+  var S = $Symbol();
+  // MS Edge converts symbol values to JSON as {}
+  // WebKit converts symbol values to JSON as null
+  // V8 throws on boxed symbols
+  return _stringify([S]) != '[null]' || _stringify({ a: S }) != '{}' || _stringify(Object(S)) != '{}';
+})), 'JSON', {
+  stringify: function stringify(it) {
+    var args = [it];
+    var i = 1;
+    var replacer, $replacer;
+    while (arguments.length > i) args.push(arguments[i++]);
+    $replacer = replacer = args[1];
+    if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined
+    if (!isArray(replacer)) replacer = function (key, value) {
+      if (typeof $replacer == 'function') value = $replacer.call(this, key, value);
+      if (!isSymbol(value)) return value;
+    };
+    args[1] = replacer;
+    return _stringify.apply($JSON, args);
+  }
+});
+
+// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
+$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__("4663")($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+// 19.4.3.5 Symbol.prototype[@@toStringTag]
+setToStringTag($Symbol, 'Symbol');
+// 20.2.1.9 Math[@@toStringTag]
+setToStringTag(Math, 'Math', true);
+// 24.3.3 JSON[@@toStringTag]
+setToStringTag(global.JSON, 'JSON', true);
+
+
+/***/ }),
+
+/***/ "e265":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("4aff");
+
+/***/ }),
+
+/***/ "e3a4":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = !__webpack_require__("0857") && !__webpack_require__("623b")(function () {
+  return Object.defineProperty(__webpack_require__("e87b")('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+
+/***/ "e3cf":
+/***/ (function(module, exports) {
+
+module.exports = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+/***/ }),
+
+/***/ "e7c7":
+/***/ (function(module, exports) {
+
+exports.f = {}.propertyIsEnumerable;
+
+
+/***/ }),
+
+/***/ "e87b":
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__("929a");
+var document = __webpack_require__("1a13").document;
+// typeof document.createElement is 'object' in old IE
+var is = isObject(document) && isObject(document.createElement);
+module.exports = function (it) {
+  return is ? document.createElement(it) : {};
+};
+
+
+/***/ }),
+
+/***/ "e886":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__("d3c7");
+var has = __webpack_require__("588f");
+var cof = __webpack_require__("566b");
+var inheritIfRequired = __webpack_require__("79b9");
+var toPrimitive = __webpack_require__("2e3d");
+var fails = __webpack_require__("5809");
+var gOPN = __webpack_require__("c3dd").f;
+var gOPD = __webpack_require__("f003").f;
+var dP = __webpack_require__("9bce").f;
+var $trim = __webpack_require__("f62a").trim;
+var NUMBER = 'Number';
+var $Number = global[NUMBER];
+var Base = $Number;
+var proto = $Number.prototype;
+// Opera ~12 has broken Object#toString
+var BROKEN_COF = cof(__webpack_require__("a782")(proto)) == NUMBER;
+var TRIM = 'trim' in String.prototype;
+
+// 7.1.3 ToNumber(argument)
+var toNumber = function (argument) {
+  var it = toPrimitive(argument, false);
+  if (typeof it == 'string' && it.length > 2) {
+    it = TRIM ? it.trim() : $trim(it, 3);
+    var first = it.charCodeAt(0);
+    var third, radix, maxCode;
+    if (first === 43 || first === 45) {
+      third = it.charCodeAt(2);
+      if (third === 88 || third === 120) return NaN; // Number('+0x1') should be NaN, old V8 fix
+    } else if (first === 48) {
+      switch (it.charCodeAt(1)) {
+        case 66: case 98: radix = 2; maxCode = 49; break; // fast equal /^0b[01]+$/i
+        case 79: case 111: radix = 8; maxCode = 55; break; // fast equal /^0o[0-7]+$/i
+        default: return +it;
+      }
+      for (var digits = it.slice(2), i = 0, l = digits.length, code; i < l; i++) {
+        code = digits.charCodeAt(i);
+        // parseInt parses a string to a first unavailable symbol
+        // but ToNumber should return NaN if a string contains unavailable symbols
+        if (code < 48 || code > maxCode) return NaN;
+      } return parseInt(digits, radix);
+    }
+  } return +it;
+};
+
+if (!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')) {
+  $Number = function Number(value) {
+    var it = arguments.length < 1 ? 0 : value;
+    var that = this;
+    return that instanceof $Number
+      // check on 1..constructor(foo) case
+      && (BROKEN_COF ? fails(function () { proto.valueOf.call(that); }) : cof(that) != NUMBER)
+        ? inheritIfRequired(new Base(toNumber(it)), that, $Number) : toNumber(it);
+  };
+  for (var keys = __webpack_require__("b4b4") ? gOPN(Base) : (
+    // ES3:
+    'MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,' +
+    // ES6 (in case, if modules with ES6 Number statics required before):
+    'EPSILON,isFinite,isInteger,isNaN,isSafeInteger,MAX_SAFE_INTEGER,' +
+    'MIN_SAFE_INTEGER,parseFloat,parseInt,isInteger'
+  ).split(','), j = 0, key; keys.length > j; j++) {
+    if (has(Base, key = keys[j]) && !has($Number, key)) {
+      dP($Number, key, gOPD(Base, key));
+    }
+  }
+  $Number.prototype = proto;
+  proto.constructor = $Number;
+  __webpack_require__("41aa")(global, NUMBER, $Number);
+}
+
+
+/***/ }),
+
+/***/ "ebf6":
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__("929a");
+module.exports = function (it) {
+  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "ed1e":
+/***/ (function(module, exports) {
+
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function (it) {
+  if (it == undefined) throw TypeError("Can't call method on  " + it);
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "ee38":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $iterators = __webpack_require__("1e97");
+var getKeys = __webpack_require__("c605");
+var redefine = __webpack_require__("41aa");
+var global = __webpack_require__("d3c7");
+var hide = __webpack_require__("defd");
+var Iterators = __webpack_require__("821b");
+var wks = __webpack_require__("07c6");
+var ITERATOR = wks('iterator');
+var TO_STRING_TAG = wks('toStringTag');
+var ArrayValues = Iterators.Array;
+
+var DOMIterables = {
+  CSSRuleList: true, // TODO: Not spec compliant, should be false.
+  CSSStyleDeclaration: false,
+  CSSValueList: false,
+  ClientRectList: false,
+  DOMRectList: false,
+  DOMStringList: false,
+  DOMTokenList: true,
+  DataTransferItemList: false,
+  FileList: false,
+  HTMLAllCollection: false,
+  HTMLCollection: false,
+  HTMLFormElement: false,
+  HTMLSelectElement: false,
+  MediaList: true, // TODO: Not spec compliant, should be false.
+  MimeTypeArray: false,
+  NamedNodeMap: false,
+  NodeList: true,
+  PaintRequestList: false,
+  Plugin: false,
+  PluginArray: false,
+  SVGLengthList: false,
+  SVGNumberList: false,
+  SVGPathSegList: false,
+  SVGPointList: false,
+  SVGStringList: false,
+  SVGTransformList: false,
+  SourceBufferList: false,
+  StyleSheetList: true, // TODO: Not spec compliant, should be false.
+  TextTrackCueList: false,
+  TextTrackList: false,
+  TouchList: false
+};
+
+for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++) {
+  var NAME = collections[i];
+  var explicit = DOMIterables[NAME];
+  var Collection = global[NAME];
+  var proto = Collection && Collection.prototype;
+  var key;
+  if (proto) {
+    if (!proto[ITERATOR]) hide(proto, ITERATOR, ArrayValues);
+    if (!proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);
+    Iterators[NAME] = ArrayValues;
+    if (explicit) for (key in $iterators) if (!proto[key]) redefine(proto, key, $iterators[key], true);
+  }
+}
+
+
+/***/ }),
+
+/***/ "ef03":
+/***/ (function(module, exports, __webpack_require__) {
+
+var def = __webpack_require__("c610").f;
+var has = __webpack_require__("d251");
+var TAG = __webpack_require__("d673")('toStringTag');
+
+module.exports = function (it, tag, stat) {
+  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
+};
+
+
+/***/ }),
+
+/***/ "efc2":
+/***/ (function(module, exports) {
+
+module.exports = function (bitmap, value) {
+  return {
+    enumerable: !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable: !(bitmap & 4),
+    value: value
+  };
+};
+
+
+/***/ }),
+
+/***/ "f003":
+/***/ (function(module, exports, __webpack_require__) {
+
+var pIE = __webpack_require__("dc3a");
+var createDesc = __webpack_require__("efc2");
+var toIObject = __webpack_require__("c56e");
+var toPrimitive = __webpack_require__("2e3d");
+var has = __webpack_require__("588f");
+var IE8_DOM_DEFINE = __webpack_require__("a974");
+var gOPD = Object.getOwnPropertyDescriptor;
+
+exports.f = __webpack_require__("b4b4") ? gOPD : function getOwnPropertyDescriptor(O, P) {
+  O = toIObject(O);
+  P = toPrimitive(P, true);
+  if (IE8_DOM_DEFINE) try {
+    return gOPD(O, P);
+  } catch (e) { /* empty */ }
+  if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
+};
+
+
+/***/ }),
+
+/***/ "f0fb":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports.f = __webpack_require__("d673");
+
+
+/***/ }),
+
+/***/ "f1f5":
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+
+/***/ }),
+
+/***/ "f379":
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__("1a13");
+var core = __webpack_require__("f76d");
+var ctx = __webpack_require__("d8a7");
+var hide = __webpack_require__("4663");
+var has = __webpack_require__("d251");
+var PROTOTYPE = 'prototype';
+
+var $export = function (type, name, source) {
+  var IS_FORCED = type & $export.F;
+  var IS_GLOBAL = type & $export.G;
+  var IS_STATIC = type & $export.S;
+  var IS_PROTO = type & $export.P;
+  var IS_BIND = type & $export.B;
+  var IS_WRAP = type & $export.W;
+  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
+  var expProto = exports[PROTOTYPE];
+  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE];
+  var key, own, out;
+  if (IS_GLOBAL) source = name;
+  for (key in source) {
+    // contains in native
+    own = !IS_FORCED && target && target[key] !== undefined;
+    if (own && has(exports, key)) continue;
+    // export native or passed
+    out = own ? target[key] : source[key];
+    // prevent global pollution for namespaces
+    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
+    // bind timers to global for call from export context
+    : IS_BIND && own ? ctx(out, global)
+    // wrap global constructors for prevent change them in library
+    : IS_WRAP && target[key] == out ? (function (C) {
+      var F = function (a, b, c) {
+        if (this instanceof C) {
+          switch (arguments.length) {
+            case 0: return new C();
+            case 1: return new C(a);
+            case 2: return new C(a, b);
+          } return new C(a, b, c);
+        } return C.apply(this, arguments);
+      };
+      F[PROTOTYPE] = C[PROTOTYPE];
+      return F;
+    // make static versions for prototype methods
+    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
+    if (IS_PROTO) {
+      (exports.virtual || (exports.virtual = {}))[key] = out;
+      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
+      if (type & $export.R && expProto && !expProto[key]) hide(expProto, key, out);
+    }
+  }
+};
+// type bitmap
+$export.F = 1;   // forced
+$export.G = 2;   // global
+$export.S = 4;   // static
+$export.P = 8;   // proto
+$export.B = 16;  // bind
+$export.W = 32;  // wrap
+$export.U = 64;  // safe
+$export.R = 128; // real proto method for `library`
+module.exports = $export;
+
+
+/***/ }),
+
+/***/ "f5d4":
+/***/ (function(module, exports) {
+
+var core = module.exports = { version: '2.6.5' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "f62a":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__("0435");
+var defined = __webpack_require__("ed1e");
+var fails = __webpack_require__("5809");
+var spaces = __webpack_require__("a866");
+var space = '[' + spaces + ']';
+var non = '\u200b\u0085';
+var ltrim = RegExp('^' + space + space + '*');
+var rtrim = RegExp(space + space + '*$');
+
+var exporter = function (KEY, exec, ALIAS) {
+  var exp = {};
+  var FORCE = fails(function () {
+    return !!spaces[KEY]() || non[KEY]() != non;
+  });
+  var fn = exp[KEY] = FORCE ? exec(trim) : spaces[KEY];
+  if (ALIAS) exp[ALIAS] = fn;
+  $export($export.P + $export.F * FORCE, 'String', exp);
+};
+
+// 1 -> String#trimLeft
+// 2 -> String#trimRight
+// 3 -> String#trim
+var trim = exporter.trim = function (string, TYPE) {
+  string = String(defined(string));
+  if (TYPE & 1) string = string.replace(ltrim, '');
+  if (TYPE & 2) string = string.replace(rtrim, '');
+  return string;
+};
+
+module.exports = exporter;
+
+
+/***/ }),
+
+/***/ "f76d":
+/***/ (function(module, exports) {
+
+var core = module.exports = { version: '2.6.5' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "fbf4":
+/***/ (function(module, exports) {
+
+module.exports = true;
+
+
+/***/ })
+
+/******/ })["default"];
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -1878,7 +5304,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
+  data: function data(vm) {
     return {
       valid: true,
       password: '',
@@ -1889,12 +5315,39 @@ __webpack_require__.r(__webpack_exports__);
         return !!v || 'Password is required';
       }, function (v) {
         return v.length >= 8 || 'Min 8 characters';
+      }],
+      passwordConfirmationRules: [function (v) {
+        return !!v || 'Password confirmation is required';
+      }, function (v) {
+        return v.length >= 8 || 'Min 8 characters';
+      }, function (v) {
+        return v == vm.password || 'Passwords do not match';
       }]
     };
   },
   methods: {
     submit: function submit() {
-      return true;
+      var _this = this;
+
+      if (!this.$refs.form.validate()) {
+        return;
+      }
+
+      axios.put('/change-password', {
+        password: this.password,
+        password_confirmation: this.passwordConfirmation
+      }).then(function (r) {
+        _this.password = "";
+        _this.passwordConfirmation = "";
+
+        _this.$refs.form.resetValidation();
+
+        _this.$notification.success("Your information has been updated successfully", {
+          timer: 3
+        });
+      })["catch"](function (error) {
+        _this.$handleRequestError(error);
+      });
     }
   }
 });
@@ -1990,38 +5443,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MyAccountComponent.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MyAccountComponent.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {};
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/UserInformationComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/UserInformationComponent.vue?vue&type=script&lang=js& ***!
@@ -2075,17 +5496,31 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submit: function submit() {
-      return true;
+      var _this = this;
+
+      if (!this.$refs.form.validate()) {
+        return;
+      }
+
+      axios.put('/user', {
+        name: this.name
+      }).then(function (r) {
+        _this.$notification.success("Your information has been updated successfully", {
+          timer: 3
+        });
+      })["catch"](function (error) {
+        _this.$handleRequestError(error);
+      });
     },
     getUserInformation: function getUserInformation() {
-      var me = this;
-      var url = location.origin + '/user';
-      axios.get(url).then(function (r) {
+      var _this2 = this;
+
+      axios.get('/user').then(function (r) {
         var response = r.data;
-        me.email = response.email;
-        me.name = response.name;
+        _this2.email = response.email;
+        _this2.name = response.name;
       })["catch"](function (error) {
-        console.log(error);
+        _this2.$handleRequestError(error);
       });
     }
   },
@@ -6627,136 +10062,5464 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/material-design-icons-iconfont/dist/material-design-icons.css?dada":
-/*!********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/material-design-icons-iconfont/dist/material-design-icons.css ***!
-  \********************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/gsap/CSSPlugin.js":
+/*!****************************************!*\
+  !*** ./node_modules/gsap/CSSPlugin.js ***!
+  \****************************************/
+/*! exports provided: CSSPlugin, default, _getBBox, _createElement, checkPrefix */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var escape = __webpack_require__(/*! ../../css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
-exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CSSPlugin", function() { return CSSPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CSSPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getBBox", function() { return _getBBox; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_createElement", function() { return _createElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkPrefix", function() { return _checkPropPrefix; });
+/* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ "./node_modules/gsap/gsap-core.js");
+/*!
+ * CSSPlugin 3.1.1
+ * https://greensock.com
+ *
+ * Copyright 2008-2020, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
 
 
-// module
-exports.push([module.i, "@charset \"UTF-8\";\r\n@font-face {\r\n  font-family: 'Material Icons';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  font-display: block;\r\n  src: url(" + escape(__webpack_require__(/*! ./fonts/MaterialIcons-Regular.eot */ "./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.eot")) + ");\r\n  /* For IE6-8 */\r\n  src: local(\"\\263A\"), url(" + escape(__webpack_require__(/*! ./fonts/MaterialIcons-Regular.woff2 */ "./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ./fonts/MaterialIcons-Regular.woff */ "./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff")) + ") format(\"woff\"), url(" + escape(__webpack_require__(/*! ./fonts/MaterialIcons-Regular.ttf */ "./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.ttf")) + ") format(\"truetype\"); }\r\n\r\n.material-icons {\r\n  font-family: 'Material Icons';\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-size: 24px;\r\n  /* Preferred icon size */\r\n  display: inline-block;\r\n  line-height: 1;\r\n  text-transform: none;\r\n  letter-spacing: normal;\r\n  word-wrap: normal;\r\n  white-space: nowrap;\r\n  direction: ltr;\r\n  /* Support for all WebKit browsers. */\r\n  -webkit-font-smoothing: antialiased;\r\n  /* Support for Safari and Chrome. */\r\n  text-rendering: optimizeLegibility;\r\n  /* Support for Firefox. */\r\n  -moz-osx-font-smoothing: grayscale;\r\n  /* Support for IE. */\r\n  font-feature-settings: 'liga'; }\r\n  .material-icons._10k:before {\r\n    content: \"\\E951\"; }\r\n  .material-icons._10mp:before {\r\n    content: \"\\E952\"; }\r\n  .material-icons._11mp:before {\r\n    content: \"\\E953\"; }\r\n  .material-icons._12mp:before {\r\n    content: \"\\E954\"; }\r\n  .material-icons._13mp:before {\r\n    content: \"\\E955\"; }\r\n  .material-icons._14mp:before {\r\n    content: \"\\E956\"; }\r\n  .material-icons._15mp:before {\r\n    content: \"\\E957\"; }\r\n  .material-icons._16mp:before {\r\n    content: \"\\E958\"; }\r\n  .material-icons._17mp:before {\r\n    content: \"\\E959\"; }\r\n  .material-icons._18mp:before {\r\n    content: \"\\E95A\"; }\r\n  .material-icons._19mp:before {\r\n    content: \"\\E95B\"; }\r\n  .material-icons._1k:before {\r\n    content: \"\\E95C\"; }\r\n  .material-icons._1k_plus:before {\r\n    content: \"\\E95D\"; }\r\n  .material-icons._20mp:before {\r\n    content: \"\\E95E\"; }\r\n  .material-icons._21mp:before {\r\n    content: \"\\E95F\"; }\r\n  .material-icons._22mp:before {\r\n    content: \"\\E960\"; }\r\n  .material-icons._23mp:before {\r\n    content: \"\\E961\"; }\r\n  .material-icons._24mp:before {\r\n    content: \"\\E962\"; }\r\n  .material-icons._2k:before {\r\n    content: \"\\E963\"; }\r\n  .material-icons._2k_plus:before {\r\n    content: \"\\E964\"; }\r\n  .material-icons._2mp:before {\r\n    content: \"\\E965\"; }\r\n  .material-icons._360:before {\r\n    content: \"\\E577\"; }\r\n  .material-icons._3d_rotation:before {\r\n    content: \"\\E84D\"; }\r\n  .material-icons._3k:before {\r\n    content: \"\\E966\"; }\r\n  .material-icons._3k_plus:before {\r\n    content: \"\\E967\"; }\r\n  .material-icons._3mp:before {\r\n    content: \"\\E968\"; }\r\n  .material-icons._4k:before {\r\n    content: \"\\E072\"; }\r\n  .material-icons._4k_plus:before {\r\n    content: \"\\E969\"; }\r\n  .material-icons._4mp:before {\r\n    content: \"\\E96A\"; }\r\n  .material-icons._5k:before {\r\n    content: \"\\E96B\"; }\r\n  .material-icons._5k_plus:before {\r\n    content: \"\\E96C\"; }\r\n  .material-icons._5mp:before {\r\n    content: \"\\E96D\"; }\r\n  .material-icons._6k:before {\r\n    content: \"\\E96E\"; }\r\n  .material-icons._6k_plus:before {\r\n    content: \"\\E96F\"; }\r\n  .material-icons._6mp:before {\r\n    content: \"\\E970\"; }\r\n  .material-icons._7k:before {\r\n    content: \"\\E971\"; }\r\n  .material-icons._7k_plus:before {\r\n    content: \"\\E972\"; }\r\n  .material-icons._7mp:before {\r\n    content: \"\\E973\"; }\r\n  .material-icons._8k:before {\r\n    content: \"\\E974\"; }\r\n  .material-icons._8k_plus:before {\r\n    content: \"\\E975\"; }\r\n  .material-icons._8mp:before {\r\n    content: \"\\E976\"; }\r\n  .material-icons._9k:before {\r\n    content: \"\\E977\"; }\r\n  .material-icons._9k_plus:before {\r\n    content: \"\\E978\"; }\r\n  .material-icons._9mp:before {\r\n    content: \"\\E979\"; }\r\n  .material-icons.ac_unit:before {\r\n    content: \"\\EB3B\"; }\r\n  .material-icons.access_alarm:before {\r\n    content: \"\\E190\"; }\r\n  .material-icons.access_alarms:before {\r\n    content: \"\\E191\"; }\r\n  .material-icons.access_time:before {\r\n    content: \"\\E192\"; }\r\n  .material-icons.accessibility:before {\r\n    content: \"\\E84E\"; }\r\n  .material-icons.accessibility_new:before {\r\n    content: \"\\E92C\"; }\r\n  .material-icons.accessible:before {\r\n    content: \"\\E914\"; }\r\n  .material-icons.accessible_forward:before {\r\n    content: \"\\E934\"; }\r\n  .material-icons.account_balance:before {\r\n    content: \"\\E84F\"; }\r\n  .material-icons.account_balance_wallet:before {\r\n    content: \"\\E850\"; }\r\n  .material-icons.account_box:before {\r\n    content: \"\\E851\"; }\r\n  .material-icons.account_circle:before {\r\n    content: \"\\E853\"; }\r\n  .material-icons.account_tree:before {\r\n    content: \"\\E97A\"; }\r\n  .material-icons.adb:before {\r\n    content: \"\\E60E\"; }\r\n  .material-icons.add:before {\r\n    content: \"\\E145\"; }\r\n  .material-icons.add_a_photo:before {\r\n    content: \"\\E439\"; }\r\n  .material-icons.add_alarm:before {\r\n    content: \"\\E193\"; }\r\n  .material-icons.add_alert:before {\r\n    content: \"\\E003\"; }\r\n  .material-icons.add_box:before {\r\n    content: \"\\E146\"; }\r\n  .material-icons.add_call:before {\r\n    content: \"\\E0E8\"; }\r\n  .material-icons.add_chart:before {\r\n    content: \"\\E97B\"; }\r\n  .material-icons.add_circle:before {\r\n    content: \"\\E147\"; }\r\n  .material-icons.add_circle_outline:before {\r\n    content: \"\\E148\"; }\r\n  .material-icons.add_comment:before {\r\n    content: \"\\E266\"; }\r\n  .material-icons.add_ic_call:before {\r\n    content: \"\\E97C\"; }\r\n  .material-icons.add_link:before {\r\n    content: \"\\E178\"; }\r\n  .material-icons.add_location:before {\r\n    content: \"\\E567\"; }\r\n  .material-icons.add_moderator:before {\r\n    content: \"\\E97D\"; }\r\n  .material-icons.add_photo_alternate:before {\r\n    content: \"\\E43E\"; }\r\n  .material-icons.add_shopping_cart:before {\r\n    content: \"\\E854\"; }\r\n  .material-icons.add_to_home_screen:before {\r\n    content: \"\\E1FE\"; }\r\n  .material-icons.add_to_photos:before {\r\n    content: \"\\E39D\"; }\r\n  .material-icons.add_to_queue:before {\r\n    content: \"\\E05C\"; }\r\n  .material-icons.adjust:before {\r\n    content: \"\\E39E\"; }\r\n  .material-icons.airline_seat_flat:before {\r\n    content: \"\\E630\"; }\r\n  .material-icons.airline_seat_flat_angled:before {\r\n    content: \"\\E631\"; }\r\n  .material-icons.airline_seat_individual_suite:before {\r\n    content: \"\\E632\"; }\r\n  .material-icons.airline_seat_legroom_extra:before {\r\n    content: \"\\E633\"; }\r\n  .material-icons.airline_seat_legroom_normal:before {\r\n    content: \"\\E634\"; }\r\n  .material-icons.airline_seat_legroom_reduced:before {\r\n    content: \"\\E635\"; }\r\n  .material-icons.airline_seat_recline_extra:before {\r\n    content: \"\\E636\"; }\r\n  .material-icons.airline_seat_recline_normal:before {\r\n    content: \"\\E637\"; }\r\n  .material-icons.airplanemode_active:before {\r\n    content: \"\\E195\"; }\r\n  .material-icons.airplanemode_inactive:before {\r\n    content: \"\\E194\"; }\r\n  .material-icons.airplanemode_off:before {\r\n    content: \"\\E194\"; }\r\n  .material-icons.airplanemode_on:before {\r\n    content: \"\\E195\"; }\r\n  .material-icons.airplay:before {\r\n    content: \"\\E055\"; }\r\n  .material-icons.airport_shuttle:before {\r\n    content: \"\\EB3C\"; }\r\n  .material-icons.alarm:before {\r\n    content: \"\\E855\"; }\r\n  .material-icons.alarm_add:before {\r\n    content: \"\\E856\"; }\r\n  .material-icons.alarm_off:before {\r\n    content: \"\\E857\"; }\r\n  .material-icons.alarm_on:before {\r\n    content: \"\\E858\"; }\r\n  .material-icons.album:before {\r\n    content: \"\\E019\"; }\r\n  .material-icons.all_inbox:before {\r\n    content: \"\\E97F\"; }\r\n  .material-icons.all_inclusive:before {\r\n    content: \"\\EB3D\"; }\r\n  .material-icons.all_out:before {\r\n    content: \"\\E90B\"; }\r\n  .material-icons.alternate_email:before {\r\n    content: \"\\E0E6\"; }\r\n  .material-icons.amp_stories:before {\r\n    content: \"\\EA13\"; }\r\n  .material-icons.android:before {\r\n    content: \"\\E859\"; }\r\n  .material-icons.announcement:before {\r\n    content: \"\\E85A\"; }\r\n  .material-icons.apartment:before {\r\n    content: \"\\EA40\"; }\r\n  .material-icons.approval:before {\r\n    content: \"\\E982\"; }\r\n  .material-icons.apps:before {\r\n    content: \"\\E5C3\"; }\r\n  .material-icons.archive:before {\r\n    content: \"\\E149\"; }\r\n  .material-icons.arrow_back:before {\r\n    content: \"\\E5C4\"; }\r\n  .material-icons.arrow_back_ios:before {\r\n    content: \"\\E5E0\"; }\r\n  .material-icons.arrow_downward:before {\r\n    content: \"\\E5DB\"; }\r\n  .material-icons.arrow_drop_down:before {\r\n    content: \"\\E5C5\"; }\r\n  .material-icons.arrow_drop_down_circle:before {\r\n    content: \"\\E5C6\"; }\r\n  .material-icons.arrow_drop_up:before {\r\n    content: \"\\E5C7\"; }\r\n  .material-icons.arrow_forward:before {\r\n    content: \"\\E5C8\"; }\r\n  .material-icons.arrow_forward_ios:before {\r\n    content: \"\\E5E1\"; }\r\n  .material-icons.arrow_left:before {\r\n    content: \"\\E5DE\"; }\r\n  .material-icons.arrow_right:before {\r\n    content: \"\\E5DF\"; }\r\n  .material-icons.arrow_right_alt:before {\r\n    content: \"\\E941\"; }\r\n  .material-icons.arrow_upward:before {\r\n    content: \"\\E5D8\"; }\r\n  .material-icons.art_track:before {\r\n    content: \"\\E060\"; }\r\n  .material-icons.aspect_ratio:before {\r\n    content: \"\\E85B\"; }\r\n  .material-icons.assessment:before {\r\n    content: \"\\E85C\"; }\r\n  .material-icons.assignment:before {\r\n    content: \"\\E85D\"; }\r\n  .material-icons.assignment_ind:before {\r\n    content: \"\\E85E\"; }\r\n  .material-icons.assignment_late:before {\r\n    content: \"\\E85F\"; }\r\n  .material-icons.assignment_return:before {\r\n    content: \"\\E860\"; }\r\n  .material-icons.assignment_returned:before {\r\n    content: \"\\E861\"; }\r\n  .material-icons.assignment_turned_in:before {\r\n    content: \"\\E862\"; }\r\n  .material-icons.assistant:before {\r\n    content: \"\\E39F\"; }\r\n  .material-icons.assistant_direction:before {\r\n    content: \"\\E988\"; }\r\n  .material-icons.assistant_navigation:before {\r\n    content: \"\\E989\"; }\r\n  .material-icons.assistant_photo:before {\r\n    content: \"\\E3A0\"; }\r\n  .material-icons.atm:before {\r\n    content: \"\\E573\"; }\r\n  .material-icons.attach_file:before {\r\n    content: \"\\E226\"; }\r\n  .material-icons.attach_money:before {\r\n    content: \"\\E227\"; }\r\n  .material-icons.attachment:before {\r\n    content: \"\\E2BC\"; }\r\n  .material-icons.attractions:before {\r\n    content: \"\\EA52\"; }\r\n  .material-icons.audiotrack:before {\r\n    content: \"\\E3A1\"; }\r\n  .material-icons.autorenew:before {\r\n    content: \"\\E863\"; }\r\n  .material-icons.av_timer:before {\r\n    content: \"\\E01B\"; }\r\n  .material-icons.backspace:before {\r\n    content: \"\\E14A\"; }\r\n  .material-icons.backup:before {\r\n    content: \"\\E864\"; }\r\n  .material-icons.badge:before {\r\n    content: \"\\EA67\"; }\r\n  .material-icons.bakery_dining:before {\r\n    content: \"\\EA53\"; }\r\n  .material-icons.ballot:before {\r\n    content: \"\\E172\"; }\r\n  .material-icons.bar_chart:before {\r\n    content: \"\\E26B\"; }\r\n  .material-icons.bathtub:before {\r\n    content: \"\\EA41\"; }\r\n  .material-icons.battery_alert:before {\r\n    content: \"\\E19C\"; }\r\n  .material-icons.battery_charging_full:before {\r\n    content: \"\\E1A3\"; }\r\n  .material-icons.battery_full:before {\r\n    content: \"\\E1A4\"; }\r\n  .material-icons.battery_std:before {\r\n    content: \"\\E1A5\"; }\r\n  .material-icons.battery_unknown:before {\r\n    content: \"\\E1A6\"; }\r\n  .material-icons.beach_access:before {\r\n    content: \"\\EB3E\"; }\r\n  .material-icons.beenhere:before {\r\n    content: \"\\E52D\"; }\r\n  .material-icons.block:before {\r\n    content: \"\\E14B\"; }\r\n  .material-icons.bluetooth:before {\r\n    content: \"\\E1A7\"; }\r\n  .material-icons.bluetooth_audio:before {\r\n    content: \"\\E60F\"; }\r\n  .material-icons.bluetooth_connected:before {\r\n    content: \"\\E1A8\"; }\r\n  .material-icons.bluetooth_disabled:before {\r\n    content: \"\\E1A9\"; }\r\n  .material-icons.bluetooth_searching:before {\r\n    content: \"\\E1AA\"; }\r\n  .material-icons.blur_circular:before {\r\n    content: \"\\E3A2\"; }\r\n  .material-icons.blur_linear:before {\r\n    content: \"\\E3A3\"; }\r\n  .material-icons.blur_off:before {\r\n    content: \"\\E3A4\"; }\r\n  .material-icons.blur_on:before {\r\n    content: \"\\E3A5\"; }\r\n  .material-icons.bolt:before {\r\n    content: \"\\EA0B\"; }\r\n  .material-icons.book:before {\r\n    content: \"\\E865\"; }\r\n  .material-icons.bookmark:before {\r\n    content: \"\\E866\"; }\r\n  .material-icons.bookmark_border:before {\r\n    content: \"\\E867\"; }\r\n  .material-icons.bookmark_outline:before {\r\n    content: \"\\E867\"; }\r\n  .material-icons.bookmarks:before {\r\n    content: \"\\E98B\"; }\r\n  .material-icons.border_all:before {\r\n    content: \"\\E228\"; }\r\n  .material-icons.border_bottom:before {\r\n    content: \"\\E229\"; }\r\n  .material-icons.border_clear:before {\r\n    content: \"\\E22A\"; }\r\n  .material-icons.border_color:before {\r\n    content: \"\\E22B\"; }\r\n  .material-icons.border_horizontal:before {\r\n    content: \"\\E22C\"; }\r\n  .material-icons.border_inner:before {\r\n    content: \"\\E22D\"; }\r\n  .material-icons.border_left:before {\r\n    content: \"\\E22E\"; }\r\n  .material-icons.border_outer:before {\r\n    content: \"\\E22F\"; }\r\n  .material-icons.border_right:before {\r\n    content: \"\\E230\"; }\r\n  .material-icons.border_style:before {\r\n    content: \"\\E231\"; }\r\n  .material-icons.border_top:before {\r\n    content: \"\\E232\"; }\r\n  .material-icons.border_vertical:before {\r\n    content: \"\\E233\"; }\r\n  .material-icons.branding_watermark:before {\r\n    content: \"\\E06B\"; }\r\n  .material-icons.breakfast_dining:before {\r\n    content: \"\\EA54\"; }\r\n  .material-icons.brightness_1:before {\r\n    content: \"\\E3A6\"; }\r\n  .material-icons.brightness_2:before {\r\n    content: \"\\E3A7\"; }\r\n  .material-icons.brightness_3:before {\r\n    content: \"\\E3A8\"; }\r\n  .material-icons.brightness_4:before {\r\n    content: \"\\E3A9\"; }\r\n  .material-icons.brightness_5:before {\r\n    content: \"\\E3AA\"; }\r\n  .material-icons.brightness_6:before {\r\n    content: \"\\E3AB\"; }\r\n  .material-icons.brightness_7:before {\r\n    content: \"\\E3AC\"; }\r\n  .material-icons.brightness_auto:before {\r\n    content: \"\\E1AB\"; }\r\n  .material-icons.brightness_high:before {\r\n    content: \"\\E1AC\"; }\r\n  .material-icons.brightness_low:before {\r\n    content: \"\\E1AD\"; }\r\n  .material-icons.brightness_medium:before {\r\n    content: \"\\E1AE\"; }\r\n  .material-icons.broken_image:before {\r\n    content: \"\\E3AD\"; }\r\n  .material-icons.brunch_dining:before {\r\n    content: \"\\EA73\"; }\r\n  .material-icons.brush:before {\r\n    content: \"\\E3AE\"; }\r\n  .material-icons.bubble_chart:before {\r\n    content: \"\\E6DD\"; }\r\n  .material-icons.bug_report:before {\r\n    content: \"\\E868\"; }\r\n  .material-icons.build:before {\r\n    content: \"\\E869\"; }\r\n  .material-icons.burst_mode:before {\r\n    content: \"\\E43C\"; }\r\n  .material-icons.bus_alert:before {\r\n    content: \"\\E98F\"; }\r\n  .material-icons.business:before {\r\n    content: \"\\E0AF\"; }\r\n  .material-icons.business_center:before {\r\n    content: \"\\EB3F\"; }\r\n  .material-icons.cached:before {\r\n    content: \"\\E86A\"; }\r\n  .material-icons.cake:before {\r\n    content: \"\\E7E9\"; }\r\n  .material-icons.calendar_today:before {\r\n    content: \"\\E935\"; }\r\n  .material-icons.calendar_view_day:before {\r\n    content: \"\\E936\"; }\r\n  .material-icons.call:before {\r\n    content: \"\\E0B0\"; }\r\n  .material-icons.call_end:before {\r\n    content: \"\\E0B1\"; }\r\n  .material-icons.call_made:before {\r\n    content: \"\\E0B2\"; }\r\n  .material-icons.call_merge:before {\r\n    content: \"\\E0B3\"; }\r\n  .material-icons.call_missed:before {\r\n    content: \"\\E0B4\"; }\r\n  .material-icons.call_missed_outgoing:before {\r\n    content: \"\\E0E4\"; }\r\n  .material-icons.call_received:before {\r\n    content: \"\\E0B5\"; }\r\n  .material-icons.call_split:before {\r\n    content: \"\\E0B6\"; }\r\n  .material-icons.call_to_action:before {\r\n    content: \"\\E06C\"; }\r\n  .material-icons.camera:before {\r\n    content: \"\\E3AF\"; }\r\n  .material-icons.camera_alt:before {\r\n    content: \"\\E3B0\"; }\r\n  .material-icons.camera_enhance:before {\r\n    content: \"\\E8FC\"; }\r\n  .material-icons.camera_front:before {\r\n    content: \"\\E3B1\"; }\r\n  .material-icons.camera_rear:before {\r\n    content: \"\\E3B2\"; }\r\n  .material-icons.camera_roll:before {\r\n    content: \"\\E3B3\"; }\r\n  .material-icons.cancel:before {\r\n    content: \"\\E5C9\"; }\r\n  .material-icons.cancel_presentation:before {\r\n    content: \"\\E0E9\"; }\r\n  .material-icons.cancel_schedule_send:before {\r\n    content: \"\\EA39\"; }\r\n  .material-icons.car_rental:before {\r\n    content: \"\\EA55\"; }\r\n  .material-icons.car_repair:before {\r\n    content: \"\\EA56\"; }\r\n  .material-icons.card_giftcard:before {\r\n    content: \"\\E8F6\"; }\r\n  .material-icons.card_membership:before {\r\n    content: \"\\E8F7\"; }\r\n  .material-icons.card_travel:before {\r\n    content: \"\\E8F8\"; }\r\n  .material-icons.cases:before {\r\n    content: \"\\E992\"; }\r\n  .material-icons.casino:before {\r\n    content: \"\\EB40\"; }\r\n  .material-icons.cast:before {\r\n    content: \"\\E307\"; }\r\n  .material-icons.cast_connected:before {\r\n    content: \"\\E308\"; }\r\n  .material-icons.category:before {\r\n    content: \"\\E574\"; }\r\n  .material-icons.celebration:before {\r\n    content: \"\\EA65\"; }\r\n  .material-icons.cell_wifi:before {\r\n    content: \"\\E0EC\"; }\r\n  .material-icons.center_focus_strong:before {\r\n    content: \"\\E3B4\"; }\r\n  .material-icons.center_focus_weak:before {\r\n    content: \"\\E3B5\"; }\r\n  .material-icons.change_history:before {\r\n    content: \"\\E86B\"; }\r\n  .material-icons.chat:before {\r\n    content: \"\\E0B7\"; }\r\n  .material-icons.chat_bubble:before {\r\n    content: \"\\E0CA\"; }\r\n  .material-icons.chat_bubble_outline:before {\r\n    content: \"\\E0CB\"; }\r\n  .material-icons.check:before {\r\n    content: \"\\E5CA\"; }\r\n  .material-icons.check_box:before {\r\n    content: \"\\E834\"; }\r\n  .material-icons.check_box_outline_blank:before {\r\n    content: \"\\E835\"; }\r\n  .material-icons.check_circle:before {\r\n    content: \"\\E86C\"; }\r\n  .material-icons.check_circle_outline:before {\r\n    content: \"\\E92D\"; }\r\n  .material-icons.chevron_left:before {\r\n    content: \"\\E5CB\"; }\r\n  .material-icons.chevron_right:before {\r\n    content: \"\\E5CC\"; }\r\n  .material-icons.child_care:before {\r\n    content: \"\\EB41\"; }\r\n  .material-icons.child_friendly:before {\r\n    content: \"\\EB42\"; }\r\n  .material-icons.chrome_reader_mode:before {\r\n    content: \"\\E86D\"; }\r\n  .material-icons.circle_notifications:before {\r\n    content: \"\\E994\"; }\r\n  .material-icons.class:before {\r\n    content: \"\\E86E\"; }\r\n  .material-icons.clear:before {\r\n    content: \"\\E14C\"; }\r\n  .material-icons.clear_all:before {\r\n    content: \"\\E0B8\"; }\r\n  .material-icons.close:before {\r\n    content: \"\\E5CD\"; }\r\n  .material-icons.closed_caption:before {\r\n    content: \"\\E01C\"; }\r\n  .material-icons.closed_caption_off:before {\r\n    content: \"\\E996\"; }\r\n  .material-icons.cloud:before {\r\n    content: \"\\E2BD\"; }\r\n  .material-icons.cloud_circle:before {\r\n    content: \"\\E2BE\"; }\r\n  .material-icons.cloud_done:before {\r\n    content: \"\\E2BF\"; }\r\n  .material-icons.cloud_download:before {\r\n    content: \"\\E2C0\"; }\r\n  .material-icons.cloud_off:before {\r\n    content: \"\\E2C1\"; }\r\n  .material-icons.cloud_queue:before {\r\n    content: \"\\E2C2\"; }\r\n  .material-icons.cloud_upload:before {\r\n    content: \"\\E2C3\"; }\r\n  .material-icons.code:before {\r\n    content: \"\\E86F\"; }\r\n  .material-icons.collections:before {\r\n    content: \"\\E3B6\"; }\r\n  .material-icons.collections_bookmark:before {\r\n    content: \"\\E431\"; }\r\n  .material-icons.color_lens:before {\r\n    content: \"\\E3B7\"; }\r\n  .material-icons.colorize:before {\r\n    content: \"\\E3B8\"; }\r\n  .material-icons.comment:before {\r\n    content: \"\\E0B9\"; }\r\n  .material-icons.commute:before {\r\n    content: \"\\E940\"; }\r\n  .material-icons.compare:before {\r\n    content: \"\\E3B9\"; }\r\n  .material-icons.compare_arrows:before {\r\n    content: \"\\E915\"; }\r\n  .material-icons.compass_calibration:before {\r\n    content: \"\\E57C\"; }\r\n  .material-icons.compress:before {\r\n    content: \"\\E94D\"; }\r\n  .material-icons.computer:before {\r\n    content: \"\\E30A\"; }\r\n  .material-icons.confirmation_num:before {\r\n    content: \"\\E638\"; }\r\n  .material-icons.confirmation_number:before {\r\n    content: \"\\E638\"; }\r\n  .material-icons.connected_tv:before {\r\n    content: \"\\E998\"; }\r\n  .material-icons.contact_mail:before {\r\n    content: \"\\E0D0\"; }\r\n  .material-icons.contact_phone:before {\r\n    content: \"\\E0CF\"; }\r\n  .material-icons.contact_support:before {\r\n    content: \"\\E94C\"; }\r\n  .material-icons.contactless:before {\r\n    content: \"\\EA71\"; }\r\n  .material-icons.contacts:before {\r\n    content: \"\\E0BA\"; }\r\n  .material-icons.content_copy:before {\r\n    content: \"\\E14D\"; }\r\n  .material-icons.content_cut:before {\r\n    content: \"\\E14E\"; }\r\n  .material-icons.content_paste:before {\r\n    content: \"\\E14F\"; }\r\n  .material-icons.control_camera:before {\r\n    content: \"\\E074\"; }\r\n  .material-icons.control_point:before {\r\n    content: \"\\E3BA\"; }\r\n  .material-icons.control_point_duplicate:before {\r\n    content: \"\\E3BB\"; }\r\n  .material-icons.copyright:before {\r\n    content: \"\\E90C\"; }\r\n  .material-icons.create:before {\r\n    content: \"\\E150\"; }\r\n  .material-icons.create_new_folder:before {\r\n    content: \"\\E2CC\"; }\r\n  .material-icons.credit_card:before {\r\n    content: \"\\E870\"; }\r\n  .material-icons.crop:before {\r\n    content: \"\\E3BE\"; }\r\n  .material-icons.crop_16_9:before {\r\n    content: \"\\E3BC\"; }\r\n  .material-icons.crop_3_2:before {\r\n    content: \"\\E3BD\"; }\r\n  .material-icons.crop_5_4:before {\r\n    content: \"\\E3BF\"; }\r\n  .material-icons.crop_7_5:before {\r\n    content: \"\\E3C0\"; }\r\n  .material-icons.crop_din:before {\r\n    content: \"\\E3C1\"; }\r\n  .material-icons.crop_free:before {\r\n    content: \"\\E3C2\"; }\r\n  .material-icons.crop_landscape:before {\r\n    content: \"\\E3C3\"; }\r\n  .material-icons.crop_original:before {\r\n    content: \"\\E3C4\"; }\r\n  .material-icons.crop_portrait:before {\r\n    content: \"\\E3C5\"; }\r\n  .material-icons.crop_rotate:before {\r\n    content: \"\\E437\"; }\r\n  .material-icons.crop_square:before {\r\n    content: \"\\E3C6\"; }\r\n  .material-icons.dangerous:before {\r\n    content: \"\\E99A\"; }\r\n  .material-icons.dashboard:before {\r\n    content: \"\\E871\"; }\r\n  .material-icons.dashboard_customize:before {\r\n    content: \"\\E99B\"; }\r\n  .material-icons.data_usage:before {\r\n    content: \"\\E1AF\"; }\r\n  .material-icons.date_range:before {\r\n    content: \"\\E916\"; }\r\n  .material-icons.deck:before {\r\n    content: \"\\EA42\"; }\r\n  .material-icons.dehaze:before {\r\n    content: \"\\E3C7\"; }\r\n  .material-icons.delete:before {\r\n    content: \"\\E872\"; }\r\n  .material-icons.delete_forever:before {\r\n    content: \"\\E92B\"; }\r\n  .material-icons.delete_outline:before {\r\n    content: \"\\E92E\"; }\r\n  .material-icons.delete_sweep:before {\r\n    content: \"\\E16C\"; }\r\n  .material-icons.delivery_dining:before {\r\n    content: \"\\EA72\"; }\r\n  .material-icons.departure_board:before {\r\n    content: \"\\E576\"; }\r\n  .material-icons.description:before {\r\n    content: \"\\E873\"; }\r\n  .material-icons.desktop_access_disabled:before {\r\n    content: \"\\E99D\"; }\r\n  .material-icons.desktop_mac:before {\r\n    content: \"\\E30B\"; }\r\n  .material-icons.desktop_windows:before {\r\n    content: \"\\E30C\"; }\r\n  .material-icons.details:before {\r\n    content: \"\\E3C8\"; }\r\n  .material-icons.developer_board:before {\r\n    content: \"\\E30D\"; }\r\n  .material-icons.developer_mode:before {\r\n    content: \"\\E1B0\"; }\r\n  .material-icons.device_hub:before {\r\n    content: \"\\E335\"; }\r\n  .material-icons.device_thermostat:before {\r\n    content: \"\\E1FF\"; }\r\n  .material-icons.device_unknown:before {\r\n    content: \"\\E339\"; }\r\n  .material-icons.devices:before {\r\n    content: \"\\E1B1\"; }\r\n  .material-icons.devices_other:before {\r\n    content: \"\\E337\"; }\r\n  .material-icons.dialer_sip:before {\r\n    content: \"\\E0BB\"; }\r\n  .material-icons.dialpad:before {\r\n    content: \"\\E0BC\"; }\r\n  .material-icons.dinner_dining:before {\r\n    content: \"\\EA57\"; }\r\n  .material-icons.directions:before {\r\n    content: \"\\E52E\"; }\r\n  .material-icons.directions_bike:before {\r\n    content: \"\\E52F\"; }\r\n  .material-icons.directions_boat:before {\r\n    content: \"\\E532\"; }\r\n  .material-icons.directions_bus:before {\r\n    content: \"\\E530\"; }\r\n  .material-icons.directions_car:before {\r\n    content: \"\\E531\"; }\r\n  .material-icons.directions_ferry:before {\r\n    content: \"\\E532\"; }\r\n  .material-icons.directions_railway:before {\r\n    content: \"\\E534\"; }\r\n  .material-icons.directions_run:before {\r\n    content: \"\\E566\"; }\r\n  .material-icons.directions_subway:before {\r\n    content: \"\\E533\"; }\r\n  .material-icons.directions_train:before {\r\n    content: \"\\E534\"; }\r\n  .material-icons.directions_transit:before {\r\n    content: \"\\E535\"; }\r\n  .material-icons.directions_walk:before {\r\n    content: \"\\E536\"; }\r\n  .material-icons.disc_full:before {\r\n    content: \"\\E610\"; }\r\n  .material-icons.dnd_forwardslash:before {\r\n    content: \"\\E611\"; }\r\n  .material-icons.dns:before {\r\n    content: \"\\E875\"; }\r\n  .material-icons.do_not_disturb:before {\r\n    content: \"\\E612\"; }\r\n  .material-icons.do_not_disturb_alt:before {\r\n    content: \"\\E611\"; }\r\n  .material-icons.do_not_disturb_off:before {\r\n    content: \"\\E643\"; }\r\n  .material-icons.do_not_disturb_on:before {\r\n    content: \"\\E644\"; }\r\n  .material-icons.dock:before {\r\n    content: \"\\E30E\"; }\r\n  .material-icons.domain:before {\r\n    content: \"\\E7EE\"; }\r\n  .material-icons.domain_disabled:before {\r\n    content: \"\\E0EF\"; }\r\n  .material-icons.done:before {\r\n    content: \"\\E876\"; }\r\n  .material-icons.done_all:before {\r\n    content: \"\\E877\"; }\r\n  .material-icons.done_outline:before {\r\n    content: \"\\E92F\"; }\r\n  .material-icons.donut_large:before {\r\n    content: \"\\E917\"; }\r\n  .material-icons.donut_small:before {\r\n    content: \"\\E918\"; }\r\n  .material-icons.double_arrow:before {\r\n    content: \"\\EA50\"; }\r\n  .material-icons.drafts:before {\r\n    content: \"\\E151\"; }\r\n  .material-icons.drag_handle:before {\r\n    content: \"\\E25D\"; }\r\n  .material-icons.drag_indicator:before {\r\n    content: \"\\E945\"; }\r\n  .material-icons.drive_eta:before {\r\n    content: \"\\E613\"; }\r\n  .material-icons.drive_file_move_outline:before {\r\n    content: \"\\E9A1\"; }\r\n  .material-icons.drive_file_rename_outline:before {\r\n    content: \"\\E9A2\"; }\r\n  .material-icons.drive_folder_upload:before {\r\n    content: \"\\E9A3\"; }\r\n  .material-icons.dry_cleaning:before {\r\n    content: \"\\EA58\"; }\r\n  .material-icons.duo:before {\r\n    content: \"\\E9A5\"; }\r\n  .material-icons.dvr:before {\r\n    content: \"\\E1B2\"; }\r\n  .material-icons.dynamic_feed:before {\r\n    content: \"\\EA14\"; }\r\n  .material-icons.eco:before {\r\n    content: \"\\EA35\"; }\r\n  .material-icons.edit:before {\r\n    content: \"\\E3C9\"; }\r\n  .material-icons.edit_attributes:before {\r\n    content: \"\\E578\"; }\r\n  .material-icons.edit_location:before {\r\n    content: \"\\E568\"; }\r\n  .material-icons.edit_off:before {\r\n    content: \"\\E950\"; }\r\n  .material-icons.eject:before {\r\n    content: \"\\E8FB\"; }\r\n  .material-icons.email:before {\r\n    content: \"\\E0BE\"; }\r\n  .material-icons.emoji_emotions:before {\r\n    content: \"\\EA22\"; }\r\n  .material-icons.emoji_events:before {\r\n    content: \"\\EA23\"; }\r\n  .material-icons.emoji_flags:before {\r\n    content: \"\\EA1A\"; }\r\n  .material-icons.emoji_food_beverage:before {\r\n    content: \"\\EA1B\"; }\r\n  .material-icons.emoji_nature:before {\r\n    content: \"\\EA1C\"; }\r\n  .material-icons.emoji_objects:before {\r\n    content: \"\\EA24\"; }\r\n  .material-icons.emoji_people:before {\r\n    content: \"\\EA1D\"; }\r\n  .material-icons.emoji_symbols:before {\r\n    content: \"\\EA1E\"; }\r\n  .material-icons.emoji_transportation:before {\r\n    content: \"\\EA1F\"; }\r\n  .material-icons.enhance_photo_translate:before {\r\n    content: \"\\E8FC\"; }\r\n  .material-icons.enhanced_encryption:before {\r\n    content: \"\\E63F\"; }\r\n  .material-icons.equalizer:before {\r\n    content: \"\\E01D\"; }\r\n  .material-icons.error:before {\r\n    content: \"\\E000\"; }\r\n  .material-icons.error_outline:before {\r\n    content: \"\\E001\"; }\r\n  .material-icons.euro:before {\r\n    content: \"\\EA15\"; }\r\n  .material-icons.euro_symbol:before {\r\n    content: \"\\E926\"; }\r\n  .material-icons.ev_station:before {\r\n    content: \"\\E56D\"; }\r\n  .material-icons.event:before {\r\n    content: \"\\E878\"; }\r\n  .material-icons.event_available:before {\r\n    content: \"\\E614\"; }\r\n  .material-icons.event_busy:before {\r\n    content: \"\\E615\"; }\r\n  .material-icons.event_note:before {\r\n    content: \"\\E616\"; }\r\n  .material-icons.event_seat:before {\r\n    content: \"\\E903\"; }\r\n  .material-icons.exit_to_app:before {\r\n    content: \"\\E879\"; }\r\n  .material-icons.expand:before {\r\n    content: \"\\E94F\"; }\r\n  .material-icons.expand_less:before {\r\n    content: \"\\E5CE\"; }\r\n  .material-icons.expand_more:before {\r\n    content: \"\\E5CF\"; }\r\n  .material-icons.explicit:before {\r\n    content: \"\\E01E\"; }\r\n  .material-icons.explore:before {\r\n    content: \"\\E87A\"; }\r\n  .material-icons.explore_off:before {\r\n    content: \"\\E9A8\"; }\r\n  .material-icons.exposure:before {\r\n    content: \"\\E3CA\"; }\r\n  .material-icons.exposure_minus_1:before {\r\n    content: \"\\E3CB\"; }\r\n  .material-icons.exposure_minus_2:before {\r\n    content: \"\\E3CC\"; }\r\n  .material-icons.exposure_neg_1:before {\r\n    content: \"\\E3CB\"; }\r\n  .material-icons.exposure_neg_2:before {\r\n    content: \"\\E3CC\"; }\r\n  .material-icons.exposure_plus_1:before {\r\n    content: \"\\E3CD\"; }\r\n  .material-icons.exposure_plus_2:before {\r\n    content: \"\\E3CE\"; }\r\n  .material-icons.exposure_zero:before {\r\n    content: \"\\E3CF\"; }\r\n  .material-icons.extension:before {\r\n    content: \"\\E87B\"; }\r\n  .material-icons.face:before {\r\n    content: \"\\E87C\"; }\r\n  .material-icons.fast_forward:before {\r\n    content: \"\\E01F\"; }\r\n  .material-icons.fast_rewind:before {\r\n    content: \"\\E020\"; }\r\n  .material-icons.fastfood:before {\r\n    content: \"\\E57A\"; }\r\n  .material-icons.favorite:before {\r\n    content: \"\\E87D\"; }\r\n  .material-icons.favorite_border:before {\r\n    content: \"\\E87E\"; }\r\n  .material-icons.favorite_outline:before {\r\n    content: \"\\E87E\"; }\r\n  .material-icons.featured_play_list:before {\r\n    content: \"\\E06D\"; }\r\n  .material-icons.featured_video:before {\r\n    content: \"\\E06E\"; }\r\n  .material-icons.feedback:before {\r\n    content: \"\\E87F\"; }\r\n  .material-icons.festival:before {\r\n    content: \"\\EA68\"; }\r\n  .material-icons.fiber_dvr:before {\r\n    content: \"\\E05D\"; }\r\n  .material-icons.fiber_manual_record:before {\r\n    content: \"\\E061\"; }\r\n  .material-icons.fiber_new:before {\r\n    content: \"\\E05E\"; }\r\n  .material-icons.fiber_pin:before {\r\n    content: \"\\E06A\"; }\r\n  .material-icons.fiber_smart_record:before {\r\n    content: \"\\E062\"; }\r\n  .material-icons.file_copy:before {\r\n    content: \"\\E173\"; }\r\n  .material-icons.file_download:before {\r\n    content: \"\\E2C4\"; }\r\n  .material-icons.file_download_done:before {\r\n    content: \"\\E9AA\"; }\r\n  .material-icons.file_present:before {\r\n    content: \"\\EA0E\"; }\r\n  .material-icons.file_upload:before {\r\n    content: \"\\E2C6\"; }\r\n  .material-icons.filter:before {\r\n    content: \"\\E3D3\"; }\r\n  .material-icons.filter_1:before {\r\n    content: \"\\E3D0\"; }\r\n  .material-icons.filter_2:before {\r\n    content: \"\\E3D1\"; }\r\n  .material-icons.filter_3:before {\r\n    content: \"\\E3D2\"; }\r\n  .material-icons.filter_4:before {\r\n    content: \"\\E3D4\"; }\r\n  .material-icons.filter_5:before {\r\n    content: \"\\E3D5\"; }\r\n  .material-icons.filter_6:before {\r\n    content: \"\\E3D6\"; }\r\n  .material-icons.filter_7:before {\r\n    content: \"\\E3D7\"; }\r\n  .material-icons.filter_8:before {\r\n    content: \"\\E3D8\"; }\r\n  .material-icons.filter_9:before {\r\n    content: \"\\E3D9\"; }\r\n  .material-icons.filter_9_plus:before {\r\n    content: \"\\E3DA\"; }\r\n  .material-icons.filter_b_and_w:before {\r\n    content: \"\\E3DB\"; }\r\n  .material-icons.filter_center_focus:before {\r\n    content: \"\\E3DC\"; }\r\n  .material-icons.filter_drama:before {\r\n    content: \"\\E3DD\"; }\r\n  .material-icons.filter_frames:before {\r\n    content: \"\\E3DE\"; }\r\n  .material-icons.filter_hdr:before {\r\n    content: \"\\E3DF\"; }\r\n  .material-icons.filter_list:before {\r\n    content: \"\\E152\"; }\r\n  .material-icons.filter_list_alt:before {\r\n    content: \"\\E94E\"; }\r\n  .material-icons.filter_none:before {\r\n    content: \"\\E3E0\"; }\r\n  .material-icons.filter_tilt_shift:before {\r\n    content: \"\\E3E2\"; }\r\n  .material-icons.filter_vintage:before {\r\n    content: \"\\E3E3\"; }\r\n  .material-icons.find_in_page:before {\r\n    content: \"\\E880\"; }\r\n  .material-icons.find_replace:before {\r\n    content: \"\\E881\"; }\r\n  .material-icons.fingerprint:before {\r\n    content: \"\\E90D\"; }\r\n  .material-icons.fireplace:before {\r\n    content: \"\\EA43\"; }\r\n  .material-icons.first_page:before {\r\n    content: \"\\E5DC\"; }\r\n  .material-icons.fit_screen:before {\r\n    content: \"\\EA10\"; }\r\n  .material-icons.fitness_center:before {\r\n    content: \"\\EB43\"; }\r\n  .material-icons.flag:before {\r\n    content: \"\\E153\"; }\r\n  .material-icons.flare:before {\r\n    content: \"\\E3E4\"; }\r\n  .material-icons.flash_auto:before {\r\n    content: \"\\E3E5\"; }\r\n  .material-icons.flash_off:before {\r\n    content: \"\\E3E6\"; }\r\n  .material-icons.flash_on:before {\r\n    content: \"\\E3E7\"; }\r\n  .material-icons.flight:before {\r\n    content: \"\\E539\"; }\r\n  .material-icons.flight_land:before {\r\n    content: \"\\E904\"; }\r\n  .material-icons.flight_takeoff:before {\r\n    content: \"\\E905\"; }\r\n  .material-icons.flip:before {\r\n    content: \"\\E3E8\"; }\r\n  .material-icons.flip_camera_android:before {\r\n    content: \"\\EA37\"; }\r\n  .material-icons.flip_camera_ios:before {\r\n    content: \"\\EA38\"; }\r\n  .material-icons.flip_to_back:before {\r\n    content: \"\\E882\"; }\r\n  .material-icons.flip_to_front:before {\r\n    content: \"\\E883\"; }\r\n  .material-icons.folder:before {\r\n    content: \"\\E2C7\"; }\r\n  .material-icons.folder_open:before {\r\n    content: \"\\E2C8\"; }\r\n  .material-icons.folder_shared:before {\r\n    content: \"\\E2C9\"; }\r\n  .material-icons.folder_special:before {\r\n    content: \"\\E617\"; }\r\n  .material-icons.font_download:before {\r\n    content: \"\\E167\"; }\r\n  .material-icons.format_align_center:before {\r\n    content: \"\\E234\"; }\r\n  .material-icons.format_align_justify:before {\r\n    content: \"\\E235\"; }\r\n  .material-icons.format_align_left:before {\r\n    content: \"\\E236\"; }\r\n  .material-icons.format_align_right:before {\r\n    content: \"\\E237\"; }\r\n  .material-icons.format_bold:before {\r\n    content: \"\\E238\"; }\r\n  .material-icons.format_clear:before {\r\n    content: \"\\E239\"; }\r\n  .material-icons.format_color_fill:before {\r\n    content: \"\\E23A\"; }\r\n  .material-icons.format_color_reset:before {\r\n    content: \"\\E23B\"; }\r\n  .material-icons.format_color_text:before {\r\n    content: \"\\E23C\"; }\r\n  .material-icons.format_indent_decrease:before {\r\n    content: \"\\E23D\"; }\r\n  .material-icons.format_indent_increase:before {\r\n    content: \"\\E23E\"; }\r\n  .material-icons.format_italic:before {\r\n    content: \"\\E23F\"; }\r\n  .material-icons.format_line_spacing:before {\r\n    content: \"\\E240\"; }\r\n  .material-icons.format_list_bulleted:before {\r\n    content: \"\\E241\"; }\r\n  .material-icons.format_list_numbered:before {\r\n    content: \"\\E242\"; }\r\n  .material-icons.format_list_numbered_rtl:before {\r\n    content: \"\\E267\"; }\r\n  .material-icons.format_paint:before {\r\n    content: \"\\E243\"; }\r\n  .material-icons.format_quote:before {\r\n    content: \"\\E244\"; }\r\n  .material-icons.format_shapes:before {\r\n    content: \"\\E25E\"; }\r\n  .material-icons.format_size:before {\r\n    content: \"\\E245\"; }\r\n  .material-icons.format_strikethrough:before {\r\n    content: \"\\E246\"; }\r\n  .material-icons.format_textdirection_l_to_r:before {\r\n    content: \"\\E247\"; }\r\n  .material-icons.format_textdirection_r_to_l:before {\r\n    content: \"\\E248\"; }\r\n  .material-icons.format_underline:before {\r\n    content: \"\\E249\"; }\r\n  .material-icons.format_underlined:before {\r\n    content: \"\\E249\"; }\r\n  .material-icons.forum:before {\r\n    content: \"\\E0BF\"; }\r\n  .material-icons.forward:before {\r\n    content: \"\\E154\"; }\r\n  .material-icons.forward_10:before {\r\n    content: \"\\E056\"; }\r\n  .material-icons.forward_30:before {\r\n    content: \"\\E057\"; }\r\n  .material-icons.forward_5:before {\r\n    content: \"\\E058\"; }\r\n  .material-icons.free_breakfast:before {\r\n    content: \"\\EB44\"; }\r\n  .material-icons.fullscreen:before {\r\n    content: \"\\E5D0\"; }\r\n  .material-icons.fullscreen_exit:before {\r\n    content: \"\\E5D1\"; }\r\n  .material-icons.functions:before {\r\n    content: \"\\E24A\"; }\r\n  .material-icons.g_translate:before {\r\n    content: \"\\E927\"; }\r\n  .material-icons.gamepad:before {\r\n    content: \"\\E30F\"; }\r\n  .material-icons.games:before {\r\n    content: \"\\E021\"; }\r\n  .material-icons.gavel:before {\r\n    content: \"\\E90E\"; }\r\n  .material-icons.gesture:before {\r\n    content: \"\\E155\"; }\r\n  .material-icons.get_app:before {\r\n    content: \"\\E884\"; }\r\n  .material-icons.gif:before {\r\n    content: \"\\E908\"; }\r\n  .material-icons.goat:before {\r\n    content: \"\\DBFF\"; }\r\n  .material-icons.golf_course:before {\r\n    content: \"\\EB45\"; }\r\n  .material-icons.gps_fixed:before {\r\n    content: \"\\E1B3\"; }\r\n  .material-icons.gps_not_fixed:before {\r\n    content: \"\\E1B4\"; }\r\n  .material-icons.gps_off:before {\r\n    content: \"\\E1B5\"; }\r\n  .material-icons.grade:before {\r\n    content: \"\\E885\"; }\r\n  .material-icons.gradient:before {\r\n    content: \"\\E3E9\"; }\r\n  .material-icons.grain:before {\r\n    content: \"\\E3EA\"; }\r\n  .material-icons.graphic_eq:before {\r\n    content: \"\\E1B8\"; }\r\n  .material-icons.grid_off:before {\r\n    content: \"\\E3EB\"; }\r\n  .material-icons.grid_on:before {\r\n    content: \"\\E3EC\"; }\r\n  .material-icons.grid_view:before {\r\n    content: \"\\E9B0\"; }\r\n  .material-icons.group:before {\r\n    content: \"\\E7EF\"; }\r\n  .material-icons.group_add:before {\r\n    content: \"\\E7F0\"; }\r\n  .material-icons.group_work:before {\r\n    content: \"\\E886\"; }\r\n  .material-icons.hail:before {\r\n    content: \"\\E9B1\"; }\r\n  .material-icons.hardware:before {\r\n    content: \"\\EA59\"; }\r\n  .material-icons.hd:before {\r\n    content: \"\\E052\"; }\r\n  .material-icons.hdr_off:before {\r\n    content: \"\\E3ED\"; }\r\n  .material-icons.hdr_on:before {\r\n    content: \"\\E3EE\"; }\r\n  .material-icons.hdr_strong:before {\r\n    content: \"\\E3F1\"; }\r\n  .material-icons.hdr_weak:before {\r\n    content: \"\\E3F2\"; }\r\n  .material-icons.headset:before {\r\n    content: \"\\E310\"; }\r\n  .material-icons.headset_mic:before {\r\n    content: \"\\E311\"; }\r\n  .material-icons.headset_off:before {\r\n    content: \"\\E33A\"; }\r\n  .material-icons.healing:before {\r\n    content: \"\\E3F3\"; }\r\n  .material-icons.hearing:before {\r\n    content: \"\\E023\"; }\r\n  .material-icons.height:before {\r\n    content: \"\\EA16\"; }\r\n  .material-icons.help:before {\r\n    content: \"\\E887\"; }\r\n  .material-icons.help_outline:before {\r\n    content: \"\\E8FD\"; }\r\n  .material-icons.high_quality:before {\r\n    content: \"\\E024\"; }\r\n  .material-icons.highlight:before {\r\n    content: \"\\E25F\"; }\r\n  .material-icons.highlight_off:before {\r\n    content: \"\\E888\"; }\r\n  .material-icons.highlight_remove:before {\r\n    content: \"\\E888\"; }\r\n  .material-icons.history:before {\r\n    content: \"\\E889\"; }\r\n  .material-icons.home:before {\r\n    content: \"\\E88A\"; }\r\n  .material-icons.home_filled:before {\r\n    content: \"\\E9B2\"; }\r\n  .material-icons.home_work:before {\r\n    content: \"\\EA09\"; }\r\n  .material-icons.horizontal_split:before {\r\n    content: \"\\E947\"; }\r\n  .material-icons.hot_tub:before {\r\n    content: \"\\EB46\"; }\r\n  .material-icons.hotel:before {\r\n    content: \"\\E53A\"; }\r\n  .material-icons.hourglass_empty:before {\r\n    content: \"\\E88B\"; }\r\n  .material-icons.hourglass_full:before {\r\n    content: \"\\E88C\"; }\r\n  .material-icons.house:before {\r\n    content: \"\\EA44\"; }\r\n  .material-icons.how_to_reg:before {\r\n    content: \"\\E174\"; }\r\n  .material-icons.how_to_vote:before {\r\n    content: \"\\E175\"; }\r\n  .material-icons.http:before {\r\n    content: \"\\E902\"; }\r\n  .material-icons.https:before {\r\n    content: \"\\E88D\"; }\r\n  .material-icons.icecream:before {\r\n    content: \"\\EA69\"; }\r\n  .material-icons.image:before {\r\n    content: \"\\E3F4\"; }\r\n  .material-icons.image_aspect_ratio:before {\r\n    content: \"\\E3F5\"; }\r\n  .material-icons.image_search:before {\r\n    content: \"\\E43F\"; }\r\n  .material-icons.imagesearch_roller:before {\r\n    content: \"\\E9B4\"; }\r\n  .material-icons.import_contacts:before {\r\n    content: \"\\E0E0\"; }\r\n  .material-icons.import_export:before {\r\n    content: \"\\E0C3\"; }\r\n  .material-icons.important_devices:before {\r\n    content: \"\\E912\"; }\r\n  .material-icons.inbox:before {\r\n    content: \"\\E156\"; }\r\n  .material-icons.indeterminate_check_box:before {\r\n    content: \"\\E909\"; }\r\n  .material-icons.info:before {\r\n    content: \"\\E88E\"; }\r\n  .material-icons.info_outline:before {\r\n    content: \"\\E88F\"; }\r\n  .material-icons.input:before {\r\n    content: \"\\E890\"; }\r\n  .material-icons.insert_chart:before {\r\n    content: \"\\E24B\"; }\r\n  .material-icons.insert_chart_outlined:before {\r\n    content: \"\\E26A\"; }\r\n  .material-icons.insert_comment:before {\r\n    content: \"\\E24C\"; }\r\n  .material-icons.insert_drive_file:before {\r\n    content: \"\\E24D\"; }\r\n  .material-icons.insert_emoticon:before {\r\n    content: \"\\E24E\"; }\r\n  .material-icons.insert_invitation:before {\r\n    content: \"\\E24F\"; }\r\n  .material-icons.insert_link:before {\r\n    content: \"\\E250\"; }\r\n  .material-icons.insert_photo:before {\r\n    content: \"\\E251\"; }\r\n  .material-icons.inventory:before {\r\n    content: \"\\E179\"; }\r\n  .material-icons.invert_colors:before {\r\n    content: \"\\E891\"; }\r\n  .material-icons.invert_colors_off:before {\r\n    content: \"\\E0C4\"; }\r\n  .material-icons.invert_colors_on:before {\r\n    content: \"\\E891\"; }\r\n  .material-icons.iso:before {\r\n    content: \"\\E3F6\"; }\r\n  .material-icons.keyboard:before {\r\n    content: \"\\E312\"; }\r\n  .material-icons.keyboard_arrow_down:before {\r\n    content: \"\\E313\"; }\r\n  .material-icons.keyboard_arrow_left:before {\r\n    content: \"\\E314\"; }\r\n  .material-icons.keyboard_arrow_right:before {\r\n    content: \"\\E315\"; }\r\n  .material-icons.keyboard_arrow_up:before {\r\n    content: \"\\E316\"; }\r\n  .material-icons.keyboard_backspace:before {\r\n    content: \"\\E317\"; }\r\n  .material-icons.keyboard_capslock:before {\r\n    content: \"\\E318\"; }\r\n  .material-icons.keyboard_control:before {\r\n    content: \"\\E5D3\"; }\r\n  .material-icons.keyboard_hide:before {\r\n    content: \"\\E31A\"; }\r\n  .material-icons.keyboard_return:before {\r\n    content: \"\\E31B\"; }\r\n  .material-icons.keyboard_tab:before {\r\n    content: \"\\E31C\"; }\r\n  .material-icons.keyboard_voice:before {\r\n    content: \"\\E31D\"; }\r\n  .material-icons.king_bed:before {\r\n    content: \"\\EA45\"; }\r\n  .material-icons.kitchen:before {\r\n    content: \"\\EB47\"; }\r\n  .material-icons.label:before {\r\n    content: \"\\E892\"; }\r\n  .material-icons.label_important:before {\r\n    content: \"\\E937\"; }\r\n  .material-icons.label_important_outline:before {\r\n    content: \"\\E948\"; }\r\n  .material-icons.label_off:before {\r\n    content: \"\\E9B6\"; }\r\n  .material-icons.label_outline:before {\r\n    content: \"\\E893\"; }\r\n  .material-icons.landscape:before {\r\n    content: \"\\E3F7\"; }\r\n  .material-icons.language:before {\r\n    content: \"\\E894\"; }\r\n  .material-icons.laptop:before {\r\n    content: \"\\E31E\"; }\r\n  .material-icons.laptop_chromebook:before {\r\n    content: \"\\E31F\"; }\r\n  .material-icons.laptop_mac:before {\r\n    content: \"\\E320\"; }\r\n  .material-icons.laptop_windows:before {\r\n    content: \"\\E321\"; }\r\n  .material-icons.last_page:before {\r\n    content: \"\\E5DD\"; }\r\n  .material-icons.launch:before {\r\n    content: \"\\E895\"; }\r\n  .material-icons.layers:before {\r\n    content: \"\\E53B\"; }\r\n  .material-icons.layers_clear:before {\r\n    content: \"\\E53C\"; }\r\n  .material-icons.leak_add:before {\r\n    content: \"\\E3F8\"; }\r\n  .material-icons.leak_remove:before {\r\n    content: \"\\E3F9\"; }\r\n  .material-icons.lens:before {\r\n    content: \"\\E3FA\"; }\r\n  .material-icons.library_add:before {\r\n    content: \"\\E02E\"; }\r\n  .material-icons.library_add_check:before {\r\n    content: \"\\E9B7\"; }\r\n  .material-icons.library_books:before {\r\n    content: \"\\E02F\"; }\r\n  .material-icons.library_music:before {\r\n    content: \"\\E030\"; }\r\n  .material-icons.lightbulb:before {\r\n    content: \"\\E0F0\"; }\r\n  .material-icons.lightbulb_outline:before {\r\n    content: \"\\E90F\"; }\r\n  .material-icons.line_style:before {\r\n    content: \"\\E919\"; }\r\n  .material-icons.line_weight:before {\r\n    content: \"\\E91A\"; }\r\n  .material-icons.linear_scale:before {\r\n    content: \"\\E260\"; }\r\n  .material-icons.link:before {\r\n    content: \"\\E157\"; }\r\n  .material-icons.link_off:before {\r\n    content: \"\\E16F\"; }\r\n  .material-icons.linked_camera:before {\r\n    content: \"\\E438\"; }\r\n  .material-icons.liquor:before {\r\n    content: \"\\EA60\"; }\r\n  .material-icons.list:before {\r\n    content: \"\\E896\"; }\r\n  .material-icons.list_alt:before {\r\n    content: \"\\E0EE\"; }\r\n  .material-icons.live_help:before {\r\n    content: \"\\E0C6\"; }\r\n  .material-icons.live_tv:before {\r\n    content: \"\\E639\"; }\r\n  .material-icons.local_activity:before {\r\n    content: \"\\E53F\"; }\r\n  .material-icons.local_airport:before {\r\n    content: \"\\E53D\"; }\r\n  .material-icons.local_atm:before {\r\n    content: \"\\E53E\"; }\r\n  .material-icons.local_attraction:before {\r\n    content: \"\\E53F\"; }\r\n  .material-icons.local_bar:before {\r\n    content: \"\\E540\"; }\r\n  .material-icons.local_cafe:before {\r\n    content: \"\\E541\"; }\r\n  .material-icons.local_car_wash:before {\r\n    content: \"\\E542\"; }\r\n  .material-icons.local_convenience_store:before {\r\n    content: \"\\E543\"; }\r\n  .material-icons.local_dining:before {\r\n    content: \"\\E556\"; }\r\n  .material-icons.local_drink:before {\r\n    content: \"\\E544\"; }\r\n  .material-icons.local_florist:before {\r\n    content: \"\\E545\"; }\r\n  .material-icons.local_gas_station:before {\r\n    content: \"\\E546\"; }\r\n  .material-icons.local_grocery_store:before {\r\n    content: \"\\E547\"; }\r\n  .material-icons.local_hospital:before {\r\n    content: \"\\E548\"; }\r\n  .material-icons.local_hotel:before {\r\n    content: \"\\E549\"; }\r\n  .material-icons.local_laundry_service:before {\r\n    content: \"\\E54A\"; }\r\n  .material-icons.local_library:before {\r\n    content: \"\\E54B\"; }\r\n  .material-icons.local_mall:before {\r\n    content: \"\\E54C\"; }\r\n  .material-icons.local_movies:before {\r\n    content: \"\\E54D\"; }\r\n  .material-icons.local_offer:before {\r\n    content: \"\\E54E\"; }\r\n  .material-icons.local_parking:before {\r\n    content: \"\\E54F\"; }\r\n  .material-icons.local_pharmacy:before {\r\n    content: \"\\E550\"; }\r\n  .material-icons.local_phone:before {\r\n    content: \"\\E551\"; }\r\n  .material-icons.local_pizza:before {\r\n    content: \"\\E552\"; }\r\n  .material-icons.local_play:before {\r\n    content: \"\\E553\"; }\r\n  .material-icons.local_post_office:before {\r\n    content: \"\\E554\"; }\r\n  .material-icons.local_print_shop:before {\r\n    content: \"\\E555\"; }\r\n  .material-icons.local_printshop:before {\r\n    content: \"\\E555\"; }\r\n  .material-icons.local_restaurant:before {\r\n    content: \"\\E556\"; }\r\n  .material-icons.local_see:before {\r\n    content: \"\\E557\"; }\r\n  .material-icons.local_shipping:before {\r\n    content: \"\\E558\"; }\r\n  .material-icons.local_taxi:before {\r\n    content: \"\\E559\"; }\r\n  .material-icons.location_city:before {\r\n    content: \"\\E7F1\"; }\r\n  .material-icons.location_disabled:before {\r\n    content: \"\\E1B6\"; }\r\n  .material-icons.location_history:before {\r\n    content: \"\\E55A\"; }\r\n  .material-icons.location_off:before {\r\n    content: \"\\E0C7\"; }\r\n  .material-icons.location_on:before {\r\n    content: \"\\E0C8\"; }\r\n  .material-icons.location_searching:before {\r\n    content: \"\\E1B7\"; }\r\n  .material-icons.lock:before {\r\n    content: \"\\E897\"; }\r\n  .material-icons.lock_open:before {\r\n    content: \"\\E898\"; }\r\n  .material-icons.lock_outline:before {\r\n    content: \"\\E899\"; }\r\n  .material-icons.logout:before {\r\n    content: \"\\E9BA\"; }\r\n  .material-icons.looks:before {\r\n    content: \"\\E3FC\"; }\r\n  .material-icons.looks_3:before {\r\n    content: \"\\E3FB\"; }\r\n  .material-icons.looks_4:before {\r\n    content: \"\\E3FD\"; }\r\n  .material-icons.looks_5:before {\r\n    content: \"\\E3FE\"; }\r\n  .material-icons.looks_6:before {\r\n    content: \"\\E3FF\"; }\r\n  .material-icons.looks_one:before {\r\n    content: \"\\E400\"; }\r\n  .material-icons.looks_two:before {\r\n    content: \"\\E401\"; }\r\n  .material-icons.loop:before {\r\n    content: \"\\E028\"; }\r\n  .material-icons.loupe:before {\r\n    content: \"\\E402\"; }\r\n  .material-icons.low_priority:before {\r\n    content: \"\\E16D\"; }\r\n  .material-icons.loyalty:before {\r\n    content: \"\\E89A\"; }\r\n  .material-icons.lunch_dining:before {\r\n    content: \"\\EA61\"; }\r\n  .material-icons.mail:before {\r\n    content: \"\\E158\"; }\r\n  .material-icons.mail_outline:before {\r\n    content: \"\\E0E1\"; }\r\n  .material-icons.map:before {\r\n    content: \"\\E55B\"; }\r\n  .material-icons.margin:before {\r\n    content: \"\\E9BB\"; }\r\n  .material-icons.mark_as_unread:before {\r\n    content: \"\\E9BC\"; }\r\n  .material-icons.markunread:before {\r\n    content: \"\\E159\"; }\r\n  .material-icons.markunread_mailbox:before {\r\n    content: \"\\E89B\"; }\r\n  .material-icons.maximize:before {\r\n    content: \"\\E930\"; }\r\n  .material-icons.meeting_room:before {\r\n    content: \"\\EB4F\"; }\r\n  .material-icons.memory:before {\r\n    content: \"\\E322\"; }\r\n  .material-icons.menu:before {\r\n    content: \"\\E5D2\"; }\r\n  .material-icons.menu_book:before {\r\n    content: \"\\EA19\"; }\r\n  .material-icons.menu_open:before {\r\n    content: \"\\E9BD\"; }\r\n  .material-icons.merge_type:before {\r\n    content: \"\\E252\"; }\r\n  .material-icons.message:before {\r\n    content: \"\\E0C9\"; }\r\n  .material-icons.messenger:before {\r\n    content: \"\\E0CA\"; }\r\n  .material-icons.messenger_outline:before {\r\n    content: \"\\E0CB\"; }\r\n  .material-icons.mic:before {\r\n    content: \"\\E029\"; }\r\n  .material-icons.mic_none:before {\r\n    content: \"\\E02A\"; }\r\n  .material-icons.mic_off:before {\r\n    content: \"\\E02B\"; }\r\n  .material-icons.minimize:before {\r\n    content: \"\\E931\"; }\r\n  .material-icons.missed_video_call:before {\r\n    content: \"\\E073\"; }\r\n  .material-icons.mms:before {\r\n    content: \"\\E618\"; }\r\n  .material-icons.mobile_friendly:before {\r\n    content: \"\\E200\"; }\r\n  .material-icons.mobile_off:before {\r\n    content: \"\\E201\"; }\r\n  .material-icons.mobile_screen_share:before {\r\n    content: \"\\E0E7\"; }\r\n  .material-icons.mode_comment:before {\r\n    content: \"\\E253\"; }\r\n  .material-icons.mode_edit:before {\r\n    content: \"\\E254\"; }\r\n  .material-icons.monetization_on:before {\r\n    content: \"\\E263\"; }\r\n  .material-icons.money:before {\r\n    content: \"\\E57D\"; }\r\n  .material-icons.money_off:before {\r\n    content: \"\\E25C\"; }\r\n  .material-icons.monochrome_photos:before {\r\n    content: \"\\E403\"; }\r\n  .material-icons.mood:before {\r\n    content: \"\\E7F2\"; }\r\n  .material-icons.mood_bad:before {\r\n    content: \"\\E7F3\"; }\r\n  .material-icons.more:before {\r\n    content: \"\\E619\"; }\r\n  .material-icons.more_horiz:before {\r\n    content: \"\\E5D3\"; }\r\n  .material-icons.more_vert:before {\r\n    content: \"\\E5D4\"; }\r\n  .material-icons.motorcycle:before {\r\n    content: \"\\E91B\"; }\r\n  .material-icons.mouse:before {\r\n    content: \"\\E323\"; }\r\n  .material-icons.move_to_inbox:before {\r\n    content: \"\\E168\"; }\r\n  .material-icons.movie:before {\r\n    content: \"\\E02C\"; }\r\n  .material-icons.movie_creation:before {\r\n    content: \"\\E404\"; }\r\n  .material-icons.movie_filter:before {\r\n    content: \"\\E43A\"; }\r\n  .material-icons.mp:before {\r\n    content: \"\\E9C3\"; }\r\n  .material-icons.multiline_chart:before {\r\n    content: \"\\E6DF\"; }\r\n  .material-icons.multitrack_audio:before {\r\n    content: \"\\E1B8\"; }\r\n  .material-icons.museum:before {\r\n    content: \"\\EA36\"; }\r\n  .material-icons.music_note:before {\r\n    content: \"\\E405\"; }\r\n  .material-icons.music_off:before {\r\n    content: \"\\E440\"; }\r\n  .material-icons.music_video:before {\r\n    content: \"\\E063\"; }\r\n  .material-icons.my_library_add:before {\r\n    content: \"\\E02E\"; }\r\n  .material-icons.my_library_books:before {\r\n    content: \"\\E02F\"; }\r\n  .material-icons.my_library_music:before {\r\n    content: \"\\E030\"; }\r\n  .material-icons.my_location:before {\r\n    content: \"\\E55C\"; }\r\n  .material-icons.nature:before {\r\n    content: \"\\E406\"; }\r\n  .material-icons.nature_people:before {\r\n    content: \"\\E407\"; }\r\n  .material-icons.navigate_before:before {\r\n    content: \"\\E408\"; }\r\n  .material-icons.navigate_next:before {\r\n    content: \"\\E409\"; }\r\n  .material-icons.navigation:before {\r\n    content: \"\\E55D\"; }\r\n  .material-icons.near_me:before {\r\n    content: \"\\E569\"; }\r\n  .material-icons.network_cell:before {\r\n    content: \"\\E1B9\"; }\r\n  .material-icons.network_check:before {\r\n    content: \"\\E640\"; }\r\n  .material-icons.network_locked:before {\r\n    content: \"\\E61A\"; }\r\n  .material-icons.network_wifi:before {\r\n    content: \"\\E1BA\"; }\r\n  .material-icons.new_releases:before {\r\n    content: \"\\E031\"; }\r\n  .material-icons.next_week:before {\r\n    content: \"\\E16A\"; }\r\n  .material-icons.nfc:before {\r\n    content: \"\\E1BB\"; }\r\n  .material-icons.nightlife:before {\r\n    content: \"\\EA62\"; }\r\n  .material-icons.nights_stay:before {\r\n    content: \"\\EA46\"; }\r\n  .material-icons.no_encryption:before {\r\n    content: \"\\E641\"; }\r\n  .material-icons.no_meeting_room:before {\r\n    content: \"\\EB4E\"; }\r\n  .material-icons.no_sim:before {\r\n    content: \"\\E0CC\"; }\r\n  .material-icons.not_interested:before {\r\n    content: \"\\E033\"; }\r\n  .material-icons.not_listed_location:before {\r\n    content: \"\\E575\"; }\r\n  .material-icons.note:before {\r\n    content: \"\\E06F\"; }\r\n  .material-icons.note_add:before {\r\n    content: \"\\E89C\"; }\r\n  .material-icons.notes:before {\r\n    content: \"\\E26C\"; }\r\n  .material-icons.notification_important:before {\r\n    content: \"\\E004\"; }\r\n  .material-icons.notifications:before {\r\n    content: \"\\E7F4\"; }\r\n  .material-icons.notifications_active:before {\r\n    content: \"\\E7F7\"; }\r\n  .material-icons.notifications_none:before {\r\n    content: \"\\E7F5\"; }\r\n  .material-icons.notifications_off:before {\r\n    content: \"\\E7F6\"; }\r\n  .material-icons.notifications_on:before {\r\n    content: \"\\E7F7\"; }\r\n  .material-icons.notifications_paused:before {\r\n    content: \"\\E7F8\"; }\r\n  .material-icons.now_wallpaper:before {\r\n    content: \"\\E1BC\"; }\r\n  .material-icons.now_widgets:before {\r\n    content: \"\\E1BD\"; }\r\n  .material-icons.offline_bolt:before {\r\n    content: \"\\E932\"; }\r\n  .material-icons.offline_pin:before {\r\n    content: \"\\E90A\"; }\r\n  .material-icons.offline_share:before {\r\n    content: \"\\E9C5\"; }\r\n  .material-icons.ondemand_video:before {\r\n    content: \"\\E63A\"; }\r\n  .material-icons.opacity:before {\r\n    content: \"\\E91C\"; }\r\n  .material-icons.open_in_browser:before {\r\n    content: \"\\E89D\"; }\r\n  .material-icons.open_in_new:before {\r\n    content: \"\\E89E\"; }\r\n  .material-icons.open_with:before {\r\n    content: \"\\E89F\"; }\r\n  .material-icons.outdoor_grill:before {\r\n    content: \"\\EA47\"; }\r\n  .material-icons.outlined_flag:before {\r\n    content: \"\\E16E\"; }\r\n  .material-icons.padding:before {\r\n    content: \"\\E9C8\"; }\r\n  .material-icons.pages:before {\r\n    content: \"\\E7F9\"; }\r\n  .material-icons.pageview:before {\r\n    content: \"\\E8A0\"; }\r\n  .material-icons.palette:before {\r\n    content: \"\\E40A\"; }\r\n  .material-icons.pan_tool:before {\r\n    content: \"\\E925\"; }\r\n  .material-icons.panorama:before {\r\n    content: \"\\E40B\"; }\r\n  .material-icons.panorama_fish_eye:before {\r\n    content: \"\\E40C\"; }\r\n  .material-icons.panorama_fisheye:before {\r\n    content: \"\\E40C\"; }\r\n  .material-icons.panorama_horizontal:before {\r\n    content: \"\\E40D\"; }\r\n  .material-icons.panorama_photosphere:before {\r\n    content: \"\\E9C9\"; }\r\n  .material-icons.panorama_photosphere_select:before {\r\n    content: \"\\E9CA\"; }\r\n  .material-icons.panorama_vertical:before {\r\n    content: \"\\E40E\"; }\r\n  .material-icons.panorama_wide_angle:before {\r\n    content: \"\\E40F\"; }\r\n  .material-icons.park:before {\r\n    content: \"\\EA63\"; }\r\n  .material-icons.party_mode:before {\r\n    content: \"\\E7FA\"; }\r\n  .material-icons.pause:before {\r\n    content: \"\\E034\"; }\r\n  .material-icons.pause_circle_filled:before {\r\n    content: \"\\E035\"; }\r\n  .material-icons.pause_circle_outline:before {\r\n    content: \"\\E036\"; }\r\n  .material-icons.pause_presentation:before {\r\n    content: \"\\E0EA\"; }\r\n  .material-icons.payment:before {\r\n    content: \"\\E8A1\"; }\r\n  .material-icons.people:before {\r\n    content: \"\\E7FB\"; }\r\n  .material-icons.people_alt:before {\r\n    content: \"\\EA21\"; }\r\n  .material-icons.people_outline:before {\r\n    content: \"\\E7FC\"; }\r\n  .material-icons.perm_camera_mic:before {\r\n    content: \"\\E8A2\"; }\r\n  .material-icons.perm_contact_cal:before {\r\n    content: \"\\E8A3\"; }\r\n  .material-icons.perm_contact_calendar:before {\r\n    content: \"\\E8A3\"; }\r\n  .material-icons.perm_data_setting:before {\r\n    content: \"\\E8A4\"; }\r\n  .material-icons.perm_device_info:before {\r\n    content: \"\\E8A5\"; }\r\n  .material-icons.perm_device_information:before {\r\n    content: \"\\E8A5\"; }\r\n  .material-icons.perm_identity:before {\r\n    content: \"\\E8A6\"; }\r\n  .material-icons.perm_media:before {\r\n    content: \"\\E8A7\"; }\r\n  .material-icons.perm_phone_msg:before {\r\n    content: \"\\E8A8\"; }\r\n  .material-icons.perm_scan_wifi:before {\r\n    content: \"\\E8A9\"; }\r\n  .material-icons.person:before {\r\n    content: \"\\E7FD\"; }\r\n  .material-icons.person_add:before {\r\n    content: \"\\E7FE\"; }\r\n  .material-icons.person_add_disabled:before {\r\n    content: \"\\E9CB\"; }\r\n  .material-icons.person_outline:before {\r\n    content: \"\\E7FF\"; }\r\n  .material-icons.person_pin:before {\r\n    content: \"\\E55A\"; }\r\n  .material-icons.person_pin_circle:before {\r\n    content: \"\\E56A\"; }\r\n  .material-icons.personal_video:before {\r\n    content: \"\\E63B\"; }\r\n  .material-icons.pets:before {\r\n    content: \"\\E91D\"; }\r\n  .material-icons.phone:before {\r\n    content: \"\\E0CD\"; }\r\n  .material-icons.phone_android:before {\r\n    content: \"\\E324\"; }\r\n  .material-icons.phone_bluetooth_speaker:before {\r\n    content: \"\\E61B\"; }\r\n  .material-icons.phone_callback:before {\r\n    content: \"\\E649\"; }\r\n  .material-icons.phone_disabled:before {\r\n    content: \"\\E9CC\"; }\r\n  .material-icons.phone_enabled:before {\r\n    content: \"\\E9CD\"; }\r\n  .material-icons.phone_forwarded:before {\r\n    content: \"\\E61C\"; }\r\n  .material-icons.phone_in_talk:before {\r\n    content: \"\\E61D\"; }\r\n  .material-icons.phone_iphone:before {\r\n    content: \"\\E325\"; }\r\n  .material-icons.phone_locked:before {\r\n    content: \"\\E61E\"; }\r\n  .material-icons.phone_missed:before {\r\n    content: \"\\E61F\"; }\r\n  .material-icons.phone_paused:before {\r\n    content: \"\\E620\"; }\r\n  .material-icons.phonelink:before {\r\n    content: \"\\E326\"; }\r\n  .material-icons.phonelink_erase:before {\r\n    content: \"\\E0DB\"; }\r\n  .material-icons.phonelink_lock:before {\r\n    content: \"\\E0DC\"; }\r\n  .material-icons.phonelink_off:before {\r\n    content: \"\\E327\"; }\r\n  .material-icons.phonelink_ring:before {\r\n    content: \"\\E0DD\"; }\r\n  .material-icons.phonelink_setup:before {\r\n    content: \"\\E0DE\"; }\r\n  .material-icons.photo:before {\r\n    content: \"\\E410\"; }\r\n  .material-icons.photo_album:before {\r\n    content: \"\\E411\"; }\r\n  .material-icons.photo_camera:before {\r\n    content: \"\\E412\"; }\r\n  .material-icons.photo_filter:before {\r\n    content: \"\\E43B\"; }\r\n  .material-icons.photo_library:before {\r\n    content: \"\\E413\"; }\r\n  .material-icons.photo_size_select_actual:before {\r\n    content: \"\\E432\"; }\r\n  .material-icons.photo_size_select_large:before {\r\n    content: \"\\E433\"; }\r\n  .material-icons.photo_size_select_small:before {\r\n    content: \"\\E434\"; }\r\n  .material-icons.picture_as_pdf:before {\r\n    content: \"\\E415\"; }\r\n  .material-icons.picture_in_picture:before {\r\n    content: \"\\E8AA\"; }\r\n  .material-icons.picture_in_picture_alt:before {\r\n    content: \"\\E911\"; }\r\n  .material-icons.pie_chart:before {\r\n    content: \"\\E6C4\"; }\r\n  .material-icons.pie_chart_outlined:before {\r\n    content: \"\\E6C5\"; }\r\n  .material-icons.pin_drop:before {\r\n    content: \"\\E55E\"; }\r\n  .material-icons.pivot_table_chart:before {\r\n    content: \"\\E9CE\"; }\r\n  .material-icons.place:before {\r\n    content: \"\\E55F\"; }\r\n  .material-icons.play_arrow:before {\r\n    content: \"\\E037\"; }\r\n  .material-icons.play_circle_fill:before {\r\n    content: \"\\E038\"; }\r\n  .material-icons.play_circle_filled:before {\r\n    content: \"\\E038\"; }\r\n  .material-icons.play_circle_outline:before {\r\n    content: \"\\E039\"; }\r\n  .material-icons.play_for_work:before {\r\n    content: \"\\E906\"; }\r\n  .material-icons.playlist_add:before {\r\n    content: \"\\E03B\"; }\r\n  .material-icons.playlist_add_check:before {\r\n    content: \"\\E065\"; }\r\n  .material-icons.playlist_play:before {\r\n    content: \"\\E05F\"; }\r\n  .material-icons.plus_one:before {\r\n    content: \"\\E800\"; }\r\n  .material-icons.policy:before {\r\n    content: \"\\EA17\"; }\r\n  .material-icons.poll:before {\r\n    content: \"\\E801\"; }\r\n  .material-icons.polymer:before {\r\n    content: \"\\E8AB\"; }\r\n  .material-icons.pool:before {\r\n    content: \"\\EB48\"; }\r\n  .material-icons.portable_wifi_off:before {\r\n    content: \"\\E0CE\"; }\r\n  .material-icons.portrait:before {\r\n    content: \"\\E416\"; }\r\n  .material-icons.post_add:before {\r\n    content: \"\\EA20\"; }\r\n  .material-icons.power:before {\r\n    content: \"\\E63C\"; }\r\n  .material-icons.power_input:before {\r\n    content: \"\\E336\"; }\r\n  .material-icons.power_off:before {\r\n    content: \"\\E646\"; }\r\n  .material-icons.power_settings_new:before {\r\n    content: \"\\E8AC\"; }\r\n  .material-icons.pregnant_woman:before {\r\n    content: \"\\E91E\"; }\r\n  .material-icons.present_to_all:before {\r\n    content: \"\\E0DF\"; }\r\n  .material-icons.print:before {\r\n    content: \"\\E8AD\"; }\r\n  .material-icons.print_disabled:before {\r\n    content: \"\\E9CF\"; }\r\n  .material-icons.priority_high:before {\r\n    content: \"\\E645\"; }\r\n  .material-icons.public:before {\r\n    content: \"\\E80B\"; }\r\n  .material-icons.publish:before {\r\n    content: \"\\E255\"; }\r\n  .material-icons.query_builder:before {\r\n    content: \"\\E8AE\"; }\r\n  .material-icons.question_answer:before {\r\n    content: \"\\E8AF\"; }\r\n  .material-icons.queue:before {\r\n    content: \"\\E03C\"; }\r\n  .material-icons.queue_music:before {\r\n    content: \"\\E03D\"; }\r\n  .material-icons.queue_play_next:before {\r\n    content: \"\\E066\"; }\r\n  .material-icons.quick_contacts_dialer:before {\r\n    content: \"\\E0CF\"; }\r\n  .material-icons.quick_contacts_mail:before {\r\n    content: \"\\E0D0\"; }\r\n  .material-icons.radio:before {\r\n    content: \"\\E03E\"; }\r\n  .material-icons.radio_button_checked:before {\r\n    content: \"\\E837\"; }\r\n  .material-icons.radio_button_off:before {\r\n    content: \"\\E836\"; }\r\n  .material-icons.radio_button_on:before {\r\n    content: \"\\E837\"; }\r\n  .material-icons.radio_button_unchecked:before {\r\n    content: \"\\E836\"; }\r\n  .material-icons.railway_alert:before {\r\n    content: \"\\E9D1\"; }\r\n  .material-icons.ramen_dining:before {\r\n    content: \"\\EA64\"; }\r\n  .material-icons.rate_review:before {\r\n    content: \"\\E560\"; }\r\n  .material-icons.receipt:before {\r\n    content: \"\\E8B0\"; }\r\n  .material-icons.recent_actors:before {\r\n    content: \"\\E03F\"; }\r\n  .material-icons.recommend:before {\r\n    content: \"\\E9D2\"; }\r\n  .material-icons.record_voice_over:before {\r\n    content: \"\\E91F\"; }\r\n  .material-icons.redeem:before {\r\n    content: \"\\E8B1\"; }\r\n  .material-icons.redo:before {\r\n    content: \"\\E15A\"; }\r\n  .material-icons.refresh:before {\r\n    content: \"\\E5D5\"; }\r\n  .material-icons.remove:before {\r\n    content: \"\\E15B\"; }\r\n  .material-icons.remove_circle:before {\r\n    content: \"\\E15C\"; }\r\n  .material-icons.remove_circle_outline:before {\r\n    content: \"\\E15D\"; }\r\n  .material-icons.remove_done:before {\r\n    content: \"\\E9D3\"; }\r\n  .material-icons.remove_from_queue:before {\r\n    content: \"\\E067\"; }\r\n  .material-icons.remove_moderator:before {\r\n    content: \"\\E9D4\"; }\r\n  .material-icons.remove_red_eye:before {\r\n    content: \"\\E417\"; }\r\n  .material-icons.remove_shopping_cart:before {\r\n    content: \"\\E928\"; }\r\n  .material-icons.reorder:before {\r\n    content: \"\\E8FE\"; }\r\n  .material-icons.repeat:before {\r\n    content: \"\\E040\"; }\r\n  .material-icons.repeat_on:before {\r\n    content: \"\\E9D6\"; }\r\n  .material-icons.repeat_one:before {\r\n    content: \"\\E041\"; }\r\n  .material-icons.repeat_one_on:before {\r\n    content: \"\\E9D7\"; }\r\n  .material-icons.replay:before {\r\n    content: \"\\E042\"; }\r\n  .material-icons.replay_10:before {\r\n    content: \"\\E059\"; }\r\n  .material-icons.replay_30:before {\r\n    content: \"\\E05A\"; }\r\n  .material-icons.replay_5:before {\r\n    content: \"\\E05B\"; }\r\n  .material-icons.replay_circle_filled:before {\r\n    content: \"\\E9D8\"; }\r\n  .material-icons.reply:before {\r\n    content: \"\\E15E\"; }\r\n  .material-icons.reply_all:before {\r\n    content: \"\\E15F\"; }\r\n  .material-icons.report:before {\r\n    content: \"\\E160\"; }\r\n  .material-icons.report_off:before {\r\n    content: \"\\E170\"; }\r\n  .material-icons.report_problem:before {\r\n    content: \"\\E8B2\"; }\r\n  .material-icons.reset_tv:before {\r\n    content: \"\\E9D9\"; }\r\n  .material-icons.restaurant:before {\r\n    content: \"\\E56C\"; }\r\n  .material-icons.restaurant_menu:before {\r\n    content: \"\\E561\"; }\r\n  .material-icons.restore:before {\r\n    content: \"\\E8B3\"; }\r\n  .material-icons.restore_from_trash:before {\r\n    content: \"\\E938\"; }\r\n  .material-icons.restore_page:before {\r\n    content: \"\\E929\"; }\r\n  .material-icons.ring_volume:before {\r\n    content: \"\\E0D1\"; }\r\n  .material-icons.room:before {\r\n    content: \"\\E8B4\"; }\r\n  .material-icons.room_service:before {\r\n    content: \"\\EB49\"; }\r\n  .material-icons.rotate_90_degrees_ccw:before {\r\n    content: \"\\E418\"; }\r\n  .material-icons.rotate_left:before {\r\n    content: \"\\E419\"; }\r\n  .material-icons.rotate_right:before {\r\n    content: \"\\E41A\"; }\r\n  .material-icons.rounded_corner:before {\r\n    content: \"\\E920\"; }\r\n  .material-icons.router:before {\r\n    content: \"\\E328\"; }\r\n  .material-icons.rowing:before {\r\n    content: \"\\E921\"; }\r\n  .material-icons.rss_feed:before {\r\n    content: \"\\E0E5\"; }\r\n  .material-icons.rtt:before {\r\n    content: \"\\E9AD\"; }\r\n  .material-icons.rv_hookup:before {\r\n    content: \"\\E642\"; }\r\n  .material-icons.satellite:before {\r\n    content: \"\\E562\"; }\r\n  .material-icons.save:before {\r\n    content: \"\\E161\"; }\r\n  .material-icons.save_alt:before {\r\n    content: \"\\E171\"; }\r\n  .material-icons.saved_search:before {\r\n    content: \"\\EA11\"; }\r\n  .material-icons.scanner:before {\r\n    content: \"\\E329\"; }\r\n  .material-icons.scatter_plot:before {\r\n    content: \"\\E268\"; }\r\n  .material-icons.schedule:before {\r\n    content: \"\\E8B5\"; }\r\n  .material-icons.schedule_send:before {\r\n    content: \"\\EA0A\"; }\r\n  .material-icons.school:before {\r\n    content: \"\\E80C\"; }\r\n  .material-icons.score:before {\r\n    content: \"\\E269\"; }\r\n  .material-icons.screen_lock_landscape:before {\r\n    content: \"\\E1BE\"; }\r\n  .material-icons.screen_lock_portrait:before {\r\n    content: \"\\E1BF\"; }\r\n  .material-icons.screen_lock_rotation:before {\r\n    content: \"\\E1C0\"; }\r\n  .material-icons.screen_rotation:before {\r\n    content: \"\\E1C1\"; }\r\n  .material-icons.screen_share:before {\r\n    content: \"\\E0E2\"; }\r\n  .material-icons.sd:before {\r\n    content: \"\\E9DD\"; }\r\n  .material-icons.sd_card:before {\r\n    content: \"\\E623\"; }\r\n  .material-icons.sd_storage:before {\r\n    content: \"\\E1C2\"; }\r\n  .material-icons.search:before {\r\n    content: \"\\E8B6\"; }\r\n  .material-icons.security:before {\r\n    content: \"\\E32A\"; }\r\n  .material-icons.segment:before {\r\n    content: \"\\E94B\"; }\r\n  .material-icons.select_all:before {\r\n    content: \"\\E162\"; }\r\n  .material-icons.send:before {\r\n    content: \"\\E163\"; }\r\n  .material-icons.send_and_archive:before {\r\n    content: \"\\EA0C\"; }\r\n  .material-icons.sentiment_dissatisfied:before {\r\n    content: \"\\E811\"; }\r\n  .material-icons.sentiment_neutral:before {\r\n    content: \"\\E812\"; }\r\n  .material-icons.sentiment_satisfied:before {\r\n    content: \"\\E813\"; }\r\n  .material-icons.sentiment_satisfied_alt:before {\r\n    content: \"\\E0ED\"; }\r\n  .material-icons.sentiment_very_dissatisfied:before {\r\n    content: \"\\E814\"; }\r\n  .material-icons.sentiment_very_satisfied:before {\r\n    content: \"\\E815\"; }\r\n  .material-icons.settings:before {\r\n    content: \"\\E8B8\"; }\r\n  .material-icons.settings_applications:before {\r\n    content: \"\\E8B9\"; }\r\n  .material-icons.settings_backup_restore:before {\r\n    content: \"\\E8BA\"; }\r\n  .material-icons.settings_bluetooth:before {\r\n    content: \"\\E8BB\"; }\r\n  .material-icons.settings_brightness:before {\r\n    content: \"\\E8BD\"; }\r\n  .material-icons.settings_cell:before {\r\n    content: \"\\E8BC\"; }\r\n  .material-icons.settings_display:before {\r\n    content: \"\\E8BD\"; }\r\n  .material-icons.settings_ethernet:before {\r\n    content: \"\\E8BE\"; }\r\n  .material-icons.settings_input_antenna:before {\r\n    content: \"\\E8BF\"; }\r\n  .material-icons.settings_input_component:before {\r\n    content: \"\\E8C0\"; }\r\n  .material-icons.settings_input_composite:before {\r\n    content: \"\\E8C1\"; }\r\n  .material-icons.settings_input_hdmi:before {\r\n    content: \"\\E8C2\"; }\r\n  .material-icons.settings_input_svideo:before {\r\n    content: \"\\E8C3\"; }\r\n  .material-icons.settings_overscan:before {\r\n    content: \"\\E8C4\"; }\r\n  .material-icons.settings_phone:before {\r\n    content: \"\\E8C5\"; }\r\n  .material-icons.settings_power:before {\r\n    content: \"\\E8C6\"; }\r\n  .material-icons.settings_remote:before {\r\n    content: \"\\E8C7\"; }\r\n  .material-icons.settings_system_daydream:before {\r\n    content: \"\\E1C3\"; }\r\n  .material-icons.settings_voice:before {\r\n    content: \"\\E8C8\"; }\r\n  .material-icons.share:before {\r\n    content: \"\\E80D\"; }\r\n  .material-icons.shield:before {\r\n    content: \"\\E9E0\"; }\r\n  .material-icons.shop:before {\r\n    content: \"\\E8C9\"; }\r\n  .material-icons.shop_two:before {\r\n    content: \"\\E8CA\"; }\r\n  .material-icons.shopping_basket:before {\r\n    content: \"\\E8CB\"; }\r\n  .material-icons.shopping_cart:before {\r\n    content: \"\\E8CC\"; }\r\n  .material-icons.short_text:before {\r\n    content: \"\\E261\"; }\r\n  .material-icons.show_chart:before {\r\n    content: \"\\E6E1\"; }\r\n  .material-icons.shuffle:before {\r\n    content: \"\\E043\"; }\r\n  .material-icons.shuffle_on:before {\r\n    content: \"\\E9E1\"; }\r\n  .material-icons.shutter_speed:before {\r\n    content: \"\\E43D\"; }\r\n  .material-icons.signal_cellular_4_bar:before {\r\n    content: \"\\E1C8\"; }\r\n  .material-icons.signal_cellular_alt:before {\r\n    content: \"\\E202\"; }\r\n  .material-icons.signal_cellular_connected_no_internet_4_bar:before {\r\n    content: \"\\E1CD\"; }\r\n  .material-icons.signal_cellular_no_sim:before {\r\n    content: \"\\E1CE\"; }\r\n  .material-icons.signal_cellular_null:before {\r\n    content: \"\\E1CF\"; }\r\n  .material-icons.signal_cellular_off:before {\r\n    content: \"\\E1D0\"; }\r\n  .material-icons.signal_wifi_4_bar:before {\r\n    content: \"\\E1D8\"; }\r\n  .material-icons.signal_wifi_4_bar_lock:before {\r\n    content: \"\\E1D9\"; }\r\n  .material-icons.signal_wifi_off:before {\r\n    content: \"\\E1DA\"; }\r\n  .material-icons.sim_card:before {\r\n    content: \"\\E32B\"; }\r\n  .material-icons.sim_card_alert:before {\r\n    content: \"\\E624\"; }\r\n  .material-icons.single_bed:before {\r\n    content: \"\\EA48\"; }\r\n  .material-icons.skip_next:before {\r\n    content: \"\\E044\"; }\r\n  .material-icons.skip_previous:before {\r\n    content: \"\\E045\"; }\r\n  .material-icons.slideshow:before {\r\n    content: \"\\E41B\"; }\r\n  .material-icons.slow_motion_video:before {\r\n    content: \"\\E068\"; }\r\n  .material-icons.smartphone:before {\r\n    content: \"\\E32C\"; }\r\n  .material-icons.smoke_free:before {\r\n    content: \"\\EB4A\"; }\r\n  .material-icons.smoking_rooms:before {\r\n    content: \"\\EB4B\"; }\r\n  .material-icons.sms:before {\r\n    content: \"\\E625\"; }\r\n  .material-icons.sms_failed:before {\r\n    content: \"\\E626\"; }\r\n  .material-icons.snooze:before {\r\n    content: \"\\E046\"; }\r\n  .material-icons.sort:before {\r\n    content: \"\\E164\"; }\r\n  .material-icons.sort_by_alpha:before {\r\n    content: \"\\E053\"; }\r\n  .material-icons.spa:before {\r\n    content: \"\\EB4C\"; }\r\n  .material-icons.space_bar:before {\r\n    content: \"\\E256\"; }\r\n  .material-icons.speaker:before {\r\n    content: \"\\E32D\"; }\r\n  .material-icons.speaker_group:before {\r\n    content: \"\\E32E\"; }\r\n  .material-icons.speaker_notes:before {\r\n    content: \"\\E8CD\"; }\r\n  .material-icons.speaker_notes_off:before {\r\n    content: \"\\E92A\"; }\r\n  .material-icons.speaker_phone:before {\r\n    content: \"\\E0D2\"; }\r\n  .material-icons.speed:before {\r\n    content: \"\\E9E4\"; }\r\n  .material-icons.spellcheck:before {\r\n    content: \"\\E8CE\"; }\r\n  .material-icons.sports:before {\r\n    content: \"\\EA30\"; }\r\n  .material-icons.sports_baseball:before {\r\n    content: \"\\EA51\"; }\r\n  .material-icons.sports_basketball:before {\r\n    content: \"\\EA26\"; }\r\n  .material-icons.sports_cricket:before {\r\n    content: \"\\EA27\"; }\r\n  .material-icons.sports_esports:before {\r\n    content: \"\\EA28\"; }\r\n  .material-icons.sports_football:before {\r\n    content: \"\\EA29\"; }\r\n  .material-icons.sports_golf:before {\r\n    content: \"\\EA2A\"; }\r\n  .material-icons.sports_handball:before {\r\n    content: \"\\EA33\"; }\r\n  .material-icons.sports_hockey:before {\r\n    content: \"\\EA2B\"; }\r\n  .material-icons.sports_kabaddi:before {\r\n    content: \"\\EA34\"; }\r\n  .material-icons.sports_mma:before {\r\n    content: \"\\EA2C\"; }\r\n  .material-icons.sports_motorsports:before {\r\n    content: \"\\EA2D\"; }\r\n  .material-icons.sports_rugby:before {\r\n    content: \"\\EA2E\"; }\r\n  .material-icons.sports_soccer:before {\r\n    content: \"\\EA2F\"; }\r\n  .material-icons.sports_tennis:before {\r\n    content: \"\\EA32\"; }\r\n  .material-icons.sports_volleyball:before {\r\n    content: \"\\EA31\"; }\r\n  .material-icons.square_foot:before {\r\n    content: \"\\EA49\"; }\r\n  .material-icons.stacked_bar_chart:before {\r\n    content: \"\\E9E6\"; }\r\n  .material-icons.star:before {\r\n    content: \"\\E838\"; }\r\n  .material-icons.star_border:before {\r\n    content: \"\\E83A\"; }\r\n  .material-icons.star_half:before {\r\n    content: \"\\E839\"; }\r\n  .material-icons.star_outline:before {\r\n    content: \"\\E83A\"; }\r\n  .material-icons.stars:before {\r\n    content: \"\\E8D0\"; }\r\n  .material-icons.stay_current_landscape:before {\r\n    content: \"\\E0D3\"; }\r\n  .material-icons.stay_current_portrait:before {\r\n    content: \"\\E0D4\"; }\r\n  .material-icons.stay_primary_landscape:before {\r\n    content: \"\\E0D5\"; }\r\n  .material-icons.stay_primary_portrait:before {\r\n    content: \"\\E0D6\"; }\r\n  .material-icons.stop:before {\r\n    content: \"\\E047\"; }\r\n  .material-icons.stop_screen_share:before {\r\n    content: \"\\E0E3\"; }\r\n  .material-icons.storage:before {\r\n    content: \"\\E1DB\"; }\r\n  .material-icons.store:before {\r\n    content: \"\\E8D1\"; }\r\n  .material-icons.store_mall_directory:before {\r\n    content: \"\\E563\"; }\r\n  .material-icons.storefront:before {\r\n    content: \"\\EA12\"; }\r\n  .material-icons.straighten:before {\r\n    content: \"\\E41C\"; }\r\n  .material-icons.stream:before {\r\n    content: \"\\E9E9\"; }\r\n  .material-icons.streetview:before {\r\n    content: \"\\E56E\"; }\r\n  .material-icons.strikethrough_s:before {\r\n    content: \"\\E257\"; }\r\n  .material-icons.style:before {\r\n    content: \"\\E41D\"; }\r\n  .material-icons.subdirectory_arrow_left:before {\r\n    content: \"\\E5D9\"; }\r\n  .material-icons.subdirectory_arrow_right:before {\r\n    content: \"\\E5DA\"; }\r\n  .material-icons.subject:before {\r\n    content: \"\\E8D2\"; }\r\n  .material-icons.subscriptions:before {\r\n    content: \"\\E064\"; }\r\n  .material-icons.subtitles:before {\r\n    content: \"\\E048\"; }\r\n  .material-icons.subway:before {\r\n    content: \"\\E56F\"; }\r\n  .material-icons.supervised_user_circle:before {\r\n    content: \"\\E939\"; }\r\n  .material-icons.supervisor_account:before {\r\n    content: \"\\E8D3\"; }\r\n  .material-icons.surround_sound:before {\r\n    content: \"\\E049\"; }\r\n  .material-icons.swap_calls:before {\r\n    content: \"\\E0D7\"; }\r\n  .material-icons.swap_horiz:before {\r\n    content: \"\\E8D4\"; }\r\n  .material-icons.swap_horizontal_circle:before {\r\n    content: \"\\E933\"; }\r\n  .material-icons.swap_vert:before {\r\n    content: \"\\E8D5\"; }\r\n  .material-icons.swap_vert_circle:before {\r\n    content: \"\\E8D6\"; }\r\n  .material-icons.swap_vertical_circle:before {\r\n    content: \"\\E8D6\"; }\r\n  .material-icons.swipe:before {\r\n    content: \"\\E9EC\"; }\r\n  .material-icons.switch_account:before {\r\n    content: \"\\E9ED\"; }\r\n  .material-icons.switch_camera:before {\r\n    content: \"\\E41E\"; }\r\n  .material-icons.switch_video:before {\r\n    content: \"\\E41F\"; }\r\n  .material-icons.sync:before {\r\n    content: \"\\E627\"; }\r\n  .material-icons.sync_alt:before {\r\n    content: \"\\EA18\"; }\r\n  .material-icons.sync_disabled:before {\r\n    content: \"\\E628\"; }\r\n  .material-icons.sync_problem:before {\r\n    content: \"\\E629\"; }\r\n  .material-icons.system_update:before {\r\n    content: \"\\E62A\"; }\r\n  .material-icons.system_update_alt:before {\r\n    content: \"\\E8D7\"; }\r\n  .material-icons.system_update_tv:before {\r\n    content: \"\\E8D7\"; }\r\n  .material-icons.tab:before {\r\n    content: \"\\E8D8\"; }\r\n  .material-icons.tab_unselected:before {\r\n    content: \"\\E8D9\"; }\r\n  .material-icons.table_chart:before {\r\n    content: \"\\E265\"; }\r\n  .material-icons.tablet:before {\r\n    content: \"\\E32F\"; }\r\n  .material-icons.tablet_android:before {\r\n    content: \"\\E330\"; }\r\n  .material-icons.tablet_mac:before {\r\n    content: \"\\E331\"; }\r\n  .material-icons.tag:before {\r\n    content: \"\\E9EF\"; }\r\n  .material-icons.tag_faces:before {\r\n    content: \"\\E420\"; }\r\n  .material-icons.takeout_dining:before {\r\n    content: \"\\EA74\"; }\r\n  .material-icons.tap_and_play:before {\r\n    content: \"\\E62B\"; }\r\n  .material-icons.terrain:before {\r\n    content: \"\\E564\"; }\r\n  .material-icons.text_fields:before {\r\n    content: \"\\E262\"; }\r\n  .material-icons.text_format:before {\r\n    content: \"\\E165\"; }\r\n  .material-icons.text_rotate_up:before {\r\n    content: \"\\E93A\"; }\r\n  .material-icons.text_rotate_vertical:before {\r\n    content: \"\\E93B\"; }\r\n  .material-icons.text_rotation_angledown:before {\r\n    content: \"\\E93C\"; }\r\n  .material-icons.text_rotation_angleup:before {\r\n    content: \"\\E93D\"; }\r\n  .material-icons.text_rotation_down:before {\r\n    content: \"\\E93E\"; }\r\n  .material-icons.text_rotation_none:before {\r\n    content: \"\\E93F\"; }\r\n  .material-icons.textsms:before {\r\n    content: \"\\E0D8\"; }\r\n  .material-icons.texture:before {\r\n    content: \"\\E421\"; }\r\n  .material-icons.theater_comedy:before {\r\n    content: \"\\EA66\"; }\r\n  .material-icons.theaters:before {\r\n    content: \"\\E8DA\"; }\r\n  .material-icons.thumb_down:before {\r\n    content: \"\\E8DB\"; }\r\n  .material-icons.thumb_down_alt:before {\r\n    content: \"\\E816\"; }\r\n  .material-icons.thumb_down_off_alt:before {\r\n    content: \"\\E9F2\"; }\r\n  .material-icons.thumb_up:before {\r\n    content: \"\\E8DC\"; }\r\n  .material-icons.thumb_up_alt:before {\r\n    content: \"\\E817\"; }\r\n  .material-icons.thumb_up_off_alt:before {\r\n    content: \"\\E9F3\"; }\r\n  .material-icons.thumbs_up_down:before {\r\n    content: \"\\E8DD\"; }\r\n  .material-icons.time_to_leave:before {\r\n    content: \"\\E62C\"; }\r\n  .material-icons.timelapse:before {\r\n    content: \"\\E422\"; }\r\n  .material-icons.timeline:before {\r\n    content: \"\\E922\"; }\r\n  .material-icons.timer:before {\r\n    content: \"\\E425\"; }\r\n  .material-icons.timer_10:before {\r\n    content: \"\\E423\"; }\r\n  .material-icons.timer_3:before {\r\n    content: \"\\E424\"; }\r\n  .material-icons.timer_off:before {\r\n    content: \"\\E426\"; }\r\n  .material-icons.title:before {\r\n    content: \"\\E264\"; }\r\n  .material-icons.toc:before {\r\n    content: \"\\E8DE\"; }\r\n  .material-icons.today:before {\r\n    content: \"\\E8DF\"; }\r\n  .material-icons.toggle_off:before {\r\n    content: \"\\E9F5\"; }\r\n  .material-icons.toggle_on:before {\r\n    content: \"\\E9F6\"; }\r\n  .material-icons.toll:before {\r\n    content: \"\\E8E0\"; }\r\n  .material-icons.tonality:before {\r\n    content: \"\\E427\"; }\r\n  .material-icons.touch_app:before {\r\n    content: \"\\E913\"; }\r\n  .material-icons.toys:before {\r\n    content: \"\\E332\"; }\r\n  .material-icons.track_changes:before {\r\n    content: \"\\E8E1\"; }\r\n  .material-icons.traffic:before {\r\n    content: \"\\E565\"; }\r\n  .material-icons.train:before {\r\n    content: \"\\E570\"; }\r\n  .material-icons.tram:before {\r\n    content: \"\\E571\"; }\r\n  .material-icons.transfer_within_a_station:before {\r\n    content: \"\\E572\"; }\r\n  .material-icons.transform:before {\r\n    content: \"\\E428\"; }\r\n  .material-icons.transit_enterexit:before {\r\n    content: \"\\E579\"; }\r\n  .material-icons.translate:before {\r\n    content: \"\\E8E2\"; }\r\n  .material-icons.trending_down:before {\r\n    content: \"\\E8E3\"; }\r\n  .material-icons.trending_flat:before {\r\n    content: \"\\E8E4\"; }\r\n  .material-icons.trending_neutral:before {\r\n    content: \"\\E8E4\"; }\r\n  .material-icons.trending_up:before {\r\n    content: \"\\E8E5\"; }\r\n  .material-icons.trip_origin:before {\r\n    content: \"\\E57B\"; }\r\n  .material-icons.tune:before {\r\n    content: \"\\E429\"; }\r\n  .material-icons.turned_in:before {\r\n    content: \"\\E8E6\"; }\r\n  .material-icons.turned_in_not:before {\r\n    content: \"\\E8E7\"; }\r\n  .material-icons.tv:before {\r\n    content: \"\\E333\"; }\r\n  .material-icons.tv_off:before {\r\n    content: \"\\E647\"; }\r\n  .material-icons.two_wheeler:before {\r\n    content: \"\\E9F9\"; }\r\n  .material-icons.unarchive:before {\r\n    content: \"\\E169\"; }\r\n  .material-icons.undo:before {\r\n    content: \"\\E166\"; }\r\n  .material-icons.unfold_less:before {\r\n    content: \"\\E5D6\"; }\r\n  .material-icons.unfold_more:before {\r\n    content: \"\\E5D7\"; }\r\n  .material-icons.unsubscribe:before {\r\n    content: \"\\E0EB\"; }\r\n  .material-icons.update:before {\r\n    content: \"\\E923\"; }\r\n  .material-icons.upload_file:before {\r\n    content: \"\\E9FC\"; }\r\n  .material-icons.usb:before {\r\n    content: \"\\E1E0\"; }\r\n  .material-icons.verified_user:before {\r\n    content: \"\\E8E8\"; }\r\n  .material-icons.vertical_align_bottom:before {\r\n    content: \"\\E258\"; }\r\n  .material-icons.vertical_align_center:before {\r\n    content: \"\\E259\"; }\r\n  .material-icons.vertical_align_top:before {\r\n    content: \"\\E25A\"; }\r\n  .material-icons.vertical_split:before {\r\n    content: \"\\E949\"; }\r\n  .material-icons.vibration:before {\r\n    content: \"\\E62D\"; }\r\n  .material-icons.video_call:before {\r\n    content: \"\\E070\"; }\r\n  .material-icons.video_collection:before {\r\n    content: \"\\E04A\"; }\r\n  .material-icons.video_label:before {\r\n    content: \"\\E071\"; }\r\n  .material-icons.video_library:before {\r\n    content: \"\\E04A\"; }\r\n  .material-icons.videocam:before {\r\n    content: \"\\E04B\"; }\r\n  .material-icons.videocam_off:before {\r\n    content: \"\\E04C\"; }\r\n  .material-icons.videogame_asset:before {\r\n    content: \"\\E338\"; }\r\n  .material-icons.view_agenda:before {\r\n    content: \"\\E8E9\"; }\r\n  .material-icons.view_array:before {\r\n    content: \"\\E8EA\"; }\r\n  .material-icons.view_carousel:before {\r\n    content: \"\\E8EB\"; }\r\n  .material-icons.view_column:before {\r\n    content: \"\\E8EC\"; }\r\n  .material-icons.view_comfortable:before {\r\n    content: \"\\E42A\"; }\r\n  .material-icons.view_comfy:before {\r\n    content: \"\\E42A\"; }\r\n  .material-icons.view_compact:before {\r\n    content: \"\\E42B\"; }\r\n  .material-icons.view_day:before {\r\n    content: \"\\E8ED\"; }\r\n  .material-icons.view_headline:before {\r\n    content: \"\\E8EE\"; }\r\n  .material-icons.view_in_ar:before {\r\n    content: \"\\E9FE\"; }\r\n  .material-icons.view_list:before {\r\n    content: \"\\E8EF\"; }\r\n  .material-icons.view_module:before {\r\n    content: \"\\E8F0\"; }\r\n  .material-icons.view_quilt:before {\r\n    content: \"\\E8F1\"; }\r\n  .material-icons.view_stream:before {\r\n    content: \"\\E8F2\"; }\r\n  .material-icons.view_week:before {\r\n    content: \"\\E8F3\"; }\r\n  .material-icons.vignette:before {\r\n    content: \"\\E435\"; }\r\n  .material-icons.visibility:before {\r\n    content: \"\\E8F4\"; }\r\n  .material-icons.visibility_off:before {\r\n    content: \"\\E8F5\"; }\r\n  .material-icons.voice_chat:before {\r\n    content: \"\\E62E\"; }\r\n  .material-icons.voice_over_off:before {\r\n    content: \"\\E94A\"; }\r\n  .material-icons.voicemail:before {\r\n    content: \"\\E0D9\"; }\r\n  .material-icons.volume_down:before {\r\n    content: \"\\E04D\"; }\r\n  .material-icons.volume_mute:before {\r\n    content: \"\\E04E\"; }\r\n  .material-icons.volume_off:before {\r\n    content: \"\\E04F\"; }\r\n  .material-icons.volume_up:before {\r\n    content: \"\\E050\"; }\r\n  .material-icons.volunteer_activism:before {\r\n    content: \"\\EA70\"; }\r\n  .material-icons.vpn_key:before {\r\n    content: \"\\E0DA\"; }\r\n  .material-icons.vpn_lock:before {\r\n    content: \"\\E62F\"; }\r\n  .material-icons.wallet_giftcard:before {\r\n    content: \"\\E8F6\"; }\r\n  .material-icons.wallet_membership:before {\r\n    content: \"\\E8F7\"; }\r\n  .material-icons.wallet_travel:before {\r\n    content: \"\\E8F8\"; }\r\n  .material-icons.wallpaper:before {\r\n    content: \"\\E1BC\"; }\r\n  .material-icons.warning:before {\r\n    content: \"\\E002\"; }\r\n  .material-icons.watch:before {\r\n    content: \"\\E334\"; }\r\n  .material-icons.watch_later:before {\r\n    content: \"\\E924\"; }\r\n  .material-icons.waterfall_chart:before {\r\n    content: \"\\EA00\"; }\r\n  .material-icons.waves:before {\r\n    content: \"\\E176\"; }\r\n  .material-icons.wb_auto:before {\r\n    content: \"\\E42C\"; }\r\n  .material-icons.wb_cloudy:before {\r\n    content: \"\\E42D\"; }\r\n  .material-icons.wb_incandescent:before {\r\n    content: \"\\E42E\"; }\r\n  .material-icons.wb_iridescent:before {\r\n    content: \"\\E436\"; }\r\n  .material-icons.wb_shade:before {\r\n    content: \"\\EA01\"; }\r\n  .material-icons.wb_sunny:before {\r\n    content: \"\\E430\"; }\r\n  .material-icons.wb_twighlight:before {\r\n    content: \"\\EA02\"; }\r\n  .material-icons.wc:before {\r\n    content: \"\\E63D\"; }\r\n  .material-icons.web:before {\r\n    content: \"\\E051\"; }\r\n  .material-icons.web_asset:before {\r\n    content: \"\\E069\"; }\r\n  .material-icons.weekend:before {\r\n    content: \"\\E16B\"; }\r\n  .material-icons.whatshot:before {\r\n    content: \"\\E80E\"; }\r\n  .material-icons.where_to_vote:before {\r\n    content: \"\\E177\"; }\r\n  .material-icons.widgets:before {\r\n    content: \"\\E1BD\"; }\r\n  .material-icons.wifi:before {\r\n    content: \"\\E63E\"; }\r\n  .material-icons.wifi_lock:before {\r\n    content: \"\\E1E1\"; }\r\n  .material-icons.wifi_off:before {\r\n    content: \"\\E648\"; }\r\n  .material-icons.wifi_tethering:before {\r\n    content: \"\\E1E2\"; }\r\n  .material-icons.work:before {\r\n    content: \"\\E8F9\"; }\r\n  .material-icons.work_off:before {\r\n    content: \"\\E942\"; }\r\n  .material-icons.work_outline:before {\r\n    content: \"\\E943\"; }\r\n  .material-icons.workspaces_filled:before {\r\n    content: \"\\EA0D\"; }\r\n  .material-icons.workspaces_outline:before {\r\n    content: \"\\EA0F\"; }\r\n  .material-icons.wrap_text:before {\r\n    content: \"\\E25B\"; }\r\n  .material-icons.youtube_searched_for:before {\r\n    content: \"\\E8FA\"; }\r\n  .material-icons.zoom_in:before {\r\n    content: \"\\E8FF\"; }\r\n  .material-icons.zoom_out:before {\r\n    content: \"\\E900\"; }\r\n  .material-icons.zoom_out_map:before {\r\n    content: \"\\E56B\"; }\r\n", ""]);
+var _win,
+    _doc,
+    _docElement,
+    _pluginInitted,
+    _tempDiv,
+    _tempDivStyler,
+    _recentSetterPlugin,
+    _windowExists = function _windowExists() {
+  return typeof window !== "undefined";
+},
+    _transformProps = {},
+    _RAD2DEG = 180 / Math.PI,
+    _DEG2RAD = Math.PI / 180,
+    _atan2 = Math.atan2,
+    _bigNum = 1e8,
+    _capsExp = /([A-Z])/g,
+    _numWithUnitExp = /[-+=\.]*\d+[\.e-]*\d*[a-z%]*/g,
+    _horizontalExp = /(?:left|right|width|margin|padding|x)/i,
+    _complexExp = /[\s,\(]\S/,
+    _propertyAliases = {
+  autoAlpha: "opacity,visibility",
+  scale: "scaleX,scaleY",
+  alpha: "opacity"
+},
+    _renderCSSProp = function _renderCSSProp(ratio, data) {
+  return data.set(data.t, data.p, ~~((data.s + data.c * ratio) * 1000) / 1000 + data.u, data);
+},
+    _renderPropWithEnd = function _renderPropWithEnd(ratio, data) {
+  return data.set(data.t, data.p, ratio === 1 ? data.e : ~~((data.s + data.c * ratio) * 1000) / 1000 + data.u, data);
+},
+    _renderCSSPropWithBeginning = function _renderCSSPropWithBeginning(ratio, data) {
+  return data.set(data.t, data.p, ratio ? ~~((data.s + data.c * ratio) * 1000) / 1000 + data.u : data.b, data);
+},
+    //if units change, we need a way to render the original unit/value when the tween goes all the way back to the beginning (ratio:0)
+_renderRoundedCSSProp = function _renderRoundedCSSProp(ratio, data) {
+  var value = data.s + data.c * ratio;
+  data.set(data.t, data.p, ~~(value + (value < 0 ? -.5 : .5)) + data.u, data);
+},
+    _renderNonTweeningValue = function _renderNonTweeningValue(ratio, data) {
+  return data.set(data.t, data.p, ratio ? data.e : data.b, data);
+},
+    _renderNonTweeningValueOnlyAtEnd = function _renderNonTweeningValueOnlyAtEnd(ratio, data) {
+  return data.set(data.t, data.p, ratio !== 1 ? data.b : data.e, data);
+},
+    _setterCSSStyle = function _setterCSSStyle(target, property, value) {
+  return target.style[property] = value;
+},
+    _setterCSSProp = function _setterCSSProp(target, property, value) {
+  return target.style.setProperty(property, value);
+},
+    _setterTransform = function _setterTransform(target, property, value) {
+  return target._gsap[property] = value;
+},
+    _setterScale = function _setterScale(target, property, value) {
+  return target._gsap.scaleX = target._gsap.scaleY = value;
+},
+    _setterScaleWithRender = function _setterScaleWithRender(target, property, value, data, ratio) {
+  var cache = target._gsap;
+  cache.scaleX = cache.scaleY = value;
+  cache.renderTransform(ratio, cache);
+},
+    _setterTransformWithRender = function _setterTransformWithRender(target, property, value, data, ratio) {
+  var cache = target._gsap;
+  cache[property] = value;
+  cache.renderTransform(ratio, cache);
+},
+    _transformProp = "transform",
+    _transformOriginProp = _transformProp + "Origin",
+    _supports3D,
+    _createElement = function _createElement(type, ns) {
+  var e = _doc.createElementNS ? _doc.createElementNS((ns || "http://www.w3.org/1999/xhtml").replace(/^https/, "http"), type) : _doc.createElement(type); //some servers swap in https for http in the namespace which can break things, making "style" inaccessible.
 
-// exports
+  return e.style ? e : _doc.createElement(type); //some environments won't allow access to the element's style when created with a namespace in which case we default to the standard createElement() to work around the issue. Also note that when GSAP is embedded directly inside an SVG file, createElement() won't allow access to the style object in Firefox (see https://greensock.com/forums/topic/20215-problem-using-tweenmax-in-standalone-self-containing-svg-file-err-cannot-set-property-csstext-of-undefined/).
+},
+    _getComputedProperty = function _getComputedProperty(target, property, skipPrefixFallback) {
+  var cs = getComputedStyle(target);
+  return cs[property] || cs.getPropertyValue(property.replace(_capsExp, "-$1").toLowerCase()) || cs.getPropertyValue(property) || !skipPrefixFallback && _getComputedProperty(target, _checkPropPrefix(property) || property, 1) || ""; //css variables may not need caps swapped out for dashes and lowercase.
+},
+    _prefixes = "O,Moz,ms,Ms,Webkit".split(","),
+    _checkPropPrefix = function _checkPropPrefix(property, element) {
+  var e = element || _tempDiv,
+      s = e.style,
+      i = 5;
+
+  if (property in s) {
+    return property;
+  }
+
+  property = property.charAt(0).toUpperCase() + property.substr(1);
+
+  while (i-- && !(_prefixes[i] + property in s)) {}
+
+  return i < 0 ? null : (i === 3 ? "ms" : i >= 0 ? _prefixes[i] : "") + property;
+},
+    _initCore = function _initCore() {
+  if (_windowExists()) {
+    _win = window;
+    _doc = _win.document;
+    _docElement = _doc.documentElement;
+    _tempDiv = _createElement("div") || {
+      style: {}
+    };
+    _tempDivStyler = _createElement("div");
+    _transformProp = _checkPropPrefix(_transformProp);
+    _transformOriginProp = _checkPropPrefix(_transformOriginProp);
+    _tempDiv.style.cssText = "border-width:0;line-height:0;position:absolute;padding:0"; //make sure to override certain properties that may contaminate measurements, in case the user has overreaching style sheets.
+
+    _supports3D = !!_checkPropPrefix("perspective");
+    _pluginInitted = 1;
+  }
+},
+    _getBBoxHack = function _getBBoxHack(swapIfPossible) {
+  //works around issues in some browsers (like Firefox) that don't correctly report getBBox() on SVG elements inside a <defs> element and/or <mask>. We try creating an SVG, adding it to the documentElement and toss the element in there so that it's definitely part of the rendering tree, then grab the bbox and if it works, we actually swap out the original getBBox() method for our own that does these extra steps whenever getBBox is needed. This helps ensure that performance is optimal (only do all these extra steps when absolutely necessary...most elements don't need it).
+  var svg = _createElement("svg", this.ownerSVGElement && this.ownerSVGElement.getAttribute("xmlns") || "http://www.w3.org/2000/svg"),
+      oldParent = this.parentNode,
+      oldSibling = this.nextSibling,
+      oldCSS = this.style.cssText,
+      bbox;
+
+  _docElement.appendChild(svg);
+
+  svg.appendChild(this);
+  this.style.display = "block";
+
+  if (swapIfPossible) {
+    try {
+      bbox = this.getBBox();
+      this._gsapBBox = this.getBBox; //store the original
+
+      this.getBBox = _getBBoxHack;
+    } catch (e) {}
+  } else if (this._gsapBBox) {
+    bbox = this._gsapBBox();
+  }
+
+  if (oldSibling) {
+    oldParent.insertBefore(this, oldSibling);
+  } else {
+    oldParent.appendChild(this);
+  }
+
+  _docElement.removeChild(svg);
+
+  this.style.cssText = oldCSS;
+  return bbox;
+},
+    _getAttributeFallbacks = function _getAttributeFallbacks(target, attributesArray) {
+  var i = attributesArray.length;
+
+  while (i--) {
+    if (target.hasAttribute(attributesArray[i])) {
+      return target.getAttribute(attributesArray[i]);
+    }
+  }
+},
+    _getBBox = function _getBBox(target) {
+  var bounds;
+
+  try {
+    bounds = target.getBBox(); //Firefox throws errors if you try calling getBBox() on an SVG element that's not rendered (like in a <symbol> or <defs>). https://bugzilla.mozilla.org/show_bug.cgi?id=612118
+  } catch (error) {
+    bounds = _getBBoxHack.call(target, true);
+  } //some browsers (like Firefox) misreport the bounds if the element has zero width and height (it just assumes it's at x:0, y:0), thus we need to manually grab the position in that case.
 
 
-/***/ }),
+  return bounds && !bounds.width && !bounds.x && !bounds.y ? {
+    x: +_getAttributeFallbacks(target, ["x", "cx", "x1"]) || 0,
+    y: +_getAttributeFallbacks(target, ["y", "cy", "y1"]) || 0,
+    width: 0,
+    height: 0
+  } : bounds;
+},
+    _isSVG = function _isSVG(e) {
+  return !!(e.getCTM && (!e.parentNode || e.ownerSVGElement) && _getBBox(e));
+},
+    //reports if the element is an SVG on which getBBox() actually works
+_removeProperty = function _removeProperty(target, property) {
+  if (property) {
+    var style = target.style;
 
-/***/ "./node_modules/css-loader/lib/css-base.js":
-/*!*************************************************!*\
-  !*** ./node_modules/css-loader/lib/css-base.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+    if (property in _transformProps) {
+      property = _transformProp;
+    }
+
+    if (style.removeProperty) {
+      if (property.substr(0, 2) === "ms" || property.substr(0, 6) === "webkit") {
+        //Microsoft and some Webkit browsers don't conform to the standard of capitalizing the first prefix character, so we adjust so that when we prefix the caps with a dash, it's correct (otherwise it'd be "ms-transform" instead of "-ms-transform" for IE9, for example)
+        property = "-" + property;
+      }
+
+      style.removeProperty(property.replace(_capsExp, "-$1").toLowerCase());
+    } else {
+      //note: old versions of IE use "removeAttribute()" instead of "removeProperty()"
+      style.removeAttribute(property);
+    }
+  }
+},
+    _addNonTweeningPT = function _addNonTweeningPT(plugin, target, property, beginning, end, onlySetAtEnd) {
+  var pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](plugin._pt, target, property, 0, 1, onlySetAtEnd ? _renderNonTweeningValueOnlyAtEnd : _renderNonTweeningValue);
+  plugin._pt = pt;
+  pt.b = beginning;
+  pt.e = end;
+
+  plugin._props.push(property);
+
+  return pt;
+},
+    _nonConvertibleUnits = {
+  deg: 1,
+  rad: 1,
+  turn: 1
+},
+    //takes a single value like 20px and converts it to the unit specified, like "%", returning only the numeric amount.
+_convertToUnit = function _convertToUnit(target, property, value, unit) {
+  var curValue = parseFloat(value) || 0,
+      curUnit = (value + "").trim().substr((curValue + "").length) || "px",
+      // some browsers leave extra whitespace at the beginning of CSS variables, hence the need to trim()
+  style = _tempDiv.style,
+      horizontal = _horizontalExp.test(property),
+      isRootSVG = target.tagName.toLowerCase() === "svg",
+      measureProperty = (isRootSVG ? "client" : "offset") + (horizontal ? "Width" : "Height"),
+      amount = 100,
+      toPixels = unit === "px",
+      px,
+      parent,
+      cache,
+      isSVG;
+
+  if (unit === curUnit || !curValue || _nonConvertibleUnits[unit] || _nonConvertibleUnits[curUnit]) {
+    return curValue;
+  }
+
+  isSVG = target.getCTM && _isSVG(target);
+
+  if (unit === "%" && (_transformProps[property] || ~property.indexOf("adius"))) {
+    //transforms and borderRadius are relative to the size of the element itself!
+    return Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(curValue / (isSVG ? target.getBBox()[horizontal ? "width" : "height"] : target[measureProperty]) * amount);
+  }
+
+  style[horizontal ? "width" : "height"] = amount + (toPixels ? curUnit : unit);
+  parent = ~property.indexOf("adius") || unit === "em" && target.appendChild && !isRootSVG ? target : target.parentNode;
+
+  if (isSVG) {
+    parent = (target.ownerSVGElement || {}).parentNode;
+  }
+
+  if (!parent || parent === _doc || !parent.appendChild) {
+    parent = _doc.body;
+  }
+
+  cache = parent._gsap;
+
+  if (cache && unit === "%" && cache.width && horizontal && cache.time === _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_ticker"].time) {
+    return Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(curValue / cache.width * amount);
+  } else {
+    parent === target && (style.position = "static"); // like for borderRadius, if it's a % we must have it relative to the target itself but that may not have position: relative or position: absolute in which case it'd go up the chain until it finds its offsetParent (bad). position: static protects against that.
+
+    parent.appendChild(_tempDiv);
+    px = _tempDiv[measureProperty];
+    parent.removeChild(_tempDiv);
+    style.position = "absolute";
+
+    if (horizontal && unit === "%") {
+      cache = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_getCache"])(parent);
+      cache.time = _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_ticker"].time;
+      cache.width = parent[measureProperty];
+    }
+  }
+
+  return Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(toPixels ? px * curValue / amount : amount / px * curValue);
+},
+    _get = function _get(target, property, unit, uncache) {
+  var value;
+
+  if (!_pluginInitted) {
+    _initCore();
+  }
+
+  if (property in _propertyAliases && property !== "transform") {
+    property = _propertyAliases[property];
+
+    if (~property.indexOf(",")) {
+      property = property.split(",")[0];
+    }
+  }
+
+  if (_transformProps[property] && property !== "transform") {
+    value = _parseTransform(target, uncache);
+    value = property !== "transformOrigin" ? value[property] : _firstTwoOnly(_getComputedProperty(target, _transformOriginProp)) + value.zOrigin + "px";
+  } else {
+    value = target.style[property];
+
+    if (!value || value === "auto" || uncache || ~(value + "").indexOf("calc(")) {
+      value = _specialProps[property] && _specialProps[property](target, property, unit) || _getComputedProperty(target, property) || Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_getProperty"])(target, property) || (property === "opacity" ? 1 : 0); // note: some browsers, like Firefox, don't report borderRadius correctly! Instead, it only reports every corner like  borderTopLeftRadius
+    }
+  }
+
+  return unit && !~(value + "").indexOf(" ") ? _convertToUnit(target, property, value, unit) + unit : value;
+},
+    _tweenComplexCSSString = function _tweenComplexCSSString(target, prop, start, end) {
+  //note: we call _tweenComplexCSSString.call(pluginInstance...) to ensure that it's scoped properly. We may call it from within a plugin too, thus "this" would refer to the plugin.
+  var pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](this._pt, target.style, prop, 0, 1, _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_renderComplexString"]),
+      index = 0,
+      matchIndex = 0,
+      a,
+      result,
+      startValues,
+      startNum,
+      color,
+      startValue,
+      endValue,
+      endNum,
+      chunk,
+      endUnit,
+      startUnit,
+      relative,
+      endValues;
+  pt.b = start;
+  pt.e = end;
+  start += ""; //ensure values are strings
+
+  end += "";
+
+  if (end === "auto") {
+    target.style[prop] = end;
+    end = _getComputedProperty(target, prop) || end;
+    target.style[prop] = start;
+  }
+
+  a = [start, end];
+
+  Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_colorStringFilter"])(a); //pass an array with the starting and ending values and let the filter do whatever it needs to the values.
+
+
+  start = a[0];
+  end = a[1];
+  startValue = start.indexOf("rgba(");
+  endValue = end.indexOf("rgba(");
+
+  if (!!startValue !== !!endValue) {
+    // for things like boxShadow, sometimes the browser provides the computed values with the color FIRST, but the user provides it with the color LAST, so flip them if necessary.
+    if (startValue) {
+      start = start.substr(startValue) + " " + start.substr(0, startValue - 1);
+    } else {
+      end = end.substr(endValue) + " " + end.substr(0, endValue - 1);
+    }
+  }
+
+  startValues = start.match(_numWithUnitExp) || [];
+  endValues = end.match(_numWithUnitExp) || [];
+
+  if (endValues.length) {
+    while (result = _numWithUnitExp.exec(end)) {
+      endValue = result[0];
+      chunk = end.substring(index, result.index);
+
+      if (color) {
+        color = (color + 1) % 5;
+      } else if (chunk.substr(-5) === "rgba(" || chunk.substr(-5) === "hsla(") {
+        color = 1;
+      }
+
+      if (endValue !== (startValue = startValues[matchIndex++] || "")) {
+        startNum = parseFloat(startValue) || 0;
+        startUnit = startValue.substr((startNum + "").length);
+        relative = endValue.charAt(1) === "=" ? +(endValue.charAt(0) + "1") : 0;
+
+        if (relative) {
+          endValue = endValue.substr(2);
+        }
+
+        endNum = parseFloat(endValue);
+        endUnit = endValue.substr((endNum + "").length);
+        index = _numWithUnitExp.lastIndex - endUnit.length;
+
+        if (!endUnit) {
+          //if something like "perspective:300" is passed in and we must add a unit to the end
+          endUnit = endUnit || _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].units[prop] || startUnit;
+
+          if (index === end.length) {
+            end += endUnit;
+            pt.e += endUnit;
+          }
+        }
+
+        if (startUnit !== endUnit) {
+          startNum = _convertToUnit(target, prop, startValue, endUnit) || 0;
+        } //these nested PropTweens are handled in a special way - we'll never actually call a render or setter method on them. We'll just loop through them in the parent complex string PropTween's render method.
+
+
+        pt._pt = {
+          _next: pt._pt,
+          p: chunk || matchIndex === 1 ? chunk : ",",
+          //note: SVG spec allows omission of comma/space when a negative sign is wedged between two numbers, like 2.5-5.3 instead of 2.5,-5.3 but when tweening, the negative value may switch to positive, so we insert the comma just in case.
+          s: startNum,
+          c: relative ? relative * endNum : endNum - startNum,
+          m: color && color < 4 ? Math.round : 0
+        };
+      }
+    }
+
+    pt.c = index < end.length ? end.substring(index, end.length) : ""; //we use the "c" of the PropTween to store the final part of the string (after the last number)
+  } else {
+    pt.r = prop === "display" && end === "none" ? _renderNonTweeningValueOnlyAtEnd : _renderNonTweeningValue;
+  }
+
+  if (_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_relExp"].test(end)) {
+    pt.e = 0; //if the end string contains relative values or dynamic random(...) values, delete the end it so that on the final render we don't actually set it to the string with += or -= characters (forces it to use the calculated value).
+  }
+
+  this._pt = pt; //start the linked list with this new PropTween. Remember, we call _tweenComplexCSSString.call(pluginInstance...) to ensure that it's scoped properly. We may call it from within another plugin too, thus "this" would refer to the plugin.
+
+  return pt;
+},
+    _keywordToPercent = {
+  top: "0%",
+  bottom: "100%",
+  left: "0%",
+  right: "100%",
+  center: "50%"
+},
+    _convertKeywordsToPercentages = function _convertKeywordsToPercentages(value) {
+  var split = value.split(" "),
+      x = split[0],
+      y = split[1] || "50%";
+
+  if (x === "top" || x === "bottom" || y === "left" || y === "right") {
+    //the user provided them in the wrong order, so flip them
+    value = x;
+    x = y;
+    y = value;
+  }
+
+  split[0] = _keywordToPercent[x] || x;
+  split[1] = _keywordToPercent[y] || y;
+  return split.join(" ");
+},
+    _renderClearProps = function _renderClearProps(ratio, data) {
+  if (data.tween && data.tween._time === data.tween._dur) {
+    var target = data.t,
+        style = target.style,
+        props = data.u,
+        prop,
+        clearTransforms,
+        i;
+
+    if (props === "all" || props === true) {
+      style.cssText = "";
+      clearTransforms = 1;
+    } else {
+      props = props.split(",");
+      i = props.length;
+
+      while (--i > -1) {
+        prop = props[i];
+
+        if (_transformProps[prop]) {
+          clearTransforms = 1;
+          prop = prop === "transformOrigin" ? _transformOriginProp : _transformProp;
+        }
+
+        _removeProperty(target, prop);
+      }
+    }
+
+    if (clearTransforms) {
+      _removeProperty(target, _transformProp);
+
+      clearTransforms = target._gsap;
+
+      if (clearTransforms) {
+        if (clearTransforms.svg) {
+          target.removeAttribute("transform");
+        }
+
+        _parseTransform(target, 1); // force all the cached values back to "normal"/identity, otherwise if there's another tween that's already set to render transforms on this element, it could display the wrong values.
+
+      }
+    }
+  }
+},
+    // note: specialProps should return 1 if (and only if) they have a non-zero priority. It indicates we need to sort the linked list.
+_specialProps = {
+  clearProps: function clearProps(plugin, target, property, endValue, tween) {
+    if (tween.data !== "isFromStart") {
+      var pt = plugin._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](plugin._pt, target, property, 0, 0, _renderClearProps);
+      pt.u = endValue;
+      pt.pr = -10;
+      pt.tween = tween;
+
+      plugin._props.push(property);
+
+      return 1;
+    }
+  }
+  /* className feature (about 0.4kb gzipped).
+  , className(plugin, target, property, endValue, tween) {
+  	let _renderClassName = (ratio, data) => {
+  			data.css.render(ratio, data.css);
+  			if (!ratio || ratio === 1) {
+  				let inline = data.rmv,
+  					target = data.t,
+  					p;
+  				target.setAttribute("class", ratio ? data.e : data.b);
+  				for (p in inline) {
+  					_removeProperty(target, p);
+  				}
+  			}
+  		},
+  		_getAllStyles = (target) => {
+  			let styles = {},
+  				computed = getComputedStyle(target),
+  				p;
+  			for (p in computed) {
+  				if (isNaN(p) && p !== "cssText" && p !== "length") {
+  					styles[p] = computed[p];
+  				}
+  			}
+  			_setDefaults(styles, _parseTransform(target, 1));
+  			return styles;
+  		},
+  		startClassList = target.getAttribute("class"),
+  		style = target.style,
+  		cssText = style.cssText,
+  		cache = target._gsap,
+  		classPT = cache.classPT,
+  		inlineToRemoveAtEnd = {},
+  		data = {t:target, plugin:plugin, rmv:inlineToRemoveAtEnd, b:startClassList, e:(endValue.charAt(1) !== "=") ? endValue : startClassList.replace(new RegExp("(?:\\s|^)" + endValue.substr(2) + "(?![\\w-])"), "") + ((endValue.charAt(0) === "+") ? " " + endValue.substr(2) : "")},
+  		changingVars = {},
+  		startVars = _getAllStyles(target),
+  		transformRelated = /(transform|perspective)/i,
+  		endVars, p;
+  	if (classPT) {
+  		classPT.r(1, classPT.d);
+  		_removeLinkedListItem(classPT.d.plugin, classPT, "_pt");
+  	}
+  	target.setAttribute("class", data.e);
+  	endVars = _getAllStyles(target, true);
+  	target.setAttribute("class", startClassList);
+  	for (p in endVars) {
+  		if (endVars[p] !== startVars[p] && !transformRelated.test(p)) {
+  			changingVars[p] = endVars[p];
+  			if (!style[p] && style[p] !== "0") {
+  				inlineToRemoveAtEnd[p] = 1;
+  			}
+  		}
+  	}
+  	cache.classPT = plugin._pt = new PropTween(plugin._pt, target, "className", 0, 0, _renderClassName, data, 0, -11);
+  	if (style.cssText !== cssText) { //only apply if things change. Otherwise, in cases like a background-image that's pulled dynamically, it could cause a refresh. See https://greensock.com/forums/topic/20368-possible-gsap-bug-switching-classnames-in-chrome/.
+  		style.cssText = cssText; //we recorded cssText before we swapped classes and ran _getAllStyles() because in cases when a className tween is overwritten, we remove all the related tweening properties from that class change (otherwise class-specific stuff can't override properties we've directly set on the target's style object due to specificity).
+  	}
+  	_parseTransform(target, true); //to clear the caching of transforms
+  	data.css = new gsap.plugins.css();
+  	data.css.init(target, changingVars, tween);
+  	plugin._props.push(...data.css._props);
+  	return 1;
+  }
+  */
+
+},
 
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
+ * --------------------------------------------------------------------------------------
+ * TRANSFORMS
+ * --------------------------------------------------------------------------------------
+ */
+_identity2DMatrix = [1, 0, 0, 1, 0, 0],
+    _rotationalProperties = {},
+    _isNullTransform = function _isNullTransform(value) {
+  return value === "matrix(1, 0, 0, 1, 0, 0)" || value === "none" || !value;
+},
+    _getComputedTransformMatrixAsArray = function _getComputedTransformMatrixAsArray(target) {
+  var matrixString = _getComputedProperty(target, _transformProp);
 
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
+  return _isNullTransform(matrixString) ? _identity2DMatrix : matrixString.substr(7).match(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_numExp"]).map(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"]);
+},
+    _getMatrix = function _getMatrix(target, force2D) {
+  var cache = target._gsap,
+      style = target.style,
+      matrix = _getComputedTransformMatrixAsArray(target),
+      parent,
+      nextSibling,
+      temp,
+      addedToDOM;
 
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
+  if (cache.svg && target.getAttribute("transform")) {
+    temp = target.transform.baseVal.consolidate().matrix; //ensures that even complex values like "translate(50,60) rotate(135,0,0)" are parsed because it mashes it into a matrix.
+
+    matrix = [temp.a, temp.b, temp.c, temp.d, temp.e, temp.f];
+    return matrix.join(",") === "1,0,0,1,0,0" ? _identity2DMatrix : matrix;
+  } else if (matrix === _identity2DMatrix && !target.offsetParent && target !== _docElement && !cache.svg) {
+    //note: if offsetParent is null, that means the element isn't in the normal document flow, like if it has display:none or one of its ancestors has display:none). Firefox returns null for getComputedStyle() if the element is in an iframe that has display:none. https://bugzilla.mozilla.org/show_bug.cgi?id=548397
+    //browsers don't report transforms accurately unless the element is in the DOM and has a display value that's not "none". Firefox and Microsoft browsers have a partial bug where they'll report transforms even if display:none BUT not any percentage-based values like translate(-50%, 8px) will be reported as if it's translate(0, 8px).
+    temp = style.display;
+    style.display = "block";
+    parent = target.parentNode;
+
+    if (!parent || !target.offsetParent) {
+      addedToDOM = 1; //flag
+
+      nextSibling = target.nextSibling;
+
+      _docElement.appendChild(target); //we must add it to the DOM in order to get values properly
+
+    }
+
+    matrix = _getComputedTransformMatrixAsArray(target);
+
+    if (temp) {
+      style.display = temp;
+    } else {
+      _removeProperty(target, "display");
+    }
+
+    if (addedToDOM) {
+      if (nextSibling) {
+        parent.insertBefore(target, nextSibling);
+      } else if (parent) {
+        parent.appendChild(target);
+      } else {
+        _docElement.removeChild(target);
+      }
+    }
+  }
+
+  return force2D && matrix.length > 6 ? [matrix[0], matrix[1], matrix[4], matrix[5], matrix[12], matrix[13]] : matrix;
+},
+    _applySVGOrigin = function _applySVGOrigin(target, origin, originIsAbsolute, smooth, matrixArray, pluginToAddPropTweensTo) {
+  var cache = target._gsap,
+      matrix = matrixArray || _getMatrix(target, true),
+      xOriginOld = cache.xOrigin || 0,
+      yOriginOld = cache.yOrigin || 0,
+      xOffsetOld = cache.xOffset || 0,
+      yOffsetOld = cache.yOffset || 0,
+      a = matrix[0],
+      b = matrix[1],
+      c = matrix[2],
+      d = matrix[3],
+      tx = matrix[4],
+      ty = matrix[5],
+      originSplit = origin.split(" "),
+      xOrigin = parseFloat(originSplit[0]) || 0,
+      yOrigin = parseFloat(originSplit[1]) || 0,
+      bounds,
+      determinant,
+      x,
+      y;
+
+  if (!originIsAbsolute) {
+    bounds = _getBBox(target);
+    xOrigin = bounds.x + (~originSplit[0].indexOf("%") ? xOrigin / 100 * bounds.width : xOrigin);
+    yOrigin = bounds.y + (~(originSplit[1] || originSplit[0]).indexOf("%") ? yOrigin / 100 * bounds.height : yOrigin);
+  } else if (matrix !== _identity2DMatrix && (determinant = a * d - b * c)) {
+    //if it's zero (like if scaleX and scaleY are zero), skip it to avoid errors with dividing by zero.
+    x = xOrigin * (d / determinant) + yOrigin * (-c / determinant) + (c * ty - d * tx) / determinant;
+    y = xOrigin * (-b / determinant) + yOrigin * (a / determinant) - (a * ty - b * tx) / determinant;
+    xOrigin = x;
+    yOrigin = y;
+  }
+
+  if (smooth || smooth !== false && cache.smooth) {
+    tx = xOrigin - xOriginOld;
+    ty = yOrigin - yOriginOld;
+    cache.xOffset = xOffsetOld + (tx * a + ty * c) - tx;
+    cache.yOffset = yOffsetOld + (tx * b + ty * d) - ty;
+  } else {
+    cache.xOffset = cache.yOffset = 0;
+  }
+
+  cache.xOrigin = xOrigin;
+  cache.yOrigin = yOrigin;
+  cache.smooth = !!smooth;
+  cache.origin = origin;
+  cache.originIsAbsolute = !!originIsAbsolute;
+  target.style[_transformOriginProp] = "0px 0px"; //otherwise, if someone sets  an origin via CSS, it will likely interfere with the SVG transform attribute ones (because remember, we're baking the origin into the matrix() value).
+
+  if (pluginToAddPropTweensTo) {
+    _addNonTweeningPT(pluginToAddPropTweensTo, cache, "xOrigin", xOriginOld, xOrigin);
+
+    _addNonTweeningPT(pluginToAddPropTweensTo, cache, "yOrigin", yOriginOld, yOrigin);
+
+    _addNonTweeningPT(pluginToAddPropTweensTo, cache, "xOffset", xOffsetOld, cache.xOffset);
+
+    _addNonTweeningPT(pluginToAddPropTweensTo, cache, "yOffset", yOffsetOld, cache.yOffset);
+  }
+},
+    _parseTransform = function _parseTransform(target, uncache) {
+  var cache = target._gsap || new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["GSCache"](target);
+
+  if ("x" in cache && !uncache && !cache.uncache) {
+    return cache;
+  }
+
+  var style = target.style,
+      invertedScaleX = cache.scaleX < 0,
+      xOrigin = cache.xOrigin || 0,
+      yOrigin = cache.yOrigin || 0,
+      px = "px",
+      deg = "deg",
+      origin = _getComputedProperty(target, _transformOriginProp) || "0",
+      x,
+      y,
+      z,
+      scaleX,
+      scaleY,
+      rotation,
+      rotationX,
+      rotationY,
+      skewX,
+      skewY,
+      perspective,
+      matrix,
+      angle,
+      cos,
+      sin,
+      a,
+      b,
+      c,
+      d,
+      a12,
+      a22,
+      t1,
+      t2,
+      t3,
+      a13,
+      a23,
+      a33,
+      a42,
+      a43,
+      a32;
+  x = y = z = rotation = rotationX = rotationY = skewX = skewY = perspective = 0;
+  scaleX = scaleY = 1;
+  cache.svg = !!(target.getCTM && _isSVG(target));
+  matrix = _getMatrix(target, cache.svg);
+
+  if (cache.svg) {
+    _applySVGOrigin(target, origin, cache.originIsAbsolute, cache.smooth !== false, matrix);
+  }
+
+  if (matrix !== _identity2DMatrix) {
+    a = matrix[0]; //a11
+
+    b = matrix[1]; //a21
+
+    c = matrix[2]; //a31
+
+    d = matrix[3]; //a41
+
+    x = a12 = matrix[4];
+    y = a22 = matrix[5]; //2D matrix
+
+    if (matrix.length === 6) {
+      scaleX = Math.sqrt(a * a + b * b);
+      scaleY = Math.sqrt(d * d + c * c);
+      rotation = a || b ? _atan2(b, a) * _RAD2DEG : 0; //note: if scaleX is 0, we cannot accurately measure rotation. Same for skewX with a scaleY of 0. Therefore, we default to the previously recorded value (or zero if that doesn't exist).
+
+      skewX = c || d ? _atan2(c, d) * _RAD2DEG + rotation : 0;
+
+      if (cache.svg) {
+        x -= xOrigin - (xOrigin * a + yOrigin * c);
+        y -= yOrigin - (xOrigin * b + yOrigin * d);
+      } //3D matrix
+
+    } else {
+      a32 = matrix[6];
+      a42 = matrix[7];
+      a13 = matrix[8];
+      a23 = matrix[9];
+      a33 = matrix[10];
+      a43 = matrix[11];
+      x = matrix[12];
+      y = matrix[13];
+      z = matrix[14];
+      angle = _atan2(a32, a33);
+      rotationX = angle * _RAD2DEG; //rotationX
+
+      if (angle) {
+        cos = Math.cos(-angle);
+        sin = Math.sin(-angle);
+        t1 = a12 * cos + a13 * sin;
+        t2 = a22 * cos + a23 * sin;
+        t3 = a32 * cos + a33 * sin;
+        a13 = a12 * -sin + a13 * cos;
+        a23 = a22 * -sin + a23 * cos;
+        a33 = a32 * -sin + a33 * cos;
+        a43 = a42 * -sin + a43 * cos;
+        a12 = t1;
+        a22 = t2;
+        a32 = t3;
+      } //rotationY
+
+
+      angle = _atan2(-c, a33);
+      rotationY = angle * _RAD2DEG;
+
+      if (angle) {
+        cos = Math.cos(-angle);
+        sin = Math.sin(-angle);
+        t1 = a * cos - a13 * sin;
+        t2 = b * cos - a23 * sin;
+        t3 = c * cos - a33 * sin;
+        a43 = d * sin + a43 * cos;
+        a = t1;
+        b = t2;
+        c = t3;
+      } //rotationZ
+
+
+      angle = _atan2(b, a);
+      rotation = angle * _RAD2DEG;
+
+      if (angle) {
+        cos = Math.cos(angle);
+        sin = Math.sin(angle);
+        t1 = a * cos + b * sin;
+        t2 = a12 * cos + a22 * sin;
+        b = b * cos - a * sin;
+        a22 = a22 * cos - a12 * sin;
+        a = t1;
+        a12 = t2;
+      }
+
+      if (rotationX && Math.abs(rotationX) + Math.abs(rotation) > 359.9) {
+        //when rotationY is set, it will often be parsed as 180 degrees different than it should be, and rotationX and rotation both being 180 (it looks the same), so we adjust for that here.
+        rotationX = rotation = 0;
+        rotationY = 180 - rotationY;
+      }
+
+      scaleX = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(Math.sqrt(a * a + b * b + c * c));
+      scaleY = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(Math.sqrt(a22 * a22 + a32 * a32));
+      angle = _atan2(a12, a22);
+      skewX = Math.abs(angle) > 0.0002 ? angle * _RAD2DEG : 0;
+      perspective = a43 ? 1 / (a43 < 0 ? -a43 : a43) : 0;
+    }
+
+    if (cache.svg) {
+      //sense if there are CSS transforms applied on an SVG element in which case we must overwrite them when rendering. The transform attribute is more reliable cross-browser, but we can't just remove the CSS ones because they may be applied in a CSS rule somewhere (not just inline).
+      matrix = target.getAttribute("transform");
+      cache.forceCSS = target.setAttribute("transform", "") || !_isNullTransform(_getComputedProperty(target, _transformProp));
+      matrix && target.setAttribute("transform", matrix);
+    }
+  }
+
+  if (Math.abs(skewX) > 90 && Math.abs(skewX) < 270) {
+    if (invertedScaleX) {
+      scaleX *= -1;
+      skewX += rotation <= 0 ? 180 : -180;
+      rotation += rotation <= 0 ? 180 : -180;
+    } else {
+      scaleY *= -1;
+      skewX += skewX <= 0 ? 180 : -180;
+    }
+  }
+
+  cache.x = ((cache.xPercent = x && Math.round(target.offsetWidth / 2) === Math.round(-x) ? -50 : 0) ? 0 : x) + px;
+  cache.y = ((cache.yPercent = y && Math.round(target.offsetHeight / 2) === Math.round(-y) ? -50 : 0) ? 0 : y) + px;
+  cache.z = z + px;
+  cache.scaleX = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(scaleX);
+  cache.scaleY = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(scaleY);
+  cache.rotation = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(rotation) + deg;
+  cache.rotationX = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(rotationX) + deg;
+  cache.rotationY = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(rotationY) + deg;
+  cache.skewX = skewX + deg;
+  cache.skewY = skewY + deg;
+  cache.transformPerspective = perspective + px;
+
+  if (cache.zOrigin = parseFloat(origin.split(" ")[2]) || 0) {
+    style[_transformOriginProp] = _firstTwoOnly(origin);
+  }
+
+  cache.xOffset = cache.yOffset = 0;
+  cache.force3D = _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].force3D;
+  cache.renderTransform = cache.svg ? _renderSVGTransforms : _supports3D ? _renderCSSTransforms : _renderNon3DTransforms;
+  cache.uncache = 0;
+  return cache;
+},
+    _firstTwoOnly = function _firstTwoOnly(value) {
+  return (value = value.split(" "))[0] + " " + value[1];
+},
+    //for handling transformOrigin values, stripping out the 3rd dimension
+_addPxTranslate = function _addPxTranslate(target, start, value) {
+  var unit = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["getUnit"])(start);
+  return Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(parseFloat(start) + parseFloat(_convertToUnit(target, "x", value + "px", unit))) + unit;
+},
+    _renderNon3DTransforms = function _renderNon3DTransforms(ratio, cache) {
+  cache.z = "0px";
+  cache.rotationY = cache.rotationX = "0deg";
+  cache.force3D = 0;
+
+  _renderCSSTransforms(ratio, cache);
+},
+    _zeroDeg = "0deg",
+    _zeroPx = "0px",
+    _endParenthesis = ") ",
+    _renderCSSTransforms = function _renderCSSTransforms(ratio, cache) {
+  var _ref = cache || this,
+      xPercent = _ref.xPercent,
+      yPercent = _ref.yPercent,
+      x = _ref.x,
+      y = _ref.y,
+      z = _ref.z,
+      rotation = _ref.rotation,
+      rotationY = _ref.rotationY,
+      rotationX = _ref.rotationX,
+      skewX = _ref.skewX,
+      skewY = _ref.skewY,
+      scaleX = _ref.scaleX,
+      scaleY = _ref.scaleY,
+      transformPerspective = _ref.transformPerspective,
+      force3D = _ref.force3D,
+      target = _ref.target,
+      zOrigin = _ref.zOrigin,
+      transforms = "",
+      use3D = force3D === "auto" && ratio && ratio !== 1 || force3D === true; // Safari has a bug that causes it not to render 3D transform-origin values properly, so we force the z origin to 0, record it in the cache, and then do the math here to offset the translate values accordingly (basically do the 3D transform-origin part manually)
+
+
+  if (zOrigin && (rotationX !== _zeroDeg || rotationY !== _zeroDeg)) {
+    var angle = parseFloat(rotationY) * _DEG2RAD,
+        a13 = Math.sin(angle),
+        a33 = Math.cos(angle),
+        cos;
+
+    angle = parseFloat(rotationX) * _DEG2RAD;
+    cos = Math.cos(angle);
+    x = _addPxTranslate(target, x, a13 * cos * -zOrigin);
+    y = _addPxTranslate(target, y, -Math.sin(angle) * -zOrigin);
+    z = _addPxTranslate(target, z, a33 * cos * -zOrigin + zOrigin);
+  }
+
+  if (transformPerspective !== _zeroPx) {
+    transforms += "perspective(" + transformPerspective + _endParenthesis;
+  }
+
+  if (xPercent || yPercent) {
+    transforms += "translate(" + xPercent + "%, " + yPercent + "%) ";
+  }
+
+  if (use3D || x !== _zeroPx || y !== _zeroPx || z !== _zeroPx) {
+    transforms += z !== _zeroPx || use3D ? "translate3d(" + x + ", " + y + ", " + z + ") " : "translate(" + x + ", " + y + _endParenthesis;
+  }
+
+  if (rotation !== _zeroDeg) {
+    transforms += "rotate(" + rotation + _endParenthesis;
+  }
+
+  if (rotationY !== _zeroDeg) {
+    transforms += "rotateY(" + rotationY + _endParenthesis;
+  }
+
+  if (rotationX !== _zeroDeg) {
+    transforms += "rotateX(" + rotationX + _endParenthesis;
+  }
+
+  if (skewX !== _zeroDeg || skewY !== _zeroDeg) {
+    transforms += "skew(" + skewX + ", " + skewY + _endParenthesis;
+  }
+
+  if (scaleX !== 1 || scaleY !== 1) {
+    transforms += "scale(" + scaleX + ", " + scaleY + _endParenthesis;
+  }
+
+  target.style[_transformProp] = transforms || "translate(0, 0)";
+},
+    _renderSVGTransforms = function _renderSVGTransforms(ratio, cache) {
+  var _ref2 = cache || this,
+      xPercent = _ref2.xPercent,
+      yPercent = _ref2.yPercent,
+      x = _ref2.x,
+      y = _ref2.y,
+      rotation = _ref2.rotation,
+      skewX = _ref2.skewX,
+      skewY = _ref2.skewY,
+      scaleX = _ref2.scaleX,
+      scaleY = _ref2.scaleY,
+      target = _ref2.target,
+      xOrigin = _ref2.xOrigin,
+      yOrigin = _ref2.yOrigin,
+      xOffset = _ref2.xOffset,
+      yOffset = _ref2.yOffset,
+      forceCSS = _ref2.forceCSS,
+      tx = parseFloat(x),
+      ty = parseFloat(y),
+      a11,
+      a21,
+      a12,
+      a22,
+      temp;
+
+  rotation = parseFloat(rotation);
+  skewX = parseFloat(skewX);
+  skewY = parseFloat(skewY);
+
+  if (skewY) {
+    //for performance reasons, we combine all skewing into the skewX and rotation values. Remember, a skewY of 10 degrees looks the same as a rotation of 10 degrees plus a skewX of 10 degrees.
+    skewY = parseFloat(skewY);
+    skewX += skewY;
+    rotation += skewY;
+  }
+
+  if (rotation || skewX) {
+    rotation *= _DEG2RAD;
+    skewX *= _DEG2RAD;
+    a11 = Math.cos(rotation) * scaleX;
+    a21 = Math.sin(rotation) * scaleX;
+    a12 = Math.sin(rotation - skewX) * -scaleY;
+    a22 = Math.cos(rotation - skewX) * scaleY;
+
+    if (skewX) {
+      skewY *= _DEG2RAD;
+      temp = Math.tan(skewX - skewY);
+      temp = Math.sqrt(1 + temp * temp);
+      a12 *= temp;
+      a22 *= temp;
+
+      if (skewY) {
+        temp = Math.tan(skewY);
+        temp = Math.sqrt(1 + temp * temp);
+        a11 *= temp;
+        a21 *= temp;
+      }
+    }
+
+    a11 = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(a11);
+    a21 = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(a21);
+    a12 = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(a12);
+    a22 = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(a22);
+  } else {
+    a11 = scaleX;
+    a22 = scaleY;
+    a21 = a12 = 0;
+  }
+
+  if (tx && !~(x + "").indexOf("px") || ty && !~(y + "").indexOf("px")) {
+    tx = _convertToUnit(target, "x", x, "px");
+    ty = _convertToUnit(target, "y", y, "px");
+  }
+
+  if (xOrigin || yOrigin || xOffset || yOffset) {
+    tx = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(tx + xOrigin - (xOrigin * a11 + yOrigin * a12) + xOffset);
+    ty = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(ty + yOrigin - (xOrigin * a21 + yOrigin * a22) + yOffset);
+  }
+
+  if (xPercent || yPercent) {
+    //The SVG spec doesn't support percentage-based translation in the "transform" attribute, so we merge it into the translation to simulate it.
+    temp = target.getBBox();
+    tx = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(tx + xPercent / 100 * temp.width);
+    ty = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(ty + yPercent / 100 * temp.height);
+  }
+
+  temp = "matrix(" + a11 + "," + a21 + "," + a12 + "," + a22 + "," + tx + "," + ty + ")";
+  target.setAttribute("transform", temp);
+
+  if (forceCSS) {
+    //some browsers prioritize CSS transforms over the transform attribute. When we sense that the user has CSS transforms applied, we must overwrite them this way (otherwise some browser simply won't render the  transform attribute changes!)
+    target.style[_transformProp] = temp;
+  }
+},
+    _addRotationalPropTween = function _addRotationalPropTween(plugin, target, property, startNum, endValue, relative) {
+  var cap = 360,
+      isString = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_isString"])(endValue),
+      endNum = parseFloat(endValue) * (isString && ~endValue.indexOf("rad") ? _RAD2DEG : 1),
+      change = relative ? endNum * relative : endNum - startNum,
+      finalValue = startNum + change + "deg",
+      direction,
+      pt;
+
+  if (isString) {
+    direction = endValue.split("_")[1];
+
+    if (direction === "short") {
+      change %= cap;
+
+      if (change !== change % (cap / 2)) {
+        change += change < 0 ? cap : -cap;
+      }
+    }
+
+    if (direction === "cw" && change < 0) {
+      change = (change + cap * _bigNum) % cap - ~~(change / cap) * cap;
+    } else if (direction === "ccw" && change > 0) {
+      change = (change - cap * _bigNum) % cap - ~~(change / cap) * cap;
+    }
+  }
+
+  plugin._pt = pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](plugin._pt, target, property, startNum, change, _renderPropWithEnd);
+  pt.e = finalValue;
+  pt.u = "deg";
+
+  plugin._props.push(property);
+
+  return pt;
+},
+    _addRawTransformPTs = function _addRawTransformPTs(plugin, transforms, target) {
+  //for handling cases where someone passes in a whole transform string, like transform: "scale(2, 3) rotate(20deg) translateY(30em)"
+  var style = _tempDivStyler.style,
+      startCache = target._gsap,
+      exclude = "perspective,force3D,transformOrigin,svgOrigin",
+      endCache,
+      p,
+      startValue,
+      endValue,
+      startNum,
+      endNum,
+      startUnit,
+      endUnit;
+  style.cssText = getComputedStyle(target).cssText + ";position:absolute;display:block;"; //%-based translations will fail unless we set the width/height to match the original target (and padding/borders can affect it)
+
+  style[_transformProp] = transforms;
+
+  _doc.body.appendChild(_tempDivStyler);
+
+  endCache = _parseTransform(_tempDivStyler, 1);
+
+  for (p in _transformProps) {
+    startValue = startCache[p];
+    endValue = endCache[p];
+
+    if (startValue !== endValue && exclude.indexOf(p) < 0) {
+      //tweening to no perspective gives very unintuitive results - just keep the same perspective in that case.
+      startUnit = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["getUnit"])(startValue);
+      endUnit = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["getUnit"])(endValue);
+      startNum = startUnit !== endUnit ? _convertToUnit(target, p, startValue, endUnit) : parseFloat(startValue);
+      endNum = parseFloat(endValue);
+      plugin._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](plugin._pt, startCache, p, startNum, endNum - startNum, _renderCSSProp);
+      plugin._pt.u = endUnit || 0;
+
+      plugin._props.push(p);
+    }
+  }
+
+  _doc.body.removeChild(_tempDivStyler);
+}; // handle splitting apart padding, margin, borderWidth, and borderRadius into their 4 components. Firefox, for example, won't report borderRadius correctly - it will only do borderTopLeftRadius and the other corners. We also want to handle paddingTop, marginLeft, borderRightWidth, etc.
+
+
+Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_forEachName"])("padding,margin,Width,Radius", function (name, index) {
+  var t = "Top",
+      r = "Right",
+      b = "Bottom",
+      l = "Left",
+      props = (index < 3 ? [t, r, b, l] : [t + l, t + r, b + r, b + l]).map(function (side) {
+    return index < 2 ? name + side : "border" + side + name;
+  });
+
+  _specialProps[index > 1 ? "border" + name : name] = function (plugin, target, property, endValue, tween) {
+    var a, vars;
+
+    if (arguments.length < 4) {
+      // getter, passed target, property, and unit (from _get())
+      a = props.map(function (prop) {
+        return _get(plugin, prop, property);
+      });
+      vars = a.join(" ");
+      return vars.split(a[0]).length === 5 ? a[0] : vars;
+    }
+
+    a = (endValue + "").split(" ");
+    vars = {};
+    props.forEach(function (prop, i) {
+      return vars[prop] = a[i] = a[i] || a[(i - 1) / 2 | 0];
+    });
+    plugin.init(target, vars, tween);
+  };
+});
+
+var CSSPlugin = {
+  name: "css",
+  register: _initCore,
+  targetTest: function targetTest(target) {
+    return target.style && target.nodeType;
+  },
+  init: function init(target, vars, tween, index, targets) {
+    var props = this._props,
+        style = target.style,
+        startValue,
+        endValue,
+        endNum,
+        startNum,
+        type,
+        specialProp,
+        p,
+        startUnit,
+        endUnit,
+        relative,
+        isTransformRelated,
+        transformPropTween,
+        cache,
+        smooth,
+        hasPriority;
+
+    if (!_pluginInitted) {
+      _initCore();
+    }
+
+    for (p in vars) {
+      if (p === "autoRound") {
+        continue;
+      }
+
+      endValue = vars[p];
+
+      if (_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_plugins"][p] && Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_checkPlugin"])(p, vars, tween, index, target, targets)) {
+        //plugins
+        continue;
+      }
+
+      type = typeof endValue;
+      specialProp = _specialProps[p];
+
+      if (type === "function") {
+        endValue = endValue.call(tween, index, target, targets);
+        type = typeof endValue;
+      }
+
+      if (type === "string" && ~endValue.indexOf("random(")) {
+        endValue = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_replaceRandom"])(endValue);
+      }
+
+      if (specialProp) {
+        if (specialProp(this, target, p, endValue, tween)) {
+          hasPriority = 1;
+        }
+      } else if (p.substr(0, 2) === "--") {
+        //CSS variable
+        this.add(style, "setProperty", getComputedStyle(target).getPropertyValue(p) + "", endValue + "", index, targets, 0, 0, p);
+      } else {
+        startValue = _get(target, p);
+        startNum = parseFloat(startValue);
+        relative = type === "string" && endValue.charAt(1) === "=" ? +(endValue.charAt(0) + "1") : 0;
+
+        if (relative) {
+          endValue = endValue.substr(2);
+        }
+
+        endNum = parseFloat(endValue);
+
+        if (p in _propertyAliases) {
+          if (p === "autoAlpha") {
+            //special case where we control the visibility along with opacity. We still allow the opacity value to pass through and get tweened.
+            if (startNum === 1 && _get(target, "visibility") === "hidden" && endNum) {
+              //if visibility is initially set to "hidden", we should interpret that as intent to make opacity 0 (a convenience)
+              startNum = 0;
+            }
+
+            _addNonTweeningPT(this, style, "visibility", startNum ? "inherit" : "hidden", endNum ? "inherit" : "hidden", !endNum);
+          }
+
+          if (p !== "scale" && p !== "transform") {
+            p = _propertyAliases[p];
+
+            if (~p.indexOf(",")) {
+              p = p.split(",")[0];
+            }
+          }
+        }
+
+        isTransformRelated = p in _transformProps; //--- TRANSFORM-RELATED ---
+
+        if (isTransformRelated) {
+          if (!transformPropTween) {
+            cache = target._gsap;
+            cache.renderTransform || _parseTransform(target); // if, for example, gsap.set(... {transform:"translateX(50vw)"}), the _get() call doesn't parse the transform, thus cache.renderTransform won't be set yet so force the parsing of the transform here.
+
+            smooth = vars.smoothOrigin !== false && cache.smooth;
+            transformPropTween = this._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](this._pt, style, _transformProp, 0, 1, cache.renderTransform, cache, 0, -1); //the first time through, create the rendering PropTween so that it runs LAST (in the linked list, we keep adding to the beginning)
+
+            transformPropTween.dep = 1; //flag it as dependent so that if things get killed/overwritten and this is the only PropTween left, we can safely kill the whole tween.
+          }
+
+          if (p === "scale") {
+            this._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](this._pt, cache, "scaleY", cache.scaleY, relative ? relative * endNum : endNum - cache.scaleY);
+            props.push("scaleY", p);
+            p += "X";
+          } else if (p === "transformOrigin") {
+            endValue = _convertKeywordsToPercentages(endValue); //in case something like "left top" or "bottom right" is passed in. Convert to percentages.
+
+            if (cache.svg) {
+              _applySVGOrigin(target, endValue, 0, smooth, 0, this);
+            } else {
+              endUnit = parseFloat(endValue.split(" ")[2]); //handle the zOrigin separately!
+
+              if (endUnit !== cache.zOrigin) {
+                _addNonTweeningPT(this, cache, "zOrigin", cache.zOrigin, endUnit);
+              }
+
+              _addNonTweeningPT(this, style, p, _firstTwoOnly(startValue), _firstTwoOnly(endValue));
+            }
+
+            continue;
+          } else if (p === "svgOrigin") {
+            _applySVGOrigin(target, endValue, 1, smooth, 0, this);
+
+            continue;
+          } else if (p in _rotationalProperties) {
+            _addRotationalPropTween(this, cache, p, startNum, endValue, relative);
+
+            continue;
+          } else if (p === "smoothOrigin") {
+            _addNonTweeningPT(this, cache, "smooth", cache.smooth, endValue);
+
+            continue;
+          } else if (p === "force3D") {
+            cache[p] = endValue;
+            continue;
+          } else if (p === "transform") {
+            _addRawTransformPTs(this, endValue, target);
+
+            continue;
+          }
+        } else if (!(p in style)) {
+          p = _checkPropPrefix(p) || p;
+        }
+
+        if (isTransformRelated || (endNum || endNum === 0) && (startNum || startNum === 0) && !_complexExp.test(endValue) && p in style) {
+          startUnit = (startValue + "").substr((startNum + "").length);
+          endUnit = (endValue + "").substr((endNum + "").length) || (p in _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].units ? _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].units[p] : startUnit);
+
+          if (startUnit !== endUnit) {
+            startNum = _convertToUnit(target, p, startValue, endUnit);
+          }
+
+          this._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](this._pt, isTransformRelated ? cache : style, p, startNum, relative ? relative * endNum : endNum - startNum, endUnit === "px" && vars.autoRound !== false && !isTransformRelated ? _renderRoundedCSSProp : _renderCSSProp);
+          this._pt.u = endUnit || 0;
+
+          if (startUnit !== endUnit) {
+            //when the tween goes all the way back to the beginning, we need to revert it to the OLD/ORIGINAL value (with those units). We record that as a "b" (beginning) property and point to a render method that handles that. (performance optimization)
+            this._pt.b = startValue;
+            this._pt.r = _renderCSSPropWithBeginning;
+          }
+        } else if (!(p in style)) {
+          if (p in target) {
+            //maybe it's not a style - it could be a property added directly to an element in which case we'll try to animate that.
+            this.add(target, p, target[p], endValue, index, targets);
+          } else {
+            Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_missingPlugin"])(p, endValue);
+
+            continue;
+          }
+        } else {
+          _tweenComplexCSSString.call(this, target, p, startValue, endValue);
+        }
+
+        props.push(p);
+      }
+    }
+
+    if (hasPriority) {
+      Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_sortPropTweensByPriority"])(this);
+    }
+  },
+  get: _get,
+  aliases: _propertyAliases,
+  getSetter: function getSetter(target, property, plugin) {
+    //returns a setter function that accepts target, property, value and applies it accordingly. Remember, properties like "x" aren't as simple as target.style.property = value because they've got to be applied to a proxy object and then merged into a transform string in a renderer.
+    property = _propertyAliases[property] || property;
+    return property in _transformProps && property !== _transformOriginProp && (target._gsap.x || _get(target, "x")) ? plugin && _recentSetterPlugin === plugin ? property === "scale" ? _setterScale : _setterTransform : (_recentSetterPlugin = plugin || {}) && (property === "scale" ? _setterScaleWithRender : _setterTransformWithRender) : target.style && !Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_isUndefined"])(target.style[property]) ? _setterCSSStyle : ~property.indexOf("-") ? _setterCSSProp : Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_getSetter"])(target, property);
+  }
 };
+_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["gsap"].utils.checkPrefix = _checkPropPrefix;
 
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
+(function (positionAndScale, rotation, others, aliases) {
+  var all = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_forEachName"])(positionAndScale + "," + rotation + "," + others, function (name) {
+    _transformProps[name] = 1;
+  });
 
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
+  Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_forEachName"])(rotation, function (name) {
+    _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].units[name] = "deg";
+    _rotationalProperties[name] = 1;
+  });
 
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
+  _propertyAliases[all[13]] = positionAndScale + "," + rotation;
 
-	return [content].join('\n');
-}
+  Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_forEachName"])(aliases, function (name) {
+    var split = name.split(":");
+    _propertyAliases[split[1]] = all[split[0]];
+  });
+})("x,y,z,scale,scaleX,scaleY,xPercent,yPercent", "rotation,rotationX,rotationY,skewX,skewY", "transform,transformOrigin,svgOrigin,force3D,smoothOrigin,transformPerspective", "0:translateX,1:translateY,2:translateZ,8:rotate,8:rotationZ,8:rotateZ,9:rotateX,10:rotateY");
 
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_forEachName"])("x,y,z,top,right,bottom,left,width,height,fontSize,padding,margin,perspective", function (name) {
+  _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].units[name] = "px";
+});
 
-	return '/*# ' + data + ' */';
-}
+_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["gsap"].registerPlugin(CSSPlugin);
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/lib/url/escape.js":
-/*!***************************************************!*\
-  !*** ./node_modules/css-loader/lib/url/escape.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/gsap/gsap-core.js":
+/*!****************************************!*\
+  !*** ./node_modules/gsap/gsap-core.js ***!
+  \****************************************/
+/*! exports provided: GSCache, Animation, Timeline, Tween, PropTween, gsap, Power0, Power1, Power2, Power3, Power4, Linear, Quad, Cubic, Quart, Quint, Strong, Elastic, Back, SteppedEase, Bounce, Sine, Expo, Circ, TweenMax, TweenLite, TimelineMax, TimelineLite, default, wrap, wrapYoyo, distribute, random, snap, normalize, getUnit, clamp, splitColor, toArray, mapRange, pipe, unitize, interpolate, shuffle, _getProperty, _numExp, _isString, _isUndefined, _renderComplexString, _relExp, _setDefaults, _removeLinkedListItem, _forEachName, _sortPropTweensByPriority, _colorStringFilter, _replaceRandom, _checkPlugin, _plugins, _ticker, _config, _roundModifier, _round, _missingPlugin, _getSetter, _getCache */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GSCache", function() { return GSCache; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Animation", function() { return Animation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Timeline", function() { return Timeline; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tween", function() { return Tween; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PropTween", function() { return PropTween; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gsap", function() { return gsap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Power0", function() { return Power0; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Power1", function() { return Power1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Power2", function() { return Power2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Power3", function() { return Power3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Power4", function() { return Power4; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Linear", function() { return Linear; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Quad", function() { return Quad; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cubic", function() { return Cubic; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Quart", function() { return Quart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Quint", function() { return Quint; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Strong", function() { return Strong; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Elastic", function() { return Elastic; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Back", function() { return Back; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SteppedEase", function() { return SteppedEase; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Bounce", function() { return Bounce; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Sine", function() { return Sine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Expo", function() { return Expo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Circ", function() { return Circ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TweenMax", function() { return Tween; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TweenLite", function() { return Tween; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineMax", function() { return Timeline; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineLite", function() { return Timeline; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gsap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wrap", function() { return wrap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wrapYoyo", function() { return wrapYoyo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "distribute", function() { return distribute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "random", function() { return random; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "snap", function() { return snap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normalize", function() { return normalize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUnit", function() { return getUnit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clamp", function() { return clamp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "splitColor", function() { return splitColor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toArray", function() { return toArray; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapRange", function() { return mapRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pipe", function() { return pipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unitize", function() { return unitize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interpolate", function() { return interpolate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shuffle", function() { return shuffle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getProperty", function() { return _getProperty; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_numExp", function() { return _numExp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_isString", function() { return _isString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_isUndefined", function() { return _isUndefined; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_renderComplexString", function() { return _renderComplexString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_relExp", function() { return _relExp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_setDefaults", function() { return _setDefaults; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_removeLinkedListItem", function() { return _removeLinkedListItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_forEachName", function() { return _forEachName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_sortPropTweensByPriority", function() { return _sortPropTweensByPriority; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_colorStringFilter", function() { return _colorStringFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_replaceRandom", function() { return _replaceRandom; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_checkPlugin", function() { return _checkPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_plugins", function() { return _plugins; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_ticker", function() { return _ticker; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_config", function() { return _config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_roundModifier", function() { return _roundModifier; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_round", function() { return _round; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_missingPlugin", function() { return _missingPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getSetter", function() { return _getSetter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getCache", function() { return _getCache; });
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+/*!
+ * GSAP 3.1.1
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2020, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+var _config = {
+  autoSleep: 120,
+  force3D: "auto",
+  nullTargetWarn: 1,
+  units: {
+    lineHeight: ""
+  }
+},
+    _defaults = {
+  duration: .5,
+  overwrite: false,
+  delay: 0
+},
+    _bigNum = 1e8,
+    _tinyNum = 1 / _bigNum,
+    _2PI = Math.PI * 2,
+    _HALF_PI = _2PI / 4,
+    _gsID = 0,
+    _sqrt = Math.sqrt,
+    _cos = Math.cos,
+    _sin = Math.sin,
+    _isString = function _isString(value) {
+  return typeof value === "string";
+},
+    _isFunction = function _isFunction(value) {
+  return typeof value === "function";
+},
+    _isNumber = function _isNumber(value) {
+  return typeof value === "number";
+},
+    _isUndefined = function _isUndefined(value) {
+  return typeof value === "undefined";
+},
+    _isObject = function _isObject(value) {
+  return typeof value === "object";
+},
+    _isNotFalse = function _isNotFalse(value) {
+  return value !== false;
+},
+    _windowExists = function _windowExists() {
+  return typeof window !== "undefined";
+},
+    _isFuncOrString = function _isFuncOrString(value) {
+  return _isFunction(value) || _isString(value);
+},
+    _isArray = Array.isArray,
+    _strictNumExp = /(?:-?\.?\d|\.)+/gi,
+    //only numbers (including negatives and decimals) but NOT relative values.
+_numExp = /[-+=\.]*\d+[\.e\-\+]*\d*[e\-\+]*\d*/g,
+    //finds any numbers, including ones that start with += or -=, negative numbers, and ones in scientific notation like 1e-8.
+_complexStringNumExp = /[-+=\.]*\d+(?:\.|e-|e)*\d*/gi,
+    //duplicate so that while we're looping through matches from exec(), it doesn't contaminate the lastIndex of _numExp which we use to search for colors too.
+_parenthesesExp = /\(([^()]+)\)/i,
+    //finds the string between parentheses.
+_relExp = /[\+-]=-?[\.\d]+/,
+    _delimitedValueExp = /[#\-+\.]*\b[a-z\d-=+%.]+/gi,
+    _globalTimeline,
+    _win,
+    _coreInitted,
+    _doc,
+    _globals = {},
+    _installScope = {},
+    _coreReady,
+    _install = function _install(scope) {
+  return (_installScope = _merge(scope, _globals)) && gsap;
+},
+    _missingPlugin = function _missingPlugin(property, value) {
+  return console.warn("Invalid property", property, "set to", value, "Missing plugin? gsap.registerPlugin()");
+},
+    _warn = function _warn(message, suppress) {
+  return !suppress && console.warn(message);
+},
+    _addGlobal = function _addGlobal(name, obj) {
+  return name && (_globals[name] = obj) && _installScope && (_installScope[name] = obj) || _globals;
+},
+    _emptyFunc = function _emptyFunc() {
+  return 0;
+},
+    _reservedProps = {},
+    _lazyTweens = [],
+    _lazyLookup = {},
+    _lastRenderedFrame,
+    _plugins = {},
+    _effects = {},
+    _nextGCFrame = 30,
+    _harnessPlugins = [],
+    _callbackNames = "onComplete,onUpdate,onStart,onRepeat,onReverseComplete,onInterrupt",
+    _harness = function _harness(targets) {
+  var target = targets[0],
+      harnessPlugin,
+      i;
+
+  if (!_isObject(target) && !_isFunction(target)) {
+    targets = [targets];
+  }
+
+  if (!(harnessPlugin = (target._gsap || {}).harness)) {
+    i = _harnessPlugins.length;
+
+    while (i-- && !_harnessPlugins[i].targetTest(target)) {}
+
+    harnessPlugin = _harnessPlugins[i];
+  }
+
+  i = targets.length;
+
+  while (i--) {
+    targets[i] && (targets[i]._gsap || (targets[i]._gsap = new GSCache(targets[i], harnessPlugin))) || targets.splice(i, 1);
+  }
+
+  return targets;
+},
+    _getCache = function _getCache(target) {
+  return target._gsap || _harness(toArray(target))[0]._gsap;
+},
+    _getProperty = function _getProperty(target, property) {
+  var currentValue = target[property];
+  return _isFunction(currentValue) ? target[property]() : _isUndefined(currentValue) && target.getAttribute(property) || currentValue;
+},
+    _forEachName = function _forEachName(names, func) {
+  return (names = names.split(",")).forEach(func) || names;
+},
+    //split a comma-delimited list of names into an array, then run a forEach() function and return the split array (this is just a way to consolidate/shorten some code).
+_round = function _round(value) {
+  return Math.round(value * 10000) / 10000;
+},
+    _arrayContainsAny = function _arrayContainsAny(toSearch, toFind) {
+  //searches one array to find matches for any of the items in the toFind array. As soon as one is found, it returns true. It does NOT return all the matches; it's simply a boolean search.
+  var l = toFind.length,
+      i = 0;
+
+  for (; toSearch.indexOf(toFind[i]) < 0 && ++i < l;) {}
+
+  return i < l;
+},
+    _parseVars = function _parseVars(params, type, parent) {
+  //reads the arguments passed to one of the key methods and figures out if the user is defining things with the OLD/legacy syntax where the duration is the 2nd parameter, and then it adjusts things accordingly and spits back the corrected vars object (with the duration added if necessary, as well as runBackwards or startAt or immediateRender). type 0 = to()/staggerTo(), 1 = from()/staggerFrom(), 2 = fromTo()/staggerFromTo()
+  var isLegacy = _isNumber(params[1]),
+      varsIndex = (isLegacy ? 2 : 1) + (type < 2 ? 0 : 1),
+      vars = params[varsIndex],
+      irVars;
+
+  if (isLegacy) {
+    vars.duration = params[1];
+  }
+
+  vars.parent = parent;
+
+  if (type) {
+    irVars = vars;
+
+    while (parent && !("immediateRender" in irVars)) {
+      // inheritance hasn't happened yet, but someone may have set a default in an ancestor timeline. We could do vars.immediateRender = _isNotFalse(_inheritDefaults(vars).immediateRender) but that'd exact a slight performance penalty because _inheritDefaults() also runs in the Tween constructor. We're paying a small kb price here to gain speed.
+      irVars = parent.vars.defaults || {};
+      parent = _isNotFalse(parent.vars.inherit) && parent.parent;
     }
 
-    return url
+    vars.immediateRender = _isNotFalse(irVars.immediateRender);
+
+    if (type < 2) {
+      vars.runBackwards = 1;
+    } else {
+      vars.startAt = params[varsIndex - 1]; // "from" vars
+    }
+  }
+
+  return vars;
+},
+    _lazyRender = function _lazyRender() {
+  var l = _lazyTweens.length,
+      a = _lazyTweens.slice(0),
+      i,
+      tween;
+
+  _lazyLookup = {};
+  _lazyTweens.length = 0;
+
+  for (i = 0; i < l; i++) {
+    tween = a[i];
+
+    if (tween && tween._lazy) {
+      tween.render(tween._lazy[0], tween._lazy[1], true)._lazy = 0;
+    }
+  }
+},
+    _lazySafeRender = function _lazySafeRender(animation, time, suppressEvents, force) {
+  if (_lazyTweens.length) {
+    _lazyRender();
+  }
+
+  animation.render(time, suppressEvents, force);
+
+  if (_lazyTweens.length) {
+    //in case rendering caused any tweens to lazy-init, we should render them because typically when someone calls seek() or time() or progress(), they expect an immediate render.
+    _lazyRender();
+  }
+},
+    _numericIfPossible = function _numericIfPossible(value) {
+  var n = parseFloat(value);
+  return (n || n === 0) && (value + "").match(_delimitedValueExp).length < 2 ? n : value;
+},
+    _passThrough = function _passThrough(p) {
+  return p;
+},
+    _setDefaults = function _setDefaults(obj, defaults) {
+  for (var p in defaults) {
+    if (!(p in obj)) {
+      obj[p] = defaults[p];
+    }
+  }
+
+  return obj;
+},
+    _setKeyframeDefaults = function _setKeyframeDefaults(obj, defaults) {
+  for (var p in defaults) {
+    if (!(p in obj) && p !== "duration" && p !== "ease") {
+      obj[p] = defaults[p];
+    }
+  }
+},
+    _merge = function _merge(base, toMerge) {
+  for (var p in toMerge) {
+    base[p] = toMerge[p];
+  }
+
+  return base;
+},
+    _mergeDeep = function _mergeDeep(base, toMerge) {
+  for (var p in toMerge) {
+    base[p] = _isObject(toMerge[p]) ? _mergeDeep(base[p] || (base[p] = {}), toMerge[p]) : toMerge[p];
+  }
+
+  return base;
+},
+    _copyExcluding = function _copyExcluding(obj, excluding) {
+  var copy = {},
+      p;
+
+  for (p in obj) {
+    if (!(p in excluding)) {
+      copy[p] = obj[p];
+    }
+  }
+
+  return copy;
+},
+    _inheritDefaults = function _inheritDefaults(vars) {
+  var parent = vars.parent || _globalTimeline,
+      func = vars.keyframes ? _setKeyframeDefaults : _setDefaults;
+
+  if (_isNotFalse(vars.inherit)) {
+    while (parent) {
+      func(vars, parent.vars.defaults);
+      parent = parent.parent;
+    }
+  }
+
+  return vars;
+},
+    _arraysMatch = function _arraysMatch(a1, a2) {
+  var i = a1.length,
+      match = i === a2.length;
+
+  while (match && i-- && a1[i] === a2[i]) {}
+
+  return i < 0;
+},
+    _addLinkedListItem = function _addLinkedListItem(parent, child, firstProp, lastProp, sortBy) {
+  if (firstProp === void 0) {
+    firstProp = "_first";
+  }
+
+  if (lastProp === void 0) {
+    lastProp = "_last";
+  }
+
+  var prev = parent[lastProp],
+      t;
+
+  if (sortBy) {
+    t = child[sortBy];
+
+    while (prev && prev[sortBy] > t) {
+      prev = prev._prev;
+    }
+  }
+
+  if (prev) {
+    child._next = prev._next;
+    prev._next = child;
+  } else {
+    child._next = parent[firstProp];
+    parent[firstProp] = child;
+  }
+
+  if (child._next) {
+    child._next._prev = child;
+  } else {
+    parent[lastProp] = child;
+  }
+
+  child._prev = prev;
+  child.parent = parent;
+  return child;
+},
+    _removeLinkedListItem = function _removeLinkedListItem(parent, child, firstProp, lastProp) {
+  if (firstProp === void 0) {
+    firstProp = "_first";
+  }
+
+  if (lastProp === void 0) {
+    lastProp = "_last";
+  }
+
+  var prev = child._prev,
+      next = child._next;
+
+  if (prev) {
+    prev._next = next;
+  } else if (parent[firstProp] === child) {
+    parent[firstProp] = next;
+  }
+
+  if (next) {
+    next._prev = prev;
+  } else if (parent[lastProp] === child) {
+    parent[lastProp] = prev;
+  }
+
+  child._dp = parent; //record the parent as _dp just so we can revert if necessary. But parent should be null to indicate the item isn't in a linked list.
+
+  child._next = child._prev = child.parent = null;
+},
+    _removeFromParent = function _removeFromParent(child, onlyIfParentHasAutoRemove) {
+  if (child.parent && (!onlyIfParentHasAutoRemove || child.parent.autoRemoveChildren)) {
+    child.parent.remove(child);
+  }
+
+  child._act = 0;
+},
+    _uncache = function _uncache(animation) {
+  var a = animation;
+
+  while (a) {
+    a._dirty = 1;
+    a = a.parent;
+  }
+
+  return animation;
+},
+    _recacheAncestors = function _recacheAncestors(animation) {
+  var parent = animation.parent;
+
+  while (parent && parent.parent) {
+    //sometimes we must force a re-sort of all children and update the duration/totalDuration of all ancestor timelines immediately in case, for example, in the middle of a render loop, one tween alters another tween's timeScale which shoves its startTime before 0, forcing the parent timeline to shift around and shiftChildren() which could affect that next tween's render (startTime). Doesn't matter for the root timeline though.
+    parent._dirty = 1;
+    parent.totalDuration();
+    parent = parent.parent;
+  }
+
+  return animation;
+},
+    _hasNoPausedAncestors = function _hasNoPausedAncestors(animation) {
+  return !animation || animation._ts && _hasNoPausedAncestors(animation.parent);
+},
+    _elapsedCycleDuration = function _elapsedCycleDuration(animation) {
+  return animation._repeat ? _animationCycle(animation._tTime, animation = animation.duration() + animation._rDelay) * animation : 0;
+},
+    // feed in the totalTime and cycleDuration and it'll return the cycle (iteration minus 1) and if the playhead is exactly at the very END, it will NOT bump up to the next cycle.
+_animationCycle = function _animationCycle(tTime, cycleDuration) {
+  return (tTime /= cycleDuration) && ~~tTime === tTime ? ~~tTime - 1 : ~~tTime;
+},
+    _parentToChildTotalTime = function _parentToChildTotalTime(parentTime, child) {
+  return (parentTime - child._start) * child._ts + (child._ts >= 0 ? 0 : child._dirty ? child.totalDuration() : child._tDur);
+},
+
+/*
+_totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
+	let cycleDuration = duration + repeatDelay,
+		time = _round(clampedTotalTime % cycleDuration);
+	if (time > duration) {
+		time = duration;
+	}
+	return (yoyo && (~~(clampedTotalTime / cycleDuration) & 1)) ? duration - time : time;
+},
+*/
+_addToTimeline = function _addToTimeline(timeline, child, position) {
+  child.parent && _removeFromParent(child);
+  child._start = position + child._delay;
+  child._end = child._start + (child.totalDuration() / Math.abs(child.timeScale()) || 0);
+
+  _addLinkedListItem(timeline, child, "_first", "_last", timeline._sort ? "_start" : 0);
+
+  timeline._recent = child;
+
+  if (child._time || !child._dur && child._initted) {
+    //in case, for example, the _start is moved on a tween that has already rendered. Imagine it's at its end state, then the startTime is moved WAY later (after the end of this timeline), it should render at its beginning.
+    var curTime = (timeline.rawTime() - child._start) * child._ts;
+
+    if (!child._dur || _clamp(0, child.totalDuration(), curTime) - child._tTime > _tinyNum) {
+      child.render(curTime, true);
+    }
+  }
+
+  _uncache(timeline); //if the timeline has already ended but the inserted tween/timeline extends the duration, we should enable this timeline again so that it renders properly. We should also align the playhead with the parent timeline's when appropriate.
+
+
+  if (timeline._dp && timeline._time >= timeline._dur && timeline._ts && timeline._dur < timeline.duration()) {
+    //in case any of the ancestors had completed but should now be enabled...
+    var tl = timeline;
+
+    while (tl._dp) {
+      tl.totalTime(tl._tTime, true); //moves the timeline (shifts its startTime) if necessary, and also enables it.
+
+      tl = tl._dp;
+    }
+  }
+
+  return timeline;
+},
+    _attemptInitTween = function _attemptInitTween(tween, totalTime, force, suppressEvents) {
+  _initTween(tween, totalTime);
+
+  if (!tween._initted) {
+    return 1;
+  }
+
+  if (!force && tween._pt && (tween._dur && tween.vars.lazy !== false || !tween._dur && tween.vars.lazy) && _lastRenderedFrame !== _ticker.frame) {
+    _lazyTweens.push(tween);
+
+    tween._lazy = [totalTime, suppressEvents];
+    return 1;
+  }
+},
+    _renderZeroDurationTween = function _renderZeroDurationTween(tween, totalTime, suppressEvents, force) {
+  var prevRatio = tween._zTime < 0 ? 0 : 1,
+      ratio = totalTime < 0 ? 0 : 1,
+      repeatDelay = tween._rDelay,
+      tTime = 0,
+      pt,
+      iteration,
+      prevIteration;
+
+  if (repeatDelay && tween._repeat) {
+    //in case there's a zero-duration tween that has a repeat with a repeatDelay
+    tTime = _clamp(0, tween._tDur, totalTime);
+    iteration = _animationCycle(tTime, repeatDelay);
+    prevIteration = _animationCycle(tween._tTime, repeatDelay);
+
+    if (iteration !== prevIteration) {
+      prevRatio = 1 - ratio;
+
+      if (tween.vars.repeatRefresh && tween._initted) {
+        tween.invalidate();
+      }
+    }
+  }
+
+  if (!tween._initted && _attemptInitTween(tween, totalTime, force, suppressEvents)) {
+    //if we render the very beginning (time == 0) of a fromTo(), we must force the render (normal tweens wouldn't need to render at a time of 0 when the prevTime was also 0). This is also mandatory to make sure overwriting kicks in immediately.
+    return;
+  }
+
+  if (ratio !== prevRatio || force || tween._zTime === _tinyNum || !totalTime && tween._zTime) {
+    tween._zTime = totalTime || (suppressEvents ? _tinyNum : 0); //when the playhead arrives at EXACTLY time 0 (right on top) of a zero-duration tween, we need to discern if events are suppressed so that when the playhead moves again (next time), it'll trigger the callback. If events are NOT suppressed, obviously the callback would be triggered in this render. Basically, the callback should fire either when the playhead ARRIVES or LEAVES this exact spot, not both. Imagine doing a timeline.seek(0) and there's a callback that sits at 0. Since events are suppressed on that seek() by default, nothing will fire, but when the playhead moves off of that position, the callback should fire. This behavior is what people intuitively expect.
+
+    tween.ratio = ratio;
+
+    if (tween._from) {
+      ratio = 1 - ratio;
+    }
+
+    tween._time = 0;
+    tween._tTime = tTime;
+
+    if (!suppressEvents) {
+      _callback(tween, "onStart");
+    }
+
+    pt = tween._pt;
+
+    while (pt) {
+      pt.r(ratio, pt.d);
+      pt = pt._next;
+    }
+
+    if (!ratio && tween._startAt && !tween._onUpdate && tween._start) {
+      //if the tween is positioned at the VERY beginning (_start 0) of its parent timeline, it's illegal for the playhead to go back further, so we should not render the recorded startAt values.
+      tween._startAt.render(totalTime, true, force);
+    }
+
+    if (tween._onUpdate && !suppressEvents) {
+      _callback(tween, "onUpdate");
+    }
+
+    if (tTime && tween._repeat && !suppressEvents && tween.parent) {
+      _callback(tween, "onRepeat");
+    }
+
+    if ((totalTime >= tween._tDur || totalTime < 0) && tween.ratio === ratio) {
+      tween.ratio && _removeFromParent(tween, 1);
+
+      if (!suppressEvents) {
+        _callback(tween, tween.ratio ? "onComplete" : "onReverseComplete", true);
+
+        tween._prom && tween._prom();
+      }
+    }
+  }
+},
+    _findNextPauseTween = function _findNextPauseTween(animation, prevTime, time) {
+  var child;
+
+  if (time > prevTime) {
+    child = animation._first;
+
+    while (child && child._start <= time) {
+      if (!child._dur && child.data === "isPause" && child._start > prevTime) {
+        return child;
+      }
+
+      child = child._next;
+    }
+  } else {
+    child = animation._last;
+
+    while (child && child._start >= time) {
+      if (!child._dur && child.data === "isPause" && child._start < prevTime) {
+        return child;
+      }
+
+      child = child._prev;
+    }
+  }
+},
+    _onUpdateTotalDuration = function _onUpdateTotalDuration(animation) {
+  if (animation instanceof Timeline) {
+    return _uncache(animation);
+  }
+
+  var repeat = animation._repeat;
+  animation._tDur = !repeat ? animation._dur : repeat < 0 ? 1e12 : _round(animation._dur * (repeat + 1) + animation._rDelay * repeat);
+
+  _uncache(animation.parent); //if the tween's duration changed, the parent timeline's duration may have changed, so flag it as "dirty"
+
+
+  return animation;
+},
+    _zeroPosition = {
+  _start: 0,
+  endTime: _emptyFunc
+},
+    _parsePosition = function _parsePosition(animation, position, useBuildFrom) {
+  var labels = animation.labels,
+      recent = animation._recent || _zeroPosition,
+      clippedDuration = animation.duration() >= _bigNum ? recent.endTime(false) : animation._dur,
+      //in case there's a child that infinitely repeats, users almost never intend for the insertion point of a new child to be based on a SUPER long value like that so we clip it and assume the most recently-added child's endTime should be used instead.
+  //buildFrom = useBuildFrom ? animation._build : "auto",
+  i,
+      offset;
+
+  if (_isString(position) && (isNaN(position) || position in labels)) {
+    //if the string is a number like "1", check to see if there's a label with that name, otherwise interpret it as a number (absolute value).
+    i = position.charAt(0);
+
+    if (i === "<" || i === ">") {
+      return (i === "<" ? recent._start : recent.endTime(recent._repeat >= 0)) + (parseFloat(position.substr(1)) || 0);
+    }
+
+    i = position.indexOf("=");
+
+    if (i < 0) {
+      if (!(position in labels)) {
+        labels[position] = clippedDuration;
+      }
+
+      return labels[position];
+    }
+
+    offset = +(position.charAt(i - 1) + position.substr(i + 1));
+    return i > 1 ? _parsePosition(animation, position.substr(0, i - 1)) + offset : clippedDuration + offset;
+  }
+
+  return position == null ? clippedDuration : +position; //return (position == null) ? (isNaN(buildFrom) ? clippedDuration : buildFrom) : (buildFrom === ">>" ? clippedDuration : +buildFrom || 0) + (+position);
+},
+    _conditionalReturn = function _conditionalReturn(value, func) {
+  return value || value === 0 ? func(value) : func;
+},
+    _clamp = function _clamp(min, max, value) {
+  return value < min ? min : value > max ? max : value;
+},
+    getUnit = function getUnit(value) {
+  return (value + "").substr((parseFloat(value) + "").length);
+},
+    clamp = function clamp(min, max, value) {
+  return _conditionalReturn(value, function (v) {
+    return _clamp(min, max, v);
+  });
+},
+    _slice = [].slice,
+    _isArrayLike = function _isArrayLike(value, nonEmpty) {
+  return value && _isObject(value) && "length" in value && (!nonEmpty && !value.length || value.length - 1 in value && _isObject(value[0])) && !value.nodeType && value !== _win;
+},
+    _flatten = function _flatten(ar, leaveStrings, accumulator) {
+  if (accumulator === void 0) {
+    accumulator = [];
+  }
+
+  return ar.forEach(function (value) {
+    var _accumulator;
+
+    return _isString(value) && !leaveStrings || _isArrayLike(value, 1) ? (_accumulator = accumulator).push.apply(_accumulator, toArray(value)) : accumulator.push(value);
+  }) || accumulator;
+},
+    //takes any value and returns an array. If it's a string (and leaveStrings isn't true), it'll use document.querySelectorAll() and convert that to an array. It'll also accept iterables like jQuery objects.
+toArray = function toArray(value, leaveStrings) {
+  return _isString(value) && !leaveStrings && (_coreInitted || !_wake()) ? _slice.call(_doc.querySelectorAll(value), 0) : _isArray(value) ? _flatten(value, leaveStrings) : _isArrayLike(value) ? _slice.call(value, 0) : value ? [value] : [];
+},
+    shuffle = function shuffle(a) {
+  return a.sort(function () {
+    return .5 - Math.random();
+  });
+},
+    //for distributing values across an array. Can accept a number, a function or (most commonly) a function which can contain the following properties: {base, amount, from, ease, grid, axis, length, each}. Returns a function that expects the following parameters: index, target, array. Recognizes the following
+distribute = function distribute(v) {
+  if (_isFunction(v)) {
+    return v;
+  }
+
+  var vars = _isObject(v) ? v : {
+    each: v
+  },
+      //n:1 is just to indicate v was a number; we leverage that later to set v according to the length we get. If a number is passed in, we treat it like the old stagger value where 0.1, for example, would mean that things would be distributed with 0.1 between each element in the array rather than a total "amount" that's chunked out among them all.
+  ease = _parseEase(vars.ease),
+      from = vars.from || 0,
+      base = parseFloat(vars.base) || 0,
+      cache = {},
+      isDecimal = from > 0 && from < 1,
+      ratios = isNaN(from) || isDecimal,
+      axis = vars.axis,
+      ratioX = from,
+      ratioY = from;
+
+  if (_isString(from)) {
+    ratioX = ratioY = {
+      center: .5,
+      edges: .5,
+      end: 1
+    }[from] || 0;
+  } else if (!isDecimal && ratios) {
+    ratioX = from[0];
+    ratioY = from[1];
+  }
+
+  return function (i, target, a) {
+    var l = (a || vars).length,
+        distances = cache[l],
+        originX,
+        originY,
+        x,
+        y,
+        d,
+        j,
+        max,
+        min,
+        wrapAt;
+
+    if (!distances) {
+      wrapAt = vars.grid === "auto" ? 0 : (vars.grid || [1, _bigNum])[1];
+
+      if (!wrapAt) {
+        max = -_bigNum;
+
+        while (max < (max = a[wrapAt++].getBoundingClientRect().left) && wrapAt < l) {}
+
+        wrapAt--;
+      }
+
+      distances = cache[l] = [];
+      originX = ratios ? Math.min(wrapAt, l) * ratioX - .5 : from % wrapAt;
+      originY = ratios ? l * ratioY / wrapAt - .5 : from / wrapAt | 0;
+      max = 0;
+      min = _bigNum;
+
+      for (j = 0; j < l; j++) {
+        x = j % wrapAt - originX;
+        y = originY - (j / wrapAt | 0);
+        distances[j] = d = !axis ? _sqrt(x * x + y * y) : Math.abs(axis === "y" ? y : x);
+
+        if (d > max) {
+          max = d;
+        }
+
+        if (d < min) {
+          min = d;
+        }
+      }
+
+      from === "random" && shuffle(distances);
+      distances.max = max - min;
+      distances.min = min;
+      distances.v = l = (parseFloat(vars.amount) || parseFloat(vars.each) * (wrapAt > l ? l - 1 : !axis ? Math.max(wrapAt, l / wrapAt) : axis === "y" ? l / wrapAt : wrapAt) || 0) * (from === "edges" ? -1 : 1);
+      distances.b = l < 0 ? base - l : base;
+      distances.u = getUnit(vars.amount || vars.each) || 0; //unit
+
+      ease = ease && l < 0 ? _invertEase(ease) : ease;
+    }
+
+    l = (distances[i] - distances.min) / distances.max || 0;
+    return _round(distances.b + (ease ? ease(l) : l) * distances.v) + distances.u; //round in order to work around floating point errors
+  };
+},
+    _roundModifier = function _roundModifier(v) {
+  //pass in 0.1 get a function that'll round to the nearest tenth, or 5 to round to the closest 5, or 0.001 to the closest 1000th, etc.
+  var p = v < 1 ? Math.pow(10, (v + "").length - 2) : 1; //to avoid floating point math errors (like 24 * 0.1 == 2.4000000000000004), we chop off at a specific number of decimal places (much faster than toFixed()
+
+  return function (raw) {
+    return ~~(Math.round(parseFloat(raw) / v) * v * p) / p + (_isNumber(raw) ? 0 : getUnit(raw));
+  };
+},
+    snap = function snap(snapTo, value) {
+  var isArray = _isArray(snapTo),
+      radius,
+      is2D;
+
+  if (!isArray && _isObject(snapTo)) {
+    radius = isArray = snapTo.radius || _bigNum;
+
+    if (snapTo.values) {
+      snapTo = toArray(snapTo.values);
+
+      if (is2D = !_isNumber(snapTo[0])) {
+        radius *= radius; //performance optimization so we don't have to Math.sqrt() in the loop.
+      }
+    } else {
+      snapTo = _roundModifier(snapTo.increment);
+    }
+  }
+
+  return _conditionalReturn(value, !isArray ? _roundModifier(snapTo) : _isFunction(snapTo) ? function (raw) {
+    is2D = snapTo(raw);
+    return Math.abs(is2D - raw) <= radius ? is2D : raw;
+  } : function (raw) {
+    var x = parseFloat(is2D ? raw.x : raw),
+        y = parseFloat(is2D ? raw.y : 0),
+        min = _bigNum,
+        closest = 0,
+        i = snapTo.length,
+        dx,
+        dy;
+
+    while (i--) {
+      if (is2D) {
+        dx = snapTo[i].x - x;
+        dy = snapTo[i].y - y;
+        dx = dx * dx + dy * dy;
+      } else {
+        dx = Math.abs(snapTo[i] - x);
+      }
+
+      if (dx < min) {
+        min = dx;
+        closest = i;
+      }
+    }
+
+    closest = !radius || min <= radius ? snapTo[closest] : raw;
+    return is2D || closest === raw || _isNumber(raw) ? closest : closest + getUnit(raw);
+  });
+},
+    random = function random(min, max, roundingIncrement, returnFunction) {
+  return _conditionalReturn(_isArray(min) ? !max : roundingIncrement === true ? !!(roundingIncrement = 0) : !returnFunction, function () {
+    return _isArray(min) ? min[~~(Math.random() * min.length)] : (roundingIncrement = roundingIncrement || 1e-5) && (returnFunction = roundingIncrement < 1 ? Math.pow(10, (roundingIncrement + "").length - 2) : 1) && ~~(Math.round((min + Math.random() * (max - min)) / roundingIncrement) * roundingIncrement * returnFunction) / returnFunction;
+  });
+},
+    pipe = function pipe() {
+  for (var _len = arguments.length, functions = new Array(_len), _key = 0; _key < _len; _key++) {
+    functions[_key] = arguments[_key];
+  }
+
+  return function (value) {
+    return functions.reduce(function (v, f) {
+      return f(v);
+    }, value);
+  };
+},
+    unitize = function unitize(func, unit) {
+  return function (value) {
+    return func(parseFloat(value)) + (unit || getUnit(value));
+  };
+},
+    normalize = function normalize(min, max, value) {
+  return mapRange(min, max, 0, 1, value);
+},
+    _wrapArray = function _wrapArray(a, wrapper, value) {
+  return _conditionalReturn(value, function (index) {
+    return a[~~wrapper(index)];
+  });
+},
+    wrap = function wrap(min, max, value) {
+  // NOTE: wrap() CANNOT be an arrow function! A very odd compiling bug causes problems (unrelated to GSAP).
+  var range = max - min;
+  return _isArray(min) ? _wrapArray(min, wrap(0, min.length), max) : _conditionalReturn(value, function (value) {
+    return (range + (value - min) % range) % range + min;
+  });
+},
+    wrapYoyo = function wrapYoyo(min, max, value) {
+  var range = max - min,
+      total = range * 2;
+  return _isArray(min) ? _wrapArray(min, wrapYoyo(0, min.length - 1), max) : _conditionalReturn(value, function (value) {
+    value = (total + (value - min) % total) % total;
+    return min + (value > range ? total - value : value);
+  });
+},
+    _replaceRandom = function _replaceRandom(value) {
+  //replaces all occurrences of random(...) in a string with the calculated random value. can be a range like random(-100, 100, 5) or an array like random([0, 100, 500])
+  var prev = 0,
+      s = "",
+      i,
+      nums,
+      end,
+      isArray;
+
+  while (~(i = value.indexOf("random(", prev))) {
+    end = value.indexOf(")", i);
+    isArray = value.charAt(i + 7) === "[";
+    nums = value.substr(i + 7, end - i - 7).match(isArray ? _delimitedValueExp : _strictNumExp);
+    s += value.substr(prev, i - prev) + random(isArray ? nums : +nums[0], +nums[1], +nums[2] || 1e-5);
+    prev = end + 1;
+  }
+
+  return s + value.substr(prev, value.length - prev);
+},
+    mapRange = function mapRange(inMin, inMax, outMin, outMax, value) {
+  var inRange = inMax - inMin,
+      outRange = outMax - outMin;
+  return _conditionalReturn(value, function (value) {
+    return outMin + (value - inMin) / inRange * outRange;
+  });
+},
+    interpolate = function interpolate(start, end, progress, mutate) {
+  var func = isNaN(start + end) ? 0 : function (p) {
+    return (1 - p) * start + p * end;
+  };
+
+  if (!func) {
+    var isString = _isString(start),
+        master = {},
+        p,
+        i,
+        interpolators,
+        l,
+        il;
+
+    progress === true && (mutate = 1) && (progress = null);
+
+    if (isString) {
+      start = {
+        p: start
+      };
+      end = {
+        p: end
+      };
+    } else if (_isArray(start) && !_isArray(end)) {
+      interpolators = [];
+      l = start.length;
+      il = l - 2;
+
+      for (i = 1; i < l; i++) {
+        interpolators.push(interpolate(start[i - 1], start[i])); //build the interpolators up front as a performance optimization so that when the function is called many times, it can just reuse them.
+      }
+
+      l--;
+
+      func = function func(p) {
+        p *= l;
+        var i = Math.min(il, ~~p);
+        return interpolators[i](p - i);
+      };
+
+      progress = end;
+    } else if (!mutate) {
+      start = _merge(_isArray(start) ? [] : {}, start);
+    }
+
+    if (!interpolators) {
+      for (p in end) {
+        _addPropTween.call(master, start, p, "get", end[p]);
+      }
+
+      func = function func(p) {
+        return _renderPropTweens(p, master) || (isString ? start.p : start);
+      };
+    }
+  }
+
+  return _conditionalReturn(progress, func);
+},
+    _getLabelInDirection = function _getLabelInDirection(timeline, fromTime, backward) {
+  //used for nextLabel() and previousLabel()
+  var labels = timeline.labels,
+      min = _bigNum,
+      p,
+      distance,
+      label;
+
+  for (p in labels) {
+    distance = labels[p] - fromTime;
+
+    if (distance < 0 === !!backward && distance && min > (distance = Math.abs(distance))) {
+      label = p;
+      min = distance;
+    }
+  }
+
+  return label;
+},
+    _callback = function _callback(animation, type, executeLazyFirst) {
+  var v = animation.vars,
+      callback = v[type],
+      params,
+      scope;
+
+  if (!callback) {
+    return;
+  }
+
+  params = v[type + "Params"];
+  scope = v.callbackScope || animation;
+
+  if (executeLazyFirst && _lazyTweens.length) {
+    //in case rendering caused any tweens to lazy-init, we should render them because typically when a timeline finishes, users expect things to have rendered fully. Imagine an onUpdate on a timeline that reports/checks tweened values.
+    _lazyRender();
+  }
+
+  return params ? callback.apply(scope, params) : callback.call(scope);
+},
+    _interrupt = function _interrupt(animation) {
+  _removeFromParent(animation);
+
+  if (animation.progress() < 1) {
+    _callback(animation, "onInterrupt");
+  }
+
+  return animation;
+},
+    _quickTween,
+    _createPlugin = function _createPlugin(config) {
+  config = !config.name && config["default"] || config; //UMD packaging wraps things oddly, so for example MotionPathHelper becomes {MotionPathHelper:MotionPathHelper, default:MotionPathHelper}.
+
+  var name = config.name,
+      isFunc = _isFunction(config),
+      Plugin = name && !isFunc && config.init ? function () {
+    this._props = [];
+  } : config,
+      //in case someone passes in an object that's not a plugin, like CustomEase
+  instanceDefaults = {
+    init: _emptyFunc,
+    render: _renderPropTweens,
+    add: _addPropTween,
+    kill: _killPropTweensOf,
+    modifier: _addPluginModifier,
+    rawVars: 0
+  },
+      statics = {
+    targetTest: 0,
+    get: 0,
+    getSetter: _getSetter,
+    aliases: {},
+    register: 0
+  };
+
+  _wake();
+
+  if (config !== Plugin) {
+    if (_plugins[name]) {
+      return;
+    }
+
+    _setDefaults(Plugin, _setDefaults(_copyExcluding(config, instanceDefaults), statics)); //static methods
+
+
+    _merge(Plugin.prototype, _merge(instanceDefaults, _copyExcluding(config, statics))); //instance methods
+
+
+    _plugins[Plugin.prop = name] = Plugin;
+
+    if (config.targetTest) {
+      _harnessPlugins.push(Plugin);
+
+      _reservedProps[name] = 1;
+    }
+
+    name = (name === "css" ? "CSS" : name.charAt(0).toUpperCase() + name.substr(1)) + "Plugin"; //for the global name. "motionPath" should become MotionPathPlugin
+  }
+
+  _addGlobal(name, Plugin);
+
+  if (config.register) {
+    config.register(gsap, Plugin, PropTween);
+  }
+},
+
+/*
+ * --------------------------------------------------------------------------------------
+ * COLORS
+ * --------------------------------------------------------------------------------------
+ */
+_255 = 255,
+    _colorLookup = {
+  aqua: [0, _255, _255],
+  lime: [0, _255, 0],
+  silver: [192, 192, 192],
+  black: [0, 0, 0],
+  maroon: [128, 0, 0],
+  teal: [0, 128, 128],
+  blue: [0, 0, _255],
+  navy: [0, 0, 128],
+  white: [_255, _255, _255],
+  olive: [128, 128, 0],
+  yellow: [_255, _255, 0],
+  orange: [_255, 165, 0],
+  gray: [128, 128, 128],
+  purple: [128, 0, 128],
+  green: [0, 128, 0],
+  red: [_255, 0, 0],
+  pink: [_255, 192, 203],
+  cyan: [0, _255, _255],
+  transparent: [_255, _255, _255, 0]
+},
+    _hue = function _hue(h, m1, m2) {
+  h = h < 0 ? h + 1 : h > 1 ? h - 1 : h;
+  return (h * 6 < 1 ? m1 + (m2 - m1) * h * 6 : h < .5 ? m2 : h * 3 < 2 ? m1 + (m2 - m1) * (2 / 3 - h) * 6 : m1) * _255 + .5 | 0;
+},
+    splitColor = function splitColor(v, toHSL) {
+  var a = !v ? _colorLookup.black : _isNumber(v) ? [v >> 16, v >> 8 & _255, v & _255] : 0,
+      r,
+      g,
+      b,
+      h,
+      s,
+      l,
+      max,
+      min,
+      d,
+      wasHSL;
+
+  if (!a) {
+    if (v.substr(-1) === ",") {
+      //sometimes a trailing comma is included and we should chop it off (typically from a comma-delimited list of values like a textShadow:"2px 2px 2px blue, 5px 5px 5px rgb(255,0,0)" - in this example "blue," has a trailing comma. We could strip it out inside parseComplex() but we'd need to do it to the beginning and ending values plus it wouldn't provide protection from other potential scenarios like if the user passes in a similar value.
+      v = v.substr(0, v.length - 1);
+    }
+
+    if (_colorLookup[v]) {
+      a = _colorLookup[v];
+    } else if (v.charAt(0) === "#") {
+      if (v.length === 4) {
+        //for shorthand like #9F0
+        r = v.charAt(1);
+        g = v.charAt(2);
+        b = v.charAt(3);
+        v = "#" + r + r + g + g + b + b;
+      }
+
+      v = parseInt(v.substr(1), 16);
+      a = [v >> 16, v >> 8 & _255, v & _255];
+    } else if (v.substr(0, 3) === "hsl") {
+      a = wasHSL = v.match(_strictNumExp);
+
+      if (!toHSL) {
+        h = +a[0] % 360 / 360;
+        s = +a[1] / 100;
+        l = +a[2] / 100;
+        g = l <= .5 ? l * (s + 1) : l + s - l * s;
+        r = l * 2 - g;
+
+        if (a.length > 3) {
+          a[3] *= 1; //cast as number
+        }
+
+        a[0] = _hue(h + 1 / 3, r, g);
+        a[1] = _hue(h, r, g);
+        a[2] = _hue(h - 1 / 3, r, g);
+      } else if (~v.indexOf("=")) {
+        //if relative values are found, just return the raw strings with the relative prefixes in place.
+        return v.match(_numExp);
+      }
+    } else {
+      a = v.match(_strictNumExp) || _colorLookup.transparent;
+    }
+
+    a = a.map(Number);
+  }
+
+  if (toHSL && !wasHSL) {
+    r = a[0] / _255;
+    g = a[1] / _255;
+    b = a[2] / _255;
+    max = Math.max(r, g, b);
+    min = Math.min(r, g, b);
+    l = (max + min) / 2;
+
+    if (max === min) {
+      h = s = 0;
+    } else {
+      d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      h = max === r ? (g - b) / d + (g < b ? 6 : 0) : max === g ? (b - r) / d + 2 : (r - g) / d + 4;
+      h *= 60;
+    }
+
+    a[0] = h + .5 | 0;
+    a[1] = s * 100 + .5 | 0;
+    a[2] = l * 100 + .5 | 0;
+  }
+
+  return a;
+},
+    _formatColors = function _formatColors(s, toHSL) {
+  var colors = (s + "").match(_colorExp),
+      charIndex = 0,
+      parsed = "",
+      i,
+      color,
+      temp;
+
+  if (!colors) {
+    return s;
+  }
+
+  for (i = 0; i < colors.length; i++) {
+    color = colors[i];
+    temp = s.substr(charIndex, s.indexOf(color, charIndex) - charIndex);
+    charIndex += temp.length + color.length;
+    color = splitColor(color, toHSL);
+
+    if (color.length === 3) {
+      color.push(1);
+    }
+
+    parsed += temp + (toHSL ? "hsla(" + color[0] + "," + color[1] + "%," + color[2] + "%," + color[3] : "rgba(" + color.join(",")) + ")";
+  }
+
+  return parsed + s.substr(charIndex);
+},
+    _colorExp = function () {
+  var s = "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3}){1,2}\\b",
+      //we'll dynamically build this Regular Expression to conserve file size. After building it, it will be able to find rgb(), rgba(), # (hexadecimal), and named color values like red, blue, purple, etc.,
+  p;
+
+  for (p in _colorLookup) {
+    s += "|" + p + "\\b";
+  }
+
+  return new RegExp(s + ")", "gi");
+}(),
+    _hslExp = /hsl[a]?\(/,
+    _colorStringFilter = function _colorStringFilter(a) {
+  var combined = a.join(" "),
+      toHSL;
+  _colorExp.lastIndex = 0;
+
+  if (_colorExp.test(combined)) {
+    toHSL = _hslExp.test(combined);
+    a[0] = _formatColors(a[0], toHSL);
+    a[1] = _formatColors(a[1], toHSL);
+  }
+},
+
+/*
+ * --------------------------------------------------------------------------------------
+ * TICKER
+ * --------------------------------------------------------------------------------------
+ */
+_tickerActive,
+    _ticker = function () {
+  var _getTime = Date.now,
+      _lagThreshold = 500,
+      _adjustedLag = 33,
+      _startTime = _getTime(),
+      _lastUpdate = _startTime,
+      _gap = 1 / 60,
+      _nextTime = _gap,
+      _listeners = [],
+      _id,
+      _req,
+      _raf,
+      _self,
+      _tick = function _tick(v) {
+    var elapsed = _getTime() - _lastUpdate,
+        manual = v === true,
+        overlap,
+        dispatch;
+
+    if (elapsed > _lagThreshold) {
+      _startTime += elapsed - _adjustedLag;
+    }
+
+    _lastUpdate += elapsed;
+    _self.time = (_lastUpdate - _startTime) / 1000;
+    overlap = _self.time - _nextTime;
+
+    if (overlap > 0 || manual) {
+      _self.frame++;
+      _nextTime += overlap + (overlap >= _gap ? 0.004 : _gap - overlap);
+      dispatch = 1;
+    }
+
+    if (!manual) {
+      //make sure the request is made before we dispatch the "tick" event so that timing is maintained. Otherwise, if processing the "tick" requires a bunch of time (like 15ms) and we're using a setTimeout() that's based on 16.7ms, it'd technically take 31.7ms between frames otherwise.
+      _id = _req(_tick);
+    }
+
+    if (dispatch) {
+      _listeners.forEach(function (l) {
+        return l(_self.time, elapsed, _self.frame, v);
+      });
+    }
+  };
+
+  _self = {
+    time: 0,
+    frame: 0,
+    tick: function tick() {
+      _tick(true);
+    },
+    wake: function wake() {
+      if (_coreReady) {
+        if (!_coreInitted && _windowExists()) {
+          _win = _coreInitted = window;
+          _doc = _win.document || {};
+          _globals.gsap = gsap;
+          (_win.gsapVersions || (_win.gsapVersions = [])).push(gsap.version);
+
+          _install(_installScope || _win.GreenSockGlobals || !_win.gsap && _win || {});
+
+          _raf = _win.requestAnimationFrame;
+        }
+
+        _id && _self.sleep();
+
+        _req = _raf || function (f) {
+          return setTimeout(f, (_nextTime - _self.time) * 1000 + 1 | 0);
+        };
+
+        _tickerActive = 1;
+
+        _tick(2);
+      }
+    },
+    sleep: function sleep() {
+      (_raf ? _win.cancelAnimationFrame : clearTimeout)(_id);
+      _tickerActive = 0;
+      _req = _emptyFunc;
+    },
+    lagSmoothing: function lagSmoothing(threshold, adjustedLag) {
+      _lagThreshold = threshold || 1 / _tinyNum; //zero should be interpreted as basically unlimited
+
+      _adjustedLag = Math.min(adjustedLag, _lagThreshold, 0);
+    },
+    fps: function fps(_fps) {
+      _gap = 1 / (_fps || 60);
+      _nextTime = _self.time + _gap;
+    },
+    add: function add(callback) {
+      _listeners.indexOf(callback) < 0 && _listeners.push(callback);
+
+      _wake();
+    },
+    remove: function remove(callback) {
+      var i;
+      ~(i = _listeners.indexOf(callback)) && _listeners.splice(i, 1);
+    },
+    _listeners: _listeners
+  };
+  return _self;
+}(),
+    _wake = function _wake() {
+  return !_tickerActive && _ticker.wake();
+},
+    //also ensures the core classes are initialized.
+
+/*
+* -------------------------------------------------
+* EASING
+* -------------------------------------------------
+*/
+_easeMap = {},
+    _customEaseExp = /^[\d.\-M][\d.\-,\s]/,
+    _quotesExp = /["']/g,
+    _parseObjectInString = function _parseObjectInString(value) {
+  //takes a string like "{wiggles:10, type:anticipate})" and turns it into a real object. Notice it ends in ")" and includes the {} wrappers. This is because we only use this function for parsing ease configs and prioritized optimization rather than reusability.
+  var obj = {},
+      split = value.substr(1, value.length - 3).split(":"),
+      key = split[0],
+      i = 1,
+      l = split.length,
+      index,
+      val,
+      parsedVal;
+
+  for (; i < l; i++) {
+    val = split[i];
+    index = i !== l - 1 ? val.lastIndexOf(",") : val.length;
+    parsedVal = val.substr(0, index);
+    obj[key] = isNaN(parsedVal) ? parsedVal.replace(_quotesExp, "").trim() : +parsedVal;
+    key = val.substr(index + 1).trim();
+  }
+
+  return obj;
+},
+    _configEaseFromString = function _configEaseFromString(name) {
+  //name can be a string like "elastic.out(1,0.5)", and pass in _easeMap as obj and it'll parse it out and call the actual function like _easeMap.Elastic.easeOut.config(1,0.5). It will also parse custom ease strings as long as CustomEase is loaded and registered (internally as _easeMap._CE).
+  var split = (name + "").split("("),
+      ease = _easeMap[split[0]];
+  return ease && split.length > 1 && ease.config ? ease.config.apply(null, ~name.indexOf("{") ? [_parseObjectInString(split[1])] : _parenthesesExp.exec(name)[1].split(",").map(_numericIfPossible)) : _easeMap._CE && _customEaseExp.test(name) ? _easeMap._CE("", name) : ease;
+},
+    _invertEase = function _invertEase(ease) {
+  return function (p) {
+    return 1 - ease(1 - p);
+  };
+},
+    // potential future feature - allow yoyoEase to be set in children and have those affected when the parent/ancestor timeline yoyos. Not sure it's worth the kb.
+// _propagateYoyoEase = (timeline, isYoyo) => {
+// 	let child = timeline._first, ease;
+// 	while (child) {
+// 		if (child instanceof Timeline) {
+// 			_propagateYoyoEase(child, isYoyo);
+// 		} else if (child.vars.yoyoEase && (!child._yoyo || !child._repeat) && child._yoyo !== isYoyo) {
+// 			if (child.timeline) {
+// 				_propagateYoyoEase(child.timeline, isYoyo);
+// 			} else {
+// 				ease = child._ease;
+// 				child._ease = child._yEase;
+// 				child._yEase = ease;
+// 				child._yoyo = isYoyo;
+// 			}
+// 		}
+// 		child = child._next;
+// 	}
+// },
+_parseEase = function _parseEase(ease, defaultEase) {
+  return !ease ? defaultEase : (_isFunction(ease) ? ease : _easeMap[ease] || _configEaseFromString(ease)) || defaultEase;
+},
+    _insertEase = function _insertEase(names, easeIn, easeOut, easeInOut) {
+  if (easeOut === void 0) {
+    easeOut = function easeOut(p) {
+      return 1 - easeIn(1 - p);
+    };
+  }
+
+  if (easeInOut === void 0) {
+    easeInOut = function easeInOut(p) {
+      return p < .5 ? easeIn(p * 2) / 2 : 1 - easeIn((1 - p) * 2) / 2;
+    };
+  }
+
+  var ease = {
+    easeIn: easeIn,
+    easeOut: easeOut,
+    easeInOut: easeInOut
+  },
+      lowercaseName;
+
+  _forEachName(names, function (name) {
+    _easeMap[name] = _globals[name] = ease;
+    _easeMap[lowercaseName = name.toLowerCase()] = easeOut;
+
+    for (var p in ease) {
+      _easeMap[lowercaseName + (p === "easeIn" ? ".in" : p === "easeOut" ? ".out" : ".inOut")] = _easeMap[name + "." + p] = ease[p];
+    }
+  });
+
+  return ease;
+},
+    _easeInOutFromOut = function _easeInOutFromOut(easeOut) {
+  return function (p) {
+    return p < .5 ? (1 - easeOut(1 - p * 2)) / 2 : .5 + easeOut((p - .5) * 2) / 2;
+  };
+},
+    _configElastic = function _configElastic(type, amplitude, period) {
+  var p1 = amplitude >= 1 ? amplitude : 1,
+      //note: if amplitude is < 1, we simply adjust the period for a more natural feel. Otherwise the math doesn't work right and the curve starts at 1.
+  p2 = (period || (type ? .3 : .45)) / (amplitude < 1 ? amplitude : 1),
+      p3 = p2 / _2PI * (Math.asin(1 / p1) || 0),
+      easeOut = function easeOut(p) {
+    return p === 1 ? 1 : p1 * Math.pow(2, -10 * p) * _sin((p - p3) * p2) + 1;
+  },
+      ease = type === "out" ? easeOut : type === "in" ? function (p) {
+    return 1 - easeOut(1 - p);
+  } : _easeInOutFromOut(easeOut);
+
+  p2 = _2PI / p2; //precalculate to optimize
+
+  ease.config = function (amplitude, period) {
+    return _configElastic(type, amplitude, period);
+  };
+
+  return ease;
+},
+    _configBack = function _configBack(type, overshoot) {
+  if (overshoot === void 0) {
+    overshoot = 1.70158;
+  }
+
+  var easeOut = function easeOut(p) {
+    return --p * p * ((overshoot + 1) * p + overshoot) + 1;
+  },
+      ease = type === "out" ? easeOut : type === "in" ? function (p) {
+    return 1 - easeOut(1 - p);
+  } : _easeInOutFromOut(easeOut);
+
+  ease.config = function (overshoot) {
+    return _configBack(type, overshoot);
+  };
+
+  return ease;
+}; // a cheaper (kb and cpu) but more mild way to get a parameterized weighted ease by feeding in a value between -1 (easeIn) and 1 (easeOut) where 0 is linear.
+// _weightedEase = ratio => {
+// 	let y = 0.5 + ratio / 2;
+// 	return p => (2 * (1 - p) * p * y + p * p);
+// },
+// a stronger (but more expensive kb/cpu) parameterized weighted ease that lets you feed in a value between -1 (easeIn) and 1 (easeOut) where 0 is linear.
+// _weightedEaseStrong = ratio => {
+// 	ratio = .5 + ratio / 2;
+// 	let o = 1 / 3 * (ratio < .5 ? ratio : 1 - ratio),
+// 		b = ratio - o,
+// 		c = ratio + o;
+// 	return p => p === 1 ? p : 3 * b * (1 - p) * (1 - p) * p + 3 * c * (1 - p) * p * p + p * p * p;
+// };
+
+
+_forEachName("Linear,Quad,Cubic,Quart,Quint,Strong", function (name, i) {
+  var power = i < 5 ? i + 1 : i;
+
+  _insertEase(name + ",Power" + (power - 1), i ? function (p) {
+    return Math.pow(p, power);
+  } : function (p) {
+    return p;
+  }, function (p) {
+    return 1 - Math.pow(1 - p, power);
+  }, function (p) {
+    return p < .5 ? Math.pow(p * 2, power) / 2 : 1 - Math.pow((1 - p) * 2, power) / 2;
+  });
+});
+
+_easeMap.Linear.easeNone = _easeMap.none = _easeMap.Linear.easeIn;
+
+_insertEase("Elastic", _configElastic("in"), _configElastic("out"), _configElastic());
+
+(function (n, c) {
+  var n1 = 1 / c,
+      n2 = 2 * n1,
+      n3 = 2.5 * n1,
+      easeOut = function easeOut(p) {
+    return p < n1 ? n * p * p : p < n2 ? n * Math.pow(p - 1.5 / c, 2) + .75 : p < n3 ? n * (p -= 2.25 / c) * p + .9375 : n * Math.pow(p - 2.625 / c, 2) + .984375;
+  };
+
+  _insertEase("Bounce", function (p) {
+    return 1 - easeOut(1 - p);
+  }, easeOut);
+})(7.5625, 2.75);
+
+_insertEase("Expo", function (p) {
+  return p ? Math.pow(2, 10 * (p - 1)) : 0;
+});
+
+_insertEase("Circ", function (p) {
+  return -(_sqrt(1 - p * p) - 1);
+});
+
+_insertEase("Sine", function (p) {
+  return -_cos(p * _HALF_PI) + 1;
+});
+
+_insertEase("Back", _configBack("in"), _configBack("out"), _configBack());
+
+_easeMap.SteppedEase = _easeMap.steps = _globals.SteppedEase = {
+  config: function config(steps, immediateStart) {
+    if (steps === void 0) {
+      steps = 1;
+    }
+
+    var p1 = 1 / steps,
+        p2 = steps + (immediateStart ? 0 : 1),
+        p3 = immediateStart ? 1 : 0,
+        max = 1 - _tinyNum;
+    return function (p) {
+      return ((p2 * _clamp(0, max, p) | 0) + p3) * p1;
+    };
+  }
+};
+_defaults.ease = _easeMap["quad.out"];
+/*
+ * --------------------------------------------------------------------------------------
+ * CACHE
+ * --------------------------------------------------------------------------------------
+ */
+
+var GSCache = function GSCache(target, harness) {
+  this.id = _gsID++;
+  target._gsap = this;
+  this.target = target;
+  this.harness = harness;
+  this.get = harness ? harness.get : _getProperty;
+  this.set = harness ? harness.getSetter : _getSetter;
+};
+/*
+ * --------------------------------------------------------------------------------------
+ * ANIMATION
+ * --------------------------------------------------------------------------------------
+ */
+
+var Animation =
+/*#__PURE__*/
+function () {
+  function Animation(vars, time) {
+    var parent = vars.parent || _globalTimeline;
+    this.vars = vars;
+    this._dur = this._tDur = +vars.duration || 0;
+    this._delay = +vars.delay || 0;
+
+    if (this._repeat = vars.repeat || 0) {
+      this._rDelay = vars.repeatDelay || 0;
+      this._yoyo = !!vars.yoyo || !!vars.yoyoEase;
+
+      _onUpdateTotalDuration(this);
+    }
+
+    this._ts = 1;
+    this.data = vars.data;
+
+    if (!_tickerActive) {
+      _ticker.wake();
+    }
+
+    if (parent) {
+      _addToTimeline(parent, this, time || time === 0 ? time : parent._time);
+    }
+
+    if (vars.reversed) {
+      this.reversed(true);
+    }
+
+    if (vars.paused) {
+      this.paused(true);
+    }
+  }
+
+  var _proto = Animation.prototype;
+
+  _proto.delay = function delay(value) {
+    if (value || value === 0) {
+      this._delay = value;
+      return this;
+    }
+
+    return this._delay;
+  };
+
+  _proto.duration = function duration(value) {
+    var isSetter = arguments.length,
+        repeat = this._repeat,
+        repeatCycles = repeat > 0 ? repeat * ((isSetter ? value : this._dur) + this._rDelay) : 0;
+    return isSetter ? this.totalDuration(repeat < 0 ? value : value + repeatCycles) : this.totalDuration() && this._dur;
+  };
+
+  _proto.totalDuration = function totalDuration(value) {
+    if (!arguments.length) {
+      return this._tDur;
+    }
+
+    var repeat = this._repeat,
+        isInfinite = (value || this._rDelay) && repeat < 0;
+    this._tDur = isInfinite ? 1e12 : value;
+    this._dur = isInfinite ? value : (value - repeat * this._rDelay) / (repeat + 1);
+    this._dirty = 0;
+
+    _uncache(this.parent);
+
+    return this;
+  };
+
+  _proto.totalTime = function totalTime(_totalTime, suppressEvents) {
+    _wake();
+
+    if (!arguments.length) {
+      return this._tTime;
+    }
+
+    var parent = this.parent || this._dp,
+        start;
+
+    if (parent && parent.smoothChildTiming && this._ts) {
+      start = this._start; // if (!parent._dp && parent._time === parent._dur) { // if a root timeline completes...and then a while later one of its children resumes, we must shoot the playhead forward to where it should be raw-wise, otherwise the child will jump to the end. Down side: this assumes it's using the _ticker.time as a reference.
+      // 	parent._time = _ticker.time - parent._start;
+      // }
+
+      this._start = parent._time - (this._ts > 0 ? _totalTime / this._ts : ((this._dirty ? this.totalDuration() : this._tDur) - _totalTime) / -this._ts);
+      this._end += this._start - start;
+
+      if (!parent._dirty) {
+        //for performance improvement. If the parent's cache is already dirty, it already took care of marking the ancestors as dirty too, so skip the function call here.
+        _uncache(parent);
+      } //in case any of the ancestor timelines had completed but should now be enabled, we should reset their totalTime() which will also ensure that they're lined up properly and enabled. Skip for animations that are on the root (wasteful). Example: a TimelineLite.exportRoot() is performed when there's a paused tween on the root, the export will not complete until that tween is unpaused, but imagine a child gets restarted later, after all [unpaused] tweens have completed. The start of that child would get pushed out, but one of the ancestors may have completed.
+
+
+      while (parent.parent) {
+        if (parent.parent._time !== parent._start + (parent._ts > 0 ? parent._tTime / parent._ts : (parent.totalDuration() - parent._tTime) / -parent._ts)) {
+          parent.totalTime(parent._tTime, true);
+        }
+
+        parent = parent.parent;
+      }
+
+      if (!this.parent && parent.autoRemoveChildren) {
+        //if the animation doesn't have a parent, put it back into its last parent (recorded as _dp for exactly cases like this). Limit to parents with autoRemoveChildren (like globalTimeline) so that if the user manually removes an animation from a timeline and then alters its playhead, it doesn't get added back in.
+        _addToTimeline(parent, this, this._start - this._delay);
+      }
+    }
+
+    if (this._tTime !== _totalTime || !this._dur && !suppressEvents) {
+      this._ts || (this._pTime = _totalTime); // otherwise, if an animation is paused, then the playhead is moved back to zero, then resumed, it'd revert back to the original time at the pause
+
+      _lazySafeRender(this, _totalTime, suppressEvents);
+    }
+
+    return this;
+  };
+
+  _proto.time = function time(value, suppressEvents) {
+    return arguments.length ? this.totalTime(Math.min(this.totalDuration(), value + _elapsedCycleDuration(this)) % this._dur || (value ? this._dur : 0), suppressEvents) : this._time; // note: if the modulus results in 0, the playhead could be exactly at the end or the beginning, and we always defer to the END with a non-zero value, otherwise if you set the time() to the very end (duration()), it would render at the START!
+  };
+
+  _proto.totalProgress = function totalProgress(value, suppressEvents) {
+    return arguments.length ? this.totalTime(this.totalDuration() * value, suppressEvents) : this._tTime / this.totalDuration();
+  };
+
+  _proto.progress = function progress(value, suppressEvents) {
+    return arguments.length ? this.totalTime(this.duration() * (this._yoyo && !(this.iteration() & 1) ? 1 - value : value) + _elapsedCycleDuration(this), suppressEvents) : this.duration() ? this._time / this._dur : this.ratio;
+  };
+
+  _proto.iteration = function iteration(value, suppressEvents) {
+    var cycleDuration = this.duration() + this._rDelay;
+
+    return arguments.length ? this.totalTime(this._time + (value - 1) * cycleDuration, suppressEvents) : this._repeat ? _animationCycle(this._tTime, cycleDuration) + 1 : 1;
+  };
+
+  _proto.timeScale = function timeScale(value) {
+    if (!arguments.length) {
+      return this._ts || this._pauseTS || 0;
+    }
+
+    if (this._pauseTS !== null) {
+      this._pauseTS = value;
+      return this;
+    }
+
+    var tTime = this.parent && this._ts ? _parentToChildTotalTime(this.parent._time, this) : this._tTime; // make sure to do the parentToChildTotalTime() BEFORE setting the new _ts because the old one must be used in that calculation.
+
+    this._ts = value; // prioritize rendering where the parent's playhead lines up instead of this._tTime because there could be a tween that's animating another tween's timeScale in the same rendering loop (same parent), thus if the timeScale tween renders first, it would alter _start BEFORE _tTime was set on that tick (in the rendering loop), effectively freezing it until the timeScale tween finishes.
+
+    return _recacheAncestors(this.totalTime(tTime, true));
+  };
+
+  _proto.paused = function paused(value) {
+    var isPaused = !this._ts;
+
+    if (!arguments.length) {
+      return isPaused;
+    }
+
+    if (isPaused !== value) {
+      if (value) {
+        this._pauseTS = this._ts;
+        this._pTime = this._tTime || Math.max(-this._delay, this.rawTime()); // if the pause occurs during the delay phase, make sure that's factored in when resuming.
+
+        this._ts = this._act = 0; //we use a timeScale of 0 to indicate a paused state, but we record the old "real" timeScale as _pauseTS so we can revert when unpaused.
+      } else {
+        this._ts = this._pauseTS || 1;
+        this._pauseTS = null;
+        value = this._tTime || this._pTime; //only defer to _pTime (pauseTime) if tTime is zero. Remember, someone could pause() an animation, then scrub the playhead and resume().
+
+        if (this.progress() === 1) {
+          // edge case: animation.progress(1).pause().play() wouldn't render again because the playhead is already at the end, but the call to totalTime() below will add it back to its parent...and not remove it again (since removing only happens upon rendering at a new time). Offsetting the _tTime slightly is done simply to cause the final render in totalTime() that'll pop it off its timeline (if autoRemoveChildren is true, of course).
+          this._tTime -= _tinyNum;
+        }
+
+        this.totalTime(value, true);
+      }
+    }
+
+    return this;
+  };
+
+  _proto.startTime = function startTime(value) {
+    if (arguments.length) {
+      if (this.parent && this.parent._sort) {
+        _addToTimeline(this.parent, this, value - this._delay);
+      }
+
+      return this;
+    }
+
+    return this._start;
+  };
+
+  _proto.endTime = function endTime(includeRepeats) {
+    return this._start + (_isNotFalse(includeRepeats) ? this.totalDuration() : this.duration()) / Math.abs(this._ts);
+  };
+
+  _proto.rawTime = function rawTime(wrapRepeats) {
+    var parent = this.parent || this._dp; // _dp = detatched parent
+
+    return !parent ? this._tTime : wrapRepeats && (!this._ts || this._repeat && this._time && this.totalProgress() < 1) ? this._tTime % (this._dur + this._rDelay) : !this._ts ? this._tTime : _parentToChildTotalTime(parent.rawTime(wrapRepeats), this);
+  } // globalTime(rawTime) {
+  // 	let animation = this,
+  // 		time = arguments.length ? rawTime : animation.rawTime();
+  // 	while (animation) {
+  // 		time = animation._start + time / (animation._ts || 1);
+  // 		animation = animation.parent;
+  // 	}
+  // 	return time;
+  // }
+  ;
+
+  _proto.repeat = function repeat(value) {
+    if (arguments.length) {
+      this._repeat = value;
+      return _onUpdateTotalDuration(this);
+    }
+
+    return this._repeat;
+  };
+
+  _proto.repeatDelay = function repeatDelay(value) {
+    if (arguments.length) {
+      this._rDelay = value;
+      return _onUpdateTotalDuration(this);
+    }
+
+    return this._rDelay;
+  };
+
+  _proto.yoyo = function yoyo(value) {
+    if (arguments.length) {
+      this._yoyo = value;
+      return this;
+    }
+
+    return this._yoyo;
+  };
+
+  _proto.seek = function seek(position, suppressEvents) {
+    return this.totalTime(_parsePosition(this, position), _isNotFalse(suppressEvents));
+  };
+
+  _proto.restart = function restart(includeDelay, suppressEvents) {
+    return this.play().totalTime(includeDelay ? -this._delay : 0, _isNotFalse(suppressEvents));
+  };
+
+  _proto.play = function play(from, suppressEvents) {
+    if (from != null) {
+      this.seek(from, suppressEvents);
+    }
+
+    return this.reversed(false).paused(false);
+  };
+
+  _proto.reverse = function reverse(from, suppressEvents) {
+    if (from != null) {
+      this.seek(from || this.totalDuration(), suppressEvents);
+    }
+
+    return this.reversed(true).paused(false);
+  };
+
+  _proto.pause = function pause(atTime, suppressEvents) {
+    if (atTime != null) {
+      this.seek(atTime, suppressEvents);
+    }
+
+    return this.paused(true);
+  };
+
+  _proto.resume = function resume() {
+    return this.paused(false);
+  };
+
+  _proto.reversed = function reversed(value) {
+    var ts = this._ts || this._pauseTS || 0;
+
+    if (arguments.length) {
+      if (value !== this.reversed()) {
+        this[this._pauseTS === null ? "_ts" : "_pauseTS"] = Math.abs(ts) * (value ? -1 : 1);
+        this.totalTime(this._tTime, true);
+      }
+
+      return this;
+    }
+
+    return ts < 0;
+  };
+
+  _proto.invalidate = function invalidate() {
+    this._initted = 0;
+    return this;
+  };
+
+  _proto.isActive = function isActive(hasStarted) {
+    var parent = this.parent || this._dp,
+        start = this._start,
+        rawTime;
+    return !!(!parent || this._ts && (this._initted || !hasStarted) && parent.isActive(hasStarted) && (rawTime = parent.rawTime(true)) >= start && rawTime < this.endTime(true) - _tinyNum);
+  };
+
+  _proto.eventCallback = function eventCallback(type, callback, params) {
+    var vars = this.vars;
+
+    if (arguments.length > 1) {
+      if (!callback) {
+        delete vars[type];
+      } else {
+        vars[type] = callback;
+
+        if (params) {
+          vars[type + "Params"] = params;
+        }
+
+        if (type === "onUpdate") {
+          this._onUpdate = callback;
+        }
+      }
+
+      return this;
+    }
+
+    return vars[type];
+  };
+
+  _proto.then = function then(onFulfilled) {
+    var self = this;
+    return new Promise(function (resolve) {
+      var f = _isFunction(onFulfilled) ? onFulfilled : _passThrough,
+          _resolve = function _resolve() {
+        var _then = self.then;
+        self.then = null; // temporarily null the then() method to avoid an infinite loop (see https://github.com/greensock/GSAP/issues/322)
+
+        f = f(self);
+
+        if (f) {
+          if (f.then || f === self) {
+            self.then = _then;
+          } else if (!_isFunction(f)) {
+            f = _passThrough;
+          }
+        }
+
+        resolve(f);
+        self.then = _then;
+      };
+
+      if (self._initted && self.totalProgress() === 1 && self._ts >= 0 || !self._tTime && self._ts < 0) {
+        _resolve();
+      } else {
+        self._prom = _resolve;
+      }
+    });
+  };
+
+  _proto.kill = function kill() {
+    _interrupt(this);
+  };
+
+  return Animation;
+}();
+
+_setDefaults(Animation.prototype, {
+  _time: 0,
+  _start: 0,
+  _end: 0,
+  _tTime: 0,
+  _tDur: 0,
+  _dirty: 0,
+  _repeat: 0,
+  _yoyo: false,
+  parent: 0,
+  _initted: false,
+  _rDelay: 0,
+  _ts: 1,
+  _dp: 0,
+  ratio: 0,
+  _zTime: -_tinyNum,
+  _prom: 0,
+  _pauseTS: null
+});
+/*
+ * -------------------------------------------------
+ * TIMELINE
+ * -------------------------------------------------
+ */
+
+
+var Timeline =
+/*#__PURE__*/
+function (_Animation) {
+  _inheritsLoose(Timeline, _Animation);
+
+  function Timeline(vars, time) {
+    var _this;
+
+    if (vars === void 0) {
+      vars = {};
+    }
+
+    _this = _Animation.call(this, vars, time) || this;
+    _this.labels = {};
+    _this.smoothChildTiming = _isNotFalse(vars.smoothChildTiming);
+    _this.autoRemoveChildren = !!vars.autoRemoveChildren;
+    _this._sort = _isNotFalse(vars.sortChildren);
+    return _this;
+  }
+
+  var _proto2 = Timeline.prototype;
+
+  _proto2.to = function to(targets, vars, position) {
+    new Tween(targets, _parseVars(arguments, 0, this), _parsePosition(this, _isNumber(vars) ? arguments[3] : position));
+    return this;
+  };
+
+  _proto2.from = function from(targets, vars, position) {
+    new Tween(targets, _parseVars(arguments, 1, this), _parsePosition(this, _isNumber(vars) ? arguments[3] : position));
+    return this;
+  };
+
+  _proto2.fromTo = function fromTo(targets, fromVars, toVars, position) {
+    new Tween(targets, _parseVars(arguments, 2, this), _parsePosition(this, _isNumber(fromVars) ? arguments[4] : position));
+    return this;
+  };
+
+  _proto2.set = function set(targets, vars, position) {
+    vars.duration = 0;
+    vars.parent = this;
+
+    if (!vars.repeatDelay) {
+      vars.repeat = 0;
+    }
+
+    vars.immediateRender = !!vars.immediateRender;
+    new Tween(targets, vars, _parsePosition(this, position));
+    return this;
+  };
+
+  _proto2.call = function call(callback, params, position) {
+    return _addToTimeline(this, Tween.delayedCall(0, callback, params), _parsePosition(this, position));
+  } //ONLY for backward compatibility! Maybe delete?
+  ;
+
+  _proto2.staggerTo = function staggerTo(targets, duration, vars, stagger, position, onCompleteAll, onCompleteAllParams) {
+    vars.duration = duration;
+    vars.stagger = vars.stagger || stagger;
+    vars.onComplete = onCompleteAll;
+    vars.onCompleteParams = onCompleteAllParams;
+    vars.parent = this;
+    new Tween(targets, vars, _parsePosition(this, position));
+    return this;
+  };
+
+  _proto2.staggerFrom = function staggerFrom(targets, duration, vars, stagger, position, onCompleteAll, onCompleteAllParams) {
+    vars.runBackwards = 1;
+    vars.immediateRender = _isNotFalse(vars.immediateRender);
+    return this.staggerTo(targets, duration, vars, stagger, position, onCompleteAll, onCompleteAllParams);
+  };
+
+  _proto2.staggerFromTo = function staggerFromTo(targets, duration, fromVars, toVars, stagger, position, onCompleteAll, onCompleteAllParams) {
+    toVars.startAt = fromVars;
+    toVars.immediateRender = _isNotFalse(toVars.immediateRender);
+    return this.staggerTo(targets, duration, toVars, stagger, position, onCompleteAll, onCompleteAllParams);
+  };
+
+  _proto2.render = function render(totalTime, suppressEvents, force) {
+    var prevTime = this._time,
+        tDur = this._dirty ? this.totalDuration() : this._tDur,
+        dur = this._dur,
+        tTime = totalTime > tDur - _tinyNum && totalTime >= 0 && this !== _globalTimeline ? tDur : totalTime < _tinyNum ? 0 : totalTime,
+        crossingStart = this._zTime < 0 !== totalTime < 0 && (this._initted || !dur),
+        time,
+        child,
+        next,
+        iteration,
+        cycleDuration,
+        prevPaused,
+        pauseTween,
+        timeScale,
+        prevStart,
+        prevIteration,
+        yoyo,
+        isYoyo;
+
+    if (tTime !== this._tTime || force || crossingStart) {
+      if (crossingStart) {
+        if (!dur) {
+          prevTime = this._zTime;
+        }
+
+        if (totalTime || !suppressEvents) {
+          //when the playhead arrives at EXACTLY time 0 (right on top) of a zero-duration timeline, we need to discern if events are suppressed so that when the playhead moves again (next time), it'll trigger the callback. If events are NOT suppressed, obviously the callback would be triggered in this render. Basically, the callback should fire either when the playhead ARRIVES or LEAVES this exact spot, not both. Imagine doing a timeline.seek(0) and there's a callback that sits at 0. Since events are suppressed on that seek() by default, nothing will fire, but when the playhead moves off of that position, the callback should fire. This behavior is what people intuitively expect.
+          this._zTime = totalTime;
+        }
+      }
+
+      time = tTime;
+      prevStart = this._start;
+      timeScale = this._ts;
+      prevPaused = timeScale === 0;
+
+      if (prevTime !== this._time && dur) {
+        //if totalDuration() finds a child with a negative startTime and smoothChildTiming is true, things get shifted around internally so we need to adjust the time accordingly. For example, if a tween starts at -30 we must shift EVERYTHING forward 30 seconds and move this timeline's startTime backward by 30 seconds so that things align with the playhead (no jump).
+        time += this._time - prevTime;
+      }
+
+      if (this._repeat) {
+        //adjust the time for repeats and yoyos
+        yoyo = this._yoyo;
+        cycleDuration = dur + this._rDelay;
+        time = _round(tTime % cycleDuration); //round to avoid floating point errors. (4 % 0.8 should be 0 but some browsers report it as 0.79999999!)
+
+        if (time > dur || tDur === tTime) {
+          time = dur;
+        }
+
+        iteration = ~~(tTime / cycleDuration);
+
+        if (iteration && iteration === tTime / cycleDuration) {
+          time = dur;
+          iteration--;
+        }
+
+        prevIteration = _animationCycle(this._tTime, cycleDuration);
+
+        if (yoyo && iteration & 1) {
+          time = dur - time;
+          isYoyo = 1;
+        }
+        /*
+        make sure children at the end/beginning of the timeline are rendered properly. If, for example,
+        a 3-second long timeline rendered at 2.9 seconds previously, and now renders at 3.2 seconds (which
+        would get translated to 2.8 seconds if the timeline yoyos or 0.2 seconds if it just repeats), there
+        could be a callback or a short tween that's at 2.95 or 3 seconds in which wouldn't render. So
+        we need to push the timeline to the end (and/or beginning depending on its yoyo value). Also we must
+        ensure that zero-duration tweens at the very beginning or end of the Timeline work.
+        */
+
+
+        if (iteration !== prevIteration && !this._lock) {
+          var rewinding = yoyo && prevIteration & 1,
+              doesWrap = rewinding === (yoyo && iteration & 1);
+
+          if (iteration < prevIteration) {
+            rewinding = !rewinding;
+          }
+
+          prevTime = rewinding ? 0 : dur;
+          this._lock = 1;
+          this.render(prevTime, suppressEvents, !dur)._lock = 0;
+
+          if (!suppressEvents && this.parent) {
+            _callback(this, "onRepeat");
+          }
+
+          this.vars.repeatRefresh && !isYoyo && this.getChildren().forEach(function (child) {
+            return child.invalidate();
+          });
+
+          if (prevTime !== this._time || prevPaused !== !this._ts) {
+            return this;
+          }
+
+          if (doesWrap) {
+            this._lock = 2;
+            prevTime = rewinding ? dur + 0.0001 : -0.0001;
+            this.render(prevTime, true);
+          }
+
+          this._lock = 0;
+
+          if (!this._ts && !prevPaused) {
+            return this;
+          } //in order for yoyoEase to work properly when there's a stagger, we must swap out the ease in each sub-tween.
+          //_propagateYoyoEase(this, isYoyo);
+
+        }
+      }
+
+      if (this._hasPause && !this._forcing && this._lock < 2) {
+        pauseTween = _findNextPauseTween(this, _round(prevTime), _round(time));
+
+        if (pauseTween) {
+          tTime -= time - (time = pauseTween._start);
+        }
+      }
+
+      this._tTime = tTime;
+      this._time = time;
+      this._act = !timeScale; //as long as it's not paused, force it to be active so that if the user renders independent of the parent timeline, it'll be forced to re-render on the next tick.
+
+      if (!this._initted) {
+        this._onUpdate = this.vars.onUpdate;
+        this._initted = 1;
+      }
+
+      if (!prevTime && time && !suppressEvents) {
+        _callback(this, "onStart");
+      }
+
+      if (time >= prevTime && totalTime >= 0) {
+        child = this._first;
+
+        while (child) {
+          next = child._next;
+
+          if ((child._act || time >= child._start) && child._ts && pauseTween !== child) {
+            if (child.parent !== this) {
+              // an extreme edge case - the child's render could do something like kill() the "next" one in the linked list, or reparent it. In that case we must re-initiate the whole render to be safe.
+              return this.render(totalTime, suppressEvents, force);
+            }
+
+            child.render(child._ts > 0 ? (time - child._start) * child._ts : (child._dirty ? child.totalDuration() : child._tDur) + (time - child._start) * child._ts, suppressEvents, force);
+
+            if (time !== this._time || !this._ts && !prevPaused) {
+              //in case a tween pauses or seeks the timeline when rendering, like inside of an onUpdate/onComplete
+              pauseTween = 0;
+              break;
+            }
+          }
+
+          child = next;
+        }
+      } else {
+        child = this._last;
+        var adjustedTime = totalTime < 0 ? totalTime : time; //when the playhead goes backward beyond the start of this timeline, we must pass that information down to the child animations so that zero-duration tweens know whether to render their starting or ending values.
+
+        while (child) {
+          next = child._prev;
+
+          if ((child._act || adjustedTime <= child._end) && child._ts && pauseTween !== child) {
+            if (child.parent !== this) {
+              // an extreme edge case - the child's render could do something like kill() the "next" one in the linked list, or reparent it. In that case we must re-initiate the whole render to be safe.
+              return this.render(totalTime, suppressEvents, force);
+            }
+
+            child.render(child._ts > 0 ? (adjustedTime - child._start) * child._ts : (child._dirty ? child.totalDuration() : child._tDur) + (adjustedTime - child._start) * child._ts, suppressEvents, force);
+
+            if (time !== this._time || !this._ts && !prevPaused) {
+              //in case a tween pauses or seeks the timeline when rendering, like inside of an onUpdate/onComplete
+              pauseTween = 0;
+              break;
+            }
+          }
+
+          child = next;
+        }
+      }
+
+      if (pauseTween && !suppressEvents) {
+        this.pause();
+        pauseTween.render(time >= prevTime ? 0 : -_tinyNum)._zTime = time >= prevTime ? 1 : -1;
+
+        if (this._ts) {
+          //the callback resumed playback! So since we may have held back the playhead due to where the pause is positioned, go ahead and jump to where it's SUPPOSED to be (if no pause happened).
+          this._start = prevStart; //if the pause was at an earlier time and the user resumed in the callback, it could reposition the timeline (changing its startTime), throwing things off slightly, so we make sure the _start doesn't shift.
+
+          return this.render(totalTime, suppressEvents, force);
+        }
+      }
+
+      if (this._onUpdate && !suppressEvents) {
+        _callback(this, "onUpdate", true);
+      }
+
+      if (tTime === tDur && tDur >= this.totalDuration() || !tTime && this._ts < 0) if (prevStart === this._start || Math.abs(timeScale) !== Math.abs(this._ts)) {
+        (totalTime || !dur) && (totalTime && this._ts > 0 || !tTime && this._ts < 0) && _removeFromParent(this, 1); // don't remove if the timeline is reversed and the playhead isn't at 0, otherwise tl.progress(1).reverse() won't work. Only remove if the playhead is at the end and timeScale is positive, or if the playhead is at 0 and the timeScale is negative.
+
+        if (!suppressEvents && !(totalTime < 0 && !prevTime)) {
+          _callback(this, tTime === tDur ? "onComplete" : "onReverseComplete", true);
+
+          this._prom && this._prom();
+        }
+      }
+    }
+
+    return this;
+  };
+
+  _proto2.add = function add(child, position) {
+    var _this2 = this;
+
+    if (!_isNumber(position)) {
+      position = _parsePosition(this, position);
+    }
+
+    if (!(child instanceof Animation)) {
+      if (_isArray(child)) {
+        child.forEach(function (obj) {
+          return _this2.add(obj, position);
+        });
+        return _uncache(this);
+      }
+
+      if (_isString(child)) {
+        return this.addLabel(child, position);
+      }
+
+      if (_isFunction(child)) {
+        child = Tween.delayedCall(0, child);
+      } else {
+        return this;
+      }
+    }
+
+    return this !== child ? _addToTimeline(this, child, position) : this; //don't allow a timeline to be added to itself as a child!
+  } // buildFrom(position, absolute) {
+  // 	this._build = (position === ">>" || position === "auto") ? position : (position === "<<") ? 0 : _parsePosition(this, position, !absolute);
+  // 	return this;
+  // }
+  ;
+
+  _proto2.getChildren = function getChildren(nested, tweens, timelines, ignoreBeforeTime) {
+    if (nested === void 0) {
+      nested = true;
+    }
+
+    if (tweens === void 0) {
+      tweens = true;
+    }
+
+    if (timelines === void 0) {
+      timelines = true;
+    }
+
+    if (ignoreBeforeTime === void 0) {
+      ignoreBeforeTime = -_bigNum;
+    }
+
+    var a = [],
+        child = this._first;
+
+    while (child) {
+      if (child._start >= ignoreBeforeTime) {
+        if (child instanceof Tween) {
+          if (tweens) {
+            a.push(child);
+          }
+        } else {
+          if (timelines) {
+            a.push(child);
+          }
+
+          if (nested) {
+            a.push.apply(a, child.getChildren(true, tweens, timelines));
+          }
+        }
+      }
+
+      child = child._next;
+    }
+
+    return a;
+  };
+
+  _proto2.getById = function getById(id) {
+    var animations = this.getChildren(1, 1, 1),
+        i = animations.length;
+
+    while (i--) {
+      if (animations[i].vars.id === id) {
+        return animations[i];
+      }
+    }
+  };
+
+  _proto2.remove = function remove(child) {
+    if (_isString(child)) {
+      return this.removeLabel(child);
+    }
+
+    if (_isFunction(child)) {
+      return this.killTweensOf(child);
+    }
+
+    _removeLinkedListItem(this, child);
+
+    if (child === this._recent) {
+      this._recent = this._last;
+    }
+
+    return _uncache(this);
+  };
+
+  _proto2.totalTime = function totalTime(_totalTime2, suppressEvents) {
+    if (!arguments.length) {
+      return this._tTime;
+    }
+
+    this._forcing = 1;
+
+    if (!this.parent && !this._dp && this._ts) {
+      //special case for the global timeline (or any other that has no parent or detached parent).
+      this._start = _ticker.time - (this._ts > 0 ? _totalTime2 / this._ts : (this.totalDuration() - _totalTime2) / -this._ts);
+    }
+
+    _Animation.prototype.totalTime.call(this, _totalTime2, suppressEvents);
+
+    this._forcing = 0;
+    return this;
+  };
+
+  _proto2.addLabel = function addLabel(label, position) {
+    this.labels[label] = _parsePosition(this, position);
+    return this;
+  };
+
+  _proto2.removeLabel = function removeLabel(label) {
+    delete this.labels[label];
+    return this;
+  };
+
+  _proto2.addPause = function addPause(position, callback, params) {
+    var t = Tween.delayedCall(0, callback || _emptyFunc, params);
+    t.data = "isPause";
+    this._hasPause = 1;
+    return _addToTimeline(this, t, _parsePosition(this, position));
+  };
+
+  _proto2.removePause = function removePause(position) {
+    var child = this._first;
+    position = _parsePosition(this, position);
+
+    while (child) {
+      if (child._start === position && child.data === "isPause") {
+        _removeFromParent(child);
+      }
+
+      child = child._next;
+    }
+  };
+
+  _proto2.killTweensOf = function killTweensOf(targets, props, onlyActive) {
+    var tweens = this.getTweensOf(targets, onlyActive),
+        i = tweens.length;
+
+    while (i--) {
+      _overwritingTween !== tweens[i] && tweens[i].kill(targets, props);
+    }
+
+    return this;
+  };
+
+  _proto2.getTweensOf = function getTweensOf(targets, onlyActive) {
+    var a = [],
+        parsedTargets = toArray(targets),
+        child = this._first,
+        children;
+
+    while (child) {
+      if (child instanceof Tween) {
+        if (_arrayContainsAny(child._targets, parsedTargets) && (!onlyActive || child.isActive(onlyActive === "started"))) {
+          a.push(child);
+        }
+      } else if ((children = child.getTweensOf(parsedTargets, onlyActive)).length) {
+        a.push.apply(a, children);
+      }
+
+      child = child._next;
+    }
+
+    return a;
+  };
+
+  _proto2.tweenTo = function tweenTo(position, vars) {
+    var tl = this,
+        endTime = _parsePosition(tl, position),
+        startAt = vars && vars.startAt,
+        tween = Tween.to(tl, _setDefaults({
+      ease: "none",
+      lazy: false,
+      time: endTime,
+      duration: Math.abs(endTime - (startAt && "time" in startAt ? startAt.time : tl._time)) / tl.timeScale() || _tinyNum,
+      onStart: function onStart() {
+        tl.pause();
+        var duration = Math.abs(endTime - tl._time) / tl.timeScale();
+
+        if (tween._dur !== duration) {
+          tween._dur = duration;
+          tween.render(tween._time, true, true);
+        }
+
+        if (vars && vars.onStart) {
+          //in case the user had an onStart in the vars - we don't want to overwrite it.
+          vars.onStart.apply(tween, vars.onStartParams || []);
+        }
+      }
+    }, vars));
+
+    return tween;
+  };
+
+  _proto2.tweenFromTo = function tweenFromTo(fromPosition, toPosition, vars) {
+    return this.tweenTo(toPosition, _setDefaults({
+      startAt: {
+        time: _parsePosition(this, fromPosition)
+      }
+    }, vars));
+  };
+
+  _proto2.recent = function recent() {
+    return this._recent;
+  };
+
+  _proto2.nextLabel = function nextLabel(afterTime) {
+    if (afterTime === void 0) {
+      afterTime = this._time;
+    }
+
+    return _getLabelInDirection(this, _parsePosition(this, afterTime));
+  };
+
+  _proto2.previousLabel = function previousLabel(beforeTime) {
+    if (beforeTime === void 0) {
+      beforeTime = this._time;
+    }
+
+    return _getLabelInDirection(this, _parsePosition(this, beforeTime), 1);
+  };
+
+  _proto2.currentLabel = function currentLabel(value) {
+    return arguments.length ? this.seek(value, true) : this.previousLabel(this._time + _tinyNum);
+  };
+
+  _proto2.shiftChildren = function shiftChildren(amount, adjustLabels, ignoreBeforeTime) {
+    if (ignoreBeforeTime === void 0) {
+      ignoreBeforeTime = 0;
+    }
+
+    var child = this._first,
+        labels = this.labels,
+        p;
+
+    while (child) {
+      if (child._start >= ignoreBeforeTime) {
+        child._start += amount;
+      }
+
+      child = child._next;
+    }
+
+    if (adjustLabels) {
+      for (p in labels) {
+        if (labels[p] >= ignoreBeforeTime) {
+          labels[p] += amount;
+        }
+      }
+    }
+
+    return _uncache(this);
+  };
+
+  _proto2.invalidate = function invalidate() {
+    var child = this._first;
+    this._lock = 0;
+
+    while (child) {
+      child.invalidate();
+      child = child._next;
+    }
+
+    return _Animation.prototype.invalidate.call(this);
+  };
+
+  _proto2.clear = function clear(includeLabels) {
+    if (includeLabels === void 0) {
+      includeLabels = true;
+    }
+
+    var child = this._first,
+        next;
+
+    while (child) {
+      next = child._next;
+      this.remove(child);
+      child = next;
+    }
+
+    this._time = this._tTime = 0;
+
+    if (includeLabels) {
+      this.labels = {};
+    }
+
+    return _uncache(this);
+  };
+
+  _proto2.totalDuration = function totalDuration(value) {
+    var max = 0,
+        self = this,
+        child = self._last,
+        prevStart = _bigNum,
+        repeat = self._repeat,
+        repeatCycles = repeat * self._rDelay || 0,
+        isInfinite = repeat < 0,
+        prev,
+        end;
+
+    if (!arguments.length) {
+      if (self._dirty) {
+        while (child) {
+          prev = child._prev; //record it here in case the tween changes position in the sequence...
+
+          if (child._dirty) {
+            child.totalDuration(); //could change the tween._startTime, so make sure the animation's cache is clean before analyzing it.
+          }
+
+          if (child._start > prevStart && self._sort && child._ts && !self._lock) {
+            //in case one of the tweens shifted out of order, it needs to be re-inserted into the correct position in the sequence
+            self._lock = 1; //prevent endless recursive calls - there are methods that get triggered that check duration/totalDuration when we add().
+
+            _addToTimeline(self, child, child._start - child._delay);
+
+            self._lock = 0;
+          } else {
+            prevStart = child._start;
+          }
+
+          if (child._start < 0 && child._ts) {
+            //children aren't allowed to have negative startTimes unless smoothChildTiming is true, so adjust here if one is found.
+            max -= child._start;
+
+            if (!self.parent && !self._dp || self.parent && self.parent.smoothChildTiming) {
+              self._start += child._start / self._ts;
+              self._time -= child._start;
+              self._tTime -= child._start;
+            }
+
+            self.shiftChildren(-child._start, false, -1e20);
+            prevStart = 0;
+          }
+
+          end = child._end = child._start + child._tDur / Math.abs(child._ts || child._pauseTS || _tinyNum);
+
+          if (end > max && child._ts) {
+            max = _round(end);
+          }
+
+          child = prev;
+        }
+
+        self._dur = self === _globalTimeline && self._time > max ? self._time : Math.min(_bigNum, max);
+        self._tDur = isInfinite && (self._dur || repeatCycles) ? 1e12 : Math.min(_bigNum, max * (repeat + 1) + repeatCycles);
+        self._end = self._start + (self._tDur / Math.abs(self._ts || self._pauseTS || _tinyNum) || 0);
+        self._dirty = 0;
+      }
+
+      return self._tDur;
+    }
+
+    return isInfinite ? self : self.timeScale(self.totalDuration() / value);
+  };
+
+  Timeline.updateRoot = function updateRoot(time) {
+    if (_globalTimeline._ts) {
+      _lazySafeRender(_globalTimeline, _parentToChildTotalTime(time, _globalTimeline));
+
+      _lastRenderedFrame = _ticker.frame;
+    }
+
+    if (_ticker.frame >= _nextGCFrame) {
+      _nextGCFrame += _config.autoSleep || 120;
+      var child = _globalTimeline._first;
+      if (!child || !child._ts) if (_config.autoSleep && _ticker._listeners.length < 2) {
+        while (child && !child._ts) {
+          child = child._next;
+        }
+
+        if (!child) {
+          _ticker.sleep();
+        }
+      }
+    }
+  };
+
+  return Timeline;
+}(Animation);
+
+_setDefaults(Timeline.prototype, {
+  _lock: 0,
+  _hasPause: 0,
+  _forcing: 0
+});
+
+var _addComplexStringPropTween = function _addComplexStringPropTween(target, prop, start, end, setter, stringFilter, funcParam) {
+  //note: we call _addComplexStringPropTween.call(tweenInstance...) to ensure that it's scoped properly. We may call it from within a plugin too, thus "this" would refer to the plugin.
+  var pt = new PropTween(this._pt, target, prop, 0, 1, _renderComplexString, null, setter),
+      index = 0,
+      matchIndex = 0,
+      result,
+      startNums,
+      color,
+      endNum,
+      chunk,
+      startNum,
+      hasRandom,
+      a;
+  pt.b = start;
+  pt.e = end;
+  start += ""; //ensure values are strings
+
+  end += "";
+
+  if (hasRandom = ~end.indexOf("random(")) {
+    end = _replaceRandom(end);
+  }
+
+  if (stringFilter) {
+    a = [start, end];
+    stringFilter(a, target, prop); //pass an array with the starting and ending values and let the filter do whatever it needs to the values.
+
+    start = a[0];
+    end = a[1];
+  }
+
+  startNums = start.match(_complexStringNumExp) || [];
+
+  while (result = _complexStringNumExp.exec(end)) {
+    endNum = result[0];
+    chunk = end.substring(index, result.index);
+
+    if (color) {
+      color = (color + 1) % 5;
+    } else if (chunk.substr(-5) === "rgba(") {
+      color = 1;
+    }
+
+    if (endNum !== startNums[matchIndex++]) {
+      startNum = parseFloat(startNums[matchIndex - 1]) || 0; //these nested PropTweens are handled in a special way - we'll never actually call a render or setter method on them. We'll just loop through them in the parent complex string PropTween's render method.
+
+      pt._pt = {
+        _next: pt._pt,
+        p: chunk || matchIndex === 1 ? chunk : ",",
+        //note: SVG spec allows omission of comma/space when a negative sign is wedged between two numbers, like 2.5-5.3 instead of 2.5,-5.3 but when tweening, the negative value may switch to positive, so we insert the comma just in case.
+        s: startNum,
+        c: endNum.charAt(1) === "=" ? parseFloat(endNum.substr(2)) * (endNum.charAt(0) === "-" ? -1 : 1) : parseFloat(endNum) - startNum,
+        m: color && color < 4 ? Math.round : 0
+      };
+      index = _complexStringNumExp.lastIndex;
+    }
+  }
+
+  pt.c = index < end.length ? end.substring(index, end.length) : ""; //we use the "c" of the PropTween to store the final part of the string (after the last number)
+
+  pt.fp = funcParam;
+
+  if (_relExp.test(end) || hasRandom) {
+    pt.e = 0; //if the end string contains relative values or dynamic random(...) values, delete the end it so that on the final render we don't actually set it to the string with += or -= characters (forces it to use the calculated value).
+  }
+
+  this._pt = pt; //start the linked list with this new PropTween. Remember, we call _addComplexStringPropTween.call(tweenInstance...) to ensure that it's scoped properly. We may call it from within a plugin too, thus "this" would refer to the plugin.
+
+  return pt;
+},
+    _addPropTween = function _addPropTween(target, prop, start, end, index, targets, modifier, stringFilter, funcParam) {
+  if (_isFunction(end)) {
+    end = end(index || 0, target, targets);
+  }
+
+  var currentValue = target[prop],
+      parsedStart = start !== "get" ? start : !_isFunction(currentValue) ? currentValue : funcParam ? target[prop.indexOf("set") || !_isFunction(target["get" + prop.substr(3)]) ? prop : "get" + prop.substr(3)](funcParam) : target[prop](),
+      setter = !_isFunction(currentValue) ? _setterPlain : funcParam ? _setterFuncWithParam : _setterFunc,
+      pt;
+
+  if (_isString(end)) {
+    if (~end.indexOf("random(")) {
+      end = _replaceRandom(end);
+    }
+
+    if (end.charAt(1) === "=") {
+      end = parseFloat(parsedStart) + parseFloat(end.substr(2)) * (end.charAt(0) === "-" ? -1 : 1) + (getUnit(parsedStart) || 0);
+    }
+  }
+
+  if (parsedStart !== end) {
+    if (!isNaN(parsedStart + end)) {
+      pt = new PropTween(this._pt, target, prop, +parsedStart || 0, end - (parsedStart || 0), typeof currentValue === "boolean" ? _renderBoolean : _renderPlain, 0, setter);
+
+      if (funcParam) {
+        pt.fp = funcParam;
+      }
+
+      if (modifier) {
+        pt.modifier(modifier, this, target);
+      }
+
+      return this._pt = pt;
+    }
+
+    !currentValue && !(prop in target) && _missingPlugin(prop, end);
+    return _addComplexStringPropTween.call(this, target, prop, parsedStart, end, setter, stringFilter || _config.stringFilter, funcParam);
+  }
+},
+    //creates a copy of the vars object and processes any function-based values (putting the resulting values directly into the copy) as well as strings with "random()" in them. It does NOT process relative values.
+_processVars = function _processVars(vars, index, target, targets, tween) {
+  if (_isFunction(vars)) {
+    vars = _parseFuncOrString(vars, tween, index, target, targets);
+  }
+
+  if (!_isObject(vars) || vars.style && vars.nodeType || _isArray(vars)) {
+    return _isString(vars) ? _parseFuncOrString(vars, tween, index, target, targets) : vars;
+  }
+
+  var copy = {},
+      p;
+
+  for (p in vars) {
+    copy[p] = _parseFuncOrString(vars[p], tween, index, target, targets);
+  }
+
+  return copy;
+},
+    _checkPlugin = function _checkPlugin(property, vars, tween, index, target, targets) {
+  var plugin, pt, ptLookup, i;
+
+  if (_plugins[property] && (plugin = new _plugins[property]()).init(target, plugin.rawVars ? vars[property] : _processVars(vars[property], index, target, targets, tween), tween, index, targets) !== false) {
+    tween._pt = pt = new PropTween(tween._pt, target, property, 0, 1, plugin.render, plugin, 0, plugin.priority);
+
+    if (tween !== _quickTween) {
+      ptLookup = tween._ptLookup[tween._targets.indexOf(target)]; //note: we can't use tween._ptLookup[index] because for staggered tweens, the index from the fullTargets array won't match what it is in each individual tween that spawns from the stagger.
+
+      i = plugin._props.length;
+
+      while (i--) {
+        ptLookup[plugin._props[i]] = pt;
+      }
+    }
+  }
+
+  return plugin;
+},
+    _overwritingTween,
+    //store a reference temporarily so we can avoid overwriting itself.
+_initTween = function _initTween(tween, time) {
+  var vars = tween.vars,
+      ease = vars.ease,
+      startAt = vars.startAt,
+      immediateRender = vars.immediateRender,
+      lazy = vars.lazy,
+      onUpdate = vars.onUpdate,
+      onUpdateParams = vars.onUpdateParams,
+      callbackScope = vars.callbackScope,
+      runBackwards = vars.runBackwards,
+      yoyoEase = vars.yoyoEase,
+      keyframes = vars.keyframes,
+      autoRevert = vars.autoRevert,
+      dur = tween._dur,
+      prevStartAt = tween._startAt,
+      targets = tween._targets,
+      parent = tween.parent,
+      fullTargets = parent && parent.data === "nested" ? parent.parent._targets : targets,
+      autoOverwrite = tween._overwrite === "auto",
+      tl = tween.timeline,
+      cleanVars,
+      i,
+      p,
+      pt,
+      target,
+      hasPriority,
+      gsData,
+      harness,
+      plugin,
+      ptLookup,
+      index,
+      harnessVars;
+
+  if (tl && (!keyframes || !ease)) {
+    ease = "none";
+  }
+
+  tween._ease = _parseEase(ease, _defaults.ease);
+  tween._yEase = yoyoEase ? _invertEase(_parseEase(yoyoEase === true ? ease : yoyoEase, _defaults.ease)) : 0;
+
+  if (yoyoEase && tween._yoyo && !tween._repeat) {
+    //there must have been a parent timeline with yoyo:true that is currently in its yoyo phase, so flip the eases.
+    yoyoEase = tween._yEase;
+    tween._yEase = tween._ease;
+    tween._ease = yoyoEase;
+  }
+
+  if (!tl) {
+    //if there's an internal timeline, skip all the parsing because we passed that task down the chain.
+    if (prevStartAt) {
+      prevStartAt.render(-1, true).kill();
+    }
+
+    if (startAt) {
+      _removeFromParent(tween._startAt = Tween.set(targets, _setDefaults({
+        data: "isStart",
+        overwrite: false,
+        parent: parent,
+        immediateRender: true,
+        lazy: _isNotFalse(lazy),
+        startAt: null,
+        delay: 0,
+        onUpdate: onUpdate,
+        onUpdateParams: onUpdateParams,
+        callbackScope: callbackScope,
+        stagger: 0
+      }, startAt))); //copy the properties/values into a new object to avoid collisions, like var to = {x:0}, from = {x:500}; timeline.fromTo(e, from, to).fromTo(e, to, from);
+
+
+      if (immediateRender) {
+        if (time > 0) {
+          !autoRevert && (tween._startAt = 0); //tweens that render immediately (like most from() and fromTo() tweens) shouldn't revert when their parent timeline's playhead goes backward past the startTime because the initial render could have happened anytime and it shouldn't be directly correlated to this tween's startTime. Imagine setting up a complex animation where the beginning states of various objects are rendered immediately but the tween doesn't happen for quite some time - if we revert to the starting values as soon as the playhead goes backward past the tween's startTime, it will throw things off visually. Reversion should only happen in Timeline instances where immediateRender was false or when autoRevert is explicitly set to true.
+        } else if (dur) {
+          return; //we skip initialization here so that overwriting doesn't occur until the tween actually begins. Otherwise, if you create several immediateRender:true tweens of the same target/properties to drop into a Timeline, the last one created would overwrite the first ones because they didn't get placed into the timeline yet before the first render occurs and kicks in overwriting.
+        }
+      }
+    } else if (runBackwards && dur) {
+      //from() tweens must be handled uniquely: their beginning values must be rendered but we don't want overwriting to occur yet (when time is still 0). Wait until the tween actually begins before doing all the routines like overwriting. At that time, we should render at the END of the tween to ensure that things initialize correctly (remember, from() tweens go backwards)
+      if (prevStartAt) {
+        !autoRevert && (tween._startAt = 0);
+      } else {
+        if (time) {
+          //in rare cases (like if a from() tween runs and then is invalidate()-ed), immediateRender could be true but the initial forced-render gets skipped, so there's no need to force the render in this context when the _time is greater than 0
+          immediateRender = false;
+        }
+
+        _removeFromParent(tween._startAt = Tween.set(targets, _merge(_copyExcluding(vars, _reservedProps), {
+          overwrite: false,
+          data: "isFromStart",
+          //we tag the tween with as "isFromStart" so that if [inside a plugin] we need to only do something at the very END of a tween, we have a way of identifying this tween as merely the one that's setting the beginning values for a "from()" tween. For example, clearProps in CSSPlugin should only get applied at the very END of a tween and without this tag, from(...{height:100, clearProps:"height", delay:1}) would wipe the height at the beginning of the tween and after 1 second, it'd kick back in.
+          lazy: immediateRender && _isNotFalse(lazy),
+          immediateRender: immediateRender,
+          //zero-duration tweens render immediately by default, but if we're not specifically instructed to render this tween immediately, we should skip this and merely _init() to record the starting values (rendering them immediately would push them to completion which is wasteful in that case - we'd have to render(-1) immediately after)
+          stagger: 0,
+          parent: parent //ensures that nested tweens that had a stagger are handled properly, like gsap.from(".class", {y:gsap.utils.wrap([-100,100])})
+
+        })));
+
+        if (!immediateRender) {
+          _initTween(tween._startAt, _tinyNum); //ensures that the initial values are recorded
+
+        } else if (!time) {
+          return;
+        }
+      }
+    }
+
+    cleanVars = _copyExcluding(vars, _reservedProps);
+    tween._pt = 0;
+    harness = targets[0] ? _getCache(targets[0]).harness : 0;
+    harnessVars = harness && vars[harness.prop]; //someone may need to specify CSS-specific values AND non-CSS values, like if the element has an "x" property plus it's a standard DOM element. We allow people to distinguish by wrapping plugin-specific stuff in a css:{} object for example.
+
+    lazy = dur && _isNotFalse(lazy) || lazy && !dur;
+
+    for (i = 0; i < targets.length; i++) {
+      target = targets[i];
+      gsData = target._gsap || _harness(targets)[i]._gsap;
+      tween._ptLookup[i] = ptLookup = {};
+
+      if (_lazyLookup[gsData.id]) {
+        _lazyRender(); //if other tweens of the same target have recently initted but haven't rendered yet, we've got to force the render so that the starting values are correct (imagine populating a timeline with a bunch of sequential tweens and then jumping to the end)
+
+      }
+
+      index = fullTargets === targets ? i : fullTargets.indexOf(target);
+
+      if (harness && (plugin = new harness()).init(target, harnessVars || cleanVars, tween, index, fullTargets) !== false) {
+        tween._pt = pt = new PropTween(tween._pt, target, plugin.name, 0, 1, plugin.render, plugin, 0, plugin.priority);
+
+        plugin._props.forEach(function (name) {
+          ptLookup[name] = pt;
+        });
+
+        if (plugin.priority) {
+          hasPriority = 1;
+        }
+      }
+
+      if (!harness || harnessVars) {
+        for (p in cleanVars) {
+          if (_plugins[p] && (plugin = _checkPlugin(p, cleanVars, tween, index, target, fullTargets))) {
+            if (plugin.priority) {
+              hasPriority = 1;
+            }
+          } else {
+            ptLookup[p] = pt = _addPropTween.call(tween, target, p, "get", cleanVars[p], index, fullTargets, 0, vars.stringFilter);
+          }
+        }
+      }
+
+      if (tween._op && tween._op[i]) {
+        tween.kill(target, tween._op[i]);
+      }
+
+      if (autoOverwrite && tween._pt) {
+        _overwritingTween = tween;
+
+        _globalTimeline.killTweensOf(target, ptLookup, "started"); //Also make sure the overwriting doesn't overwrite THIS tween!!!
+
+
+        _overwritingTween = 0;
+      }
+
+      if (tween._pt && lazy) {
+        _lazyLookup[gsData.id] = 1;
+      }
+    }
+
+    if (hasPriority) {
+      _sortPropTweensByPriority(tween);
+    }
+
+    if (tween._onInit) {
+      //plugins like RoundProps must wait until ALL of the PropTweens are instantiated. In the plugin's init() function, it sets the _onInit on the tween instance. May not be pretty/intuitive, but it's fast and keeps file size down.
+      tween._onInit(tween);
+    }
+  }
+
+  tween._from = !tl && !!vars.runBackwards; //nested timelines should never run backwards - the backwards-ness is in the child tweens.
+
+  tween._onUpdate = onUpdate;
+  tween._initted = 1;
+},
+    _addAliasesToVars = function _addAliasesToVars(targets, vars) {
+  var harness = targets[0] ? _getCache(targets[0]).harness : 0,
+      propertyAliases = harness && harness.aliases,
+      copy,
+      p,
+      i,
+      aliases;
+
+  if (!propertyAliases) {
+    return vars;
+  }
+
+  copy = _merge({}, vars);
+
+  for (p in propertyAliases) {
+    if (p in copy) {
+      aliases = propertyAliases[p].split(",");
+      i = aliases.length;
+
+      while (i--) {
+        copy[aliases[i]] = copy[p];
+      }
+    }
+  }
+
+  return copy;
+},
+    _parseFuncOrString = function _parseFuncOrString(value, tween, i, target, targets) {
+  return _isFunction(value) ? value.call(tween, i, target, targets) : _isString(value) && ~value.indexOf("random(") ? _replaceRandom(value) : value;
+},
+    _staggerTweenProps = _callbackNames + ",repeat,repeatDelay,yoyo,repeatRefresh,yoyoEase",
+    _staggerPropsToSkip = (_staggerTweenProps + ",id,stagger,delay,duration,paused").split(",");
+/*
+ * --------------------------------------------------------------------------------------
+ * TWEEN
+ * --------------------------------------------------------------------------------------
+ */
+
+
+var Tween =
+/*#__PURE__*/
+function (_Animation2) {
+  _inheritsLoose(Tween, _Animation2);
+
+  function Tween(targets, vars, time) {
+    var _this3;
+
+    if (typeof vars === "number") {
+      time.duration = vars;
+      vars = time;
+      time = null;
+    }
+
+    _this3 = _Animation2.call(this, _inheritDefaults(vars), time) || this;
+    var _this3$vars = _this3.vars,
+        duration = _this3$vars.duration,
+        delay = _this3$vars.delay,
+        immediateRender = _this3$vars.immediateRender,
+        stagger = _this3$vars.stagger,
+        overwrite = _this3$vars.overwrite,
+        keyframes = _this3$vars.keyframes,
+        defaults = _this3$vars.defaults,
+        parsedTargets = _isArray(targets) && _isNumber(targets[0]) ? [targets] : toArray(targets),
+        tl,
+        i,
+        copy,
+        l,
+        p,
+        curTarget,
+        staggerFunc,
+        staggerVarsToMerge;
+    _this3._targets = parsedTargets.length ? _harness(parsedTargets) : _warn("GSAP target " + targets + " not found. https://greensock.com", !_config.nullTargetWarn) || [];
+    _this3._ptLookup = []; //PropTween lookup. An array containing an object for each target, having keys for each tweening property
+
+    _this3._overwrite = overwrite;
+
+    if (keyframes || stagger || _isFuncOrString(duration) || _isFuncOrString(delay)) {
+      vars = _this3.vars;
+      tl = _this3.timeline = new Timeline({
+        data: "nested",
+        defaults: defaults || {}
+      });
+      tl.kill();
+      tl.parent = _assertThisInitialized(_this3);
+
+      if (keyframes) {
+        _setDefaults(tl.vars.defaults, {
+          ease: "none"
+        });
+
+        keyframes.forEach(function (frame) {
+          return tl.to(parsedTargets, frame, ">");
+        });
+      } else {
+        l = parsedTargets.length;
+        staggerFunc = stagger ? distribute(stagger) : _emptyFunc;
+
+        if (_isObject(stagger)) {
+          //users can pass in callbacks like onStart/onComplete in the stagger object. These should fire with each individual tween.
+          for (p in stagger) {
+            if (~_staggerTweenProps.indexOf(p)) {
+              if (!staggerVarsToMerge) {
+                staggerVarsToMerge = {};
+              }
+
+              staggerVarsToMerge[p] = stagger[p];
+            }
+          }
+        }
+
+        for (i = 0; i < l; i++) {
+          copy = {};
+
+          for (p in vars) {
+            if (_staggerPropsToSkip.indexOf(p) < 0) {
+              copy[p] = vars[p];
+            }
+          }
+
+          copy.stagger = 0;
+
+          if (staggerVarsToMerge) {
+            _merge(copy, staggerVarsToMerge);
+          }
+
+          if (vars.yoyoEase && !vars.repeat) {
+            //so that propagation works properly when a ancestor timeline yoyos
+            copy.yoyoEase = vars.yoyoEase;
+          }
+
+          curTarget = parsedTargets[i]; //don't just copy duration or delay because if they're a string or function, we'd end up in an infinite loop because _isFuncOrString() would evaluate as true in the child tweens, entering this loop, etc. So we parse the value straight from vars and default to 0.
+
+          copy.duration = +_parseFuncOrString(duration, _assertThisInitialized(_this3), i, curTarget, parsedTargets);
+          copy.delay = (+_parseFuncOrString(delay, _assertThisInitialized(_this3), i, curTarget, parsedTargets) || 0) - _this3._delay;
+
+          if (!stagger && l === 1 && copy.delay) {
+            // if someone does delay:"random(1, 5)", repeat:-1, for example, the delay shouldn't be inside the repeat.
+            _this3._delay = delay = copy.delay;
+            _this3._start += delay;
+            copy.delay = 0;
+          }
+
+          tl.to(curTarget, copy, staggerFunc(i, curTarget, parsedTargets));
+        }
+
+        duration = delay = 0;
+      }
+
+      duration || _this3.duration(duration = tl.duration());
+    } else {
+      _this3.timeline = 0; //speed optimization, faster lookups (no going up the prototype chain)
+    }
+
+    if (overwrite === true) {
+      _overwritingTween = _assertThisInitialized(_this3);
+
+      _globalTimeline.killTweensOf(parsedTargets);
+
+      _overwritingTween = 0;
+    }
+
+    if (immediateRender || !duration && !keyframes && _this3._start === _this3.parent._time && _isNotFalse(immediateRender) && _hasNoPausedAncestors(_assertThisInitialized(_this3)) && _this3.parent.data !== "nested") {
+      _this3._tTime = -_tinyNum; //forces a render without having to set the render() "force" parameter to true because we want to allow lazying by default (using the "force" parameter always forces an immediate full render)
+
+      _this3.render(Math.max(0, -delay)); //in case delay is negative
+
+    }
+
+    return _this3;
+  }
+
+  var _proto3 = Tween.prototype;
+
+  _proto3.render = function render(totalTime, suppressEvents, force) {
+    var prevTime = this._time,
+        tDur = this._tDur,
+        dur = this._dur,
+        tTime = totalTime > tDur - _tinyNum && totalTime >= 0 ? tDur : totalTime < _tinyNum ? 0 : totalTime,
+        time,
+        pt,
+        iteration,
+        cycleDuration,
+        prevIteration,
+        isYoyo,
+        ratio,
+        timeline,
+        yoyoEase;
+
+    if (!dur) {
+      _renderZeroDurationTween(this, totalTime, suppressEvents, force);
+    } else if (tTime !== this._tTime || !totalTime || force || this._startAt && this._zTime < 0 !== totalTime < 0) {
+      //this senses if we're crossing over the start time, in which case we must record _zTime and force the render, but we do it in this lengthy conditional way for performance reasons (usually we can skip the calculations): this._initted && (this._zTime < 0) !== (totalTime < 0)
+      time = tTime;
+      timeline = this.timeline;
+
+      if (this._repeat) {
+        //adjust the time for repeats and yoyos
+        cycleDuration = dur + this._rDelay;
+        time = _round(tTime % cycleDuration); //round to avoid floating point errors. (4 % 0.8 should be 0 but some browsers report it as 0.79999999!)
+
+        if (time > dur) {
+          time = dur;
+        }
+
+        iteration = ~~(tTime / cycleDuration);
+
+        if (iteration && iteration === tTime / cycleDuration) {
+          time = dur;
+          iteration--;
+        }
+
+        isYoyo = this._yoyo && iteration & 1;
+
+        if (isYoyo) {
+          yoyoEase = this._yEase;
+          time = dur - time;
+        }
+
+        prevIteration = _animationCycle(this._tTime, cycleDuration);
+
+        if (time === prevTime && !force && this._initted) {
+          //could be during the repeatDelay part. No need to render and fire callbacks.
+          return this;
+        }
+
+        if (iteration !== prevIteration) {
+          //timeline && this._yEase && _propagateYoyoEase(timeline, isYoyo);
+          //repeatRefresh functionality
+          if (this.vars.repeatRefresh && !isYoyo && !this._lock) {
+            this._lock = force = 1; //force, otherwise if lazy is true, the _attemptInitTween() will return and we'll jump out and get caught bouncing on each tick.
+
+            this.render(cycleDuration * iteration, true).invalidate()._lock = 0;
+          }
+        }
+      }
+
+      if (!this._initted && _attemptInitTween(this, time, force, suppressEvents)) {
+        this._tTime = 0; // in constructor if immediateRender is true, we set _tTime to -_tinyNum to have the playhead cross the starting point but we can't leave _tTime as a negative number.
+
+        return this;
+      }
+
+      this._tTime = tTime;
+      this._time = time;
+
+      if (!this._act && this._ts) {
+        this._act = 1; //as long as it's not paused, force it to be active so that if the user renders independent of the parent timeline, it'll be forced to re-render on the next tick.
+
+        this._lazy = 0;
+      }
+
+      this.ratio = ratio = (yoyoEase || this._ease)(time / dur);
+
+      if (this._from) {
+        this.ratio = ratio = 1 - ratio;
+      }
+
+      if (!prevTime && time && !suppressEvents) {
+        _callback(this, "onStart");
+      }
+
+      pt = this._pt;
+
+      while (pt) {
+        pt.r(ratio, pt.d);
+        pt = pt._next;
+      }
+
+      timeline && timeline.render(totalTime < 0 ? totalTime : !time && isYoyo ? -_tinyNum : timeline._dur * ratio, suppressEvents, force) || this._startAt && (this._zTime = totalTime);
+
+      if (this._onUpdate && !suppressEvents) {
+        if (totalTime < 0 && this._startAt) {
+          this._startAt.render(totalTime, true, force); //note: for performance reasons, we tuck this conditional logic inside less traveled areas (most tweens don't have an onUpdate). We'd just have it at the end before the onComplete, but the values should be updated before any onUpdate is called, so we ALSO put it here and then if it's not called, we do so later near the onComplete.
+
+        }
+
+        _callback(this, "onUpdate");
+      }
+
+      if (this._repeat) if (iteration !== prevIteration && this.vars.onRepeat && !suppressEvents && this.parent) {
+        _callback(this, "onRepeat");
+      }
+
+      if ((tTime === this._tDur || !tTime) && this._tTime === tTime) {
+        if (totalTime < 0 && this._startAt && !this._onUpdate) {
+          this._startAt.render(totalTime, true, force);
+        }
+
+        (totalTime || !dur) && (totalTime && this._ts > 0 || !tTime && this._ts < 0) && _removeFromParent(this, 1); // don't remove if we're rendering at exactly a time of 0, as there could be autoRevert values that should get set on the next tick (if the playhead goes backward beyond the startTime, negative totalTime). Don't remove if the timeline is reversed and the playhead isn't at 0, otherwise tl.progress(1).reverse() won't work. Only remove if the playhead is at the end and timeScale is positive, or if the playhead is at 0 and the timeScale is negative.
+
+        if (!suppressEvents && !(totalTime < 0 && !prevTime)) {
+          _callback(this, tTime === tDur ? "onComplete" : "onReverseComplete", true);
+
+          this._prom && this._prom();
+        }
+      }
+    }
+
+    return this;
+  };
+
+  _proto3.targets = function targets() {
+    return this._targets;
+  };
+
+  _proto3.invalidate = function invalidate() {
+    this._pt = this._op = this._startAt = this._onUpdate = this._act = this._lazy = 0;
+    this._ptLookup = [];
+
+    if (this.timeline) {
+      this.timeline.invalidate();
+    }
+
+    return _Animation2.prototype.invalidate.call(this);
+  };
+
+  _proto3.kill = function kill(targets, vars) {
+    if (vars === void 0) {
+      vars = "all";
+    }
+
+    if (!targets && (!vars || vars === "all")) {
+      this._lazy = 0;
+
+      if (this.parent) {
+        return _interrupt(this);
+      }
+    }
+
+    if (this.timeline) {
+      this.timeline.killTweensOf(targets, vars, _overwritingTween && _overwritingTween.vars.overwrite !== true);
+      return this;
+    }
+
+    var parsedTargets = this._targets,
+        killingTargets = targets ? toArray(targets) : parsedTargets,
+        propTweenLookup = this._ptLookup,
+        firstPT = this._pt,
+        overwrittenProps,
+        curLookup,
+        curOverwriteProps,
+        props,
+        p,
+        pt,
+        i;
+
+    if ((!vars || vars === "all") && _arraysMatch(parsedTargets, killingTargets)) {
+      return _interrupt(this);
+    }
+
+    overwrittenProps = this._op = this._op || [];
+
+    if (vars !== "all") {
+      //so people can pass in a comma-delimited list of property names
+      if (_isString(vars)) {
+        p = {};
+
+        _forEachName(vars, function (name) {
+          return p[name] = 1;
+        });
+
+        vars = p;
+      }
+
+      vars = _addAliasesToVars(parsedTargets, vars);
+    }
+
+    i = parsedTargets.length;
+
+    while (i--) {
+      if (~killingTargets.indexOf(parsedTargets[i])) {
+        curLookup = propTweenLookup[i];
+
+        if (vars === "all") {
+          overwrittenProps[i] = vars;
+          props = curLookup;
+          curOverwriteProps = {};
+        } else {
+          curOverwriteProps = overwrittenProps[i] = overwrittenProps[i] || {};
+          props = vars;
+        }
+
+        for (p in props) {
+          pt = curLookup && curLookup[p];
+
+          if (pt) {
+            if (!("kill" in pt.d) || pt.d.kill(p) === true) {
+              _removeLinkedListItem(this, pt, "_pt");
+            }
+
+            delete curLookup[p];
+          }
+
+          if (curOverwriteProps !== "all") {
+            curOverwriteProps[p] = 1;
+          }
+        }
+      }
+    }
+
+    if (this._initted && !this._pt && firstPT) {
+      //if all tweening properties are killed, kill the tween. Without this line, if there's a tween with multiple targets and then you killTweensOf() each target individually, the tween would technically still remain active and fire its onComplete even though there aren't any more properties tweening.
+      _interrupt(this);
+    }
+
+    return this;
+  };
+
+  Tween.to = function to(targets, vars) {
+    return new Tween(targets, vars, arguments[2]);
+  };
+
+  Tween.from = function from(targets, vars) {
+    return new Tween(targets, _parseVars(arguments, 1));
+  };
+
+  Tween.delayedCall = function delayedCall(delay, callback, params, scope) {
+    return new Tween(callback, 0, {
+      immediateRender: false,
+      lazy: false,
+      overwrite: false,
+      delay: delay,
+      onComplete: callback,
+      onReverseComplete: callback,
+      onCompleteParams: params,
+      onReverseCompleteParams: params,
+      callbackScope: scope
+    });
+  };
+
+  Tween.fromTo = function fromTo(targets, fromVars, toVars) {
+    return new Tween(targets, _parseVars(arguments, 2));
+  };
+
+  Tween.set = function set(targets, vars) {
+    vars.duration = 0;
+
+    if (!vars.repeatDelay) {
+      vars.repeat = 0;
+    }
+
+    return new Tween(targets, vars);
+  };
+
+  Tween.killTweensOf = function killTweensOf(targets, props, onlyActive) {
+    return _globalTimeline.killTweensOf(targets, props, onlyActive);
+  };
+
+  return Tween;
+}(Animation);
+
+_setDefaults(Tween.prototype, {
+  _targets: [],
+  _lazy: 0,
+  _startAt: 0,
+  _op: 0,
+  _onInit: 0
+}); //add the pertinent timeline methods to Tween instances so that users can chain conveniently and create a timeline automatically. (removed due to concerns that it'd ultimately add to more confusion especially for beginners)
+// _forEachName("to,from,fromTo,set,call,add,addLabel,addPause", name => {
+// 	Tween.prototype[name] = function() {
+// 		let tl = new Timeline();
+// 		return _addToTimeline(tl, this)[name].apply(tl, toArray(arguments));
+// 	}
+// });
+//for backward compatibility. Leverage the timeline calls.
+
+
+_forEachName("staggerTo,staggerFrom,staggerFromTo", function (name) {
+  Tween[name] = function () {
+    var tl = new Timeline(),
+        params = _slice.call(arguments, 0);
+
+    params.splice(name === "staggerFromTo" ? 5 : 4, 0, 0);
+    return tl[name].apply(tl, params);
+  };
+});
+/*
+ * --------------------------------------------------------------------------------------
+ * PROPTWEEN
+ * --------------------------------------------------------------------------------------
+ */
+
+
+var _setterPlain = function _setterPlain(target, property, value) {
+  return target[property] = value;
+},
+    _setterFunc = function _setterFunc(target, property, value) {
+  return target[property](value);
+},
+    _setterFuncWithParam = function _setterFuncWithParam(target, property, value, data) {
+  return target[property](data.fp, value);
+},
+    _setterAttribute = function _setterAttribute(target, property, value) {
+  return target.setAttribute(property, value);
+},
+    _getSetter = function _getSetter(target, property) {
+  return _isFunction(target[property]) ? _setterFunc : _isUndefined(target[property]) && target.setAttribute ? _setterAttribute : _setterPlain;
+},
+    _renderPlain = function _renderPlain(ratio, data) {
+  return data.set(data.t, data.p, Math.round((data.s + data.c * ratio) * 10000) / 10000, data);
+},
+    _renderBoolean = function _renderBoolean(ratio, data) {
+  return data.set(data.t, data.p, !!(data.s + data.c * ratio), data);
+},
+    _renderComplexString = function _renderComplexString(ratio, data) {
+  var pt = data._pt,
+      s = "";
+
+  if (!ratio && data.b) {
+    //b = beginning string
+    s = data.b;
+  } else if (ratio === 1 && data.e) {
+    //e = ending string
+    s = data.e;
+  } else {
+    while (pt) {
+      s = pt.p + (pt.m ? pt.m(pt.s + pt.c * ratio) : Math.round((pt.s + pt.c * ratio) * 10000) / 10000) + s; //we use the "p" property for the text inbetween (like a suffix). And in the context of a complex string, the modifier (m) is typically just Math.round(), like for RGB colors.
+
+      pt = pt._next;
+    }
+
+    s += data.c; //we use the "c" of the PropTween to store the final chunk of non-numeric text.
+  }
+
+  data.set(data.t, data.p, s, data);
+},
+    _renderPropTweens = function _renderPropTweens(ratio, data) {
+  var pt = data._pt;
+
+  while (pt) {
+    pt.r(ratio, pt.d);
+    pt = pt._next;
+  }
+},
+    _addPluginModifier = function _addPluginModifier(modifier, tween, target, property) {
+  var pt = this._pt,
+      next;
+
+  while (pt) {
+    next = pt._next;
+
+    if (pt.p === property) {
+      pt.modifier(modifier, tween, target);
+    }
+
+    pt = next;
+  }
+},
+    _killPropTweensOf = function _killPropTweensOf(property) {
+  var pt = this._pt,
+      hasNonDependentRemaining,
+      next;
+
+  while (pt) {
+    next = pt._next;
+
+    if (pt.p === property && !pt.op || pt.op === property) {
+      _removeLinkedListItem(this, pt, "_pt");
+    } else if (!pt.dep) {
+      hasNonDependentRemaining = 1;
+    }
+
+    pt = next;
+  }
+
+  return !hasNonDependentRemaining;
+},
+    _setterWithModifier = function _setterWithModifier(target, property, value, data) {
+  data.mSet(target, property, data.m.call(data.tween, value, data.mt), data);
+},
+    _sortPropTweensByPriority = function _sortPropTweensByPriority(parent) {
+  var pt = parent._pt,
+      next,
+      pt2,
+      first,
+      last; //sorts the PropTween linked list in order of priority because some plugins need to do their work after ALL of the PropTweens were created (like RoundPropsPlugin and ModifiersPlugin)
+
+  while (pt) {
+    next = pt._next;
+    pt2 = first;
+
+    while (pt2 && pt2.pr > pt.pr) {
+      pt2 = pt2._next;
+    }
+
+    if (pt._prev = pt2 ? pt2._prev : last) {
+      pt._prev._next = pt;
+    } else {
+      first = pt;
+    }
+
+    if (pt._next = pt2) {
+      pt2._prev = pt;
+    } else {
+      last = pt;
+    }
+
+    pt = next;
+  }
+
+  parent._pt = first;
+}; //PropTween key: t = target, p = prop, r = renderer, d = data, s = start, c = change, op = overwriteProperty (ONLY populated when it's different than p), pr = priority, _next/_prev for the linked list siblings, set = setter, m = modifier, mSet = modifierSetter (the original setter, before a modifier was added)
+
+
+var PropTween =
+/*#__PURE__*/
+function () {
+  function PropTween(next, target, prop, start, change, renderer, data, setter, priority) {
+    this.t = target;
+    this.s = start;
+    this.c = change;
+    this.p = prop;
+    this.r = renderer || _renderPlain;
+    this.d = data || this;
+    this.set = setter || _setterPlain;
+    this.pr = priority || 0;
+    this._next = next;
+
+    if (next) {
+      next._prev = this;
+    }
+  }
+
+  var _proto4 = PropTween.prototype;
+
+  _proto4.modifier = function modifier(func, tween, target) {
+    this.mSet = this.mSet || this.set; //in case it was already set (a PropTween can only have one modifier)
+
+    this.set = _setterWithModifier;
+    this.m = func;
+    this.mt = target; //modifier target
+
+    this.tween = tween;
+  };
+
+  return PropTween;
+}(); //Initialization tasks
+
+_forEachName(_callbackNames + ",parent,duration,ease,delay,overwrite,runBackwards,startAt,yoyo,immediateRender,repeat,repeatDelay,data,paused,reversed,lazy,callbackScope,stringFilter,id,yoyoEase,stagger,inherit,repeatRefresh,keyframes,autoRevert", function (name) {
+  _reservedProps[name] = 1;
+  if (name.substr(0, 2) === "on") _reservedProps[name + "Params"] = 1;
+});
+
+_globals.TweenMax = _globals.TweenLite = Tween;
+_globals.TimelineLite = _globals.TimelineMax = Timeline;
+_globalTimeline = new Timeline({
+  sortChildren: false,
+  defaults: _defaults,
+  autoRemoveChildren: true,
+  id: "root"
+});
+_config.stringFilter = _colorStringFilter;
+/*
+ * --------------------------------------------------------------------------------------
+ * GSAP
+ * --------------------------------------------------------------------------------------
+ */
+
+var _gsap = {
+  registerPlugin: function registerPlugin() {
+    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    args.forEach(function (config) {
+      return _createPlugin(config);
+    });
+  },
+  timeline: function timeline(vars) {
+    return new Timeline(vars);
+  },
+  getTweensOf: function getTweensOf(targets, onlyActive) {
+    return _globalTimeline.getTweensOf(targets, onlyActive);
+  },
+  getProperty: function getProperty(target, property, unit, uncache) {
+    if (_isString(target)) {
+      //in case selector text or an array is passed in
+      target = toArray(target)[0];
+    }
+
+    var getter = _getCache(target || {}).get,
+        format = unit ? _passThrough : _numericIfPossible;
+
+    if (unit === "native") {
+      unit = "";
+    }
+
+    return !target ? target : !property ? function (property, unit, uncache) {
+      return format((_plugins[property] && _plugins[property].get || getter)(target, property, unit, uncache));
+    } : format((_plugins[property] && _plugins[property].get || getter)(target, property, unit, uncache));
+  },
+  quickSetter: function quickSetter(target, property, unit) {
+    target = toArray(target);
+
+    if (target.length > 1) {
+      var setters = target.map(function (t) {
+        return gsap.quickSetter(t, property, unit);
+      }),
+          l = setters.length;
+      return function (value) {
+        var i = l;
+
+        while (i--) {
+          setters[i](value);
+        }
+      };
+    }
+
+    target = target[0] || {};
+
+    var Plugin = _plugins[property],
+        cache = _getCache(target),
+        setter = Plugin ? function (value) {
+      var p = new Plugin();
+      _quickTween._pt = 0;
+      p.init(target, unit ? value + unit : value, _quickTween, 0, [target]);
+      p.render(1, p);
+      _quickTween._pt && _renderPropTweens(1, _quickTween);
+    } : cache.set(target, property);
+
+    return Plugin ? setter : function (value) {
+      return setter(target, property, unit ? value + unit : value, cache, 1);
+    };
+  },
+  isTweening: function isTweening(targets) {
+    return _globalTimeline.getTweensOf(targets, true).length > 0;
+  },
+  defaults: function defaults(value) {
+    if (value && value.ease) {
+      value.ease = _parseEase(value.ease, _defaults.ease);
+    }
+
+    return _mergeDeep(_defaults, value || {});
+  },
+  config: function config(value) {
+    return _mergeDeep(_config, value || {});
+  },
+  registerEffect: function registerEffect(_ref) {
+    var name = _ref.name,
+        effect = _ref.effect,
+        plugins = _ref.plugins,
+        defaults = _ref.defaults,
+        extendTimeline = _ref.extendTimeline;
+    (plugins || "").split(",").forEach(function (pluginName) {
+      return pluginName && !_plugins[pluginName] && !_globals[pluginName] && _warn(name + " effect requires " + pluginName + " plugin.");
+    });
+
+    _effects[name] = function (targets, vars) {
+      return effect(toArray(targets), _setDefaults(vars || {}, defaults));
+    };
+
+    if (extendTimeline) {
+      Timeline.prototype[name] = function (targets, vars, position) {
+        return this.add(_effects[name](targets, _isObject(vars) ? vars : (position = vars) && {}), position);
+      };
+    }
+  },
+  registerEase: function registerEase(name, ease) {
+    _easeMap[name] = _parseEase(ease);
+  },
+  parseEase: function parseEase(ease, defaultEase) {
+    return arguments.length ? _parseEase(ease, defaultEase) : _easeMap;
+  },
+  getById: function getById(id) {
+    return _globalTimeline.getById(id);
+  },
+  exportRoot: function exportRoot(vars, includeDelayedCalls) {
+    if (vars === void 0) {
+      vars = {};
+    }
+
+    var tl = new Timeline(vars),
+        child,
+        next;
+    tl.smoothChildTiming = _isNotFalse(vars.smoothChildTiming);
+
+    _globalTimeline.remove(tl);
+
+    tl._dp = 0; //otherwise it'll get re-activated when adding children and be re-introduced into _globalTimeline's linked list (then added to itself).
+
+    tl._time = tl._tTime = _globalTimeline._time;
+    child = _globalTimeline._first;
+
+    while (child) {
+      next = child._next;
+
+      if (includeDelayedCalls || !(!child._dur && child instanceof Tween && child.vars.onComplete === child._targets[0])) {
+        _addToTimeline(tl, child, child._start - child._delay);
+      }
+
+      child = next;
+    }
+
+    _addToTimeline(_globalTimeline, tl, 0);
+
+    return tl;
+  },
+  utils: {
+    wrap: wrap,
+    wrapYoyo: wrapYoyo,
+    distribute: distribute,
+    random: random,
+    snap: snap,
+    normalize: normalize,
+    getUnit: getUnit,
+    clamp: clamp,
+    splitColor: splitColor,
+    toArray: toArray,
+    mapRange: mapRange,
+    pipe: pipe,
+    unitize: unitize,
+    interpolate: interpolate,
+    shuffle: shuffle
+  },
+  install: _install,
+  effects: _effects,
+  ticker: _ticker,
+  updateRoot: Timeline.updateRoot,
+  plugins: _plugins,
+  globalTimeline: _globalTimeline,
+  core: {
+    PropTween: PropTween,
+    globals: _addGlobal,
+    Tween: Tween,
+    Timeline: Timeline,
+    Animation: Animation,
+    getCache: _getCache
+  }
+};
+
+_forEachName("to,from,fromTo,delayedCall,set,killTweensOf", function (name) {
+  return _gsap[name] = Tween[name];
+});
+
+_ticker.add(Timeline.updateRoot);
+
+_quickTween = _gsap.to({}, {
+  duration: 0
+}); // ---- EXTRA PLUGINS --------------------------------------------------------
+
+var _getPluginPropTween = function _getPluginPropTween(plugin, prop) {
+  var pt = plugin._pt;
+
+  while (pt && pt.p !== prop && pt.op !== prop && pt.fp !== prop) {
+    pt = pt._next;
+  }
+
+  return pt;
+},
+    _addModifiers = function _addModifiers(tween, modifiers) {
+  var targets = tween._targets,
+      p,
+      i,
+      pt;
+
+  for (p in modifiers) {
+    i = targets.length;
+
+    while (i--) {
+      pt = tween._ptLookup[i][p];
+
+      if (pt && (pt = pt.d)) {
+        if (pt._pt) {
+          // is a plugin
+          pt = _getPluginPropTween(pt, p);
+        }
+
+        pt && pt.modifier && pt.modifier(modifiers[p], tween, targets[i], p);
+      }
+    }
+  }
+},
+    _buildModifierPlugin = function _buildModifierPlugin(name, modifier) {
+  return {
+    name: name,
+    rawVars: 1,
+    //don't pre-process function-based values or "random()" strings.
+    init: function init(target, vars, tween) {
+      tween._onInit = function (tween) {
+        var temp, p;
+
+        if (_isString(vars)) {
+          temp = {};
+
+          _forEachName(vars, function (name) {
+            return temp[name] = 1;
+          }); //if the user passes in a comma-delimited list of property names to roundProps, like "x,y", we round to whole numbers.
+
+
+          vars = temp;
+        }
+
+        if (modifier) {
+          temp = {};
+
+          for (p in vars) {
+            temp[p] = modifier(vars[p]);
+          }
+
+          vars = temp;
+        }
+
+        _addModifiers(tween, vars);
+      };
+    }
+  };
+}; //register core plugins
+
+
+var gsap = _gsap.registerPlugin({
+  name: "attr",
+  init: function init(target, vars, tween, index, targets) {
+    for (var p in vars) {
+      this.add(target, "setAttribute", (target.getAttribute(p) || 0) + "", vars[p], index, targets, 0, 0, p); //this.add(target, "setAttribute", (target.getAttribute((p in target.dataset ? (p = "data-" + p) : p)) || 0) + "", vars[p], index, targets, 0, 0, p);
+
+      this._props.push(p);
+    }
+  }
+}, {
+  name: "endArray",
+  init: function init(target, value) {
+    var i = value.length;
+
+    while (i--) {
+      this.add(target, i, target[i] || 0, value[i]);
+    }
+  }
+}, _buildModifierPlugin("roundProps", _roundModifier), _buildModifierPlugin("modifiers"), _buildModifierPlugin("snap", snap)) || _gsap; //to prevent the core plugins from being dropped via aggressive tree shaking, we must include them in the variable declaration in this way.
+
+Tween.version = Timeline.version = gsap.version = "3.1.1";
+_coreReady = 1;
+
+if (_windowExists()) {
+  _wake();
 }
+
+var Power0 = _easeMap.Power0,
+    Power1 = _easeMap.Power1,
+    Power2 = _easeMap.Power2,
+    Power3 = _easeMap.Power3,
+    Power4 = _easeMap.Power4,
+    Linear = _easeMap.Linear,
+    Quad = _easeMap.Quad,
+    Cubic = _easeMap.Cubic,
+    Quart = _easeMap.Quart,
+    Quint = _easeMap.Quint,
+    Strong = _easeMap.Strong,
+    Elastic = _easeMap.Elastic,
+    Back = _easeMap.Back,
+    SteppedEase = _easeMap.SteppedEase,
+    Bounce = _easeMap.Bounce,
+    Sine = _easeMap.Sine,
+    Expo = _easeMap.Expo,
+    Circ = _easeMap.Circ;
+
+ //export some internal methods/orojects for use in CSSPlugin so that we can externalize that file and allow custom builds that exclude it.
+
+
+
+/***/ }),
+
+/***/ "./node_modules/gsap/index.js":
+/*!************************************!*\
+  !*** ./node_modules/gsap/index.js ***!
+  \************************************/
+/*! exports provided: gsap, default, CSSPlugin, TweenMax, TweenLite, TimelineMax, TimelineLite, Power0, Power1, Power2, Power3, Power4, Linear, Quad, Cubic, Quart, Quint, Strong, Elastic, Back, SteppedEase, Bounce, Sine, Expo, Circ */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gsap", function() { return gsapWithCSS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gsapWithCSS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TweenMax", function() { return TweenMaxWithCSS; });
+/* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ "./node_modules/gsap/gsap-core.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TweenLite", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["TweenLite"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TimelineMax", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["TimelineMax"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TimelineLite", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["TimelineLite"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Power0", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Power0"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Power1", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Power1"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Power2", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Power2"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Power3", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Power3"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Power4", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Power4"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Linear", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Linear"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Quad", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Quad"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Cubic", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Cubic"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Quart", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Quart"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Quint", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Quint"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Strong", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Strong"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Elastic", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Elastic"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Back", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Back"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SteppedEase", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["SteppedEase"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Bounce", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Bounce"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Sine", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Sine"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Expo", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Expo"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Circ", function() { return _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["Circ"]; });
+
+/* harmony import */ var _CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CSSPlugin.js */ "./node_modules/gsap/CSSPlugin.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CSSPlugin", function() { return _CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__["CSSPlugin"]; });
+
+
+
+var gsapWithCSS = _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["gsap"].registerPlugin(_CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__["CSSPlugin"]) || _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["gsap"],
+    // to protect from tree shaking
+TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
 
 /***/ }),
@@ -34509,80 +43272,6 @@ return jQuery;
 
 /***/ }),
 
-/***/ "./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.eot":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.eot ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/fonts/vendor/material-design-icons-icondist/MaterialIcons-Regular.eot?96c476804d7a788cc1c05351b287ee41";
-
-/***/ }),
-
-/***/ "./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.ttf":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.ttf ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/fonts/vendor/material-design-icons-icondist/MaterialIcons-Regular.ttf?da4ea5cdfca6b3baab285741f5ccb59f";
-
-/***/ }),
-
-/***/ "./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/fonts/vendor/material-design-icons-icondist/MaterialIcons-Regular.woff?29b882f018fa6fe75fd338aaae6235b8";
-
-/***/ }),
-
-/***/ "./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff2":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff2 ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/fonts/vendor/material-design-icons-icondist/MaterialIcons-Regular.woff2?0509ab09c1b0d2200a4135803c91d6ce";
-
-/***/ }),
-
-/***/ "./node_modules/material-design-icons-iconfont/dist/material-design-icons.css":
-/*!************************************************************************************!*\
-  !*** ./node_modules/material-design-icons-iconfont/dist/material-design-icons.css ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./material-design-icons.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/material-design-icons-iconfont/dist/material-design-icons.css?dada");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
@@ -37606,515 +46295,6 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/lib/addStyles.js":
-/*!****************************************************!*\
-  !*** ./node_modules/style-loader/lib/addStyles.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-
-var stylesInDom = {};
-
-var	memoize = function (fn) {
-	var memo;
-
-	return function () {
-		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-		return memo;
-	};
-};
-
-var isOldIE = memoize(function () {
-	// Test for IE <= 9 as proposed by Browserhacks
-	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-	// Tests for existence of standard globals is to allow style-loader
-	// to operate correctly into non-standard environments
-	// @see https://github.com/webpack-contrib/style-loader/issues/177
-	return window && document && document.all && !window.atob;
-});
-
-var getTarget = function (target, parent) {
-  if (parent){
-    return parent.querySelector(target);
-  }
-  return document.querySelector(target);
-};
-
-var getElement = (function (fn) {
-	var memo = {};
-
-	return function(target, parent) {
-                // If passing function in options, then use it for resolve "head" element.
-                // Useful for Shadow Root style i.e
-                // {
-                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
-                // }
-                if (typeof target === 'function') {
-                        return target();
-                }
-                if (typeof memo[target] === "undefined") {
-			var styleTarget = getTarget.call(this, target, parent);
-			// Special case to return head of iframe instead of iframe itself
-			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
-				try {
-					// This will throw an exception if access to iframe is blocked
-					// due to cross-origin restrictions
-					styleTarget = styleTarget.contentDocument.head;
-				} catch(e) {
-					styleTarget = null;
-				}
-			}
-			memo[target] = styleTarget;
-		}
-		return memo[target]
-	};
-})();
-
-var singleton = null;
-var	singletonCounter = 0;
-var	stylesInsertedAtTop = [];
-
-var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
-
-module.exports = function(list, options) {
-	if (typeof DEBUG !== "undefined" && DEBUG) {
-		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-	}
-
-	options = options || {};
-
-	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
-
-	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-	// tags it will allow on a page
-	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
-
-	// By default, add <style> tags to the <head> element
-        if (!options.insertInto) options.insertInto = "head";
-
-	// By default, add <style> tags to the bottom of the target
-	if (!options.insertAt) options.insertAt = "bottom";
-
-	var styles = listToStyles(list, options);
-
-	addStylesToDom(styles, options);
-
-	return function update (newList) {
-		var mayRemove = [];
-
-		for (var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-
-			domStyle.refs--;
-			mayRemove.push(domStyle);
-		}
-
-		if(newList) {
-			var newStyles = listToStyles(newList, options);
-			addStylesToDom(newStyles, options);
-		}
-
-		for (var i = 0; i < mayRemove.length; i++) {
-			var domStyle = mayRemove[i];
-
-			if(domStyle.refs === 0) {
-				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
-
-				delete stylesInDom[domStyle.id];
-			}
-		}
-	};
-};
-
-function addStylesToDom (styles, options) {
-	for (var i = 0; i < styles.length; i++) {
-		var item = styles[i];
-		var domStyle = stylesInDom[item.id];
-
-		if(domStyle) {
-			domStyle.refs++;
-
-			for(var j = 0; j < domStyle.parts.length; j++) {
-				domStyle.parts[j](item.parts[j]);
-			}
-
-			for(; j < item.parts.length; j++) {
-				domStyle.parts.push(addStyle(item.parts[j], options));
-			}
-		} else {
-			var parts = [];
-
-			for(var j = 0; j < item.parts.length; j++) {
-				parts.push(addStyle(item.parts[j], options));
-			}
-
-			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-		}
-	}
-}
-
-function listToStyles (list, options) {
-	var styles = [];
-	var newStyles = {};
-
-	for (var i = 0; i < list.length; i++) {
-		var item = list[i];
-		var id = options.base ? item[0] + options.base : item[0];
-		var css = item[1];
-		var media = item[2];
-		var sourceMap = item[3];
-		var part = {css: css, media: media, sourceMap: sourceMap};
-
-		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
-		else newStyles[id].parts.push(part);
-	}
-
-	return styles;
-}
-
-function insertStyleElement (options, style) {
-	var target = getElement(options.insertInto)
-
-	if (!target) {
-		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
-	}
-
-	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
-
-	if (options.insertAt === "top") {
-		if (!lastStyleElementInsertedAtTop) {
-			target.insertBefore(style, target.firstChild);
-		} else if (lastStyleElementInsertedAtTop.nextSibling) {
-			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
-		} else {
-			target.appendChild(style);
-		}
-		stylesInsertedAtTop.push(style);
-	} else if (options.insertAt === "bottom") {
-		target.appendChild(style);
-	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
-		var nextSibling = getElement(options.insertAt.before, target);
-		target.insertBefore(style, nextSibling);
-	} else {
-		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
-	}
-}
-
-function removeStyleElement (style) {
-	if (style.parentNode === null) return false;
-	style.parentNode.removeChild(style);
-
-	var idx = stylesInsertedAtTop.indexOf(style);
-	if(idx >= 0) {
-		stylesInsertedAtTop.splice(idx, 1);
-	}
-}
-
-function createStyleElement (options) {
-	var style = document.createElement("style");
-
-	if(options.attrs.type === undefined) {
-		options.attrs.type = "text/css";
-	}
-
-	if(options.attrs.nonce === undefined) {
-		var nonce = getNonce();
-		if (nonce) {
-			options.attrs.nonce = nonce;
-		}
-	}
-
-	addAttrs(style, options.attrs);
-	insertStyleElement(options, style);
-
-	return style;
-}
-
-function createLinkElement (options) {
-	var link = document.createElement("link");
-
-	if(options.attrs.type === undefined) {
-		options.attrs.type = "text/css";
-	}
-	options.attrs.rel = "stylesheet";
-
-	addAttrs(link, options.attrs);
-	insertStyleElement(options, link);
-
-	return link;
-}
-
-function addAttrs (el, attrs) {
-	Object.keys(attrs).forEach(function (key) {
-		el.setAttribute(key, attrs[key]);
-	});
-}
-
-function getNonce() {
-	if (false) {}
-
-	return __webpack_require__.nc;
-}
-
-function addStyle (obj, options) {
-	var style, update, remove, result;
-
-	// If a transform function was defined, run it on the css
-	if (options.transform && obj.css) {
-	    result = typeof options.transform === 'function'
-		 ? options.transform(obj.css) 
-		 : options.transform.default(obj.css);
-
-	    if (result) {
-	    	// If transform returns a value, use that instead of the original css.
-	    	// This allows running runtime transformations on the css.
-	    	obj.css = result;
-	    } else {
-	    	// If the transform function returns a falsy value, don't add this css.
-	    	// This allows conditional loading of css
-	    	return function() {
-	    		// noop
-	    	};
-	    }
-	}
-
-	if (options.singleton) {
-		var styleIndex = singletonCounter++;
-
-		style = singleton || (singleton = createStyleElement(options));
-
-		update = applyToSingletonTag.bind(null, style, styleIndex, false);
-		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-
-	} else if (
-		obj.sourceMap &&
-		typeof URL === "function" &&
-		typeof URL.createObjectURL === "function" &&
-		typeof URL.revokeObjectURL === "function" &&
-		typeof Blob === "function" &&
-		typeof btoa === "function"
-	) {
-		style = createLinkElement(options);
-		update = updateLink.bind(null, style, options);
-		remove = function () {
-			removeStyleElement(style);
-
-			if(style.href) URL.revokeObjectURL(style.href);
-		};
-	} else {
-		style = createStyleElement(options);
-		update = applyToTag.bind(null, style);
-		remove = function () {
-			removeStyleElement(style);
-		};
-	}
-
-	update(obj);
-
-	return function updateStyle (newObj) {
-		if (newObj) {
-			if (
-				newObj.css === obj.css &&
-				newObj.media === obj.media &&
-				newObj.sourceMap === obj.sourceMap
-			) {
-				return;
-			}
-
-			update(obj = newObj);
-		} else {
-			remove();
-		}
-	};
-}
-
-var replaceText = (function () {
-	var textStore = [];
-
-	return function (index, replacement) {
-		textStore[index] = replacement;
-
-		return textStore.filter(Boolean).join('\n');
-	};
-})();
-
-function applyToSingletonTag (style, index, remove, obj) {
-	var css = remove ? "" : obj.css;
-
-	if (style.styleSheet) {
-		style.styleSheet.cssText = replaceText(index, css);
-	} else {
-		var cssNode = document.createTextNode(css);
-		var childNodes = style.childNodes;
-
-		if (childNodes[index]) style.removeChild(childNodes[index]);
-
-		if (childNodes.length) {
-			style.insertBefore(cssNode, childNodes[index]);
-		} else {
-			style.appendChild(cssNode);
-		}
-	}
-}
-
-function applyToTag (style, obj) {
-	var css = obj.css;
-	var media = obj.media;
-
-	if(media) {
-		style.setAttribute("media", media)
-	}
-
-	if(style.styleSheet) {
-		style.styleSheet.cssText = css;
-	} else {
-		while(style.firstChild) {
-			style.removeChild(style.firstChild);
-		}
-
-		style.appendChild(document.createTextNode(css));
-	}
-}
-
-function updateLink (link, options, obj) {
-	var css = obj.css;
-	var sourceMap = obj.sourceMap;
-
-	/*
-		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
-		and there is no publicPath defined then lets turn convertToAbsoluteUrls
-		on by default.  Otherwise default to the convertToAbsoluteUrls option
-		directly
-	*/
-	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
-
-	if (options.convertToAbsoluteUrls || autoFixUrls) {
-		css = fixUrls(css);
-	}
-
-	if (sourceMap) {
-		// http://stackoverflow.com/a/26603875
-		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-	}
-
-	var blob = new Blob([css], { type: "text/css" });
-
-	var oldSrc = link.href;
-
-	link.href = URL.createObjectURL(blob);
-
-	if(oldSrc) URL.revokeObjectURL(oldSrc);
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/lib/urls.js":
-/*!***********************************************!*\
-  !*** ./node_modules/style-loader/lib/urls.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * When source maps are enabled, `style-loader` uses a link element with a data-uri to
- * embed the css on the page. This breaks all relative urls because now they are relative to a
- * bundle instead of the current page.
- *
- * One solution is to only use full urls, but that may be impossible.
- *
- * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
- *
- * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
- *
- */
-
-module.exports = function (css) {
-  // get current location
-  var location = typeof window !== "undefined" && window.location;
-
-  if (!location) {
-    throw new Error("fixUrls requires window.location");
-  }
-
-	// blank or null?
-	if (!css || typeof css !== "string") {
-	  return css;
-  }
-
-  var baseUrl = location.protocol + "//" + location.host;
-  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
-
-	// convert each url(...)
-	/*
-	This regular expression is just a way to recursively match brackets within
-	a string.
-
-	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
-	   (  = Start a capturing group
-	     (?:  = Start a non-capturing group
-	         [^)(]  = Match anything that isn't a parentheses
-	         |  = OR
-	         \(  = Match a start parentheses
-	             (?:  = Start another non-capturing groups
-	                 [^)(]+  = Match anything that isn't a parentheses
-	                 |  = OR
-	                 \(  = Match a start parentheses
-	                     [^)(]*  = Match anything that isn't a parentheses
-	                 \)  = Match a end parentheses
-	             )  = End Group
-              *\) = Match anything and then a close parens
-          )  = Close non-capturing group
-          *  = Match anything
-       )  = Close capturing group
-	 \)  = Match a close parens
-
-	 /gi  = Get all matches, not the first.  Be case insensitive.
-	 */
-	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
-		// strip quotes (if they exist)
-		var unquotedOrigUrl = origUrl
-			.trim()
-			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
-			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
-
-		// already a full url? no change
-		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
-		  return fullMatch;
-		}
-
-		// convert the url to a full url
-		var newUrl;
-
-		if (unquotedOrigUrl.indexOf("//") === 0) {
-		  	//TODO: should we add protocol?
-			newUrl = unquotedOrigUrl;
-		} else if (unquotedOrigUrl.indexOf("/") === 0) {
-			// path should be relative to the base url
-			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
-		} else {
-			// path should be relative to current directory
-			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
-		}
-
-		// send back the fixed url(...)
-		return "url(" + JSON.stringify(newUrl) + ")";
-	});
-
-	// send back the fixed css
-	return fixedCss;
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/timers-browserify/main.js":
 /*!************************************************!*\
   !*** ./node_modules/timers-browserify/main.js ***!
@@ -38232,7 +46412,9 @@ var render = function() {
               [
                 _c("v-text-field", {
                   attrs: {
-                    "append-icon": _vm.showPassword ? "mdi-eye" : "mdi-eye-off",
+                    "append-icon": _vm.showPassword
+                      ? "visibility"
+                      : "visibility_off",
                     rules: _vm.passwordRules,
                     type: _vm.showPassword ? "text" : "password",
                     label: "Password",
@@ -38263,9 +46445,9 @@ var render = function() {
                 _c("v-text-field", {
                   attrs: {
                     "append-icon": _vm.showPasswordConfirmation
-                      ? "mdi-eye"
-                      : "mdi-eye-off",
-                    rules: _vm.passwordRules,
+                      ? "visibility"
+                      : "visibility_off",
+                    rules: _vm.passwordConfirmationRules,
                     type: _vm.showPasswordConfirmation ? "text" : "password",
                     label: "Password confirmation",
                     hint: "At least 8 characters",
@@ -38273,7 +46455,7 @@ var render = function() {
                   },
                   on: {
                     "click:append": function($event) {
-                      _vm.showPassword = !_vm.showPassword
+                      _vm.showPasswordConfirmation = !_vm.showPasswordConfirmation
                     }
                   },
                   model: {
@@ -94746,8 +102928,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuetify */ "./node_modules/vuetify/dist/vuetify.js");
 /* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuetify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var material_design_icons_iconfont_dist_material_design_icons_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! material-design-icons-iconfont/dist/material-design-icons.css */ "./node_modules/material-design-icons-iconfont/dist/material-design-icons.css");
-/* harmony import */ var material_design_icons_iconfont_dist_material_design_icons_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(material_design_icons_iconfont_dist_material_design_icons_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _kugatsu_vuenotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kugatsu/vuenotification */ "./node_modules/@kugatsu/vuenotification/dist/vueNotification.common.js");
+/* harmony import */ var _kugatsu_vuenotification__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kugatsu_vuenotification__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_DashboardComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/DashboardComponent */ "./resources/js/components/DashboardComponent.vue");
 /* harmony import */ var _components_DevicesComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/DevicesComponent */ "./resources/js/components/DevicesComponent.vue");
 /* harmony import */ var _components_MyAccountComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/MyAccountComponent */ "./resources/js/components/MyAccountComponent.vue");
@@ -94762,6 +102944,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
+Vue.use(_kugatsu_vuenotification__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  timer: 20
+});
 Vue.use(vuetify__WEBPACK_IMPORTED_MODULE_0___default.a);
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /**
@@ -94802,9 +102987,47 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: routes // short for `routes: routes`
 
 });
+
+Vue.prototype.$handleRequestError = function (error) {
+  if (error.response) {
+    // The request was made and the server responded with a status code
+    // that falls out of the range of 2xx
+    if (error.response.status == 422 && error.response.data.errors) {
+      //The form contains errors
+      Vue.prototype.$notification.warning(Object.values(error.response.data.errors)[0][0], {
+        timer: 3
+      });
+    } else {
+      if (error.response.status == 401 && error.response.data.message == "Unauthenticated.") {
+        //The session expired
+        Vue.prototype.$notification.error("Your session expired", {
+          timer: 3
+        });
+        setTimeout(function () {
+          window.location.href = '/login';
+        }, 3000);
+      } else {
+        Vue.prototype.$notification.error("Unexpected error", {
+          timer: 3
+        });
+      }
+    }
+  } else if (error.request) {
+    // The request was made but no response was received
+    console.log(error.request);
+    Vue.prototype.$notification.error("Unexpected error", {
+      timer: 3
+    });
+  }
+};
+
 var app = new Vue({
   el: '#app',
-  vuetify: new vuetify__WEBPACK_IMPORTED_MODULE_0___default.a(),
+  vuetify: new vuetify__WEBPACK_IMPORTED_MODULE_0___default.a({
+    icons: {
+      iconfont: 'md'
+    }
+  }),
   router: router
 });
 
@@ -95072,17 +103295,15 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MyAccountComponent_vue_vue_type_template_id_79a76a72___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MyAccountComponent.vue?vue&type=template&id=79a76a72& */ "./resources/js/components/MyAccountComponent.vue?vue&type=template&id=79a76a72&");
-/* harmony import */ var _MyAccountComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyAccountComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/MyAccountComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-
-
+var script = {}
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _MyAccountComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
   _MyAccountComponent_vue_vue_type_template_id_79a76a72___WEBPACK_IMPORTED_MODULE_0__["render"],
   _MyAccountComponent_vue_vue_type_template_id_79a76a72___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -95096,20 +103317,6 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/MyAccountComponent.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/MyAccountComponent.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************!*\
-  !*** ./resources/js/components/MyAccountComponent.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MyAccountComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./MyAccountComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MyAccountComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MyAccountComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

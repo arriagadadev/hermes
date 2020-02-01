@@ -12,3 +12,7 @@
 .nav-icon{
 	font-size:25px !important;
 }
+
+.header{
+	z-index: 1 !important;
+}

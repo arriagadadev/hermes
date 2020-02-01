@@ -9,6 +9,11 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Vuetify from 'vuetify';
 import VueRouter from 'vue-router';
+import VueNotification from "@kugatsu/vuenotification";
+
+Vue.use(VueNotification, {
+  timer: 20
+});
 Vue.use(Vuetify);
 Vue.use(VueRouter);
 
@@ -23,10 +28,11 @@ Vue.use(VueRouter);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('user-information', require('./components/UserInformationComponent.vue').default);
+Vue.component('change-password', require('./components/ChangePasswordComponent.vue').default);
 import DashboardComponent from './components/DashboardComponent';
 import DevicesComponent from './components/DevicesComponent';
-
+import MyAccountComponent from './components/MyAccountComponent';
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -44,6 +50,11 @@ var routes = [
         path: '/devices',
         name: 'devices',
         component: DevicesComponent
+    },
+    {
+        path: '/my-account',
+        name: 'my-account',
+        component: MyAccountComponent
     }
 
 ];
@@ -52,8 +63,30 @@ const router = new VueRouter({
   routes // short for `routes: routes`
 });
 
+Vue.prototype.$handleRequestError = error => {
+	if (error.response) {
+	  // The request was made and the server responded with a status code
+	  // that falls out of the range of 2xx
+	  if(error.response.status == 422 && error.response.data.errors){
+	    //The form contains errors
+	    Vue.prototype.$notification.warning(Object.values(error.response.data.errors)[0][0], {timer: 3});
+	  }else{
+	    if(error.response.status == 401 && error.response.data.message == "Unauthenticated."){
+	    	//The session expired
+	        Vue.prototype.$notification.error("Your session expired", {timer: 3});
+	        setTimeout(function(){window.location.href = '/login';},3000);
+	    }else{
+	        Vue.prototype.$notification.error("Unexpected error", {timer: 3});
+	    }
+	  }
+	} else if (error.request) {
+	  // The request was made but no response was received
+	  console.log(error.request);
+	  Vue.prototype.$notification.error("Unexpected error", {timer: 3});
+	}
+};
 const app = new Vue({
     el: '#app',
-    vuetify: new Vuetify(),
+    vuetify: new Vuetify({icons: {iconfont: 'md'}}),
     router
 });
