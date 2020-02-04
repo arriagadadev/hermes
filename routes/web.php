@@ -16,10 +16,16 @@ Auth::routes();
 
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/', function () {
-	    return view('app');
-	});
 	Route::get('/user', 'UserController@getUserInformation');
 	Route::put('/user', 'UserController@updateUserInformation');
 	Route::put('/change-password', 'UserController@changePassword');
+
+	//devices
+	Route::get('/organization/{id}/devices', 'DeviceController@getDevices');
+
+	//selector
+	Route::get('/', 'OrganizationSelectorController@index');
+
+	//App
+	Route::get('/organization/{organization}', 'AppController@index');
 });

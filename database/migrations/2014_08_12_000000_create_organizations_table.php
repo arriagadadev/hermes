@@ -17,6 +17,7 @@ class CreateOrganizationsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description')->nullable();
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

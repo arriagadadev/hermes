@@ -11,6 +11,9 @@
 
     <link href="/css/app.css?v=0.1" rel="stylesheet">
     <link href="/css/style.min.css?v=0.1" rel="stylesheet">
+    <script type="text/javascript">
+        window.__ORGANIZATION__ = {!! $organization !!};
+    </script>
 </head>
 
 <body class="app">

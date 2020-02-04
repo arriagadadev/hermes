@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'organization_name' => ['required','string']
         ]);
     }
 
@@ -70,15 +71,14 @@ class RegisterController extends Controller
 
         //Default Organization for the user
         $organization = new Organization;
-        $organization->name = $data['name']."'s organization";
+        $organization->name = $data['organization_name'];
         $organization->save();
 
         //User creation
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'last_organization_displayed' => $organization->id
+            'password' => Hash::make($data['password'])
         ]);
 
         //Get all permissions

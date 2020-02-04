@@ -18,6 +18,16 @@
             @enderror
         </div>
         <div class="form-group">
+            <label class="text-normal text-dark">Organization name</label>
+            <input id="organization_name" type="text" class="form-control @error('organization_name') is-invalid @enderror" name="organization_name" value="{{ old('organization_name') }}" required autocomplete="organization_name" placeholder="Create your own organization">
+
+            @error('organization_name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+        <div class="form-group">
             <label class="text-normal text-dark">Email Address</label>
             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="youremail@domain.com">
 
