@@ -28,11 +28,12 @@ Vue.use(VueRouter);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('user-information', require('./components/UserInformationComponent.vue').default);
-Vue.component('change-password', require('./components/ChangePasswordComponent.vue').default);
-import DashboardComponent from './components/DashboardComponent';
-import DevicesComponent from './components/DevicesComponent';
-import MyAccountComponent from './components/MyAccountComponent';
+Vue.component('user-information', require('./components/Users/UserInformationComponent.vue').default);
+Vue.component('change-password', require('./components/Users/ChangePasswordComponent.vue').default);
+Vue.component('pagination', require('laravel-vue-pagination'));
+import DashboardComponent from './components/Dashboard/DashboardComponent';
+import DevicesComponent from './components/Devices/DevicesComponent';
+import MyAccountComponent from './components/Users/MyAccountComponent';
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -62,7 +63,7 @@ var routes = [
 const router = new VueRouter({
   routes // short for `routes: routes`
 });
-
+Vue.prototype.$organization = window.__ORGANIZATION__;
 Vue.prototype.$handleRequestError = error => {
 	if (error.response) {
 	  // The request was made and the server responded with a status code
