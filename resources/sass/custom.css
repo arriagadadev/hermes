@@ -1,3 +1,6 @@
+/*
+*	Template and VueJS
+*/
 .sidebar-element{
 	font-size: 16px !important;
 }
@@ -13,16 +16,43 @@
 	font-size:25px !important;
 }
 
+/*
+*	Notifications
+*/
 .header{
 	z-index: 1 !important;
 }
 
+/*
+*	Search Bar
+*/
 @media (min-width: 768px) {  
 	.search-bar{
 		width: 50%;
 	}
 }
 
+/*
+*	Paginator
+*/
 .paginator{
 	padding: 10px 0 0 0 !important;
+}
+
+/*
+*	Button Floating
+*/
+.card-btn-floating{
+	position: relative;
+}
+.card-btn-floating .v-speed-dial {
+	position: absolute;
+}
+
+.card-btn-floating .v-btn--floating {
+	position: relative;
+}
+
+.table-fab {
+	margin-top: 35px;
 }
