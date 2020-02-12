@@ -20,10 +20,21 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::put('/user', 'UserController@updateUserInformation');
 	Route::put('/change-password', 'UserController@changePassword');
 
-	//devices
+	//Devices
 	Route::get('/organization/{id}/devices', 'DeviceController@getDevices');
 
-	//selector
+	//Device
+	Route::get('/device/{id}', 'DeviceController@getDevice');
+	Route::post('/device', 'DeviceController@storeDevice');
+	Route::put('/device', 'DeviceController@updateDevice');
+
+	//Technology types
+	Route::get('/technology-types', 'TechnologyTypeController@getTechnologyTypes');
+
+	//Device types
+	Route::get('/device-types', 'DeviceTypeController@getDeviceTypes');
+
+	//Selector
 	Route::get('/', 'OrganizationSelectorController@index');
 
 	//App
