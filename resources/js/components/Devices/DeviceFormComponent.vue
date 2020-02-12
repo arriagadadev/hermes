@@ -211,9 +211,9 @@
                 this.device.device_type_id = 0;
                 this.device.technology_type_id = 0;
                 this.device.scope = 0;
-                this.device.latitude = 0;
-                this.device.longitude = 0;
-                this.device.altitude = 0;
+                this.device.latitude = '';
+                this.device.longitude = '';
+                this.device.altitude = '';
                 this.device.active = true;
                 this.device.has_gps = false;
                 this.organization_id = this.$organization.id;
