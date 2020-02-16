@@ -33,6 +33,7 @@ Vue.component('change-password', require('./components/Users/ChangePasswordCompo
 Vue.component('pagination', require('laravel-vue-pagination'));
 import DashboardComponent from './components/Dashboard/DashboardComponent';
 import DevicesComponent from './components/Devices/DevicesComponent';
+import DeviceComponent from './components/Devices/DeviceComponent';
 import DeviceFormComponent from './components/Devices/DeviceFormComponent';
 import MyAccountComponent from './components/Users/MyAccountComponent';
 /**
@@ -57,6 +58,11 @@ var routes = [
         path: '/device/new-device',
         name: 'new-device',
         component: DeviceFormComponent
+    },
+    {
+        path: '/device/:id',
+        name: 'device',
+        component: DeviceComponent
     },
     {
         path: '/device/:id/edit',
