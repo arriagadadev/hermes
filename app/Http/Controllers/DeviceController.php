@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Device;
+use App\Measurement;
 
 class DeviceController extends Controller
 {
@@ -52,6 +53,19 @@ class DeviceController extends Controller
         ->join('technology_types','devices.technology_type_id','=','technology_types.id')
         ->join('device_types','devices.device_type_id','=','device_types.id')
         ->where('devices.id',$request->id)->first();
+
+        if($device){
+            $lastMeasurement = Measurement::select('measurements.created_at')
+            ->join('slots','measurements.slot_id','=','slots.id')
+            ->where('slots.device_id', $device->id)
+            ->orderBy('measurements.id','desc')
+            ->first();
+            if($lastMeasurement){
+                $device->last_seen = $lastMeasurement->created_at->diffForHumans();
+            }else{
+                $device->last_seen = null;
+            }
+        }
 
         return [
             'device' => $device
