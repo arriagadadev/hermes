@@ -10,6 +10,8 @@ window.Vue = require('vue');
 import Vuetify from 'vuetify';
 import VueRouter from 'vue-router';
 import VueNotification from "@kugatsu/vuenotification";
+import { LMap, LTileLayer, LMarker, LPopup, LTooltip } from "vue2-leaflet";
+import 'leaflet/dist/leaflet.css';
 
 Vue.use(VueNotification, {
   timer: 20
@@ -36,6 +38,14 @@ import DevicesComponent from './components/Devices/DevicesComponent';
 import DeviceComponent from './components/Devices/DeviceComponent';
 import DeviceFormComponent from './components/Devices/DeviceFormComponent';
 import MyAccountComponent from './components/Users/MyAccountComponent';
+
+//Leaflet components
+Vue.component('l-map', LMap);
+Vue.component('l-tile-layer', LTileLayer);
+Vue.component('l-marker', LMarker);
+Vue.component('l-popup', LPopup);
+Vue.component('l-tooltip', LTooltip);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
