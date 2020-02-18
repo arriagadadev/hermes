@@ -24,7 +24,6 @@ class CreateDevicesTable extends Migration
             $table->boolean('has_gps')->default(false);
             $table->string('latitude')->nullable();
             $table->string('longitude')->nullable();
-            $table->string('altitude')->nullable();
             $table->boolean('active')->default(true);
             $table->unsignedBigInteger('icon_id')->default(1);
             $table->timestamps();

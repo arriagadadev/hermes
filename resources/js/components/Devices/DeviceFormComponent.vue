@@ -79,13 +79,6 @@
                                             ></v-text-field>
                                         </div>
                                         <div class="col-md-3 form-group">
-                                            <v-text-field
-                                                v-model="device.altitude"
-                                                label="Altitude"
-                                                :rules="[rules.realNumber]"
-                                            ></v-text-field>
-                                        </div>
-                                        <div class="col-md-3 form-group">
                                             <v-switch
                                                 v-model="device.active"
                                                 color="#00c7ff"
@@ -136,7 +129,6 @@
                     scope: 0,
                     latitude: '',
                     longitude: '',
-                    altitude: '',
                     active: true,
                     has_gps: false,
                     organization_id: vm.$organization.id
@@ -230,7 +222,6 @@
                 this.device.scope = 0;
                 this.device.latitude = '';
                 this.device.longitude = '';
-                this.device.altitude = '';
                 this.device.active = true;
                 this.device.has_gps = false;
                 this.organization_id = this.$organization.id;

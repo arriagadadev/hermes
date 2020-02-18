@@ -48,7 +48,6 @@ class DeviceController extends Controller
             'icons.src as icon_src',
             'devices.latitude',
             'devices.longitude',
-            'devices.altitude',
             'technology_types.name as technology_type',
             'device_types.name as device_type',
             'devices.organization_id'
@@ -88,7 +87,6 @@ class DeviceController extends Controller
         $device->has_gps = $validatedData['device']['has_gps'];
         $device->latitude = $validatedData['device']['latitude'];
         $device->longitude = $validatedData['device']['longitude'];
-        $device->altitude = $validatedData['device']['altitude'];
         $device->organization_id = $validatedData['device']['organization_id'];
         $device->icon_id = $validatedData['device']['icon_id'];
         $device->save();
@@ -109,7 +107,6 @@ class DeviceController extends Controller
         $device->has_gps = $request->device['has_gps'];
         $device->latitude = $request->device['latitude'];
         $device->longitude = $request->device['longitude'];
-        $device->altitude = $request->device['altitude'];
         $device->icon_id = $validatedData['device']['icon_id'];
         $device->save();
         return [
@@ -129,7 +126,6 @@ class DeviceController extends Controller
             'device.active' => 'boolean',
             'device.latitude' => 'nullable',
             'device.longitude' => 'nullable',
-            'device.altitude' => 'nullable',
             'device.icon_id' => 'nullable|integer'
         ];
 
