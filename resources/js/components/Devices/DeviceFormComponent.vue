@@ -49,6 +49,15 @@
                                             ></v-select>
                                         </div>
                                         <div class="col-md-3 form-group">
+                                            <v-select
+                                                :items="icons"
+                                                item-text="name"
+                                                item-value="id"
+                                                label="Icon"
+                                                v-model="device.icon_id"
+                                            ></v-select>
+                                        </div>
+                                        <div class="col-md-3 form-group">
                                             <v-text-field
                                                 v-model="device.scope"
                                                 label="Scope"
@@ -135,7 +144,8 @@
                 valid: true,
                 create: true,
                 deviceTypes: [],
-                technologyTypes: []
+                technologyTypes: [],
+                icons: []
             }
         },
         methods:{
@@ -191,6 +201,13 @@
                 })
                 .catch(error => {this.$handleRequestError(error)});
             },
+            getIcons() {
+                axios.get('/icons').then(r => {
+                    var response = r.data;
+                    this.icons = response.icons;
+                })
+                .catch(error => {this.$handleRequestError(error)});
+            },
             activateEditMode(route){
                 this.create = false;
                 this.getDevice(route);
@@ -222,6 +239,7 @@
         mounted() {
             this.getDeviceTypes();
             this.getTechnologyTypes();
+            this.getIcons();
             this.setMode(this.$route);
         },
         watch: {

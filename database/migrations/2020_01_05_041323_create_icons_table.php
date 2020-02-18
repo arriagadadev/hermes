@@ -16,8 +16,7 @@ class CreateIconsTable extends Migration
         Schema::create('icons', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('online_src');
-            $table->string('offline_src');
+            $table->string('src');
             $table->timestamps();
         });
     }

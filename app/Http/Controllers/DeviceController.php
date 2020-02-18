@@ -43,6 +43,9 @@ class DeviceController extends Controller
             'devices.has_gps',
             'devices.technology_type_id',
             'devices.device_type_id',
+            'devices.icon_id',
+            'icons.name as icon_name',
+            'icons.src as icon_src',
             'devices.latitude',
             'devices.longitude',
             'devices.altitude',
@@ -52,6 +55,7 @@ class DeviceController extends Controller
             )
         ->join('technology_types','devices.technology_type_id','=','technology_types.id')
         ->join('device_types','devices.device_type_id','=','device_types.id')
+        ->join('icons','devices.icon_id','=','icons.id')
         ->where('devices.id',$request->id)->first();
 
         if($device){
@@ -86,6 +90,7 @@ class DeviceController extends Controller
         $device->longitude = $validatedData['device']['longitude'];
         $device->altitude = $validatedData['device']['altitude'];
         $device->organization_id = $validatedData['device']['organization_id'];
+        $device->icon_id = $validatedData['device']['icon_id'];
         $device->save();
         return [
             'device' => $device
@@ -105,6 +110,7 @@ class DeviceController extends Controller
         $device->latitude = $request->device['latitude'];
         $device->longitude = $request->device['longitude'];
         $device->altitude = $request->device['altitude'];
+        $device->icon_id = $validatedData['device']['icon_id'];
         $device->save();
         return [
             'device' => $device
@@ -123,7 +129,8 @@ class DeviceController extends Controller
             'device.active' => 'boolean',
             'device.latitude' => 'nullable',
             'device.longitude' => 'nullable',
-            'device.altitude' => 'nullable'
+            'device.altitude' => 'nullable',
+            'device.icon_id' => 'nullable|integer'
         ];
 
         //The identifier must be unique in the organization

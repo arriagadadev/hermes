@@ -26,7 +26,7 @@ class CreateDevicesTable extends Migration
             $table->string('longitude')->nullable();
             $table->string('altitude')->nullable();
             $table->boolean('active')->default(true);
-            $table->unsignedBigInteger('icon_id')->nullable();
+            $table->unsignedBigInteger('icon_id')->default(1);
             $table->timestamps();
 
             $table->foreign('device_type_id')->references('id')->on('device_types');

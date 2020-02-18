@@ -34,6 +34,9 @@ Route::group(['middleware' => ['auth']], function () {
 	//Device types
 	Route::get('/device-types', 'DeviceTypeController@getDeviceTypes');
 
+	//Icons
+	Route::get('/icons', 'IconController@getIcons');
+
 	//Selector
 	Route::get('/', 'OrganizationSelectorController@index');
 
