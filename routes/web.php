@@ -28,6 +28,9 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::post('/device', 'DeviceController@storeDevice');
 	Route::put('/device', 'DeviceController@updateDevice');
 
+	//Slots
+	Route::get('/organization/{organization}/device/{device}/slots', 'SlotController@getSlots');
+
 	//Technology types
 	Route::get('/technology-types', 'TechnologyTypeController@getTechnologyTypes');
 

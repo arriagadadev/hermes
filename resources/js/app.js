@@ -7,38 +7,26 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import Vuetify from 'vuetify';
-import VueRouter from 'vue-router';
 import VueNotification from "@kugatsu/vuenotification";
+
+import Vuetify from 'vuetify';
+
+import VueRouter from 'vue-router';
+
 import { LMap, LTileLayer, LMarker, LPopup, LTooltip } from "vue2-leaflet";
+
 import 'leaflet/dist/leaflet.css';
 
-Vue.use(VueNotification, {
-  timer: 20
-});
-Vue.use(Vuetify);
-Vue.use(VueRouter);
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+import DashboardComponent from './components/Dashboard/DashboardComponent';
+import DeviceComponent from './components/Devices/DeviceComponent';
+import DeviceFormComponent from './components/Devices/DeviceFormComponent';
+import DevicesComponent from './components/Devices/DevicesComponent';
+import SlotsComponent from './components/Slots/SlotsComponent';
+import MyAccountComponent from './components/Users/MyAccountComponent';
 
 Vue.component('user-information', require('./components/Users/UserInformationComponent.vue').default);
 Vue.component('change-password', require('./components/Users/ChangePasswordComponent.vue').default);
 Vue.component('pagination', require('laravel-vue-pagination'));
-import DashboardComponent from './components/Dashboard/DashboardComponent';
-import DevicesComponent from './components/Devices/DevicesComponent';
-import DeviceComponent from './components/Devices/DeviceComponent';
-import DeviceFormComponent from './components/Devices/DeviceFormComponent';
-import MyAccountComponent from './components/Users/MyAccountComponent';
-
 //Leaflet components
 Vue.component('l-map', LMap);
 Vue.component('l-tile-layer', LTileLayer);
@@ -80,6 +68,11 @@ var routes = [
         component: DeviceFormComponent
     },
     {
+        path: '/device/:device/slots',
+        name: 'slots',
+        component: SlotsComponent
+    },
+    {
         path: '/my-account',
         name: 'my-account',
         component: MyAccountComponent
@@ -113,6 +106,12 @@ Vue.prototype.$handleRequestError = error => {
 	  Vue.prototype.$notification.error("Unexpected error", {timer: 3});
 	}
 };
+
+Vue.use(Vuetify);
+Vue.use(VueRouter);
+Vue.use(VueNotification, {
+  timer: 20
+});
 const app = new Vue({
     el: '#app',
     vuetify: new Vuetify({icons: {iconfont: 'md'}}),
