@@ -6,7 +6,7 @@
                     <div class="col-md-12">
                         <div class="bgc-white bdrs-3 p-20">
                             <h4 v-if="create" class="c-grey-900"><router-link to="/devices" >Devices</router-link>/New device</h4>
-                            <h4 v-else class="c-grey-900"><router-link to="/devices" >Devices</router-link>/<router-link :to="'/device/' + device.id" ><span v-text="device.identifier"></span></router-link>/edit</h4>
+                            <h4 v-else class="c-grey-900"><router-link to="/devices" >Devices</router-link>/<router-link :to="'/device/' + $route.params.device" ><span v-text="$route.params.device"></span></router-link>/edit</h4>
                             <v-form
                                 ref="form"
                                 v-model="valid"
@@ -98,7 +98,7 @@
                                             <v-btn class="mr-4" @click="submit()">Save</v-btn>
                                         </div>
                                         <div class="col-6 text-right">
-                                            <router-link v-if="!create" :to="'/device/' + device.id + '/slots'">
+                                            <router-link v-if="!create" :to="'/device/' + $route.params.device + '/slots'">
                                                 <v-btn class="mr-4">Slots</v-btn>
                                             </router-link>
                                         </div>
@@ -130,8 +130,7 @@
                     latitude: '',
                     longitude: '',
                     active: true,
-                    has_gps: false,
-                    organization_id: vm.$organization.id
+                    has_gps: false
                 },
                 valid: true,
                 create: true,
@@ -152,18 +151,18 @@
 
             },
             storeDevice(){
-                axios.post('/device', {
+                axios.post('/organization/' + this.$organization.slug + '/device', {
                     device: this.device
                 })
                 .then(r => {
                     this.device = r.data.device;
                     this.$notification.success("The device has been created successfully", {timer: 3});
-                    setTimeout(()=>{this.$router.push('/device/' + this.device.id + '/edit');this.create=false;}, 1000);
+                    setTimeout(()=>{this.$router.push('/device/' + this.device.identifier + '/edit');this.create=false;}, 1000);
                 })
                 .catch(error => {this.$handleRequestError(error)});
             },
             updateDevice(){
-                axios.put('/device', {
+                axios.put('/organization/' + this.$organization.slug + '/device', {
                     device: this.device
                 })
                 .then(r => {
@@ -173,7 +172,7 @@
                 .catch(error => {this.$handleRequestError(error)});
             },
             getDevice(route){
-                axios.get('/device/' + route.params.id).then(r => {
+                axios.get('/organization/' + this.$organization.slug + '/device/' + route.params.device).then(r => {
                     var response = r.data;
                     this.device = response.device;
                 })
@@ -224,7 +223,6 @@
                 this.device.longitude = '';
                 this.device.active = true;
                 this.device.has_gps = false;
-                this.organization_id = this.$organization.id;
             }
         },
         mounted() {

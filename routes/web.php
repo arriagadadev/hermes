@@ -21,12 +21,18 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::put('/change-password', 'UserController@changePassword');
 
 	//Devices
-	Route::get('/organization/{id}/devices', 'DeviceController@getDevices');
+	Route::get('/organization/{organization}/devices', 'DeviceController@getDevices');
 
 	//Device
-	Route::get('/device/{id}', 'DeviceController@getDevice');
-	Route::post('/device', 'DeviceController@storeDevice');
-	Route::put('/device', 'DeviceController@updateDevice');
+	Route::get('/organization/{organization}/device/{device}', 'DeviceController@getDevice');
+	Route::post('/organization/{organization}/device', 'DeviceController@storeDevice');
+	Route::put('/organization/{organization}/device', 'DeviceController@updateDevice');
+
+	//Slots
+	Route::get('/organization/{organization}/device/{device}/slots', 'SlotController@getSlots');
+	Route::get('/organization/{organization}/device/{device}/slot/{slot}', 'SlotController@getSlot');
+	Route::post('/organization/{organization}/device/{device}/slot', 'SlotController@storeSlot');
+	Route::put('/organization/{organization}/device/{device}/slot', 'SlotController@updateSlot');
 
 	//Technology types
 	Route::get('/technology-types', 'TechnologyTypeController@getTechnologyTypes');
@@ -36,6 +42,12 @@ Route::group(['middleware' => ['auth']], function () {
 
 	//Icons
 	Route::get('/icons', 'IconController@getIcons');
+
+	//Variables
+	Route::get('/variables', 'VariableController@getVariables');
+
+	//Display modes
+	Route::get('/display-modes', 'DisplayModeController@getDisplayModes');
 
 	//Selector
 	Route::get('/', 'OrganizationSelectorController@index');

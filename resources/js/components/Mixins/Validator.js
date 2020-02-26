@@ -28,6 +28,13 @@ export default {
                         return 'This attribute must be in a range between -180 and 180';
                     }
                     return true;
+                },
+                jsonKey: v => {
+                    var re = /^[a-zA-Z0-9\-\_]*$/;
+                    if(!re.exec(v ? v : '0')){
+                        return "This attribute is not a valid json key";
+                    }
+                    return true;
                 }
 
             }
