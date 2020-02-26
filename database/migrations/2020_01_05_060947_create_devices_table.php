@@ -29,7 +29,7 @@ class CreateDevicesTable extends Migration
             $table->timestamps();
 
             $table->foreign('device_type_id')->references('id')->on('device_types');
-            $table->foreign('organization_id')->references('id')->on('organizations');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->foreign('icon_id')->references('id')->on('icons');
             $table->foreign('technology_type_id')->references('id')->on('technology_types');
         });

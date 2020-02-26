@@ -19,7 +19,7 @@ class CreateUnitsOfMeasurementTable extends Migration
             $table->string('name');
             $table->string('unit');
 
-            $table->foreign('variable_id')->references('id')->on('variables');
+            $table->foreign('variable_id')->references('id')->on('variables')->onDelete('cascade');
             
             $table->timestamps();
         });

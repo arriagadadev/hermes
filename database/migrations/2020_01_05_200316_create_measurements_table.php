@@ -20,7 +20,7 @@ class CreateMeasurementsTable extends Migration
             $table->decimal('calibrated_measurement', 18, 6);
             $table->timestamp("created_at");
 
-            $table->foreign('slot_id')->references('id')->on('slots');
+            $table->foreign('slot_id')->references('id')->on('slots')->onDelete('cascade');
         });
     }
 

@@ -24,7 +24,7 @@ class CreateSlotsTable extends Migration
             $table->string('title');
             $table->string('color')->default('#336699');
 
-            $table->foreign('device_id')->references('id')->on('devices');
+            $table->foreign('device_id')->references('id')->on('devices')->onDelete('cascade');
             $table->foreign('unit_of_measurement_id')->references('id')->on('units_of_measurement');
             $table->foreign('display_mode_id')->references('id')->on('display_modes');
 

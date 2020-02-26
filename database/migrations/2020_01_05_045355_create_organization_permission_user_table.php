@@ -18,9 +18,9 @@ class CreateOrganizationPermissionUserTable extends Migration
             $table->unsignedBigInteger('permission_id');
             $table->unsignedBigInteger('user_id');
 
-            $table->foreign('organization_id')->references('id')->on('organizations');
-            $table->foreign('permission_id')->references('id')->on('permissions');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
+            $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
