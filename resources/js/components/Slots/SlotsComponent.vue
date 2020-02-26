@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="bgc-white bdrs-3 p-20">
-                            <h4 class="c-grey-900">Slots</h4>
+                            <h4 class="c-grey-900"><router-link to="/devices" >Devices</router-link>/<router-link :to="'/device/' + $route.params.device" ><span v-text="$route.params.device"></span></router-link>/Slots</h4>
                             <v-simple-table>
                                 <template v-slot:default>
                                     <thead>
@@ -18,7 +18,7 @@
                                     </thead>
                                     <tbody>
                                         <tr v-for="slot in slots" :key="slot.id">
-                                            <td><router-link :to="'/device/'+$route.params.device+'/slot/'+slot.id">{{ slot.alias }}</router-link></td>
+                                            <td><router-link :to="'/device/'+$route.params.device+'/slot/'+slot.parameter_name">{{ slot.alias }}</router-link></td>
                                             <td><em>{{ slot.parameter_name }}</em></td>
                                             <td>{{ slot.variable_name }}</td>
                                             <td>{{ slot.unit_of_measurement_name }} ({{ slot.unit_of_measurement_symbol }})</td>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <v-fab-transition>
-                <router-link :to="'/device/'+$route.params.device+'/slot/new-slot'">
+                <router-link :to="'/device/'+$route.params.device+'/new-slot'">
                     <v-btn
                         absolute
                         top

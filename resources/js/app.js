@@ -22,6 +22,8 @@ import DeviceComponent from './components/Devices/DeviceComponent';
 import DeviceFormComponent from './components/Devices/DeviceFormComponent';
 import DevicesComponent from './components/Devices/DevicesComponent';
 import SlotsComponent from './components/Slots/SlotsComponent';
+import SlotComponent from './components/Slots/SlotComponent';
+import SlotFormComponent from './components/Slots/SlotFormComponent';
 import MyAccountComponent from './components/Users/MyAccountComponent';
 
 Vue.component('user-information', require('./components/Users/UserInformationComponent.vue').default);
@@ -58,12 +60,12 @@ var routes = [
         component: DeviceFormComponent
     },
     {
-        path: '/device/:id',
+        path: '/device/:device',
         name: 'device',
         component: DeviceComponent
     },
     {
-        path: '/device/:id/edit',
+        path: '/device/:device/edit',
         name: 'edit-device',
         component: DeviceFormComponent
     },
@@ -73,9 +75,24 @@ var routes = [
         component: SlotsComponent
     },
     {
-        path: '/my-account',
-        name: 'my-account',
-        component: MyAccountComponent
+      path: '/device/:device/new-slot',
+      name: 'new-slot',
+      component: SlotFormComponent
+    },
+    {
+      path: '/device/:device/slot/:slot',
+      name: 'slot',
+      component: SlotComponent
+    },
+    {
+      path: '/device/:device/slot/:slot/edit',
+      name: 'edit-slot',
+      component: SlotFormComponent
+    },
+    {
+      path: '/my-account',
+      name: 'my-account',
+      component: MyAccountComponent
     }
 
 ];

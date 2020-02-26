@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Device;
 use App\Measurement;
+use App\Organization;
 
 class DeviceController extends Controller
 {
@@ -20,7 +21,7 @@ class DeviceController extends Controller
     		)
     	->join('technology_types','devices.technology_type_id','=','technology_types.id')
     	->join('device_types','devices.device_type_id','=','device_types.id')
-    	->where('devices.organization_id',$request->id);
+    	->where('devices.organization_id',$request->organization);
 
         if($request->filter){
             $devices = $devices->where(function ($query) use ($request) {
@@ -34,6 +35,7 @@ class DeviceController extends Controller
     }
 
     public function getDevice(Request $request){
+        $organization = Organization::select('id')->where('slug', $request->organization)->first();
         $device = Device::select(
             'devices.id',
             'devices.identifier',
@@ -49,13 +51,14 @@ class DeviceController extends Controller
             'devices.latitude',
             'devices.longitude',
             'technology_types.name as technology_type',
-            'device_types.name as device_type',
-            'devices.organization_id'
+            'device_types.name as device_type'
             )
         ->join('technology_types','devices.technology_type_id','=','technology_types.id')
         ->join('device_types','devices.device_type_id','=','device_types.id')
         ->join('icons','devices.icon_id','=','icons.id')
-        ->where('devices.id',$request->id)->first();
+        ->where('devices.identifier',$request->device)
+        ->where('devices.organization_id', $organization->id)
+        ->first();
 
         if($device){
             $lastMeasurement = Measurement::select('measurements.created_at')
@@ -76,6 +79,8 @@ class DeviceController extends Controller
     }
 
     public function storeDevice(Request $request){
+        $organization = Organization::select('id')->where('slug', $request->organization)->first();
+        $request->organization = $organization;
         $validatedData = $request->validate($this->getValidations($request));
         $device = new Device;
         $device->identifier = $validatedData['device']['identifier'];
@@ -87,7 +92,7 @@ class DeviceController extends Controller
         $device->has_gps = $validatedData['device']['has_gps'];
         $device->latitude = $validatedData['device']['latitude'];
         $device->longitude = $validatedData['device']['longitude'];
-        $device->organization_id = $validatedData['device']['organization_id'];
+        $device->organization_id = $organization->id;
         $device->icon_id = $validatedData['device']['icon_id'];
         $device->save();
         return [
@@ -96,6 +101,8 @@ class DeviceController extends Controller
     }
 
     public function updateDevice(Request $request){
+        $organization = Organization::select('id')->where('slug', $request->organization)->first();
+        $request->organization = $organization;
         $validatedData = $request->validate($this->getValidations($request));
         $device = Device::findOrFail($request->device['id']);
         $device->identifier = $request->device['identifier'];
@@ -119,20 +126,19 @@ class DeviceController extends Controller
             'device.id' => 'integer',
             'device.alias' => 'required',
             'device.scope' => 'integer',
-            'device.device_type_id' => 'integer',
-            'device.technology_type_id' => 'integer',
-            'device.organization_id' => 'integer',
+            'device.device_type_id' => 'required|integer|min:0|not_in:0',
+            'device.technology_type_id' => 'required|integer|min:0|not_in:0',
             'device.has_gps' => 'boolean',
             'device.active' => 'boolean',
             'device.latitude' => 'nullable',
             'device.longitude' => 'nullable',
-            'device.icon_id' => 'nullable|integer'
+            'device.icon_id' => 'nullable|integer|min:0|not_in:0'
         ];
 
         //The identifier must be unique in the organization
         $validations['device.identifier'] = Rule::unique('devices', 'identifier')
             ->where(function ($query) use ($request){
-                return $query->where('organization_id', $request->device['organization_id']);
+                return $query->where('organization_id', $request->organization->id);
             });
 
         //If we are updating the device, we must ignore it in the validation

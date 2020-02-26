@@ -26,7 +26,7 @@
                                     </thead>
                                     <tbody>
                                         <tr v-for="device in paginator.data" :key="device.id">
-                                            <td><router-link :to="'/device/'+device.id">{{ device.identifier }}</router-link></td>
+                                            <td><router-link :to="'/device/'+device.identifier">{{ device.identifier }}</router-link></td>
                                             <td>{{ device.alias }}</td>
                                             <td>{{ device.device_type }}</td>
                                             <td>{{ device.technology_type }}</td>

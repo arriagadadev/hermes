@@ -8,7 +8,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="bgc-white bdrs-3 p-20">
-                                        <h4 class="c-grey-900"><router-link to="/devices" >Devices</router-link>/<span v-text="$route.params.device"></span></h4>
+                                        <h4 class="c-grey-900"><router-link to="/devices" >Devices</router-link>/<span v-text="device.identifier"></span></h4>
                                         <p>
                                             <span v-text="device.identifier"></span> - <span v-text="device.alias"></span><br/>
                                             Type: <span v-text="device.device_type"></span><br/>
@@ -41,7 +41,7 @@
                                     <v-icon dark v-else>more_vert</v-icon>
                                 </v-btn>
                             </template>
-                            <router-link :to="this.$route.params.device + '/edit'">
+                            <router-link :to="this.$route.params.id + '/edit'">
                                 <v-btn
                                     fab
                                     dark
@@ -51,7 +51,7 @@
                                     <v-icon>edit</v-icon>
                                 </v-btn>
                             </router-link>
-                            <router-link :to="this.$route.params.device + '/slots'">
+                            <router-link :to="this.$route.params.id + '/slots'">
                                 <v-btn
                                     fab
                                     dark
@@ -139,7 +139,7 @@
         },
         methods:{
             getDevice(){
-                axios.get('/organization/' + this.$organization.slug + '/device/' + this.$route.params.device).then(r => {
+                axios.get('/device/' + this.$route.params.id).then(r => {
                     var response = r.data;
                     this.device = response.device;
                 })
