@@ -17,7 +17,7 @@ class CreateUnitsOfMeasurementTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('variable_id');
             $table->string('name');
-            $table->string('unit');
+            $table->string('symbol');
 
             $table->foreign('variable_id')->references('id')->on('variables')->onDelete('cascade');
             
