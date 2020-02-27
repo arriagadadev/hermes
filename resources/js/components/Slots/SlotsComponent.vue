@@ -32,7 +32,7 @@
                 </div>
             </div>
             <v-fab-transition>
-                <router-link :to="'/device/'+$route.params.device+'/new-slot'">
+                <router-link :to="'/device/'+$route.params.device+'/slots/new-slot'">
                     <v-btn
                         absolute
                         top

@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="bgc-white bdrs-3 p-20">
-                            <h4 v-if="create" class="c-grey-900"><router-link to="/devices" >Devices</router-link>/<router-link :to="'/device/' + $route.params.device" ><span v-text="$route.params.device"></span></router-link>/New slot</h4>
+                            <h4 v-if="create" class="c-grey-900"><router-link to="/devices" >Devices</router-link>/<router-link :to="'/device/' + $route.params.device" ><span v-text="$route.params.device"></span></router-link>/Slots/New slot</h4>
                             <h4 v-else class="c-grey-900"><router-link to="/devices" >Devices</router-link>/<router-link :to="'/device/' + $route.params.device"><span v-text="$route.params.device"></span></router-link>/slot/<router-link :to="'/device/' + $route.params.device + '/slot/' + $route.params.slot" ><span v-text="$route.params.slot"></span></router-link>/edit</h4>
                             <v-form
                                 ref="form"

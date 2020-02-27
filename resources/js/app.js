@@ -55,7 +55,7 @@ var routes = [
         component: DevicesComponent
     },
     {
-        path: '/device/new-device',
+        path: '/devices/new-device',
         name: 'new-device',
         component: DeviceFormComponent
     },
@@ -75,7 +75,7 @@ var routes = [
         component: SlotsComponent
     },
     {
-      path: '/device/:device/new-slot',
+      path: '/device/:device/slots/new-slot',
       name: 'new-slot',
       component: SlotFormComponent
     },

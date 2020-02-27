@@ -41,7 +41,7 @@
                 </div>
             </div>
             <v-fab-transition>
-                <router-link to="/device/new-device">
+                <router-link to="/devices/new-device">
                     <v-btn
                         absolute
                         top
