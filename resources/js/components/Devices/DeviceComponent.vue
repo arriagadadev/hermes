@@ -93,7 +93,7 @@
                                               <l-marker :lat-lng="{ lat: device.latitude, lng: device.longitude }">
                                                 <l-popup>
                                                   <div>
-                                                    Device Pop up
+                                                    <span v-text="device.identifier"></span> - <span v-text="device.alias"></span>
                                                   </div>
                                                 </l-popup>
                                               </l-marker>
@@ -131,7 +131,6 @@
                 withPopup: {lat: 47.41322, lng: -1.219482},
                 withTooltip: {lat: 47.41422, lng: -1.250482},
                 currentZoom: 11.5,
-                showParagraph: false,
                 mapOptions: {
                     zoomSnap: 0.5
                 }
