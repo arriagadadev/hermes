@@ -51,6 +51,7 @@
                                 dark
                                 small
                                 color="red"
+                                @click="remove()"
                             >
                                 <v-icon>delete</v-icon>
                             </v-btn>
@@ -78,6 +79,14 @@
                     this.slot = response.slot;
                 })
                 .catch(error => {this.$handleRequestError(error)});
+            },
+            remove(){
+                if(confirm("Are you sure?")){
+                    axios.delete('/organization/' + this.$organization.slug + '/device/' + this.$route.params.device + '/slot/' + this.$route.params.slot).then(r => {
+                        this.$router.push('/device/' + this.$route.params.device + '/slots/');
+                    })
+                    .catch(error => {this.$handleRequestError(error)});
+                }
             }
         },
         mounted() {

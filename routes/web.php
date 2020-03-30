@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
 			//Slots
 			Route::get('slots', 'SlotController@getSlots');
 			Route::get('slot/{slot}', 'SlotController@getSlot');
+			Route::delete('slot/{slot}', 'SlotController@deleteSlot');
 			Route::post('slot', 'SlotController@storeSlot');
 			Route::put('slot', 'SlotController@updateSlot');
 		});

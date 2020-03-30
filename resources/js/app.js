@@ -21,9 +21,9 @@ import DashboardComponent from './components/Dashboard/DashboardComponent';
 import DeviceComponent from './components/Devices/DeviceComponent';
 import DeviceFormComponent from './components/Devices/DeviceFormComponent';
 import DevicesComponent from './components/Devices/DevicesComponent';
-import SlotsComponent from './components/Slots/SlotsComponent';
 import SlotComponent from './components/Slots/SlotComponent';
 import SlotFormComponent from './components/Slots/SlotFormComponent';
+import SlotsComponent from './components/Slots/SlotsComponent';
 import MyAccountComponent from './components/Users/MyAccountComponent';
 
 Vue.component('user-information', require('./components/Users/UserInformationComponent.vue').default);

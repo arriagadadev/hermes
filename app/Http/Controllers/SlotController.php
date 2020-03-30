@@ -73,6 +73,22 @@ class SlotController extends Controller
         ];
     }
 
+    public function deleteSlot(Request $request){
+        $organization = Organization::select('id')
+        ->where('slug', $request->organization)
+        ->first();
+        $device = Device::select('id')
+        ->where('identifier', $request->device)
+        ->where('organization_id', $organization->id)
+        ->first();
+        $slot = Slot::where('slots.parameter_name', $request->slot)
+        ->where('device_id', $device->id)
+        ->delete();
+        return [
+            "slot" => $slot
+        ];
+    }
+
     public function storeSlot(Request $request){
         $organization = Organization::select('id')
         ->where('slug', $request->organization)
